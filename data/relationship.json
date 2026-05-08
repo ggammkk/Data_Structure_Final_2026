@@ -1,0 +1,7 @@
+[
+  {
+    "from": "AVL",
+    "to": "BST",
+    "relationship": "is_a"
+  }
+]

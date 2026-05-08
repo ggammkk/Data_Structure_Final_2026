@@ -1,0 +1,8 @@
+[
+  {
+    "name": "Stack",
+    "definition": "LIFO linear structure",
+    "category": "Linear Structure",
+    "operations": ["push", "pop"]
+  }
+]
