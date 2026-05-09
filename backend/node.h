@@ -9,17 +9,17 @@ using namespace std;
 struct Node
 {
     string name;
-    string def;
+    string definition;
     string category;
 
     vector<string> operations;
-    vector<string> related;
+    vector<string> related_topics;
 
-    string codeexample;
-    string reallifeexample;
-    string mathrelation;
+    string code_examples;
+    string real_life_examples;
+    string math_relations;
 
-    string timecomplexity;
+    vector<string> time_complexity;
 };
 
 #endif
