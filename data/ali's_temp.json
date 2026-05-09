@@ -63,8 +63,7 @@
         "delete",
         "preorder traversal", 
         "inorder traversal", 
-        "postorder traversal",
-        "level-order traversal"
+        "postorder traversal"
         
     ],
 
@@ -189,32 +188,66 @@
     ],
 
     "real_life_examples": [
-        "Organization charts",
-        "File systems",
-        "Family trees",
-        "Decision making/trees"
-    ],
-              "    }\n",
-              "};"
-    ],
-
-    "real_life_examples": [
-        "Organization charts",
-        "File systems",
-        "Family trees",
-        "Decision making/trees"
+        "Gaming and Simulation Engines",
+        "Memory management in operating systems"
     ],
 
     "math_relations": [
-        "Maximum number of nodes in a binary tree with n levels: 2^n - 1",
-    "Maximum number of nodes at level i in a binary tree: 2^(i-1)" 
+        "Balance Factor = height(left subtree) - height(right subtree)",
+        "Number of edges in a tree with n nodes: n - 1" 
     ],
 
     "time_complexity": {
-        "access": "O(n)",
-        "search": "O(n)",
-        "insert": "O(1) to O(n)",
-        "traverse": "O(n)"
-    }}
+        "insert":"O(log n)",
+        "delete":"O(log n)",
+        "search":"O(log n)",
+        "rotateLeft":"O(1)",
+        "rotateRight":"O(1)",
+        "rebalance":"O(log n)"
+
+    }},
+    
+    {
+        "name": "Heap",
+
+        "definition":"A complete binary tree that satisfies the heap property",
+
+        "category": "Non-Linear Structure",
+
+        "operations": [
+            "insert",
+            "delete",
+            "heapify",
+            "buildHeap"
+        ],
+
+        "relationships": [
+            {
+                "target": "Complete Binary Tree",
+                "type": "is_a"
+            }
+       ],
+
+        "code_examples": [
+            "vector<int> heap = {50, 30, 20, 15, 10};"
+        ],
+
+        "real_life_examples": [
+            "Bandwidth management in networks",
+            "Job scheduling in cloud computing"
+        ],
+
+        "math_relations": [
+            "Height of a heap with n nodes = O(log n)",
+            "Parent index = (i - 1) / 2"
+        ],
+
+        "time_complexity": {
+            "insert":"O(log n)",
+            "delete":"O(log n)",
+            "heapify":"O(log n)",
+            "buildHeap":"O(n)"
+        }
+    }
 
 ]
