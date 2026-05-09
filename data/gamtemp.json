@@ -1,0 +1,375 @@
+[
+    {
+        "name": "Data",
+        "definition": "Raw facts and information that can be processed.",
+        "category": "Fundamental Concept",
+
+        "operations": [],
+
+        "relationships": [],
+
+        "code_examples": [],
+
+        "real_life_examples": [
+            "Student scores",
+            "Temperature readings"
+        ],
+
+        "math_relations": [],
+
+        "time_complexity": {}
+    },
+
+    {
+        "name": "Data Structure",
+        "definition": "A method of organizing and storing data efficiently.",
+        "category": "Fundamental Concept",
+
+        "operations": [
+            "insert",
+            "delete",
+            "search",
+            "traverse"
+        ],
+
+        "relationships": [
+            {
+                "target": "Data",
+                "type": "related_to"
+            }
+        ],
+
+        "code_examples": [],
+
+        "real_life_examples": [
+            "Database organization"
+        ],
+
+        "math_relations": [],
+
+        "time_complexity": {}
+    },
+
+    {
+        "name": "Abstract Data Type",
+        "definition": "A logical description of a data structure independent of implementation.",
+        "category": "Abstract Data Type",
+
+        "operations": [],
+
+        "relationships": [
+            {
+                "target": "Data Structure",
+                "type": "related_to"
+            }
+        ],
+
+        "code_examples": [],
+
+        "real_life_examples": [],
+
+        "math_relations": [],
+
+        "time_complexity": {}
+    },
+
+    {
+        "name": "Data Type",
+        "definition": "Defines the type of data a variable can store.",
+        "category": "Fundamental Concept",
+
+        "operations": [],
+
+        "relationships": [
+            {
+                "target": "Data",
+                "type": "related_to"
+            }
+        ],
+
+        "code_examples": [
+            "int x = 5;"
+        ],
+
+        "real_life_examples": [],
+
+        "math_relations": [],
+
+        "time_complexity": {}
+    },
+
+    {
+        "name": "Algorithm",
+        "definition": "A step-by-step procedure for solving a problem.",
+        "category": "Fundamental Concept",
+
+        "operations": [],
+
+        "relationships": [
+            {
+                "target": "Program",
+                "type": "related_to"
+            }
+        ],
+
+        "code_examples": [],
+
+        "real_life_examples": [
+            "Recipe instructions"
+        ],
+
+        "math_relations": [],
+
+        "time_complexity": {}
+    },
+
+    {
+        "name": "Program",
+        "definition": "A set of instructions executed by a computer.",
+        "category": "Fundamental Concept",
+
+        "operations": [],
+
+        "relationships": [
+            {
+                "target": "Algorithm",
+                "type": "uses"
+            }
+        ],
+
+        "code_examples": [],
+
+        "real_life_examples": [],
+
+        "math_relations": [],
+
+        "time_complexity": {}
+    },
+
+    {
+        "name": "Algorithm Efficiency",
+        "definition": "Measurement of how efficiently an algorithm performs.",
+        "category": "Complexity Analysis",
+
+        "operations": [],
+
+        "relationships": [
+            {
+                "target": "Time Complexity",
+                "type": "related_to"
+            },
+
+            {
+                "target": "Space Complexity",
+                "type": "related_to"
+            }
+        ],
+
+        "code_examples": [],
+
+        "real_life_examples": [],
+
+        "math_relations": [
+            "Big O analysis"
+        ],
+
+        "time_complexity": {}
+    },
+
+    {
+        "name": "Time Complexity",
+        "definition": "Measures algorithm execution time as input size grows.",
+        "category": "Complexity Analysis",
+
+        "operations": [],
+
+        "relationships": [
+            {
+                "target": "Big O Notation",
+                "type": "uses"
+            }
+        ],
+
+        "code_examples": [],
+
+        "real_life_examples": [],
+
+        "math_relations": [
+            "O(n)",
+            "O(log n)"
+        ],
+
+        "time_complexity": {}
+    },
+
+    {
+        "name": "Space Complexity",
+        "definition": "Measures memory usage of an algorithm.",
+        "category": "Complexity Analysis",
+
+        "operations": [],
+
+        "relationships": [
+            {
+                "target": "Big O Notation",
+                "type": "uses"
+            }
+        ],
+
+        "code_examples": [],
+
+        "real_life_examples": [],
+
+        "math_relations": [
+            "O(n)"
+        ],
+
+        "time_complexity": {}
+    },
+
+    {
+        "name": "Big O Notation",
+        "definition": "Mathematical notation used to describe algorithm complexity.",
+        "category": "Complexity Analysis",
+
+        "operations": [],
+
+        "relationships": [
+            {
+                "target": "Algorithm Efficiency",
+                "type": "related_to"
+            }
+        ],
+
+        "code_examples": [],
+
+        "real_life_examples": [],
+
+        "math_relations": [
+            "O(1)",
+            "O(log n)",
+            "O(n)"
+        ],
+
+        "time_complexity": {}
+    },
+
+    {
+        "name": "Linear Data Structure",
+        "definition": "Data elements arranged sequentially.",
+        "category": "Linear Structure",
+
+        "operations": [
+            "insert",
+            "delete",
+            "traverse"
+        ],
+
+        "relationships": [
+            {
+                "target": "Data Structure",
+                "type": "is_a"
+            }
+        ],
+
+        "code_examples": [],
+
+        "real_life_examples": [
+            "Queue line"
+        ],
+
+        "math_relations": [],
+
+        "time_complexity": {}
+    },
+
+    {
+        "name": "Static Data Structure",
+        "definition": "Data structure with fixed memory size.",
+        "category": "Linear Structure",
+
+        "operations": [],
+
+        "relationships": [
+            {
+                "target": "Linear Data Structure",
+                "type": "is_a"
+            }
+        ],
+
+        "code_examples": [],
+
+        "real_life_examples": [],
+
+        "math_relations": [],
+
+        "time_complexity": {}
+    },
+
+    {
+        "name": "Dynamic Data Structure",
+        "definition": "Data structure with flexible memory allocation.",
+        "category": "Linear Structure",
+
+        "operations": [],
+
+        "relationships": [
+            {
+                "target": "Linear Data Structure",
+                "type": "is_a"
+            }
+        ],
+
+        "code_examples": [],
+
+        "real_life_examples": [],
+
+        "math_relations": [],
+
+        "time_complexity": {}
+    },
+
+    {
+        "name": "Array",
+        "definition": "A collection of elements stored in contiguous memory locations.",
+        "category": "Linear Structure",
+
+        "operations": [
+            "insert",
+            "delete",
+            "access",
+            "traverse"
+        ],
+
+        "relationships": [
+            {
+                "target": "Linear Data Structure",
+                "type": "is_a"
+            },
+
+            {
+                "target": "Static Data Structure",
+                "type": "is_a"
+            }
+        ],
+
+        "code_examples": [
+            "int arr[5] = {1,2,3,4,5};"
+        ],
+
+        "real_life_examples": [
+            "Student score list"
+        ],
+
+        "math_relations": [
+            "Matrix representation"
+        ],
+
+        "time_complexity": {
+            "access": "O(1)",
+            "search": "O(n)",
+            "insert": "O(n)",
+            "delete": "O(n)"
+        }
+    }
+]
