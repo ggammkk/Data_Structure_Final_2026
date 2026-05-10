@@ -1,12 +1,1253 @@
-{
-    "name": "",
-    "definition": "",
-    "category": "",
-    "relationships": [],
-    "operations": [],
-    "related_topics": [],
-    "code_examples": {},
-    "real_life_examples": [],
-    "math_relations": [],
-    "time_complexity": {}
-} 
+[
+    {
+        "name": "Linked List",
+        "definition": "A linked list is a linear data structure made of nodes, where elements are stored non-contiguously in memory. Each node contains data and a pointer to the next node in the sequence.",
+        "category": "Linear Structure",
+        "relationships": [
+            {
+                "target": "Node",
+                "type": "uses"
+            },
+            {
+                "target": "Pointer",
+                "type": "uses"
+            },
+            {
+                "target": "Singly Linked List",
+                "type": "parent_of"
+            },
+            {
+                "target": "Doubly Linked List",
+                "type": "parent_of"
+            },
+            {
+                "target": "Circular Linked List",
+                "type": "parent_of"
+            }
+        ],
+        "operations": [
+            "Insert",
+            "Delete",
+            "Traverse",
+            "Search"
+        ],
+        "related_topics": [
+            "Node",
+            "Pointer",
+            "Stack",
+            "Queue",
+            "Dynamic Memory Allocation"
+        ],
+        "code_examples": {
+            "cpp": [    
+                "class Node {",
+                "public:",
+                "    int data;",
+                "    Node *next;",
+                "",
+                "    Node(int value) : data(value), next(nullptr) {}",
+                "};",
+                "",
+                "int main() {",
+                "    Node* head = new Node(1);",
+                "    head->next = new Node(2);",
+                "    head->next->next = new Node(3);",
+                "    return 0;",
+                "}"
+            ]
+        },
+        "real_life_examples": [
+            "Music playlists navigation",
+            "Browser history navigation"
+        ],
+        "math_relations": [
+            "linked_list_definition : L = (N, P)",
+            "linear_order_relation : n_i -> n_{i+1}",
+            "node_structure : Node = (data, link)",
+            "head_pointer : first -> n_0",
+            "tail_pointer : last -> n_k"
+        ],
+        "time_complexity": {
+            "Access": "O(n)",
+            "Insert at head": "O(1)",
+            "Insert at position": "O(n)",
+            "Delete the head": "O(1)",
+            "Delete a specific node": "O(n) if search is required",
+            "Traverse": "O(n)",
+            "Search": "O(n)"
+        }
+    },
+
+    {
+        "name": "Singly Linked List",
+        "definition": "Singly linked list is a linked list where each node points only to the next node in the sequence.",
+        "category": "Linear Structure",
+        "relationships": [
+            {
+                "target": "Linked List",
+                "type": "child_of"
+            },
+            {
+                "target": "Node",
+                "type": "uses"
+            },
+            {
+                "target": "Pointer",
+                "type": "uses"
+            },
+            {
+                "target": "Dynamic Memory Allocation",
+                "type": "uses"
+            }
+        ],
+        "operations": [
+            "Insert",
+            "Delete",
+            "Traverse",
+            "Search"
+        ],
+        "related_topics": [
+            "Linked List",
+            "Node",
+            "Pointer",
+            "Stack",
+            "Queue",
+            "Dynamic Memory Allocation"
+        ],
+        "code_examples": {
+            "cpp": [    
+                "class Node {",
+                "public:",
+                "    int data;",
+                "    Node *next;",
+                "",
+                "    Node(int value) : data(value), next(nullptr) {}",
+                "};",
+                "",
+                "int main() {",
+                "    Node* head = new Node(1);",
+                "    head->next = new Node(2);",
+                "    head->next->next = nullptr;",
+                "    return 0;",
+                "}"
+            ]
+        },
+        "real_life_examples": [
+            "Simple task scheduling",
+            "Browser forward navigation",
+            "Music playlist next song navigation"
+        ],
+        "math_relations": [
+            "singly_linked_list : SLL = {n_0, n_1, ..., n_k}",
+            "sll_link_relation : n_i.link = n_{i+1}",
+            "sll_terminal_condition : n_k.link = NULL",
+            "sll_traversal : n_i -> n_{i+1}"
+        ],
+        "time_complexity": {
+            "Access": "O(n)",
+            "Insert at head": "O(1)",
+            "Insert at other position": "O(n)",
+            "Delete the head": "O(1)",
+            "Delete a specific node": "O(n) if search is required",
+            "Traverse": "O(n)",
+            "Search": "O(n)"
+        }
+    },
+
+    {
+        "name": "Doubly Linked List",
+        "definition": "A linked list where each node contains pointers to both the next and previous nodes.",
+        "category": "Linear Structure",
+        "relationships": [
+            {
+                "target": "Linked List",
+                "type": "child_of"
+            },
+            {
+                "target": "Node",
+                "type": "uses"
+            },
+            {
+                "target": "Pointer",
+                "type": "uses"
+            }
+        ],
+        "operations": [
+            "Insert",
+            "Delete",
+            "Traverse",
+            "Search"
+        ],
+        "related_topics": [
+            "Linked List",
+            "Node",
+            "Pointer",
+            "Deque",
+            "Dynamic Memory Allocation"
+        ],
+        "code_examples": {
+            "cpp": [
+                "class Node {",
+                "public:",
+                "    int data;",
+                "    Node *next;",
+                "    Node *prev;",
+                "",
+                "    Node(int value) : data(value), next(nullptr), prev(nullptr) {}",
+                "};",
+                "",
+                "int main() {",
+                "    Node* head = new Node(1);",
+                "    head->next = new Node(2);",
+                "    head->next->prev = head;",
+                "    head->next->next = new Node(3);",
+                "    head->next->next->prev = head->next;",
+                "    return 0;",
+                "}"
+            ]
+        },
+        "real_life_examples": [
+            "Music playlist next and previous song navigation",
+            "Browser back and forward navigation",
+            "Undo and redo functionality in software"
+        ],
+        "math_relations": [
+            "doubly_linked_list : DLL = (N, prev, next)",
+            "dll_forward_relation : n_i.next = n_{i+1}",
+            "dll_backward_relation : n_i.prev = n_{i-1}",
+            "dll_bidirectional_property : prev(next(n_i)) = n_i"
+         ],
+        "time_complexity": {
+            "Access": "O(n)",
+            "Insert at head": "O(1)",
+            "Insert at tail": "O(1) with tail pointer",
+            "Insert at other position": "O(n)",
+            "Delete the head": "O(1)",
+            "Delete a specific node": "O(n) if search is required",
+            "Traverse": "O(n)",
+            "Search": "O(n)"
+        }
+    },
+    
+    {
+        "name": "Circular Linked List",
+        "definition": "A linked list where the last node points back to the first node, forming a circular structure.",
+        "category": "Linear Structure",
+        "relationships": [
+            {
+                "target": "Linked List",
+                "type": "child_of"
+            },
+            {
+                "target": "Node",
+                "type": "uses"
+            },
+            {
+                "target": "Pointer",
+                "type": "uses"
+            }
+        ],
+        "operations": [
+            "Insert",
+            "Delete",
+            "Traverse",
+            "Search"
+        ],
+        "related_topics": [
+            "Linked List",
+            "Node",
+            "Pointer",
+            "Circular Queue",
+            "Dynamic Memory Allocation"
+
+        ],
+        "code_examples": {
+            "cpp": [
+                "class Node {",
+                "public:",
+                "    int data;",
+                "    Node *next;",
+                "",
+                "    Node(int value) : data(value), next(this) {}",
+                "};",
+                "",
+                "int main() {",
+                "    Node* head = new Node(1);",
+                "    Node* second = new Node(2);",
+                "    Node* third = new Node(3);",
+                "",
+                "    head->next = second;",
+                "    second->next = third;",
+                "    third->next = head;",
+                "    return 0;",
+                "}"
+            ]
+        },
+        "real_life_examples": [
+            "Circular buffer implementation",
+            "Round-robin scheduling",
+            "Looping music playlists"
+        ],
+        "math_relations": [
+            "circular_linked_list : CLL = {n_0, n_1, ..., n_k}",
+            "circular_relation : n_k.link = n_0",
+            "circular_traversal : n_i -> n_{(i+1) mod n}"
+        ],
+        "time_complexity": {
+            "Access": "O(n)",
+            "Insert at head": "O(1)",
+            "Insert at tail": "O(1) with tail pointer",
+            "Insert at other position": "O(n)",
+            "Delete the head": "O(1)",
+            "Delete a specific node": "O(n) if search is required",
+            "Traverse": "O(n)",
+            "Search": "O(n)"
+        }
+    },
+    
+    {
+        "name": "Node",
+        "definition": "A fundamental building block used in data structures such as linked lists, trees, and graphs, where each node stores data and one or more references to other nodes.",
+        "category": "Component",
+        "relationships": [
+            {
+                "target": "Linked List",
+                "type": "used_in"
+            },
+            {
+                "target": "Tree",
+                "type": "used_in"
+            },
+            {
+                "target": "Graph",
+                "type": "used_in"
+            },
+            {
+                "target": "Binary Tree",
+                "type": "used_in"
+            },
+            {
+                "target": "Binary Search Tree",
+                "type": "used_in"
+            }
+        ],
+        "operations": [
+            "Store Data",
+            "Access Data",
+            "Link to Another Node",
+            "Update Reference"
+        ],
+        "related_topics": [
+            "Pointer",
+            "Linked List",
+            "Tree",
+            "Binary Tree",
+            "Binary Search Tree",
+            "Graph",
+            "Dynamic Memory Allocation"
+        ],
+        "code_examples": {
+            "cpp": [
+                "class Node {",
+                "public:",
+                "    int data;",
+                "    Node *next;",
+                "",
+                "    Node(int value) : data(value), next(nullptr) {}",
+                "};"
+            ]
+        },
+        "real_life_examples": [
+            "People connected in a social network",
+            "Webpages connected by hyperlinks"
+        ],
+        "math_relations": [
+            "Graph vertices",
+            "Tree nodes",
+            "Linked graph connections",
+            "node_definition : Node = (data, pointer)"
+        ],
+        "time_complexity": {}
+    },
+
+    {
+        "name": "Pointer",
+        "definition": "A variable that stores the memory address of another variable.",
+        "category": "Memory Concept",
+        "relationships": [
+            {
+                "target": "Node",
+                "type": "used_in"
+            },
+            {
+                "target": "Linked List",
+                "type": "used_in"
+            },
+            {
+                "target": "Tree",
+                "type": "used_in"
+            },
+            {
+                "target": "Graph",
+                "type": "used_in"
+            }
+        ],
+        "operations": [
+            "Store Memory Address",
+            "Dereference to Access Value",
+            "Dynamic Memory Allocation",
+            "Reference Memory Location"
+        ],
+        "related_topics": [
+            "Node",
+            "Linked List",
+            "Tree",
+            "Array",
+            "Graph",
+            "Dynamic Memory Allocation"
+        ],
+        "code_examples": {
+            "cpp": [
+                "int main() {",
+                "    int value = 42;",
+                "    int* ptr = &value;",
+                "    cout << \"Value: \" << *ptr << endl;",
+                "    return 0;",
+                "}"
+            ]
+        },
+        "real_life_examples": [
+            "Memory management in operating systems",
+            "Navigation systems using memory references",
+            "Dynamic data structures in programming"
+        ],
+        "math_relations": [
+            "Graph connections where pointers represent edges",
+            "pointer_definition : pointer = memory_address",
+            "pointer_assignment : p = &x",
+            "pointer_dereference : *p = value_at_address(p)"
+        ],
+        "time_complexity": {}
+    },
+
+    {
+        "name": "Dynamic Memory Allocation",
+        "definition": "Dynamic memory allocation is the process of allocating memory for a program at runtime (while it is running), rather than at compile time. This allows for more flexible and efficient use of memory, as the program can request and release memory as needed.",
+        "category": "Memory Concept",
+        "relationships": [
+            {
+                "target": "Pointer",
+                "type": "uses"
+            },
+            {
+                "target": "Linked List",
+                "type": "used_in"
+            },
+            {
+                "target": "Tree",
+                "type": "used_in"
+            },
+            {
+                "target": "Graph",
+                "type": "used_in"
+            }
+        ],
+        "operations": [
+            "Allocate Memory: Using new",
+            "Deallocate Memory: Using delete",
+            "Reallocate Memory",
+            "Access Allocated Data Dynamically"
+        ],
+        "related_topics": [
+            "Pointer",
+            "Linked List",
+            "Tree",
+            "Graph",
+            "Stack",
+            "Queue"
+        ],
+        "code_examples": {
+            "cpp": [
+                "#include <iostream>",
+                "using namespace std;",
+                "",
+                "int main() {",
+                "    int* arr = new int[5]; // Allocate memory for an array of 5 integers",
+                "    for (int i = 0; i < 5; i++) {",
+                "        arr[i] = i + 1; // Initialize the array",
+                "    }",
+                "    for (int i = 0; i < 5; i++) {",
+                "        cout << arr[i] << \" \"; // Output the array elements",
+                "    }",
+                "    delete[] arr; // Deallocate the memory",
+                "    return 0;",
+                "}"
+            ]
+        },
+        "real_life_examples": [
+            "Managing memory for applications while they are running",
+            "Creating dynamic data structures like linked lists and trees",
+            "Operating systems allocating memory to processes"
+        ],
+        "math_relations": [
+            "Memory address mapping",
+            "Heap memory organization, allocated_memory ∈ Heap",
+            "Graph connections through dynamically allocated nodes"
+
+        ],
+        "time_complexity": {
+            "Allocate memory": "Average O(1)",
+            "Deallocate memory": "Average O(1)",
+            "Access allocated memory": "O(1)"
+        }
+    },
+    
+    {
+        "name": "Stack",
+        "definition": "A linear data structure where operations are performed only at one end, the last element added to the stack is the first to be removed (LIFO: Last In First Out).",
+        "category": "Linear Structure",
+        "relationships": [
+            {
+                "target": "Linked List",
+                "type": "uses"
+            },
+            {
+                "target": "Array",
+                "type": "uses"
+            },
+            {
+                "target": "Pointer",
+                "type": "uses"
+            }
+        ],
+        "operations": [
+            "push(x): Insert x at the top",
+            "pop(): Remove top element",
+            "Top(): Access top element",
+            "IsEmpty(): Check if stack is empty",
+            "IsFull(): Check if stack is full",
+            "Size(): Check the size of the stack"
+        ],
+        "related_topics": [
+            "Queue",
+            "Array",
+            "Linked List",
+            "Recursion",
+            "Call Stack",
+            "Memory Management"
+        ],
+        "code_examples": {
+            "cpp": [
+                "#include <stack>",
+                "using namespace std;",
+                "",
+                "int main() {",
+                "    stack<int> s;",
+                "",
+                "    s.push(10);",
+                "    s.push(20);",
+                "    s.pop();",
+                "",
+                "    return 0;",
+                "}"
+            ]
+
+        },
+        "real_life_examples": [
+            "Undo functionality",
+            "Browser back button",
+            "Stack of plates",
+            "Stack of books",
+            "Stack of boxes"
+        ],
+        "math_relations": [
+            "Reverse traversal",
+            "Expression evaluation",
+            "stack_definition : Stack = (elements, top)",
+            "stack_push : top = top + 1",
+            "stack_pop : top = top - 1",
+            "stack_access : element = stack[top]",
+            "lifo_property : LastIn = FirstOut"
+        ],
+        "time_complexity": {
+            "Push": "O(1)",
+            "Pop": "O(1)",
+            "Top": "O(1)",
+            "IsEmpty": "O(1)",
+            "IsFull": "O(1)",
+            "Size": "O(1)"
+        }
+    },
+
+    {
+        "name": "Queue",
+        "definition": "A linear structure where the first element added is the first to be removed (FIFO: First In First Out), elements are inserted at the rear and removed from the front.",
+        "category": "Linear Structure",
+        "relationships": [
+            {
+                "target": "Linked List",
+                "type": "uses"
+            },
+            {
+                "target": "Array",
+                "type": "uses"
+            },
+            {
+                "target": "Node",
+                "type": "uses"
+            },
+            {
+                "target": "Circular Queue",
+                "type": "parent_of"
+            },
+            {
+                "target": "Priority Queue",
+                "type": "parent_of"
+            },
+            {
+                "target": "Deque",
+                "type": "parent_of"
+            }
+
+        ],
+        "operations": [
+            "Enqueue(x): Insert x at rear",
+            "Dequeue(): Remove front",
+            "Front(): Access front element",
+            "IsEmpty(): Check if queue is empty",
+            "IsFull(): Check if queue is full",
+            "Size(): Check the size of the queue"
+        ],
+        "related_topics": [
+            "Stack",
+            "Array",
+            "Linked List",
+            "Priority Queue",
+            "Circular Queue",
+            "Deque",
+            "Breadth First Search",
+            "Level Order Traversal"
+        ],
+        "code_examples": {
+            "cpp": [ 
+                "#include <iostream>",
+                "#include <queue>",
+                "using namespace std;",
+                "",
+                "int main() {",
+                "   queue<int> q;",
+                "   q.push(10);",
+                "   q.push(20);",
+                "   cout << q.front() << endl;",
+                "   q.pop();",
+                "   return 0;",
+                "}"
+            ]
+        },
+        "real_life_examples": [
+            "Store customer lines, first come, first served",
+            "Print queue in a printer",
+            "CPU task scheduling"
+        ],
+        "math_relations": [
+            "Ordered sequence (a1, a2, a3, ...,  an)",
+            "queue_definition : Queue = (front, rear)",
+            "enqueue_operation : rear = rear + 1",
+            "dequeue_operation : front = front + 1",
+            "fifo_property : FirstIn = FirstOut"
+        ],
+        "time_complexity": {
+            "Enqueue": "O(1)",
+            "Dequeue": "O(1)",
+            "Front": "O(1)",
+            "Size": "O(1)",
+            "IsEmpty": "O(1)",
+            "IsFull": "O(1)"
+        }
+    },
+
+    {
+        "name": "Circular Queue",
+        "definition": "A queue where the rear wraps around to the front using circular indexing, efficiently reusing empty spaces created by dequeued elements.",
+        "category": "Linear Structure",
+        "relationships": [
+            {
+                "target": "Queue",
+                "type": "child_of"
+            },
+            {
+                "target": "Array",
+                "type": "uses"
+            },
+            {
+                "target": "Modular Arithmetic",
+                "type": "uses"
+            }
+        ],
+        "operations": [
+            "Enqueue(x): Enqueue, insert x at rear",
+            "Dequeue(): Dequeue, remove front",
+            "Front(): Access front element",
+            "IsEmpty(): Check if queue is empty",
+            "IsFull(): Check if queue is full",
+            "Size(): Check the size of the queue"
+        ],
+        "related_topics": [
+            "Queue",
+            "Array",
+            "Linked List"
+        ],
+        "code_examples": {
+            "cpp": [
+                "#include <iostream>",
+                "using namespace std;",
+                "",
+                "int arr[3], front = -1, rear = -1, n = 3;",
+                "",
+                "void enqueue(int x) {",
+                "    if ((rear + 1) % n == front) return;",
+                "    if (front == -1) front = 0;",
+                "    rear = (rear + 1) % n;",
+                "    arr[rear] = x;",
+                "}",
+                "",
+                "void dequeue() {",
+                "    if (front == -1) return;",
+                "    if (front == rear) front = rear = -1;",
+                "    else front = (front + 1) % n;",
+                "}",
+                "",
+                "int main() {",
+                "    enqueue(10);",
+                "    enqueue(20);",
+                "    dequeue();",
+                "    enqueue(30);",
+                "}"
+            ]
+        },
+        "real_life_examples": [
+            "Round-robin scheduling",
+            "Circular buffer implementation",
+            "Traffic lights",
+            "Printer queue"
+        ],
+        "math_relations": [
+            "Cyclic structure representation",
+            "Modular arithmetic indexing (i + 1) mod n",
+            "circular_queue_definition : CQ = (front, rear, maxSize)",
+            "circular_increment : i = (i + 1) mod maxSize",
+            "cq_empty_condition : front = rear = -1",
+            "cq_full_condition : (rear + 1) mod maxSize = front",
+            "cq_length_formula : length = (rear - front + maxSize) mod maxSize"
+        ],
+        "time_complexity": {
+            "Enqueue": "O(1)",
+            "Dequeue": "O(1)",
+            "Front": "O(1)",
+            "IsEmpty": "O(1)",
+            "IsFull": "O(1)",
+            "Size": "O(1)"
+        }
+    },
+
+    {
+        "name": "Priority Queue",
+        "definition": "A queue where elements are removed based on priority instead of insertion order.",
+        "category": "Specialized Structure",
+        "relationships": [
+            {
+                "target": "Queue",
+                "type": "child_of"
+            },
+            {
+                "target": "Heap",
+                "type": "uses"
+            },
+            {
+                "target": "Dijkstra Algorithm",
+                "type": "used_in"
+            },
+            {
+                "target": "Prim Algorithm",
+                "type": "used_in"
+            }
+        ],
+        "operations": [
+            "push(x, p): Inserts new element x with priority p.",
+            "pop(): Remove highest priority element.",
+            "top(): Access the highest priority item"
+        ],
+        "related_topics": [
+            "Heap",
+            "Max Heap",
+            "Min Heap",
+            "Minimum Spanning Tree"
+        ],
+        "code_examples": {
+            "cpp": [
+                "#include <iostream>",
+                "#include <queue>",
+                "using namespace std;",
+                "",
+                "int main() {",
+                "",
+                "   // pair<priority, value>",
+                "   priority_queue<pair<int, int>> pq;",
+                "",
+                "   pq.push({3, 100});",
+                "   pq.push({5, 200});",
+                "   pq.push({1, 300});",
+                "",
+                "   // top()",
+                "   cout << \"Top Element: \"",
+                "        << pq.top().second",
+                "        << \" with priority \"",
+                "        << pq.top().first << endl;",
+                "",
+                "   pq.pop();",
+                "",
+                "   cout << \"After pop(): \"",
+                "        << pq.top().second << endl;",
+                "",
+                "   return 0;",
+                "}"
+            ]
+        },
+        "real_life_examples": [
+            "CPU task scheduling",
+            "Hospital emergency room system",
+            "Network packet routing"
+        ],
+        "math_relations": [
+            "priority_queue_definition : PQ = {(x_i, p_i)}",
+            "priority_order_relation : p_i > p_j => x_i served before x_j",
+            "left_child_index : 2i + 1",
+            "right_child_index : 2i + 2",
+            "parent_index : floor((i - 1)/2)",
+            "min_heap_property : parent(i) <= child(i)",
+            "max_heap_property : parent(i) >= child(i)",
+            "complete_binary_tree_property : nodes filled level by level"
+        ],
+        "time_complexity": {
+            "Push": "O(log n)",
+            "Pop": "O(log n)",
+            "Top": "O(1)"
+        }
+    },
+
+    {
+        "name": "Deque",
+        "definition": "A double-ended queue that allows insertion and deletion at both the front and rear.",
+        "category": "Linear Structure",
+        "relationships":  [
+            {
+                "target": "Queue",
+                "type": "child_of"
+            },
+            {
+                "target": "Doubly Linked List",
+                "type": "uses"
+            }
+        ],
+        "operations": [
+            "push_front(x): Insert an element at the front end.",
+            "push_back(x): Insert an element at the rear end.",
+            "pop_front(): Delete an element from the front end.",
+            "pop_back(): Delete an element from the rear end.",
+            "getFront(): Retrieve (does not remove) the front element.",
+            "getRear(): Retrieve (does not remove) the rear element.",
+            "isEmpty(): Check if the deque is empty.",
+            "size(): Return the number of elements currently in the deque."
+        ],
+        "related_topics": [
+            "Array",
+            "Stack",
+            "Doubly Linked List"
+        ],
+        "code_examples": {
+            "cpp": [
+                "#include <iostream>",
+                "#include <deque>",
+                "using namespace std;",
+                "",
+                "int main() {",
+                "    deque<int> dq;",
+                "",
+                "    dq.push_back(10);",
+                "    dq.push_back(20);",
+                "    dq.push_front(30);",
+                "",
+                "    // Print deque elements",
+                "    for (int x : dq) cout << x << \" \";",
+                "    cout << endl;",
+                "",
+                "    // Pop from front and back",
+                "    dq.pop_front();",
+                "    dq.pop_back();",
+                "",
+                "    // Print deque elements after pop",
+                "    for (int x : dq) cout << x << \" \";",
+                "",
+                "    return 0;",
+                "}"
+            ]
+        },
+        "real_life_examples": [
+            "Browser history navigation",
+            "Sliding window algorithms"
+        ],
+        "math_relations": [
+            "Double ended access",
+            "Bidirectional operations",
+            "deque_insert_front : front = front - 1",
+            "deque_insert_rear : rear = rear + 1",
+            "deque_delete_front : front = front + 1",
+            "deque_delete_rear : rear = rear - 1"
+        ],
+        "time_complexity": {
+            "Insert": "O(1)",
+            "Delete": "O(1)",
+            "Get Front or Rear": "O(1)",
+            "IsEmpty": "O(1)"
+        }
+    },
+
+    {
+        "name": "Recursion",
+        "definition": "Recursion is a technique where a function solves a problem by calling itself on smaller subproblems.",
+        "category": "Algorithmic Technique",
+        "relationships": [
+            {
+                "target": "Recursive Function",
+                "type": "parent_of"
+            },
+            {
+                "target": "Call Stack",
+                "type": "uses"
+            },
+            {
+                "target": "Tree Traversal",
+                "type": "used_in"
+            },
+            {
+                "target": "Base Case",
+                "type": "uses"
+            }
+        ],
+        "operations": [
+            "Recursive Call",
+            "Return"
+        ],
+        "related_topics": [
+            "Stack",
+            "Depth First Search"
+        ],
+        "code_examples": {},
+        "real_life_examples": [
+            "Folder traversal",
+            "Tower of hanoi"
+        ],
+        "math_relations": [],
+        "time_complexity": {
+            "Depends on": "Recursion depth"
+        }
+    },
+
+    {
+        "name": "Recursive Function",
+        "definition": "A function that calls itself to solve smaller instances of a problem.",
+        "category": "Algorithm",
+        "relationships": [
+            {
+                "target": "Recursion",
+                "type": "child_of"
+            },
+            {
+                "target": "Call Stack",
+                "type": "uses"
+            },
+            {
+                "target": "Tree Traversal",
+                "type": "used_in"
+            },
+            {
+                "target": "Base Case",
+                "type": "uses"
+            }
+        ],
+        "operations": [
+            "Self Call"
+        ],
+        "related_topics": [
+            "Base Case"
+        ],
+        "code_examples": {
+            "cpp": [
+                "#include <iostream>",
+                "using namespace std;",
+                "",
+                "int factorial(int n) {",
+                "   if (n == 0 || n == 1) return 1;",
+                "   return n * factorial(n-1);",
+                "}",
+                "",
+                "int main() {",
+                "   int n = 5;",
+                "   int result = factorial(n);",
+                "   cout << result << endl;",
+                "   return 0;",
+                "}"
+
+            ]
+        },
+        "real_life_examples": [
+            "Factorial calculation",
+            "Tower of hanoi"
+        ],
+        "math_relations": [
+            "Factorial calculation",
+            "Fibonacci sequence calculation",
+            "Mathematical induction",
+            "factorial_relation : n! = n * (n-1)!"
+        ],
+        "time_complexity": {
+            "Depends on": "Problem structure and recursion depth"
+        }
+    },
+
+    {
+        "name": "Base Case",
+        "definition": "The stopping condition in a recursive algorithm that prevents infinite recursion.",
+        "category": "Algorithmic Technique",
+        "relationships": [
+            {
+                "target": "Recursion",
+                "type": "used_in"
+            },
+            {
+                "target": "Recursive Function",
+                "type": "used_in"
+            }
+        ],
+        "operations": [
+            "CheckCondition(): Check if the input size is minimal enough to return a value",
+            "ReturnResult(): Return result"
+        ],
+        "related_topics": [
+            "Recursion",
+            "Recursive Function",
+            "Factorial",
+            "Fibonacci Sequence"
+        ],
+        "code_examples": {
+            "cpp": [
+                "int factorial(int n) {",
+                "    // The Base Case",
+                "    if (n <= 1) { ",
+                "        return 1; ",
+                "    }",
+                "    // The Recursive Step",
+                "    return n * factorial(n - 1);",
+                "}"
+            ]
+        },
+        "real_life_examples": [
+            "A GPS stopping its search once the destination coordinates are reached",
+            "Walking down a staircase and stopping once our foot touches the ground floor"
+        ],
+        "math_relations": [
+            "Fibonacci(3) = 2",
+            "Factorial(3) = 6"
+        ],
+        "time_complexity": {
+            "CheckCondition()": "O(1)",
+            "ReturnResult()": "O(1)"
+        }
+    },
+
+    {
+        "name": "Call Stack",
+        "definition": "A stack used by programs to manage active function calls. Each time a function is called, it is added to the stack, executes its statements, and finally returns to where it was called from.",
+        "category": "Memory Concept",
+        "relationships": [
+            {
+                "target": "Stack",
+                "type": "is_a"
+            },
+            {
+                "target": "Recursion",
+                "type": "used_in"
+            },
+            {
+                "target": "Recursive Function",
+                "type": "used_in"
+            }
+        ],
+        "operations": [
+            "push (Function Call): The program pushes a new frame into the stack when a function is called.",
+            "pop (Function Return): When a function finishes execution, the frame is popped off."
+        ],
+        "related_topics": [],
+        "code_examples": {
+            "cpp": [
+                "#include <iostream>",
+                "using namespace std;",
+                "",
+                "void D() {",
+                "    float d = 40.5f;",
+                "    cout << \"In function D\\n\";",
+                "}",
+                "",
+                "void C() {",
+                "    double c = 30.5;",
+                "    cout << \"In function C\\n\";",
+                "}",
+                "",
+                "void B() {",
+                "    int b = 20;",
+                "    C();",
+                "    cout << \"In function B\\n\";",
+                "}",
+                "",
+                "void A() {",
+                "    int a = 10;",
+                "    B();",
+                "    cout << \"In function A\\n\";",
+                "}",
+                "",
+                "int main() {",
+                "    A();",
+                "    D();",
+                "    return 0;",
+                "}"
+            ]
+        },
+        "real_life_examples": [
+            "Tracking active function calls in a program",
+            "Managing recursive function execution"
+        ],
+        "math_relations": [
+            "Factorial calculation"
+        ],
+        "time_complexity": {
+            "Push": "O(1)",
+            "Pop": "O(1)"
+        }
+    },
+    
+    {
+        "name": "Sparse Matrix",
+        "definition": "A matrix in which most of the elements are zero.",
+        "category": "Specialized Structure",
+        "relationships": [
+            {
+                "target": "Matrix",
+                "type": "child_of"
+            },
+            {
+                "target": "Linked List",
+                "type": "uses"
+            },
+            {
+                "target": "Graph",
+                "type": "used_in"
+            },
+            {
+                "target": "Array",
+                "type": "uses"
+            }
+        ],
+        "operations": [
+            "insert(row, column, value): Adds a non-zero element to the matrix",
+            "delete(row, column): Removes a non-zero element.",
+            "traverse(): Iterates through non-zero elements.",
+            "transpose(): Reverse the row and column indices of all non-zero elements."
+        ],
+        "related_topics": [
+            "Triplet Representation",
+            "Adjacency Matrix"
+        ],
+        "code_examples": {
+            "cpp": [
+                "struct Node {",
+                "    int row, col, val;",
+                "    Node* next;",
+                "};",
+                "// Linked list approach for insertion",
+                "void insert(int r, int c, int v) {",
+                "    // Implementation logic to link new node",
+                "}"
+            ]
+        },
+        "real_life_examples": [
+            "Adjacency matrix of sparse graphs",
+            "Image compression"
+        ],
+        "math_relations": [
+            "sparsity_index : S = \\frac{\\text{Count}(x_{i,j} = 0)}{m*n}"
+        ],
+        "time_complexity": {
+            "Insert": "O(n)",
+            "Delete": "O(n)",
+            "Traverse": "O(number of non-zero elements)",
+            "Space": "O(number of non-zero elements)"
+        }
+    },
+
+    {
+        "name": "Polynomial Representation",
+        "definition": "A method of storing and manipulating polynomial expressions using arrays or linked lists.",
+        "category": "Representation Technique",
+        "relationships": [
+            {
+                "target": "Polynomial",
+                "type": "used_in"
+            },
+            {
+                "target": "Array",
+                "type": "uses"
+            },
+            {
+                "target": "Linked List",
+                "type": "uses"
+            }
+        ],
+        "operations": [
+            "create(): Initialize a new polynomial",
+            "insert(coeff, exp): Add a new term to the polynomial",
+            "display(): Print the polynomial in a + bx^n format",
+            "add(poly1, poly2): Add two polynomials by summing coefficients of like terms",
+            "multiply(poly1, poly2): Multiply every term of poly1 by every term of poly2"
+        ],
+        "related_topics": [
+            "Sparse Matrix"
+        ],
+        "code_examples": {
+            "cpp": [
+                "struct Term {",
+                "    int coeff;",
+                "    int exp;",
+                "    Term* next;",
+                "};",
+                "",
+                "void addTerm(Term** poly, int c, int e) {",
+                "    Term* newNode = new Term{c, e, nullptr};",
+                "    // Implementation to keep terms sorted by exponent",
+                "}"
+            ]
+        },
+        "real_life_examples": [
+            "Equation simplification",
+            "Scientific calculator"
+        ],
+        "math_relations": [
+            "P(x) = a_nx^n + ... + a_1x + a_0",
+            "term = coefficient * x^exp"
+        ],
+        "time_complexity": {
+            "Addition": "O(n + m) // n, m are number of terms",
+            "Multiplication": "O(n*m)",
+            "Evaluation": "O(n)"
+        }
+    } 
+]
