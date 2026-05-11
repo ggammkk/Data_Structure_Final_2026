@@ -32,7 +32,9 @@ int main()
         cout << "\nOperations:" << endl;
         for (auto &op : item["operations"])
         {
-            cout << "- " << op.get<string>() << endl;
+            q
+                    cout
+                << "- " << op.get<string>() << endl;
         }
 
         // Relationships
