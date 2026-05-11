@@ -4,5 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DSA Knowledge Graph</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
+  <body>
+    <div class="container">
+      <h1>DSA Knowledge Graph</h1>
+      <div id="cy"></div>
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search a topic... (example: Queue)"
+        />
+        <button onclick="searchTopic()">Search</button>
+      </div>
+
+      <div class="result" id="resultBox">
+        <p class="placeholder">Search for a DSA topic to view information.</p>
+      </div>
+    </div>
+
+        <!-- Cytoscape Library -->
+    <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+    <!-- Your JavaScript -->
+    <script src="script.js"></script>
+
+  </body>
 </html>
