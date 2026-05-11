@@ -119,6 +119,16 @@ string Search::detectIntent(string query)
         return "related";
     }
 
+    else if (query.find("real life") != string::npos || query.find("real-life") != string::npos || query.find("application") != string::npos || query.find("applications") != string::npos || query.find("uses") != string::npos)
+    {
+        return "real_life_examples";
+    }
+
+    else if (query.find("math") != string::npos || query.find("formula") != string::npos || query.find("equation") != string::npos || query.find("relation") != string::npos)
+    {
+        return "math_relations";
+    }
+
     else
     {
         return "general_search";
@@ -147,4 +157,122 @@ string Search::extractTopic(string query)
     query.erase(query.find_last_not_of(" \t") + 1);
 
     return query;
+}
+
+// Responses
+string Search::generateResponse(string query)
+{
+    string intent = detectIntent(query);
+    string topic = extractTopic(query);
+
+    vector<Node> results = searchByName(topic);
+
+    if (results.empty())
+    {
+        return "Sorry, this topic can not be found in the knowledge graph.";
+    }
+
+    Node node = results[0];
+
+    if (intent == "definition")
+    {
+        return node.name + " is " + node.definition;
+    }
+
+    if (intent == "category")
+    {
+        return node.name + " belongs to the category: " + node.category;
+    }
+
+    if (intent == "operations")
+    {
+        if (node.operations.empty())
+            return "No operations found for " + node.name + ".";
+
+        string response = "Common operations of " + node.name + " are:\n";
+
+        for (string op : node.operations)
+        {
+            response += "- " + op + "\n";
+        }
+
+        return response;
+    }
+
+    if (intent == "time_complexity")
+    {
+        if (node.time_complexity.empty())
+            return "No time complexity information found for " + node.name + ".";
+
+        string response = "Time complexities for " + node.name + ":\n";
+
+        for (auto tc : node.time_complexity)
+        {
+            response += "- " + tc.first + ": " + tc.second + "\n";
+        }
+
+        return response;
+    }
+
+    if (intent == "related")
+    {
+        if (node.relationships.empty())
+            return "No related topics found for " + node.name + ".";
+
+        string response = "Topics related to " + node.name + " are:\n";
+
+        for (Relationship rel : node.relationships)
+        {
+            response += "- " + rel.target + " (" + rel.type + ")\n";
+        }
+
+        return response;
+    }
+
+    if (intent == "example")
+    {
+        if (node.code_examples.empty())
+            return "No code example found for " + node.name + ".";
+
+        string response = "Code example for " + node.name + ":\n";
+
+        for (string code : node.code_examples)
+        {
+            response += code + "\n";
+        }
+
+        return response;
+    }
+
+    if (intent == "real_life_examples")
+    {
+        if (node.real_life_examples.empty())
+            return "No real-life examples found for " + node.name + ".";
+
+        string response = "Real-life examples of " + node.name + " are:\n";
+
+        for (string example : node.real_life_examples)
+        {
+            response += "- " + example + "\n";
+        }
+
+        return response;
+    }
+
+    if (intent == "math_relations")
+    {
+        if (node.math_relations.empty())
+            return "No mathematical relations found for " + node.name + ".";
+
+        string response = "Mathematical relations involving " + node.name + " are:\n";
+
+        for (string math : node.math_relations)
+        {
+            response += "- " + math + "\n";
+        }
+
+        return response;
+    }
+
+    return node.name + ": " + node.definition;
 }

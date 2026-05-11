@@ -20,6 +20,9 @@ public:
     // Advanced search features(Query understanding, intent detection, topic extraction)
     string detectIntent(string query);
     string extractTopic(string query);
+
+    // Responses
+    string generateResponse(string query);
 };
 
 #endif

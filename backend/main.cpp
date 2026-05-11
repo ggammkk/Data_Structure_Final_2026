@@ -136,7 +136,7 @@ int main()
 
         graph.printGraph();
 
-        // Allows user to search
+        // Allows user to search test
         Search search(&graph);
 
         string query;
