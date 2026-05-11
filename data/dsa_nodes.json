@@ -3,128 +3,98 @@
         "name": "Data",
         "definition": "Raw facts and information that can be processed.",
         "category": "Fundamental Concept",
-
         "operations": [],
-
         "relationships": [],
-
         "code_examples": [],
-
         "real_life_examples": [
             "Student scores",
             "Temperature readings"
         ],
-
         "math_relations": [],
-
         "time_complexity": {}
     },
-
     {
         "name": "Data Structure",
         "definition": "A method of organizing and storing data efficiently.",
         "category": "Fundamental Concept",
-
         "operations": [
             "insert",
             "delete",
             "search",
             "traverse"
         ],
-
         "relationships": [
             {
                 "target": "Data",
                 "type": "uses"
             }
         ],
-
         "code_examples": [],
-
         "real_life_examples": [
             "Database organization"
         ],
-
         "math_relations": [],
-
         "time_complexity": {}
     },
-
     {
         "name": "Linear Data Structure",
         "definition": "Data elements arranged sequentially.",
         "category": "Linear Structure",
-
         "operations": [
             "insert",
             "delete",
             "traverse"
         ],
-
         "relationships": [
             {
                 "target": "Data Structure",
                 "type": "is_a"
             }
         ],
-
         "code_examples": [],
-
         "real_life_examples": [
             "Queue line"
         ],
-
         "math_relations": [],
-
         "time_complexity": {}
     },
-
     {
         "name": "Array",
         "definition": "A collection of elements stored in contiguous memory locations.",
         "category": "Linear Structure",
-
         "operations": [
             "insert",
             "delete",
             "access",
             "traverse"
         ],
-
         "relationships": [
             {
                 "target": "Linear Data Structure",
                 "type": "is_a"
             },
-
             {
                 "target": "One-Dimensional Array",
                 "type": "parent_of"
             },
-
             {
                 "target": "Two-Dimensional Array",
                 "type": "parent_of"
             },
-
             {
                 "target": "Multidimensional Array",
                 "type": "parent_of"
             }
         ],
-
         "code_examples": [
             "int arr[5] = {1,2,3,4,5};"
         ],
-
         "real_life_examples": [
             "Student score list"
         ],
-
         "math_relations": [
             "Matrix representation"
         ],
-
         "time_complexity": {
             "access": "O(1)",
             "search": "O(n)",
@@ -132,65 +102,50 @@
             "delete": "O(n)"
         }
     },
-
     {
         "name": "One-Dimensional Array",
         "definition": "Array containing elements in a single row.",
         "category": "Linear Structure",
-
         "operations": [
             "access",
             "insert",
             "delete"
         ],
-
         "relationships": [],
-
         "code_examples": [
             "int arr[5];"
         ],
-
         "real_life_examples": [
             "List of exam scores"
         ],
-
         "math_relations": [],
-
         "time_complexity": {
             "access": "O(1)"
         }
     },
-
     {
         "name": "Two-Dimensional Array",
         "definition": "Array organized in rows and columns.",
         "category": "Linear Structure",
-
         "operations": [
             "access",
             "insert",
             "delete"
         ],
-
         "relationships": [],
-
         "code_examples": [
             "int matrix[3][3];"
         ],
-
         "real_life_examples": [
             "Spreadsheet table"
         ],
-
         "math_relations": [
             "Matrix"
         ],
-
         "time_complexity": {
             "access": "O(1)"
         }
     },
-    
     {
         "name": "Linked List",
         "definition": "A linked list is a linear data structure made of nodes, where elements are stored non-contiguously in memory. Each node contains data and a pointer to the next node in the sequence.",
@@ -231,7 +186,7 @@
             "Dynamic Memory Allocation"
         ],
         "code_examples": {
-            "cpp": [    
+            "cpp": [
                 "class Node {",
                 "public:",
                 "    int data;",
@@ -269,7 +224,6 @@
             "Search": "O(n)"
         }
     },
-
     {
         "name": "Singly Linked List",
         "definition": "Singly linked list is a linked list where each node points only to the next node in the sequence.",
@@ -307,7 +261,7 @@
             "Dynamic Memory Allocation"
         ],
         "code_examples": {
-            "cpp": [    
+            "cpp": [
                 "class Node {",
                 "public:",
                 "    int data;",
@@ -345,7 +299,6 @@
             "Search": "O(n)"
         }
     },
-
     {
         "name": "Doubly Linked List",
         "definition": "A linked list where each node contains pointers to both the next and previous nodes.",
@@ -408,7 +361,7 @@
             "dll_forward_relation : n_i.next = n_{i+1}",
             "dll_backward_relation : n_i.prev = n_{i-1}",
             "dll_bidirectional_property : prev(next(n_i)) = n_i"
-         ],
+        ],
         "time_complexity": {
             "Access": "O(n)",
             "Insert at head": "O(1)",
@@ -420,7 +373,6 @@
             "Search": "O(n)"
         }
     },
-    
     {
         "name": "Circular Linked List",
         "definition": "A linked list where the last node points back to the first node, forming a circular structure.",
@@ -451,7 +403,6 @@
             "Pointer",
             "Circular Queue",
             "Dynamic Memory Allocation"
-
         ],
         "code_examples": {
             "cpp": [
@@ -496,7 +447,6 @@
             "Search": "O(n)"
         }
     },
-    
     {
         "name": "Node",
         "definition": "A fundamental building block used in data structures such as linked lists, trees, and graphs, where each node stores data and one or more references to other nodes.",
@@ -561,7 +511,6 @@
         ],
         "time_complexity": {}
     },
-
     {
         "name": "Pointer",
         "definition": "A variable that stores the memory address of another variable.",
@@ -621,7 +570,6 @@
         ],
         "time_complexity": {}
     },
-
     {
         "name": "Dynamic Memory Allocation",
         "definition": "Dynamic memory allocation is the process of allocating memory for a program at runtime (while it is running), rather than at compile time. This allows for more flexible and efficient use of memory, as the program can request and release memory as needed.",
@@ -685,7 +633,6 @@
             "Memory address mapping",
             "Heap memory organization, allocated_memory ∈ Heap",
             "Graph connections through dynamically allocated nodes"
-
         ],
         "time_complexity": {
             "Allocate memory": "Average O(1)",
@@ -693,7 +640,6 @@
             "Access allocated memory": "O(1)"
         }
     },
-    
     {
         "name": "Stack",
         "definition": "A linear data structure where operations are performed only at one end, the last element added to the stack is the first to be removed (LIFO: Last In First Out).",
@@ -743,7 +689,6 @@
                 "    return 0;",
                 "}"
             ]
-
         },
         "real_life_examples": [
             "Undo functionality",
@@ -770,7 +715,6 @@
             "Size": "O(1)"
         }
     },
-
     {
         "name": "Queue",
         "definition": "A linear structure where the first element added is the first to be removed (FIFO: First In First Out), elements are inserted at the rear and removed from the front.",
@@ -800,7 +744,6 @@
                 "target": "Deque",
                 "type": "parent_of"
             }
-
         ],
         "operations": [
             "Enqueue(x): Insert x at rear",
@@ -821,7 +764,7 @@
             "Level Order Traversal"
         ],
         "code_examples": {
-            "cpp": [ 
+            "cpp": [
                 "#include <iostream>",
                 "#include <queue>",
                 "using namespace std;",
@@ -857,7 +800,6 @@
             "IsFull": "O(1)"
         }
     },
-
     {
         "name": "Circular Queue",
         "definition": "A queue where the rear wraps around to the front using circular indexing, efficiently reusing empty spaces created by dequeued elements.",
@@ -941,7 +883,6 @@
             "Size": "O(1)"
         }
     },
-
     {
         "name": "Priority Queue",
         "definition": "A queue where elements are removed based on priority instead of insertion order.",
@@ -1026,12 +967,11 @@
             "Top": "O(1)"
         }
     },
-
     {
         "name": "Deque",
         "definition": "A double-ended queue that allows insertion and deletion at both the front and rear.",
         "category": "Linear Structure",
-        "relationships":  [
+        "relationships": [
             {
                 "target": "Queue",
                 "type": "child_of"
@@ -1103,7 +1043,6 @@
             "IsEmpty": "O(1)"
         }
     },
-
     {
         "name": "Recursion",
         "definition": "Recursion is a technique where a function solves a problem by calling itself on smaller subproblems.",
@@ -1144,7 +1083,6 @@
             "Depends on": "Recursion depth"
         }
     },
-
     {
         "name": "Recursive Function",
         "definition": "A function that calls itself to solve smaller instances of a problem.",
@@ -1189,7 +1127,6 @@
                 "   cout << result << endl;",
                 "   return 0;",
                 "}"
-
             ]
         },
         "real_life_examples": [
@@ -1206,7 +1143,6 @@
             "Depends on": "Problem structure and recursion depth"
         }
     },
-
     {
         "name": "Base Case",
         "definition": "The stopping condition in a recursive algorithm that prevents infinite recursion.",
@@ -1256,7 +1192,6 @@
             "ReturnResult()": "O(1)"
         }
     },
-
     {
         "name": "Call Stack",
         "definition": "A stack used by programs to manage active function calls. Each time a function is called, it is added to the stack, executes its statements, and finally returns to where it was called from.",
@@ -1326,7 +1261,6 @@
             "Pop": "O(1)"
         }
     },
-    
     {
         "name": "Sparse Matrix",
         "definition": "A matrix in which most of the elements are zero.",
@@ -1385,7 +1319,6 @@
             "Space": "O(number of non-zero elements)"
         }
     },
-
     {
         "name": "Polynomial Representation",
         "definition": "A method of storing and manipulating polynomial expressions using arrays or linked lists.",
@@ -1755,56 +1688,261 @@
         }
     },
     {
-        "name": "Priority Queue",
-        "definition": "A data structure that manages a collection of elements with priority assigned to each element.Where elements are removed according to priority.",
-        "category": "Non-Linear Structure",
+        "name": "Adjacency Matrix",
+        "definition": "A matrix used to represent a graph, where each cell indicates if an edge exists between two vertices.",
+        "category": "Representation Technique",
         "operations": [
-            "enqueue",
-            "dequeue",
-            "peek",
-            "changePriority"
+            "storeEdge",
+            "lookupEdge"
         ],
         "relationships": [
             {
-                "target": "Heap",
+                "target": "Graph",
+                "type": "used_in"
+            },
+            {
+                "target": "Sparse Matrix",
+                "type": "related_to"
+            }
+        ],
+        "code_examples": [
+            "vector<vector<int>> adj(V, vector<int>(V, 0));"
+        ],
+        "real_life_examples": [
+            "Network connectivity tables"
+        ],
+        "math_relations": [
+            "graph_definition : G = (V,E)"
+        ],
+        "time_complexity": {
+            "lookupEdge": "O(1)"
+        }
+    },
+    {
+        "name": "Breadth First Search",
+        "definition": "An algorithm for traversing or searching graph or tree data structures level by level.",
+        "category": "Algorithm",
+        "operations": [
+            "enqueue",
+            "dequeue",
+            "visit",
+            "markVisited"
+        ],
+        "relationships": [
+            {
+                "target": "BFS",
+                "type": "synonym_of"
+            },
+            {
+                "target": "Queue",
                 "type": "uses"
             },
             {
-                "target": "Dijkstra Algorithm",
+                "target": "Graph",
+                "type": "uses"
+            }
+        ],
+        "code_examples": [
+            "queue<int> q; q.push(src);"
+        ],
+        "real_life_examples": [
+            "Finding shortest paths in unweighted graphs"
+        ],
+        "math_relations": [
+            "time_complexity : O(V + E)"
+        ],
+        "time_complexity": {
+            "traverse": "O(V + E)"
+        }
+    },
+    {
+        "name": "Depth First Search",
+        "definition": "An algorithm for traversing or searching graph or tree data structures by exploring as far down a branch as possible before backtracking.",
+        "category": "Algorithm",
+        "operations": [
+            "visit",
+            "recurse",
+            "backtrack"
+        ],
+        "relationships": [
+            {
+                "target": "DFS",
+                "type": "synonym_of"
+            },
+            {
+                "target": "Graph",
+                "type": "uses"
+            },
+            {
+                "target": "Recursion",
+                "type": "uses"
+            }
+        ],
+        "code_examples": [
+            "dfs(v) { visited[v]=true; for(n in adj[v]) if(!visited[n]) dfs(n); }"
+        ],
+        "real_life_examples": [
+            "Maze solving"
+        ],
+        "math_relations": [
+            "time_complexity : O(V + E)"
+        ],
+        "time_complexity": {
+            "traverse": "O(V + E)"
+        }
+    },
+    {
+        "name": "Factorial",
+        "definition": "The product of all positive integers up to a given number, used in recursion and mathematical computations.",
+        "category": "Mathematics",
+        "operations": [
+            "compute",
+            "multiply"
+        ],
+        "relationships": [
+            {
+                "target": "Base Case",
+                "type": "used_in"
+            },
+            {
+                "target": "Recursive Function",
+                "type": "related_to"
+            }
+        ],
+        "code_examples": [
+            "int factorial(int n) { return n <= 1 ? 1 : n * factorial(n - 1); }"
+        ],
+        "real_life_examples": [
+            "Counting permutations"
+        ],
+        "math_relations": [
+            "n! = n × (n - 1)!"
+        ],
+        "time_complexity": {
+            "compute": "O(n)"
+        }
+    },
+    {
+        "name": "Fibonacci Sequence",
+        "definition": "A sequence where each number is the sum of the two preceding numbers, often defined recursively.",
+        "category": "Mathematics",
+        "operations": [
+            "generate",
+            "add"
+        ],
+        "relationships": [
+            {
+                "target": "Base Case",
+                "type": "used_in"
+            },
+            {
+                "target": "Recursive Function",
+                "type": "related_to"
+            }
+        ],
+        "code_examples": [
+            "int fib(int n) { return n <= 1 ? n : fib(n - 1) + fib(n - 2); }"
+        ],
+        "real_life_examples": [
+            "Population growth models"
+        ],
+        "math_relations": [
+            "F(n) = F(n-1) + F(n-2)"
+        ],
+        "time_complexity": {
+            "generate": "O(2^n)"
+        }
+    },
+    {
+        "name": "Level Order Traversal",
+        "definition": "A tree traversal method that visits nodes level by level, from top to bottom.",
+        "category": "Algorithm",
+        "operations": [
+            "enqueue",
+            "dequeue",
+            "visit"
+        ],
+        "relationships": [
+            {
+                "target": "Tree Traversal",
+                "type": "related_to"
+            },
+            {
+                "target": "Queue",
+                "type": "uses"
+            }
+        ],
+        "code_examples": [
+            "queue<Node*> q; q.push(root); while(!q.empty()) { ... }"
+        ],
+        "real_life_examples": [
+            "Breadth-first exploration"
+        ],
+        "math_relations": [
+            "time_complexity : O(n)"
+        ],
+        "time_complexity": {
+            "traverse": "O(n)"
+        }
+    },
+    {
+        "name": "Memory Management",
+        "definition": "The process of allocating and freeing memory in a program, often important in dynamic data structures and recursion.",
+        "category": "Computer Science Concept",
+        "operations": [
+            "allocate",
+            "deallocate",
+            "manage"
+        ],
+        "relationships": [
+            {
+                "target": "Stack",
+                "type": "related_to"
+            },
+            {
+                "target": "Dynamic Memory Allocation",
+                "type": "related_to"
+            }
+        ],
+        "code_examples": [
+            "int* data = new int[10]; delete[] data;"
+        ],
+        "real_life_examples": [
+            "Managing RAM for running applications"
+        ],
+        "math_relations": [
+            "space_usage : O(n)"
+        ],
+        "time_complexity": {
+            "allocate": "O(1)",
+            "deallocate": "O(1)"
+        }
+    },
+    {
+        "name": "Triplet Representation",
+        "definition": "A sparse matrix representation that stores only non-zero elements as triplets of row, column, and value.",
+        "category": "Representation Technique",
+        "operations": [
+            "storeNonZero",
+            "iterateTriplets"
+        ],
+        "relationships": [
+            {
+                "target": "Sparse Matrix",
                 "type": "used_in"
             }
         ],
         "code_examples": [
-            "class PriorityQueues {",
-            "private:",
-            "    vector<T> heap;",
-            "    int capacity;",
-            "    int size;",
-            "",
-            "public:",
-            "    PriorityQueues(int cap) : capacity(cap), size(0) {",
-            "        heap.resize(capacity);",
-            "    }",
-            "",
-            "    void push(T value);",
-            "    void pop();",
-            "    T top();",
-            "};"
+            "struct Triplet { int row, col, val; };"
         ],
         "real_life_examples": [
-            "Hospital emergency rooms",
-            "CPU Task scheduling"
+            "Storing sparse datasets efficiently"
         ],
         "math_relations": [
-            "left_child_index : 2*i + 1",
-            "right_child_index : 2*i + 2",
-            "parent_index : (i - 1) / 2"
+            "triplet : (row, col, value)"
         ],
         "time_complexity": {
-            "enqueue": "O(log n)",
-            "dequeue": "O(log n)",
-            "peek": "O(1)",
-            "changePriority": "O(log n)"
+            "storeNonZero": "O(1)"
         }
     },
     {
@@ -2073,11 +2211,11 @@
         "relationships": [
             {
                 "target": "Graph",
-                "type": "traverses"
+                "type": "related_to"
             },
             {
                 "target": "Tree",
-                "type": "traverses"
+                "type": "related_to"
             },
             {
                 "target": "Connected Components",
@@ -2144,11 +2282,11 @@
         "relationships": [
             {
                 "target": "Graph",
-                "type": "traverses"
+                "type": "related_to"
             },
             {
                 "target": "Tree",
-                "type": "traverses"
+                "type": "related_to"
             },
             {
                 "target": "Shortest Path (unweighted graphs)",
@@ -2217,7 +2355,7 @@
         "relationships": [
             {
                 "target": "Weighted Graph",
-                "type": "operates_on"
+                "type": "uses"
             },
             {
                 "target": "Priority Queue",
@@ -2300,15 +2438,15 @@
             },
             {
                 "target": "Weighted Undirected Graph",
-                "type": "built_from"
+                "type": "depends_on"
             },
             {
                 "target": "Prim Algorithm",
-                "type": "constructed_using"
+                "type": "implements"
             },
             {
                 "target": "Kruskal Algorithm",
-                "type": "constructed_using"
+                "type": "implements"
             }
         ],
         "code_examples": [
@@ -2361,11 +2499,11 @@
         "relationships": [
             {
                 "target": "Minimum Spanning Tree",
-                "type": "builds"
+                "type": "parent_of"
             },
             {
                 "target": "Weighted Graph",
-                "type": "operates_on"
+                "type": "uses"
             }
         ],
         "code_examples": [
@@ -2437,11 +2575,11 @@
         "relationships": [
             {
                 "target": "Minimum Spanning Tree",
-                "type": "builds"
+                "type": "parent_of"
             },
             {
                 "target": "Weighted Graph",
-                "type": "operates_on"
+                "type": "uses"
             }
         ],
         "code_examples": [
@@ -2494,19 +2632,19 @@
         "relationships": [
             {
                 "target": "DAG",
-                "type": "operates_on"
+                "type": "uses"
             },
             {
                 "target": "Directed Graph",
-                "type": "operates_on"
+                "type": "uses"
             },
             {
                 "target": "DFS",
-                "type": "implemented_using"
+                "type": "implements"
             },
             {
                 "target": "BFS",
-                "type": "implemented_using"
+                "type": "implements"
             }
         ],
         "code_examples": [
@@ -2578,7 +2716,7 @@
             },
             {
                 "target": "Collision Resolution",
-                "type": "requires"
+                "type": "depends_on"
             }
         ],
         "code_examples": [
@@ -2625,7 +2763,7 @@
         "relationships": [
             {
                 "target": "Hash Table",
-                "type": "used_by"
+                "type": "used_in"
             }
         ],
         "code_examples": [
@@ -3045,11 +3183,11 @@
         "relationships": [
             {
                 "target": "Sorted Data",
-                "type": "requires"
+                "type": "depends_on"
             },
             {
                 "target": "Binary Search Tree",
-                "type": "used_with"
+                "type": "related_to"
             }
         ],
         "code_examples": [
@@ -3095,27 +3233,27 @@
         "relationships": [
             {
                 "target": "Vector",
-                "type": "includes"
+                "type": "parent_of"
             },
             {
                 "target": "Queue",
-                "type": "includes"
+                "type": "parent_of"
             },
             {
                 "target": "Stack",
-                "type": "includes"
+                "type": "parent_of"
             },
             {
                 "target": "Map",
-                "type": "includes"
+                "type": "parent_of"
             },
             {
                 "target": "Set",
-                "type": "includes"
+                "type": "parent_of"
             },
             {
                 "target": "Priority Queue",
-                "type": "includes"
+                "type": "parent_of"
             }
         ],
         "code_examples": [
@@ -3152,6 +3290,582 @@
             "sort": "O(n log n)",
             "iterate": "O(n)",
             "applyAlgorithm": "O(n)"
+        }
+    },
+    {
+        "name": "Multidimensional Array",
+        "definition": "An array with more than two dimensions.",
+        "category": "Linear Structure",
+        "operations": [
+            "access",
+            "insert",
+            "delete",
+            "traverse"
+        ],
+        "relationships": [
+            {
+                "target": "Array",
+                "type": "child_of"
+            }
+        ],
+        "code_examples": [
+            "int arr[2][3][4];"
+        ],
+        "real_life_examples": [
+            "3D game coordinates",
+            "Scientific simulation data"
+        ],
+        "math_relations": [
+            "Tensor representation"
+        ],
+        "time_complexity": {
+            "access": "O(1)",
+            "search": "O(n)"
+        }
+    },
+    {
+        "name": "Modular Arithmetic",
+        "definition": "A system of arithmetic where numbers wrap around after reaching a certain value.",
+        "category": "Mathematics",
+        "operations": [
+            "modulus",
+            "addition",
+            "subtraction",
+            "multiplication"
+        ],
+        "relationships": [
+            {
+                "target": "Algorithm",
+                "type": "used_in"
+            }
+        ],
+        "code_examples": [
+            "int result = a % b;"
+        ],
+        "real_life_examples": [
+            "Clock arithmetic",
+            "Hash functions"
+        ],
+        "math_relations": [
+            "Number theory"
+        ],
+        "time_complexity": {}
+    },
+    {
+        "name": "Algorithm",
+        "definition": "A step-by-step procedure or set of rules to be followed in calculations or other problem-solving operations.",
+        "category": "Fundamental Concept",
+        "operations": [
+            "execute",
+            "analyze"
+        ],
+        "relationships": [
+            {
+                "target": "Data Structure",
+                "type": "uses"
+            }
+        ],
+        "code_examples": [
+            "def add(a, b): return a + b"
+        ],
+        "real_life_examples": [
+            "Cooking recipes",
+            "Google Search"
+        ],
+        "math_relations": [
+            "Complexity Theory"
+        ],
+        "time_complexity": {}
+    },
+    {
+        "name": "Vector",
+        "definition": "A dynamic array that can resize itself automatically when an element is inserted or deleted.",
+        "category": "Linear Structure",
+        "operations": [
+            "push_back",
+            "pop_back",
+            "access",
+            "insert"
+        ],
+        "relationships": [
+            {
+                "target": "Array",
+                "type": "child_of"
+            }
+        ],
+        "code_examples": [
+            "std::vector<int> v;",
+            "ArrayList<Integer> list = new ArrayList<>();"
+        ],
+        "real_life_examples": [
+            "Dynamic list of items in a shopping cart"
+        ],
+        "math_relations": [],
+        "time_complexity": {
+            "access": "O(1)",
+            "insertion": "O(1) amortized",
+            "deletion": "O(n)"
+        }
+    },
+    {
+        "name": "Matrix",
+        "definition": "A collection of numbers arranged in a fixed number of rows and columns.",
+        "category": "Linear Structure",
+        "operations": [
+            "access",
+            "addition",
+            "multiplication",
+            "transpose"
+        ],
+        "relationships": [
+            {
+                "target": "Multidimensional Array",
+                "type": "is_a"
+            }
+        ],
+        "code_examples": [
+            "int matrix[3][3];"
+        ],
+        "real_life_examples": [
+            "Image pixels",
+            "Spreadsheet"
+        ],
+        "math_relations": [
+            "Linear Algebra"
+        ],
+        "time_complexity": {
+            "access": "O(1)"
+        }
+    },
+    {
+        "name": "Set",
+        "definition": "A collection of distinct elements where no duplicate values are allowed.",
+        "category": "Linear Structure",
+        "operations": [
+            "insert",
+            "delete",
+            "search",
+            "union",
+            "intersection"
+        ],
+        "relationships": [
+            {
+                "target": "Hash Table",
+                "type": "implements"
+            }
+        ],
+        "code_examples": [
+            "Set<Integer> s = new HashSet<>();",
+            "my_set = {1, 2, 3}"
+        ],
+        "real_life_examples": [
+            "Unique IDs",
+            "Distinct words in a book"
+        ],
+        "math_relations": [
+            "Set Theory"
+        ],
+        "time_complexity": {
+            "search": "O(1) or O(log n)",
+            "insertion": "O(1) or O(log n)"
+        }
+    },
+    {
+        "name": "Map",
+        "definition": "A collection of key-value pairs where each key is unique and maps to a specific value.",
+        "category": "Linear Structure",
+        "operations": [
+            "put",
+            "get",
+            "remove",
+            "contains_key"
+        ],
+        "relationships": [
+            {
+                "target": "Hash Table",
+                "type": "implements"
+            }
+        ],
+        "code_examples": [
+            "Map<String, Int> m = new HashMap<>();",
+            "my_dict = {'key': 'value'}"
+        ],
+        "real_life_examples": [
+            "Dictionary",
+            "Phone book"
+        ],
+        "math_relations": [
+            "Function mapping"
+        ],
+        "time_complexity": {
+            "search": "O(1) or O(log n)",
+            "insertion": "O(1) or O(log n)"
+        }
+    },
+    {
+        "name": "Polynomial",
+        "definition": "An expression consisting of variables and coefficients, involving only addition, subtraction, and multiplication.",
+        "category": "Mathematics",
+        "operations": [
+            "addition",
+            "multiplication",
+            "evaluation",
+            "differentiation"
+        ],
+        "relationships": [
+            {
+                "target": "Linked List",
+                "type": "related_to"
+            }
+        ],
+        "code_examples": [
+            "3x^2 + 2x + 5"
+        ],
+        "real_life_examples": [
+            "Physics formulas",
+            "Economic modeling"
+        ],
+        "math_relations": [
+            "Algebra"
+        ],
+        "time_complexity": {}
+    },
+    {
+        "name": "Sorted Data",
+        "definition": "Data that has been arranged in a systematic order, such as numerical or alphabetical.",
+        "category": "Fundamental Concept",
+        "operations": [
+            "binary search",
+            "merge"
+        ],
+        "relationships": [
+            {
+                "target": "Search Algorithm",
+                "type": "used_in"
+            }
+        ],
+        "code_examples": [
+            "[1, 2, 3, 4, 5]"
+        ],
+        "real_life_examples": [
+            "Alphabetized contact list",
+            "Leaderboard"
+        ],
+        "math_relations": [
+            "Order theory"
+        ],
+        "time_complexity": {
+            "search": "O(log n)"
+        }
+    },
+    {
+        "name": "Search Algorithm",
+        "definition": "An algorithm designed to find a target element or determine whether it exists in a collection of data.",
+        "category": "Algorithm",
+        "operations": [
+            "search",
+            "compare",
+            "traverse",
+            "probe"
+        ],
+        "relationships": [
+            {
+                "target": "Data Structure",
+                "type": "uses"
+            },
+            {
+                "target": "Sorted Data",
+                "type": "uses"
+            },
+            {
+                "target": "Algorithm",
+                "type": "is_a"
+            }
+        ],
+        "code_examples": [
+            "int binarySearch(vector<int>& arr, int target, int low, int high) { /* ... */ }"
+        ],
+        "real_life_examples": [
+            "Finding a name in a phone book",
+            "Searching for a word in a dictionary",
+            "Looking up a record in a database"
+        ],
+        "math_relations": [
+            "search_problem : find x in S"
+        ],
+        "time_complexity": {
+            "best": "O(1)",
+            "average": "O(log n)",
+            "worst": "O(n)"
+        }
+    },
+    {
+        "name": "Complete Binary Tree",
+        "definition": "A binary tree in which every level is completely filled, except possibly the last level, which is filled from left to right.",
+        "category": "Non-Linear Structure",
+        "operations": [
+            "insert",
+            "delete",
+            "traverse"
+        ],
+        "relationships": [
+            {
+                "target": "Binary Tree",
+                "type": "child_of"
+            },
+            {
+                "target": "Heap",
+                "type": "related_to"
+            }
+        ],
+        "code_examples": [],
+        "real_life_examples": [
+            "Binary Heap storage"
+        ],
+        "math_relations": [
+            "Logarithmic height"
+        ],
+        "time_complexity": {
+            "height": "O(log n)"
+        }
+    },
+    {
+        "name": "Tree Traversal",
+        "definition": "The process of visiting all nodes in a tree in a specific order.",
+        "category": "Algorithm",
+        "operations": [
+            "inorder",
+            "preorder",
+            "postorder",
+            "level-order"
+        ],
+        "relationships": [
+            {
+                "target": "Tree",
+                "type": "uses"
+            }
+        ],
+        "code_examples": [
+            "void preorder(Node n) { ... }"
+        ],
+        "real_life_examples": [
+            "File system exploration"
+        ],
+        "math_relations": [],
+        "time_complexity": {
+            "traversal": "O(n)"
+        }
+    },
+    {
+        "name": "BFS",
+        "definition": "Breadth-First Search: An algorithm for traversing or searching tree or graph data structures level by level.",
+        "category": "Algorithm",
+        "operations": [
+            "traverse",
+            "shortest path"
+        ],
+        "relationships": [
+            {
+                "target": "Queue",
+                "type": "uses"
+            },
+            {
+                "target": "Graph",
+                "type": "uses"
+            }
+        ],
+        "code_examples": [
+            "queue.enqueue(root);"
+        ],
+        "real_life_examples": [
+            "GPS navigation",
+            "Social networking (friend levels)"
+        ],
+        "math_relations": [],
+        "time_complexity": {
+            "traversal": "O(V + E)"
+        }
+    },
+    {
+        "name": "DFS",
+        "definition": "Depth-First Search: An algorithm for traversing or searching tree or graph data structures by exploring as far as possible along each branch before backtracking.",
+        "category": "Algorithm",
+        "operations": [
+            "traverse",
+            "pathfinding"
+        ],
+        "relationships": [
+            {
+                "target": "Stack",
+                "type": "uses"
+            },
+            {
+                "target": "Recursion",
+                "type": "uses"
+            },
+            {
+                "target": "Graph",
+                "type": "uses"
+            }
+        ],
+        "code_examples": [
+            "dfs(vertex) { visited[vertex]=true; for... }"
+        ],
+        "real_life_examples": [
+            "Solving puzzles (mazes)"
+        ],
+        "math_relations": [],
+        "time_complexity": {
+            "traversal": "O(V + E)"
+        }
+    },
+    {
+        "name": "DAG",
+        "definition": "Directed Acyclic Graph: A directed graph with no directed cycles.",
+        "category": "Non-Linear Structure",
+        "operations": [
+            "topological sort",
+            "shortest path"
+        ],
+        "relationships": [
+            {
+                "target": "Graph",
+                "type": "child_of"
+            }
+        ],
+        "code_examples": [],
+        "real_life_examples": [
+            "Task scheduling",
+            "Git commit history"
+        ],
+        "math_relations": [
+            "Partial order"
+        ],
+        "time_complexity": {}
+    },
+    {
+        "name": "Weighted Undirected Graph",
+        "definition": "An undirected graph where each edge has an associated numerical value (weight).",
+        "category": "Non-Linear Structure",
+        "operations": [
+            "find minimum spanning tree",
+            "shortest path"
+        ],
+        "relationships": [
+            {
+                "target": "Graph",
+                "type": "child_of"
+            }
+        ],
+        "code_examples": [],
+        "real_life_examples": [
+            "Road networks with distances"
+        ],
+        "math_relations": [],
+        "time_complexity": {}
+    },
+    {
+        "name": "Shortest Path (unweighted graphs)",
+        "definition": "Finding the path between two vertices such that the number of edges is minimized.",
+        "category": "Algorithm",
+        "operations": [
+            "find_path"
+        ],
+        "relationships": [
+            {
+                "target": "BFS",
+                "type": "implements"
+            }
+        ],
+        "code_examples": [],
+        "real_life_examples": [
+            "Six degrees of separation"
+        ],
+        "math_relations": [],
+        "time_complexity": {
+            "search": "O(V + E)"
+        }
+    },
+    {
+        "name": "Connected Components",
+        "definition": "Subgraphs in which any two vertices are connected to each other by paths.",
+        "category": "Algorithm",
+        "operations": [
+            "count_components",
+            "find_components"
+        ],
+        "relationships": [
+            {
+                "target": "BFS",
+                "type": "uses"
+            },
+            {
+                "target": "DFS",
+                "type": "uses"
+            }
+        ],
+        "code_examples": [],
+        "real_life_examples": [
+            "Social network clusters"
+        ],
+        "math_relations": [
+            "Equivalence classes"
+        ],
+        "time_complexity": {
+            "find": "O(V + E)"
+        }
+    },
+    {
+        "name": "Spanning Tree",
+        "definition": "A subset of an undirected graph that connects all vertices together without any cycles.",
+        "category": "Non-Linear Structure",
+        "operations": [
+            "construct"
+        ],
+        "relationships": [
+            {
+                "target": "Graph",
+                "type": "related_to"
+            }
+        ],
+        "code_examples": [],
+        "real_life_examples": [
+            "Network design (cabling)"
+        ],
+        "math_relations": [
+            "Tree properties"
+        ],
+        "time_complexity": {}
+    },
+    {
+        "name": "Topological Sort",
+        "definition": "A linear ordering of vertices such that for every directed edge (u, v), vertex u comes before v.",
+        "category": "Algorithm",
+        "operations": [
+            "sort"
+        ],
+        "relationships": [
+            {
+                "target": "DAG",
+                "type": "uses"
+            },
+            {
+                "target": "DFS",
+                "type": "uses"
+            }
+        ],
+        "code_examples": [
+            "Kahn's Algorithm"
+        ],
+        "real_life_examples": [
+            "University course prerequisites",
+            "Build systems"
+        ],
+        "math_relations": [
+            "Linear extension of a partial order"
+        ],
+        "time_complexity": {
+            "sort": "O(V + E)"
         }
     }
 ]
