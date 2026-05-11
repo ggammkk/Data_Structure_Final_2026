@@ -3,23 +3,27 @@
 
 #include "node.h"
 
-#include<unordered_map>
-#include<vector>
-#include<string>
+#include <unordered_map>
+#include <vector>
+#include <string>
 
 using namespace std;
 
-class Graph {
-    private:
-        unordered_map<string, Node> nodes;
+class Graph
+{
+private:
+    unordered_map<string, Node> nodes;
 
-        unordered_map<string,vector<pair<string,string>>> adjacencyList;
+    unordered_map<string, vector<pair<string, string>>> adjacencyList;
 
-    public:
-        void addNode(Node node);
+public:
+    void addNode(Node node);
 
-        void addEdge(string source, string target, string type);
-        void printGraph();
+    void addEdge(string source, string target, string type);
+    void printGraph();
+
+    unordered_map<string, Node> &getNodes();
+    unordered_map<string, vector<pair<string, string>>> &getAdjacencyList();
 };
 
 #endif
