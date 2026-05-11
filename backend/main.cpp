@@ -9,7 +9,7 @@ using namespace std;
 
 int main(){
     
-    ifstream file("../data/gamtemp.json");
+    ifstream file("../data/dsa_nodes.json");
 
     if(!file){
         cout << "Failed to open JSON file.\n";
