@@ -969,7 +969,7 @@
             "relaxEdge" : "O(1)", 
             "updateDistance" : "O(1)", 
             "updatePath" : "O(1)", 
-            "findShortestPath" : "O(V^2)"
+            "findShortestPath" : "O((V + E) log V)"
         }
     },
     {
@@ -989,12 +989,20 @@
 
         "relationships": [
             {
-                "target": "Minimum Spanning Tree",
-                "type": "builds"
+                "target": "Tree",
+                "type": "is_a"
             },
             {
-                "target": "Weighted Graph",
-                "type": "operates_on"
+                "target": "Weighted Undirected Graph",
+                "type": "built_from"
+            },
+            {
+                "target": "Prim Algorithm",
+                "type": "constructed_using"
+            },
+            {
+                "target": "Kruskal Algorithm",
+                "type": "constructed_using"
             }
        ],
 
