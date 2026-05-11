@@ -3,6 +3,7 @@
 
 #include "json.hpp"
 #include "graph.h"
+#include "search.h"
 
 using json = nlohmann::json;
 using namespace std;
@@ -83,6 +84,16 @@ int main()
     }
 
     graph.printGraph();
+
+    // Allows user to search
+    Search search(&graph);
+
+    string query;
+    cout << "Ask something: ";
+    getline(cin, query);
+
+    cout << "Intent: " << search.detectIntent(query) << endl;
+    cout << "Topic: " << search.extractTopic(query) << endl;
 
     system("pause");
 
