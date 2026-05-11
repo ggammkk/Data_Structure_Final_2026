@@ -136,15 +136,86 @@ int main()
 
         graph.printGraph();
 
-        // Allows user to search test
+        // Allows user to search test  might not be permanent
         Search search(&graph);
 
-        string query;
-        cout << "Ask something: ";
-        getline(cin, query);
+        // 1. Test search algorithms
+        cout << "\n===== Testing Search Algorithms =====\n";
 
-        cout << "Intent: " << search.detectIntent(query) << endl;
-        cout << "Topic: " << search.extractTopic(query) << endl;
+        vector<Node> nameResults = search.searchByName("stack");
+        cout << "\nSearch by name: stack\n";
+        for (Node node : nameResults)
+        {
+            cout << "- " << node.name << endl;
+        }
+
+        vector<Node> categoryResults = search.searchByCategory("Linear Structure");
+        cout << "\nSearch by category: Linear Structure\n";
+        for (Node node : categoryResults)
+        {
+            cout << "- " << node.name << endl;
+        }
+
+        vector<Node> operationResults = search.searchByOperation("insert");
+        cout << "\nSearch by operation: insert\n";
+        for (Node node : operationResults)
+        {
+            cout << "- " << node.name << endl;
+        }
+
+        vector<Node> relationshipResults = search.searchByRelationship("uses");
+        cout << "\nSearch by relationship: uses\n";
+        for (Node node : relationshipResults)
+        {
+            cout << "- " << node.name << endl;
+        }
+
+        // 2. Test query parsing
+        cout << "\n===== Testing Query Parsing =====\n";
+
+        string testQuery = "time complexity of binary search tree";
+
+        cout << "Query: " << testQuery << endl;
+        cout << "Detected Intent: " << search.detectIntent(testQuery) << endl;
+        cout << "Extracted Topic: " << search.extractTopic(testQuery) << endl;
+
+        // 3. Test chatbot-like responses
+        cout << "\n===== Testing Chatbot-like Responses =====\n";
+
+        vector<string> testQueries = {
+            "what is stack",
+            "category of binary search tree",
+            "operations of queue",
+            "time complexity of binary search tree",
+            "example of stack",
+            "real life examples of binary search tree",
+            "math relations of binary search tree",
+            "related topics of graph"};
+
+        for (string query : testQueries)
+        {
+            cout << "\nUser: " << query << endl;
+            cout << "Bot: " << search.generateResponse(query) << endl;
+        }
+
+        // 4. Interactive chatbot loop
+        cout << "\n===== Interactive Search System =====\n";
+        cout << "Type a question, or type exit to quit.\n";
+
+        string query;
+
+        while (true)
+        {
+            cout << "\nAsk something: ";
+            getline(cin, query);
+
+            if (query == "exit")
+            {
+                break;
+            }
+
+            cout << search.generateResponse(query) << endl;
+        }
 
         system("pause");
 
