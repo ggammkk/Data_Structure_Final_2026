@@ -7,6 +7,7 @@
 
 using json = nlohmann::json;
 using namespace std;
+
 int main()
 {
 
@@ -35,14 +36,11 @@ int main()
         node.definition = item["definition"];
         node.category = item["category"];
 
-        // operation
+        // OPERATIONS
         for (auto &op : item["operations"])
-
-            // OPERATIONS
-            for (auto &op : item["operations"])
-            {
-                node.operations.push_back(op);
-            }
+        {
+            node.operations.push_back(op);
+        }
 
         // RELATIONSHIPS
         for (auto &rel : item["relationships"])
@@ -56,7 +54,28 @@ int main()
         // CODE EXAMPLES
         for (auto &code : item["code_examples"])
         {
-            node.code_examples.push_back(code);
+            if (code.is_string())
+            {
+                node.code_examples.push_back(code.get<string>());
+            }
+            else if (code.is_object() && code.contains("code"))
+            {
+                if (code["code"].is_string())
+                {
+                    node.code_examples.push_back(code["code"].get<string>());
+                }
+                else if (code["code"].is_array())
+                {
+                    string fullCode = "";
+
+                    for (auto &line : code["code"])
+                    {
+                        fullCode += line.get<string>() + "\n";
+                    }
+
+                    node.code_examples.push_back(fullCode);
+                }
+            }
         }
 
         // REAL LIFE EXAMPLES
@@ -74,121 +93,50 @@ int main()
         // TIME COMPLEXITY
         for (auto &tc : item["time_complexity"].items())
         {
-            node.time_complexity[tc.key()] = tc.value();
+            node.time_complexity[tc.key()] = tc.value().get<string>();
         }
 
-        // add relationships
-        for (auto &rel : node.relationships)
-        {
-            graph.addEdge(node.name, rel.target, rel.type);
-
-            // ADD NODE
-            graph.addNode(node);
-        }
-
-        // =====================================
-        // SECOND PASS:
-        // ADD ALL EDGES
-        // =====================================
-        for (auto &item : data)
-        {
-            string source = item["name"];
-
-            for (auto &rel : item["relationships"])
-            {
-                string target = rel["target"];
-
-                string type = rel["type"];
-
-                graph.addEdge(source, rel["target"], rel["type"]);
-            }
-        }
-
-        graph.printGraph();
-
-        // Allows user to search test  might not be permanent
-        Search search(&graph);
-
-        // 1. Test search algorithms
-        cout << "\n===== Testing Search Algorithms =====\n";
-
-        vector<Node> nameResults = search.searchByName("stack");
-        cout << "\nSearch by name: stack\n";
-        for (Node node : nameResults)
-        {
-            cout << "- " << node.name << endl;
-        }
-
-        vector<Node> categoryResults = search.searchByCategory("Linear Structure");
-        cout << "\nSearch by category: Linear Structure\n";
-        for (Node node : categoryResults)
-        {
-            cout << "- " << node.name << endl;
-        }
-
-        vector<Node> operationResults = search.searchByOperation("insert");
-        cout << "\nSearch by operation: insert\n";
-        for (Node node : operationResults)
-        {
-            cout << "- " << node.name << endl;
-        }
-
-        vector<Node> relationshipResults = search.searchByRelationship("uses");
-        cout << "\nSearch by relationship: uses\n";
-        for (Node node : relationshipResults)
-        {
-            cout << "- " << node.name << endl;
-        }
-
-        // 2. Test query parsing
-        cout << "\n===== Testing Query Parsing =====\n";
-
-        string testQuery = "time complexity of binary search tree";
-
-        cout << "Query: " << testQuery << endl;
-        cout << "Detected Intent: " << search.detectIntent(testQuery) << endl;
-        cout << "Extracted Topic: " << search.extractTopic(testQuery) << endl;
-
-        // 3. Test chatbot-like responses
-        cout << "\n===== Testing Chatbot-like Responses =====\n";
-
-        vector<string> testQueries = {
-            "what is stack",
-            "category of binary search tree",
-            "operations of queue",
-            "time complexity of binary search tree",
-            "example of stack",
-            "real life examples of binary search tree",
-            "math relations of binary search tree",
-            "related topics of graph"};
-
-        for (string query : testQueries)
-        {
-            cout << "\nUser: " << query << endl;
-            cout << "Bot: " << search.generateResponse(query) << endl;
-        }
-
-        // 4. Interactive chatbot loop
-        cout << "\n===== Interactive Search System =====\n";
-        cout << "Type a question, or type exit to quit.\n";
-
-        string query;
-
-        while (true)
-        {
-            cout << "\nAsk something: ";
-            getline(cin, query);
-
-            if (query == "exit")
-            {
-                break;
-            }
-
-            cout << search.generateResponse(query) << endl;
-        }
-
-        system("pause");
-
-        return 0;
+        graph.addNode(node);
     }
+
+    // =====================================
+    // SECOND PASS:
+    // ADD ALL EDGES
+    // =====================================
+    for (auto &item : data)
+    {
+        string source = item["name"];
+
+        for (auto &rel : item["relationships"])
+        {
+            graph.addEdge(source, rel["target"], rel["type"]);
+        }
+    }
+
+    // graph.printGraph();
+
+    // Allows user to search test  might not be permanent
+    Search search(&graph);
+
+    cout << "\n===== Interactive Search System =====\n";
+    cout << "Type a question, or type exit to quit.\n";
+
+    string query;
+
+    while (true)
+    {
+        cout << "\nAsk something: ";
+        getline(cin, query);
+
+        if (query == "exit")
+        {
+            break;
+        }
+
+        cout << search.generateResponse(query) << endl;
+    }
+
+    system("pause");
+
+    return 0;
 }
