@@ -211,7 +211,7 @@ string Search::detectIntent(string query)
         return "operations";
     }
 
-    else if (query.find("related") != string::npos || query.find("connected") != string::npos || query.find("relationship") != string::npos)
+    else if (query.find("related") != string::npos || query.find("relations") != string::npos || query.find("relation") != string::npos || query.find("connected") != string::npos || query.find("relationship") != string::npos)
     {
         return "related";
     }
@@ -316,6 +316,10 @@ string Search::extractTopic(string query)
         query.erase(0, 2);
     };
     if (query.rfind("an ", 0) == 0)
+    {
+        query.erase(0, 3);
+    };
+    if (query.rfind("to ", 0) == 0)
     {
         query.erase(0, 3);
     };
