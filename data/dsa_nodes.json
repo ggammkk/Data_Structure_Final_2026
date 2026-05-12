@@ -1719,79 +1719,6 @@
         }
     },
     {
-        "name": "Breadth First Search",
-        "definition": "An algorithm for traversing or searching graph or tree data structures level by level.",
-        "category": "Algorithm",
-        "operations": [
-            "enqueue",
-            "dequeue",
-            "visit",
-            "markVisited"
-        ],
-        "relationships": [
-            {
-                "target": "BFS",
-                "type": "synonym_of"
-            },
-            {
-                "target": "Queue",
-                "type": "uses"
-            },
-            {
-                "target": "Graph",
-                "type": "uses"
-            }
-        ],
-        "code_examples": [
-            "queue<int> q; q.push(src);"
-        ],
-        "real_life_examples": [
-            "Finding shortest paths in unweighted graphs"
-        ],
-        "math_relations": [
-            "time_complexity : O(V + E)"
-        ],
-        "time_complexity": {
-            "traverse": "O(V + E)"
-        }
-    },
-    {
-        "name": "Depth First Search",
-        "definition": "An algorithm for traversing or searching graph or tree data structures by exploring as far down a branch as possible before backtracking.",
-        "category": "Algorithm",
-        "operations": [
-            "visit",
-            "recurse",
-            "backtrack"
-        ],
-        "relationships": [
-            {
-                "target": "DFS",
-                "type": "synonym_of"
-            },
-            {
-                "target": "Graph",
-                "type": "uses"
-            },
-            {
-                "target": "Recursion",
-                "type": "uses"
-            }
-        ],
-        "code_examples": [
-            "dfs(v) { visited[v]=true; for(n in adj[v]) if(!visited[n]) dfs(n); }"
-        ],
-        "real_life_examples": [
-            "Maze solving"
-        ],
-        "math_relations": [
-            "time_complexity : O(V + E)"
-        ],
-        "time_complexity": {
-            "traverse": "O(V + E)"
-        }
-    },
-    {
         "name": "Factorial",
         "definition": "The product of all positive integers up to a given number, used in recursion and mathematical computations.",
         "category": "Mathematics",
@@ -1963,11 +1890,11 @@
         ],
         "relationships": [
             {
-                "target": "DFS",
+                "target": "Depth First Search",
                 "type": "uses"
             },
             {
-                "target": "BFS",
+                "target": "Breadth First Search",
                 "type": "uses"
             }
         ],
@@ -2030,7 +1957,7 @@
                 "type": "is_a"
             },
             {
-                "target": "Topological Sort",
+                "target": "Topological Sorting",
                 "type": "used_in"
             }
         ],
@@ -2226,7 +2153,7 @@
                 "type": "used_in"
             },
             {
-                "target": "Topological Sort",
+                "target": "Topological Sorting",
                 "type": "used_in"
             }
         ],
@@ -2639,11 +2566,11 @@
                 "type": "uses"
             },
             {
-                "target": "DFS",
+                "target": "Depth First Search",
                 "type": "implements"
             },
             {
-                "target": "BFS",
+                "target": "Breadth First Search",
                 "type": "implements"
             }
         ],
@@ -3657,7 +3584,7 @@
         }
     },
     {
-        "name": "BFS",
+        "name": "Breadth First Search",
         "definition": "Breadth-First Search: An algorithm for traversing or searching tree or graph data structures level by level.",
         "category": "Algorithm",
         "operations": [
@@ -3687,7 +3614,7 @@
         }
     },
     {
-        "name": "DFS",
+        "name": "Depth First Search",
         "definition": "Depth-First Search: An algorithm for traversing or searching tree or graph data structures by exploring as far as possible along each branch before backtracking.",
         "category": "Algorithm",
         "operations": [
@@ -3773,7 +3700,7 @@
         ],
         "relationships": [
             {
-                "target": "BFS",
+                "target": "Breadth First Search",
                 "type": "implements"
             }
         ],
@@ -3796,11 +3723,11 @@
         ],
         "relationships": [
             {
-                "target": "BFS",
+                "target": "Breadth First Search",
                 "type": "uses"
             },
             {
-                "target": "DFS",
+                "target": "Depth First Search",
                 "type": "uses"
             }
         ],
@@ -3836,36 +3763,5 @@
             "Tree properties"
         ],
         "time_complexity": {}
-    },
-    {
-        "name": "Topological Sort",
-        "definition": "A linear ordering of vertices such that for every directed edge (u, v), vertex u comes before v.",
-        "category": "Algorithm",
-        "operations": [
-            "sort"
-        ],
-        "relationships": [
-            {
-                "target": "DAG",
-                "type": "uses"
-            },
-            {
-                "target": "DFS",
-                "type": "uses"
-            }
-        ],
-        "code_examples": [
-            "Kahn's Algorithm"
-        ],
-        "real_life_examples": [
-            "University course prerequisites",
-            "Build systems"
-        ],
-        "math_relations": [
-            "Linear extension of a partial order"
-        ],
-        "time_complexity": {
-            "sort": "O(V + E)"
-        }
     }
 ]
