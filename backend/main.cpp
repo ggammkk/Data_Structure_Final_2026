@@ -7,7 +7,6 @@
 
 using json = nlohmann::json;
 using namespace std;
-
 int main()
 {
 
