@@ -107,7 +107,7 @@ fetch("../data/dsa_nodes.json")
 
                         'padding': '10px',
 
-                        'background-color': '#4f46e5',
+                        'background-color': '#041361',
 
                         'label': 'data(label)',
 
