@@ -49,7 +49,11 @@ fetch("../data/dsa_nodes.json")
         console.log("GRAPH ELEMENTS:");
         console.log(elements);
 
+<<<<<<< HEAD
         const cy = cytoscape({
+=======
+        window.cy = cytoscape({
+>>>>>>> a030c9d4dab15db2bb32533cbe3cbce88bd65e24
             container: document.getElementById('cy'),
             elements: elements,
 
@@ -166,4 +170,32 @@ fetch("../data/dsa_nodes.json")
     .catch(error => {
         console.log("ERROR LOADING JSON:");
         console.log(error);
+<<<<<<< HEAD
     });
+=======
+    });
+
+function searchTopic() {
+    const input = document.getElementById("searchInput").value;
+
+    const node = window.cy.getElementById(input);
+
+    if (!node || node.length === 0) {
+        console.log("Node not found");
+        return;
+    }
+
+    window.cy.animate({
+        fit: {
+            eles: node,
+            padding: 80
+        },
+        duration: 500
+    });
+
+    node.style({
+        'background-color': '#E5cbcc',
+        'color': '#000'
+    });
+}
+>>>>>>> a030c9d4dab15db2bb32533cbe3cbce88bd65e24
