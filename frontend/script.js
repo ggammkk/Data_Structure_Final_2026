@@ -11,10 +11,9 @@ fetch("../data/dsa_nodes.json")
         function findNode(data, query) {
             query = normalize(query);
 
-            return data.find(item => {
-                const name = normalize(item.name);
-                return name.includes(query) || query.includes(name);
-            });
+            return data.find(item =>
+                normalize(item.name) === query
+            );
         }
 
         console.log("JSON LOADED SUCCESSFULLY");
@@ -192,7 +191,7 @@ function searchTopic() {
     const input = document.getElementById("searchInput").value;
 
     const nodeData = globalData.find(item =>
-        item.name.toLowerCase().trim() === input.toLowerCase().trim()
+        item.name.toLowerCase().includes(input.toLowerCase().trim())
     );
 
     if (!nodeData) {
