@@ -54,7 +54,28 @@ int main()
         // CODE EXAMPLES
         for (auto &code : item["code_examples"])
         {
-            node.code_examples.push_back(code);
+            if (code.is_string())
+            {
+                node.code_examples.push_back(code.get<string>());
+            }
+            else if (code.is_object() && code.contains("code"))
+            {
+                if (code["code"].is_string())
+                {
+                    node.code_examples.push_back(code["code"].get<string>());
+                }
+                else if (code["code"].is_array())
+                {
+                    string fullCode = "";
+
+                    for (auto &line : code["code"])
+                    {
+                        fullCode += line.get<string>() + "\n";
+                    }
+
+                    node.code_examples.push_back(fullCode);
+                }
+            }
         }
 
         // REAL LIFE EXAMPLES
@@ -72,7 +93,7 @@ int main()
         // TIME COMPLEXITY
         for (auto &tc : item["time_complexity"].items())
         {
-            node.time_complexity[tc.key()] = tc.value();
+            node.time_complexity[tc.key()] = tc.value().get<string>();
         }
 
         graph.addNode(node);
