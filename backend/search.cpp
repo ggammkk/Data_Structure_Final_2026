@@ -192,7 +192,7 @@ string Search::extractTopic(string query)
     {
         query.erase(0, 2);
     };
-    if (query.rfind("an", 0) == 0)
+    if (query.rfind("an ", 0) == 0)
     {
         query.erase(0, 3);
     };
@@ -205,6 +205,97 @@ string Search::extractTopic(string query)
 }
 
 // Responses
+string Search::generateFullNodeResponse(Node node)
+{
+    string response = "";
+    response += "\n===== " + node.name + " =====\n\n";
+
+    response += "Definition:\n";
+    response += node.definition + "\n\n";
+
+    response += "Category:\n";
+    response += node.category + "\n\n";
+
+    response += "Operations:\n";
+    if (node.operations.empty())
+    {
+        response += "None\n";
+    }
+    else
+    {
+        for (string op : node.operations)
+        {
+            response += "- " + op + "\n";
+        }
+    }
+
+    response += "\nRelationships:\n";
+    if (node.relationships.empty())
+    {
+        response += "None\n";
+    }
+    else
+    {
+        for (Relationship rel : node.relationships)
+        {
+            response += "- " + rel.target + " (" + rel.type + ")\n";
+        }
+    }
+
+    response += "\nCode Examples:\n";
+    if (node.code_examples.empty())
+    {
+        response += "None\n";
+    }
+    else
+    {
+        for (string code : node.code_examples)
+        {
+            response += "- " + code + "\n";
+        }
+    }
+
+    response += "\nReal-Life Examples:\n";
+    if (node.real_life_examples.empty())
+    {
+        response += "None\n";
+    }
+    else
+    {
+        for (string example : node.real_life_examples)
+        {
+            response += "- " + example + "\n";
+        }
+    }
+
+    response += "\nMath Relations:\n";
+    if (node.math_relations.empty())
+    {
+        response += "None\n";
+    }
+    else
+    {
+        for (string math : node.math_relations)
+        {
+            response += "- " + math + "\n";
+        }
+    }
+
+    response += "\nTime Complexity:\n";
+    if (node.time_complexity.empty())
+    {
+        response += "None\n";
+    }
+    else
+    {
+        for (auto tc : node.time_complexity)
+        {
+            response += "- " + tc.first + ": " + tc.second + "\n";
+        }
+    }
+
+    return response;
+}
 string Search::generateResponse(string query)
 {
     string intent = detectIntent(query);
@@ -228,7 +319,7 @@ string Search::generateResponse(string query)
 
     if (intent == "definition")
     {
-        return node.name + " is " + node.definition;
+        return generateFullNodeResponse(node);
     }
 
     if (intent == "category")
@@ -326,5 +417,5 @@ string Search::generateResponse(string query)
         return response;
     }
 
-    return node.name + ": " + node.definition;
+    return generateFullNodeResponse(node);
 }
