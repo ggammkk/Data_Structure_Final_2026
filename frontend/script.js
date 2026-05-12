@@ -1,12 +1,23 @@
-// LOAD JSON FILE
+let globalData = [];
+
 fetch("../data/dsa_nodes.json")
-
     .then(response => response.json())
-
     .then(data => {
+        globalData = data;
+        function normalize(str) {
+            return str.toLowerCase().trim();
+        }
+
+        function findNode(data, query) {
+            query = normalize(query);
+
+            return data.find(item => {
+                const name = normalize(item.name);
+                return name.includes(query) || query.includes(name);
+            });
+        }
 
         console.log("JSON LOADED SUCCESSFULLY");
-
         console.log(data);
 
         function renderSection(title, itemsHTML) {
@@ -57,7 +68,8 @@ fetch("../data/dsa_nodes.json")
                 {
                     selector: 'node',
                     style: {
-                        'shape': 'ellipse',
+                        'shape': 'round-rectangle',
+                        'corner-radius': 100,
                         'width': 'label',
                         'height': 'label',
                         'padding': '10px',
@@ -86,6 +98,14 @@ fetch("../data/dsa_nodes.json")
                         'text-background-opacity': 1,
                         'text-background-padding': '2px'
                     }
+                },
+
+                {
+                    selector: '.highlight',
+                    style: {
+                        'background-color': '#E5cbcc',
+                        'color': '#000',
+                    }
                 }
             ],
 
@@ -108,9 +128,7 @@ fetch("../data/dsa_nodes.json")
             console.log("CLICKED:");
             console.log(nodeName);
 
-            const nodeData = data.find(item =>
-                item.name.trim().toLowerCase() === nodeName.trim().toLowerCase()
-            );
+            const nodeData = findNode(data, nodeName);
             const resultBox = document.getElementById('resultBox');
 
             if(nodeData){
@@ -168,26 +186,35 @@ fetch("../data/dsa_nodes.json")
         console.log(error);
     });
 
+    globalData = data;
+
 function searchTopic() {
     const input = document.getElementById("searchInput").value;
 
-    const node = window.cy.getElementById(input);
+    const nodeData = globalData.find(item =>
+        item.name.toLowerCase().trim() === input.toLowerCase().trim()
+    );
+
+    if (!nodeData) {
+        console.log("Node not found");
+        return;
+    }
+
+    const node = window.cy.getElementById(nodeData.name);
 
     if (!node || node.length === 0) {
-        console.log("Node not found");
+        console.log("Graph node not found");
         return;
     }
 
     window.cy.animate({
         fit: {
             eles: node,
-            padding: 80
+            padding: 120
         },
         duration: 500
     });
 
-    node.style({
-        'background-color': '#E5cbcc',
-        'color': '#000'
-    });
+    window.cy.elements().removeClass("highlight");
+    node.addClass("highlight");
 }
