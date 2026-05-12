@@ -1,5 +1,7 @@
 #include <algorithm>
 #include "search.h"
+#include <iostream>
+using namespace std;
 
 // Basic search functions(algorithms)
 string toLowerCases(string text)
@@ -10,19 +12,31 @@ string toLowerCases(string text)
 
 vector<Node> Search::searchByName(string name)
 {
-    vector<Node> results;
+    vector<Node> exactResults;
+    vector<Node> partialResults;
     name = toLowerCases(name);
 
     for (auto &pair : graph->getNodes())
     {
         Node node = pair.second;
+        string nodeName = toLowerCases(node.name);
 
-        if (toLowerCases(node.name).find(name) != string::npos)
+        if (nodeName == name)
         {
-            results.push_back(node);
+            exactResults.push_back(node);
+        }
+        else if (nodeName.find(name) != string::npos)
+        {
+            partialResults.push_back(node);
         }
     }
-    return results;
+
+    if (!exactResults.empty())
+    {
+        return exactResults;
+    }
+
+    return partialResults;
 }
 
 vector<Node> Search::searchByCategory(string category)
@@ -140,15 +154,19 @@ string Search::extractTopic(string query)
     query = toLowerCases(query);
 
     // Remove common intent keywords
-    vector<string> intentKeywords = {"definition", "what is", "define",
+    vector<string> intentKeywords = {"code examples", "code example",
+                                     "real life examples", "real-life examples",
+                                     "math relations", "math relation",
+                                     "time complexity",
+                                     "related topics", "related topic",
+                                     "what is", "define", "definition",
                                      "category", "type",
-                                     "how to", "example", "examples",
-                                     "complexity", "time", "big o", "time complexity",
+                                     "how to", "examples", "example",
+                                     "complexity", "time", "big o",
                                      "operation", "operations",
-                                     "related topics", "related topic", "related",
-                                     "connected", "relationship",
+                                     "related", "connected", "relationship",
                                      "real life", "real-life", "applications", "application",
-                                     "math relations", "math relation", "math",
+                                     "math", "formula", "equation", "relation",
                                      "of"};
     for (string keyword : intentKeywords)
     {
@@ -159,9 +177,29 @@ string Search::extractTopic(string query)
         }
     }
 
+    query.erase(remove(query.begin(), query.end(), '?'), query.end());
+
     // Handling whitespace
-    query.erase(0, query.find_first_not_of("  \t"));
-    query.erase(query.find_last_not_of(" \t") + 1);
+    query.erase(0, query.find_first_not_of(" \t"));
+
+    if (!query.empty())
+    {
+        query.erase(query.find_last_not_of(" \t") + 1);
+    }
+
+    // removes the a, and, an
+    if (query.rfind("a ", 0) == 0)
+    {
+        query.erase(0, 2);
+    };
+    if (query.rfind("an", 0) == 0)
+    {
+        query.erase(0, 3);
+    };
+    if (query.rfind("the ", 0) == 0)
+    {
+        query.erase(0, 4);
+    }
 
     return query;
 }
@@ -171,6 +209,13 @@ string Search::generateResponse(string query)
 {
     string intent = detectIntent(query);
     string topic = extractTopic(query);
+    // temporary remove the line below later
+    cout << "DEBUG topic = [" << topic << "]\n";
+
+    if (topic.empty())
+    {
+        return "Please include a topic, for example: math relations of binary search tree.";
+    }
 
     vector<Node> results = searchByName(topic);
 
