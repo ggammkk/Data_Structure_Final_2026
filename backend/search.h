@@ -22,6 +22,7 @@ public:
     string extractTopic(string query);
 
     // Responses
+    string generateFullNodeResponse(Node node);
     string generateResponse(string query);
 };
 
