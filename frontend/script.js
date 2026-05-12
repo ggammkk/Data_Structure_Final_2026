@@ -211,22 +211,50 @@ fetch("../data/dsa_nodes.json")
 
 
 
-            if(nodeData)
-            {
+            if(nodeData){
+                let complexityHTML = "";
+                for(const key in nodeData.time_complexity)
+                    {complexityHTML += `<li>${key}: ${nodeData.time_complexity[key]}</li>`;}
                 resultBox.innerHTML = `
 
-                    <h2>${nodeData.name}</h2>
+                <h2>${nodeData.name}</h2>
 
-                    <p><strong>Definition:</strong> ${nodeData.definition}</p>
 
-                    <p><strong>Category:</strong> ${nodeData.category}</p>
 
-                    <p><strong>Operations:</strong>
-                        ${nodeData.operations.join(", ")}
-                    </p>
+                <p>
+                    <strong>Definition:</strong>
+                    ${nodeData.definition}
+                </p>
+                <p>
+                    <strong>Category:</strong>
+                    ${nodeData.category}
+                </p>
+                <p>
+                    <strong>Operations:</strong>
+                    ${nodeData.operations.join(", ")}
+                </p>
+                <p>
+                    <strong>Code Examples:</strong>
+                    ${nodeData.code_examples.join("<br>")}
+                </p>
+                <p>
+                    <strong>Real Life Examples:</strong>
+                    ${nodeData.real_life_examples.join(", ")}
+                </p>
+
+                <p>
+                    <strong>Math Relations:</strong>
+                    ${nodeData.math_relations.join(", ")}
+                </p>
+
+                <h3>Time Complexity</h3>
+
+                <ul>
+                    ${complexityHTML}
+                </ul>
 
                 `;
-            }
+                }
 
         });
 
