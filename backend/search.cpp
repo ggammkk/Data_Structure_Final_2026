@@ -206,7 +206,7 @@ string Search::detectIntent(string query)
         return "time_complexity";
     }
 
-    else if (query.find("operation") != string::npos || query.find("operations") != string::npos)
+    else if (query.find("operations") != string::npos || query.find("operation") != string::npos)
     {
         return "operations";
     }
@@ -268,11 +268,16 @@ string Search::extractTopic(string query)
         "complexity",
         "time",
         "big o",
-        "operation",
         "operations",
+        "operation",
+        "relationships",
+        "relationship",
+        "relations",
+        "relation",
+        "related topics",
+        "related topic",
         "related",
         "connected",
-        "relationship",
         "real life",
         "real-life",
         "applications",
