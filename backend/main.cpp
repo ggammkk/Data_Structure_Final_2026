@@ -36,14 +36,11 @@ int main()
         node.definition = item["definition"];
         node.category = item["category"];
 
-        // operation
+        // OPERATIONS
         for (auto &op : item["operations"])
-
-            // OPERATIONS
-            for (auto &op : item["operations"])
-            {
-                node.operations.push_back(op);
-            }
+        {
+            node.operations.push_back(op);
+        }
 
         // RELATIONSHIPS
         for (auto &rel : item["relationships"])
@@ -78,15 +75,6 @@ int main()
             node.time_complexity[tc.key()] = tc.value();
         }
 
-        // add relationships
-        for (auto &rel : node.relationships)
-        {
-            graph.addEdge(node.name, rel.target, rel.type);
-
-            // ADD NODE
-            graph.addNode(node);
-        }
-
         // =====================================
         // SECOND PASS:
         // ADD ALL EDGES
@@ -97,15 +85,11 @@ int main()
 
             for (auto &rel : item["relationships"])
             {
-                string target = rel["target"];
-
-                string type = rel["type"];
-
                 graph.addEdge(source, rel["target"], rel["type"]);
             }
         }
 
-        graph.printGraph();
+        // graph.printGraph();
 
         // Allows user to search test  might not be permanent
         Search search(&graph);

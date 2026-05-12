@@ -140,9 +140,16 @@ string Search::extractTopic(string query)
     query = toLowerCases(query);
 
     // Remove common intent keywords
-    vector<string> intentKeywords = {"definition", "what is", "define", "category", "type",
-                                     "how to", "example", "complexity", "time", "big o", "time complexity",
-                                     "operation", "operations", "related", "connected", "relationship"};
+    vector<string> intentKeywords = {"definition", "what is", "define",
+                                     "category", "type",
+                                     "how to", "example", "examples",
+                                     "complexity", "time", "big o", "time complexity",
+                                     "operation", "operations",
+                                     "related topics", "related topic", "related",
+                                     "connected", "relationship",
+                                     "real life", "real-life", "applications", "application",
+                                     "math relations", "math relation", "math",
+                                     "of"};
     for (string keyword : intentKeywords)
     {
         size_t pos = query.find(keyword);
