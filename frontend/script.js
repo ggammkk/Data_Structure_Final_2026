@@ -29,11 +29,9 @@ fetch("../data/dsa_nodes.json")
         });
 
         data.forEach(item => {
-            if(item.relationships)
-            {
+            if (item.relationships) {
                 item.relationships.forEach(rel => {
-                    if(rel.target && rel.type)
-                    {
+                    if (rel.target && rel.type) {
                         elements.push({
                             data: {
                                 source: item.name,
@@ -50,7 +48,11 @@ fetch("../data/dsa_nodes.json")
         console.log(elements);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         const cy = cytoscape({
+=======
+        window.cy = cytoscape({
+>>>>>>> a030c9d4dab15db2bb32533cbe3cbce88bd65e24
 =======
         window.cy = cytoscape({
 >>>>>>> a030c9d4dab15db2bb32533cbe3cbce88bd65e24
@@ -105,7 +107,7 @@ fetch("../data/dsa_nodes.json")
 
         console.log("GRAPH CREATED SUCCESSFULLY");
 
-        cy.on('tap', 'node', function(evt) {
+        cy.on('tap', 'node', function (evt) {
             const node = evt.target;
             const nodeName = node.id();
 
@@ -117,10 +119,9 @@ fetch("../data/dsa_nodes.json")
             );
             const resultBox = document.getElementById('resultBox');
 
-            if(nodeData){
+            if (nodeData) {
                 let complexityHTML = "";
-                for(const key in nodeData.time_complexity)
-                    {complexityHTML += `<li>${key}: ${nodeData.time_complexity[key]}</li>`;}
+                for (const key in nodeData.time_complexity) { complexityHTML += `<li>${key}: ${nodeData.time_complexity[key]}</li>`; }
                 resultBox.innerHTML = `
 
                 <h2>${nodeData.name}</h2>
@@ -160,7 +161,7 @@ fetch("../data/dsa_nodes.json")
                     </ul>
                 ` : ""}
                 `;
-                }
+            }
 
         });
 
@@ -171,8 +172,11 @@ fetch("../data/dsa_nodes.json")
         console.log("ERROR LOADING JSON:");
         console.log(error);
 <<<<<<< HEAD
+<<<<<<< HEAD
     });
 =======
+=======
+>>>>>>> a030c9d4dab15db2bb32533cbe3cbce88bd65e24
     });
 
 function searchTopic() {
@@ -197,5 +201,9 @@ function searchTopic() {
         'background-color': '#E5cbcc',
         'color': '#000'
     });
+<<<<<<< HEAD
+}
+>>>>>>> a030c9d4dab15db2bb32533cbe3cbce88bd65e24
+=======
 }
 >>>>>>> a030c9d4dab15db2bb32533cbe3cbce88bd65e24
