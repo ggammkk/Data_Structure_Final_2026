@@ -1,12 +1,23 @@
-// LOAD JSON FILE
+let globalData = [];
+
 fetch("../data/dsa_nodes.json")
-
     .then(response => response.json())
-
     .then(data => {
+        globalData = data;
+        function normalize(str) {
+            return str.toLowerCase().trim();
+        }
+
+        function findNode(data, query) {
+            query = normalize(query);
+
+            return data.find(item => {
+                const name = normalize(item.name);
+                return name.includes(query) || query.includes(name);
+            });
+        }
 
         console.log("JSON LOADED SUCCESSFULLY");
-
         console.log(data);
 
         function renderSection(title, itemsHTML) {
@@ -29,9 +40,11 @@ fetch("../data/dsa_nodes.json")
         });
 
         data.forEach(item => {
-            if (item.relationships) {
+            if(item.relationships)
+            {
                 item.relationships.forEach(rel => {
-                    if (rel.target && rel.type) {
+                    if(rel.target && rel.type)
+                    {
                         elements.push({
                             data: {
                                 source: item.name,
@@ -47,15 +60,7 @@ fetch("../data/dsa_nodes.json")
         console.log("GRAPH ELEMENTS:");
         console.log(elements);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        const cy = cytoscape({
-=======
         window.cy = cytoscape({
->>>>>>> a030c9d4dab15db2bb32533cbe3cbce88bd65e24
-=======
-        window.cy = cytoscape({
->>>>>>> a030c9d4dab15db2bb32533cbe3cbce88bd65e24
             container: document.getElementById('cy'),
             elements: elements,
 
@@ -63,7 +68,8 @@ fetch("../data/dsa_nodes.json")
                 {
                     selector: 'node',
                     style: {
-                        'shape': 'ellipse',
+                        'shape': 'round-rectangle',
+                        'corner-radius': 100,
                         'width': 'label',
                         'height': 'label',
                         'padding': '10px',
@@ -92,6 +98,14 @@ fetch("../data/dsa_nodes.json")
                         'text-background-opacity': 1,
                         'text-background-padding': '2px'
                     }
+                },
+
+                {
+                    selector: '.highlight',
+                    style: {
+                        'background-color': '#E5cbcc',
+                        'color': '#000',
+                    }
                 }
             ],
 
@@ -107,21 +121,20 @@ fetch("../data/dsa_nodes.json")
 
         console.log("GRAPH CREATED SUCCESSFULLY");
 
-        cy.on('tap', 'node', function (evt) {
+        cy.on('tap', 'node', function(evt) {
             const node = evt.target;
             const nodeName = node.id();
 
             console.log("CLICKED:");
             console.log(nodeName);
 
-            const nodeData = data.find(item =>
-                item.name.trim().toLowerCase() === nodeName.trim().toLowerCase()
-            );
+            const nodeData = findNode(data, nodeName);
             const resultBox = document.getElementById('resultBox');
 
-            if (nodeData) {
+            if(nodeData){
                 let complexityHTML = "";
-                for (const key in nodeData.time_complexity) { complexityHTML += `<li>${key}: ${nodeData.time_complexity[key]}</li>`; }
+                for(const key in nodeData.time_complexity)
+                    {complexityHTML += `<li>${key}: ${nodeData.time_complexity[key]}</li>`;}
                 resultBox.innerHTML = `
 
                 <h2>${nodeData.name}</h2>
@@ -161,7 +174,7 @@ fetch("../data/dsa_nodes.json")
                     </ul>
                 ` : ""}
                 `;
-            }
+                }
 
         });
 
@@ -171,39 +184,37 @@ fetch("../data/dsa_nodes.json")
     .catch(error => {
         console.log("ERROR LOADING JSON:");
         console.log(error);
-<<<<<<< HEAD
-<<<<<<< HEAD
     });
-=======
-=======
->>>>>>> a030c9d4dab15db2bb32533cbe3cbce88bd65e24
-    });
+
+    globalData = data;
 
 function searchTopic() {
     const input = document.getElementById("searchInput").value;
 
-    const node = window.cy.getElementById(input);
+    const nodeData = globalData.find(item =>
+        item.name.toLowerCase().trim() === input.toLowerCase().trim()
+    );
+
+    if (!nodeData) {
+        console.log("Node not found");
+        return;
+    }
+
+    const node = window.cy.getElementById(nodeData.name);
 
     if (!node || node.length === 0) {
-        console.log("Node not found");
+        console.log("Graph node not found");
         return;
     }
 
     window.cy.animate({
         fit: {
             eles: node,
-            padding: 80
+            padding: 120
         },
         duration: 500
     });
 
-    node.style({
-        'background-color': '#E5cbcc',
-        'color': '#000'
-    });
-<<<<<<< HEAD
+    window.cy.elements().removeClass("highlight");
+    node.addClass("highlight");
 }
->>>>>>> a030c9d4dab15db2bb32533cbe3cbce88bd65e24
-=======
-}
->>>>>>> a030c9d4dab15db2bb32533cbe3cbce88bd65e24
