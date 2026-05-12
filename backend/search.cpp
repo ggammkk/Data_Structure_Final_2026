@@ -139,6 +139,48 @@ vector<string> Search::bfsTraversal(string startNode)
     return visitedOrder;
 }
 
+vector<string> Search::dfsTraversal(string startNode)
+{
+    vector<string> visitedOrder;
+    stack<string> s;
+    unordered_set<string> visited;
+
+    vector<Node> startResults = searchByName(startNode);
+
+    if (startResults.empty())
+    {
+        return visitedOrder;
+    }
+
+    string start = startResults[0].name;
+    s.push(start);
+
+    while (!s.empty())
+    {
+        string current = s.top();
+        s.pop();
+
+        if (visited.find(current) != visited.end())
+        {
+            continue;
+        }
+
+        visited.insert(current);
+        visitedOrder.push_back(current);
+        auto adjacencyList = graph->getAdjacencyList();
+
+        for (auto &edge : adjacencyList[current])
+        {
+            string neighbor = edge.first;
+            if (visited.find(neighbor) == visited.end())
+            {
+                s.push(neighbor);
+            }
+        }
+    }
+    return visitedOrder;
+}
+
 // Advanced search features(Query understanding, intent detection, topic extraction)
 string Search::detectIntent(string query)
 {
@@ -184,6 +226,16 @@ string Search::detectIntent(string query)
         return "math_relations";
     }
 
+    else if (query.find("bfs") != string::npos || query.find("breadth first") != string::npos)
+    {
+        return "bfs";
+    }
+
+    else if (query.find("dfs") != string::npos || query.find("depth first") != string::npos)
+    {
+        return "dfs";
+    }
+
     else
     {
         return "general_search";
@@ -195,20 +247,50 @@ string Search::extractTopic(string query)
     query = toLowerCases(query);
 
     // Remove common intent keywords
-    vector<string> intentKeywords = {"code examples", "code example",
-                                     "real life examples", "real-life examples",
-                                     "math relations", "math relation",
-                                     "time complexity",
-                                     "related topics", "related topic",
-                                     "what is", "define", "definition",
-                                     "category", "type",
-                                     "how to", "examples", "example",
-                                     "complexity", "time", "big o",
-                                     "operation", "operations",
-                                     "related", "connected", "relationship",
-                                     "real life", "real-life", "applications", "application",
-                                     "math", "formula", "equation", "relation",
-                                     "of"};
+    vector<string> intentKeywords = {
+        "code examples",
+        "code example",
+        "real life examples",
+        "real-life examples",
+        "math relations",
+        "math relation",
+        "time complexity",
+        "related topics",
+        "related topic",
+        "what is",
+        "define",
+        "definition",
+        "category",
+        "type",
+        "how to",
+        "examples",
+        "example",
+        "complexity",
+        "time",
+        "big o",
+        "operation",
+        "operations",
+        "related",
+        "connected",
+        "relationship",
+        "real life",
+        "real-life",
+        "applications",
+        "application",
+        "math",
+        "formula",
+        "equation",
+        "relation",
+        "of",
+        "bfs",
+        "breadth first search",
+        "breadth first",
+        "dfs",
+        "depth first search",
+        "depth first",
+        "traversal",
+        "traverse",
+    };
     for (string keyword : intentKeywords)
     {
         size_t pos = query.find(keyword);
@@ -341,8 +423,6 @@ string Search::generateResponse(string query)
 {
     string intent = detectIntent(query);
     string topic = extractTopic(query);
-    // temporary remove the line below later
-    cout << "DEBUG topic = [" << topic << "]\n";
 
     if (topic.empty())
     {
@@ -357,6 +437,40 @@ string Search::generateResponse(string query)
     }
 
     Node node = results[0];
+
+    if (intent == "bfs")
+    {
+        vector<string> order = bfsTraversal(node.name);
+
+        if (order.empty())
+            return "BFS traversal could not be performed.";
+
+        string response = "BFS traversal starting from " + node.name + ":\n";
+
+        for (string name : order)
+        {
+            response += "- " + name + "\n";
+        }
+
+        return response;
+    }
+
+    if (intent == "dfs")
+    {
+        vector<string> order = dfsTraversal(node.name);
+
+        if (order.empty())
+            return "DFS traversal could not be performed.";
+
+        string response = "DFS traversal starting from " + node.name + ":\n";
+
+        for (string name : order)
+        {
+            response += "- " + name + "\n";
+        }
+
+        return response;
+    }
 
     if (intent == "definition")
     {
