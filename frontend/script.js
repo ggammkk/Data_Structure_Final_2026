@@ -99,6 +99,14 @@ fetch("../data/dsa_nodes.json")
 
                     style: {
 
+                        'shape': 'ellipse',
+
+                        'width': 'label',
+
+                        'height': 'label',
+
+                        'padding': '10px',
+
                         'background-color': '#4f46e5',
 
                         'label': 'data(label)',
@@ -109,11 +117,11 @@ fetch("../data/dsa_nodes.json")
 
                         'text-halign': 'center',
 
-                        'font-size': '10px',
+                        'font-size': '20px',
 
                         'text-wrap': 'wrap',
 
-                        'text-max-width': '80px'
+                        'text-max-width': '200px'
                     }
                 },
 
@@ -155,6 +163,14 @@ fetch("../data/dsa_nodes.json")
             layout: {
 
                 name: 'cose',
+
+                idealEdgeLength: 100,
+
+                nodeRepulsion: 4000000,
+
+                edgeElasticity: 100,
+
+                gravity: 80,
 
                 animate: true
 
