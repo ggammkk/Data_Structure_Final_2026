@@ -7,14 +7,10 @@
 
 using json = nlohmann::json;
 using namespace std;
-
 int main()
 {
 
     ifstream file("../data/dsa_nodes.json");
-
-    if (!file)
-        ifstream file("../data/dsa_nodes.json");
 
     if (!file)
     {
@@ -26,14 +22,6 @@ int main()
     file >> data;
 
     Graph graph;
-
-    for (auto &item : data)
-    {
-
-        Node node;
-
-        // basic info
-    }
     // =====================================
     // FIRST PASS:
     // ADD ALL NODES
@@ -56,56 +44,38 @@ int main()
                 node.operations.push_back(op);
             }
 
-        // relationship
+        // RELATIONSHIPS
         for (auto &rel : item["relationships"])
+        {
+            Relationship relationship;
+            relationship.target = rel["target"];
+            relationship.type = rel["type"];
+            node.relationships.push_back(relationship);
+        }
 
-            // RELATIONSHIPS
-            for (auto &rel : item["relationships"])
-            {
-                Relationship relationship;
-                relationship.target = rel["target"];
-                relationship.type = rel["type"];
-                node.relationships.push_back(relationship);
-            }
-
-        // code example
+        // CODE EXAMPLES
         for (auto &code : item["code_examples"])
+        {
+            node.code_examples.push_back(code);
+        }
 
-            // CODE EXAMPLES
-            for (auto &code : item["code_examples"])
-            {
-                node.code_examples.push_back(code);
-            }
-
-        // real life example
+        // REAL LIFE EXAMPLES
         for (auto &example : item["real_life_examples"])
+        {
+            node.real_life_examples.push_back(example);
+        }
 
-            // REAL LIFE EXAMPLES
-            for (auto &example : item["real_life_examples"])
-            {
-                node.real_life_examples.push_back(example);
-            }
-
-        // math relations
+        // MATH RELATIONS
         for (auto &math : item["math_relations"])
+        {
+            node.math_relations.push_back(math);
+        }
 
-            // MATH RELATIONS
-            for (auto &math : item["math_relations"])
-            {
-                node.math_relations.push_back(math);
-            }
-
-        // timecomplexity
+        // TIME COMPLEXITY
         for (auto &tc : item["time_complexity"].items())
-
-            // TIME COMPLEXITY
-            for (auto &tc : item["time_complexity"].items())
-            {
-                node.time_complexity[tc.key()] = tc.value();
-            }
-
-        // add node
-        graph.addNode(node);
+        {
+            node.time_complexity[tc.key()] = tc.value();
+        }
 
         // add relationships
         for (auto &rel : node.relationships)
@@ -130,7 +100,7 @@ int main()
 
                 string type = rel["type"];
 
-                graph.addEdge(source, target, type);
+                graph.addEdge(source, rel["target"], rel["type"]);
             }
         }
 
