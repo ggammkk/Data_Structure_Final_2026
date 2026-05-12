@@ -233,10 +233,8 @@ fetch("../data/dsa_nodes.json")
                     <strong>Operations:</strong>
                     ${nodeData.operations.join(", ")}
                 </p>
-                <p>
-                    <strong>Code Examples:</strong>
-                    ${nodeData.code_examples.join("<br>")}
-                </p>
+                <p><strong>Code Examples:</strong></p>
+                <pre class="code-block">${nodeData.code_examples.join("\n")}</pre>
                 <p>
                     <strong>Real Life Examples:</strong>
                     ${nodeData.real_life_examples.join(", ")}
@@ -247,11 +245,9 @@ fetch("../data/dsa_nodes.json")
                     ${nodeData.math_relations.join(", ")}
                 </p>
 
-                <h3>Time Complexity</h3>
+                <p><strong>Time Complexity:</strong></p>
 
-                <ul>
-                    ${complexityHTML}
-                </ul>
+                <ul>${complexityHTML}</ul>
 
                 `;
                 }
