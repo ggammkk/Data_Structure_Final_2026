@@ -1,9 +1,13 @@
 #include <algorithm>
 #include "search.h"
 #include <iostream>
+#include <queue>
+#include <unordered_set>
+#include <vector>
+#include <stack>
 using namespace std;
 
-// Basic search functions(algorithms)
+// Basic search functions
 string toLowerCases(string text)
 {
     transform(text.begin(), text.end(), text.begin(), ::tolower);
@@ -96,6 +100,43 @@ vector<Node> Search::searchByRelationship(string relationshipType)
         }
     }
     return results;
+}
+
+vector<string> Search::bfsTraversal(string startNode)
+{
+    vector<string> visitedOrder;
+    queue<string> q;
+    unordered_set<string> visited;
+
+    vector<Node> startResults = searchByName(startNode);
+
+    if (startResults.empty())
+    {
+        return visitedOrder;
+    }
+
+    string start = startResults[0].name;
+    q.push(start);
+    visited.insert(start);
+
+    while (!q.empty())
+    {
+        string current = q.front();
+        q.pop();
+        visitedOrder.push_back(current);
+        auto adjacencyList = graph->getAdjacencyList();
+
+        for (auto &edge : adjacencyList[current])
+        {
+            string neighbor = edge.first;
+            if (visited.find(neighbor) == visited.end())
+            {
+                visited.insert(neighbor);
+                q.push(neighbor);
+            }
+        }
+    }
+    return visitedOrder;
 }
 
 // Advanced search features(Query understanding, intent detection, topic extraction)

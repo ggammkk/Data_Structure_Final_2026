@@ -16,6 +16,8 @@ public:
     vector<Node> searchByCategory(string category);
     vector<Node> searchByOperation(string operation);
     vector<Node> searchByRelationship(string relationshipType);
+    vector<string> bfsTraversal(string startNode);
+    vector<string> dfsTranversal(string startNode);
 
     // Advanced search features(Query understanding, intent detection, topic extraction)
     string detectIntent(string query);
