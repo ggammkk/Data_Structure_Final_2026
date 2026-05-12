@@ -10,30 +10,19 @@ string toLowerCases(string text)
 
 vector<Node> Search::searchByName(string name)
 {
-    vector<Node> exactResults;
-    vector<Node> partialResults;
+    vector<Node> results;
     name = toLowerCases(name);
 
     for (auto &pair : graph->getNodes())
     {
         Node node = pair.second;
-        string nodeName = toLowerCases(node.name);
 
-        if (nodeName == name)
+        if (toLowerCases(node.name).find(name) != string::npos)
         {
-            exactResults.push_back(node);
-        }
-        else if (nodeName.find(name) != string::npos)
-        {
-            partialResults.push_back(node);
+            results.push_back(node);
         }
     }
-
-    if (!exactResults.empty())
-    {
-        return exactResults;
-    }
-    return partialResults;
+    return results;
 }
 
 vector<Node> Search::searchByCategory(string category)
@@ -151,20 +140,16 @@ string Search::extractTopic(string query)
     query = toLowerCases(query);
 
     // Remove common intent keywords
-    vector<string> intentKeywords = {"code examples", "code example",
-                                     "real life examples", "real-life examples",
-                                     "math relations", "math relation",
-                                     "time complexity",
-                                     "related topics", "related topic",
-                                     "what is", "define", "definition",
+    vector<string> intentKeywords = {"definition", "what is", "define",
                                      "category", "type",
-                                     "how to", "examples", "example",
-                                     "complexity", "time", "big o",
+                                     "how to", "example", "examples",
+                                     "complexity", "time", "big o", "time complexity",
                                      "operation", "operations",
-                                     "related", "connected", "relationship",
+                                     "related topics", "related topic", "related",
+                                     "connected", "relationship",
                                      "real life", "real-life", "applications", "application",
-                                     "math", "formula", "equation", "relation",
-                                     "of", "a", "an", "the"};
+                                     "math relations", "math relation", "math",
+                                     "of"};
     for (string keyword : intentKeywords)
     {
         size_t pos = query.find(keyword);
@@ -186,11 +171,6 @@ string Search::generateResponse(string query)
 {
     string intent = detectIntent(query);
     string topic = extractTopic(query);
-
-    if (topic.empty())
-    {
-        return "Please include a topic, for example: math relations of binary search tree.";
-    }
 
     vector<Node> results = searchByName(topic);
 
