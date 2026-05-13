@@ -30,14 +30,23 @@ app.get("/api/search", (req, res) => {
         return res.status(400).json({ error: "No search query provided" });
     }
 
-    execFile("./search_program.exe", [query], (error, stdout, stderr) => {
-        if (error) {
-            console.error(error);
-            return res.status(500).json({ error: "C++ search failed" });
-        }
+    execFile(
+        path.join(__dirname, "search_program.exe"),
+        [query],
+        { cwd: __dirname },
+        (error, stdout, stderr) => {
+            if (error) {
+                console.error("C++ ERROR:", error);
+                console.error("STDOUT:", stdout);
+                console.error("STDERR:", stderr);
 
-        res.json({
-            answer: stdout
-        });
-    });
+                return res.status(500).json({
+                    error: "C++ search failed",
+                    details: stdout || stderr || error.message
+                });
+            }
+
+            res.json({ answer: stdout });
+        }
+    );
 });

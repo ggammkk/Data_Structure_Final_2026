@@ -14,7 +14,8 @@ using namespace std;
 int main(int argc, char *argv[])
 {
 
-    std::filesystem::path jsonPath = std::filesystem::path("..") / "data" / "dsa_nodes.json";
+    std::filesystem::path jsonPath =
+        "D:/Documents/Academia/year 1 semester 2/Data Structures/Final Project 2026/Data_Structure_Final_2026/data/dsa_nodes.json";
     std::ifstream file(jsonPath);
 
     if (!file)
