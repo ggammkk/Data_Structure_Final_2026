@@ -1,6 +1,6 @@
 let globalData = [];
 
-fetch("../data/dsa_nodes.json")
+fetch("http://localhost:3000/api/dsa")
     .then(response => response.json())
     .then(data => {
         globalData = data;
@@ -190,7 +190,7 @@ fetch("../data/dsa_nodes.json")
         console.log(error);
     });
 
-globalData = data;
+//globalData = data;
 
 function searchTopic() {
     const input = document.getElementById("searchInput").value.trim();
@@ -268,8 +268,8 @@ function searchTopic() {
                     <p><strong>Math Relations:</strong></p>
                     <ul>
                         ${nodeData.math_relations
-                            .map(math => `<li>${math}</li>`)
-                            .join("")}
+                        .map(math => `<li>${math}</li>`)
+                        .join("")}
                     </ul>
                 ` : ""}
 
@@ -277,8 +277,8 @@ function searchTopic() {
                     <p><strong>Time Complexity:</strong></p>
                     <ul>
                         ${Object.entries(nodeData.time_complexity)
-                            .map(([key, value]) => `<li>${key}: ${value}</li>`)
-                            .join("")}
+                        .map(([key, value]) => `<li>${key}: ${value}</li>`)
+                        .join("")}
                     </ul>
                 ` : ""}
             `;
