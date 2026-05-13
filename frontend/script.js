@@ -120,6 +120,22 @@ fetch("http://localhost:3000/api/dsa")
 
         cy.on('tap', 'node', function (evt) {
             const node = evt.target;
+
+            // remove previous highlight
+            cy.elements().removeClass("highlight");
+
+            // highlight clicked node
+            node.addClass("highlight");
+
+            // zoom + center properly
+            cy.animate({
+                fit: {
+                    eles: node,
+                    padding: 120
+                },
+                duration: 600
+            });
+
             const nodeName = node.id();
 
             console.log("CLICKED:");
