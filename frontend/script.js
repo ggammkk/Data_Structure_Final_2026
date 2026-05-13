@@ -1,6 +1,6 @@
 let globalData = [];
 
-fetch("http://localhost:3000/api/dsa")
+fetch("../data/dsa_nodes.json")
     .then(response => response.json())
     .then(data => {
         globalData = data;
@@ -149,16 +149,24 @@ fetch("http://localhost:3000/api/dsa")
                         ${nodeData.operations.map(op => `<li>${op}</li>`).join("")}
                     </ul>
                 ` : ""}
-                <p><strong>Code Examples:</strong></p>
-                <pre class="code-block">${(nodeData.code_examples?.cpp || nodeData.code_examples || []).join("\n")}</pre>
+
+                ${(nodeData.code_examples?.cpp || nodeData.code_examples)?.length ? `
+                    <p><strong>Code Examples:</strong></p>
+                    <pre class="code-block">${(nodeData.code_examples?.cpp || nodeData.code_examples).join("\n")}</pre>
+                ` : ""}
+                
                 ${nodeData.real_life_examples && nodeData.real_life_examples.length > 0 ? `
                     <p><strong>Real Life Examples:</strong></p>
                     <p>${nodeData.real_life_examples.join(", ")}</p>
                 ` : ""}
 
-                ${nodeData.math_relations && nodeData.math_relations.length > 0 ? `
+                ${nodeData.math_relations?.length ? `
                     <p><strong>Math Relations:</strong></p>
-                    <p>${nodeData.math_relations.join(", ")}</p>
+                    <ul>
+                        ${nodeData.math_relations
+                            .map(math => `<li>${math}</li>`)
+                            .join("")}
+                    </ul>
                 ` : ""}
 
                 ${nodeData.time_complexity && Object.keys(nodeData.time_complexity).length > 0 ? `
@@ -196,8 +204,83 @@ function searchTopic() {
     fetch(`http://localhost:3000/api/search?q=${encodeURIComponent(input)}`)
         .then(response => response.json())
         .then(data => {
+            const nodeData = globalData.find(item =>
+                item.name.toLowerCase() === input.toLowerCase()
+            );
+
+            if (!nodeData) {
+                resultBox.innerHTML = "<p>Topic not found.</p>";
+                return;
+            }
+
+            const node = window.cy.getElementById(nodeData.name);
+
+            if (node && node.length > 0) {
+
+                // remove previous highlights
+                window.cy.elements().removeClass("highlight");
+
+                // highlight current node
+                node.addClass("highlight");
+
+                // animate zoom
+                window.cy.animate({
+                    fit: {
+                        eles: node,
+                        padding: 120
+                    },
+                    zoom: 1.2,
+                    duration: 700
+                });
+            }
+
             resultBox.innerHTML = `
-                <pre class="code-block">${data.answer}</pre>
+                <h2>${nodeData.name}</h2>
+
+                <p>
+                    <strong>Definition:</strong>
+                    ${nodeData.definition}
+                </p>
+
+                <p>
+                    <strong>Category:</strong>
+                    ${nodeData.category}
+                </p>
+
+                ${nodeData.operations?.length ? `
+                    <p><strong>Operations:</strong></p>
+                    <ul>
+                        ${nodeData.operations.map(op => `<li>${op}</li>`).join("")}
+                    </ul>
+                ` : ""}
+
+                ${(nodeData.code_examples?.cpp || nodeData.code_examples)?.length ? `
+                    <p><strong>Code Examples:</strong></p>
+                    <pre class="code-block">${(nodeData.code_examples?.cpp || nodeData.code_examples).join("\n")}</pre>
+                ` : ""}
+ 
+               ${nodeData.real_life_examples && nodeData.real_life_examples.length > 0 ? `
+                    <p><strong>Real Life Examples:</strong></p>
+                    <p>${nodeData.real_life_examples.join(", ")}</p>
+                ` : ""}
+
+                ${nodeData.math_relations?.length ? `
+                    <p><strong>Math Relations:</strong></p>
+                    <ul>
+                        ${nodeData.math_relations
+                            .map(math => `<li>${math}</li>`)
+                            .join("")}
+                    </ul>
+                ` : ""}
+
+               ${nodeData.time_complexity && Object.keys(nodeData.time_complexity).length > 0 ? `
+                    <p><strong>Time Complexity:</strong></p>
+                    <ul>
+                        ${Object.entries(nodeData.time_complexity)
+                            .map(([key, value]) => `<li>${key}: ${value}</li>`)
+                            .join("")}
+                    </ul>
+                ` : ""}
             `;
         })
         .catch(error => {
