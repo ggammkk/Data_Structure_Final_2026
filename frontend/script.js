@@ -1,6 +1,6 @@
 let globalData = [];
 
-fetch("../data/dsa_nodes.json")
+fetch("http://localhost:3000/api/dsa")
     .then(response => response.json())
     .then(data => {
         globalData = data;
@@ -39,11 +39,9 @@ fetch("../data/dsa_nodes.json")
         });
 
         data.forEach(item => {
-            if(item.relationships)
-            {
+            if (item.relationships) {
                 item.relationships.forEach(rel => {
-                    if(rel.target && rel.type)
-                    {
+                    if (rel.target && rel.type) {
                         elements.push({
                             data: {
                                 source: item.name,
@@ -120,7 +118,7 @@ fetch("../data/dsa_nodes.json")
 
         console.log("GRAPH CREATED SUCCESSFULLY");
 
-        cy.on('tap', 'node', function(evt) {
+        cy.on('tap', 'node', function (evt) {
             const node = evt.target;
             const nodeName = node.id();
 
@@ -130,10 +128,9 @@ fetch("../data/dsa_nodes.json")
             const nodeData = findNode(data, nodeName);
             const resultBox = document.getElementById('resultBox');
 
-            if(nodeData){
+            if (nodeData) {
                 let complexityHTML = "";
-                for(const key in nodeData.time_complexity)
-                    {complexityHTML += `<li>${key}: ${nodeData.time_complexity[key]}</li>`;}
+                for (const key in nodeData.time_complexity) { complexityHTML += `<li>${key}: ${nodeData.time_complexity[key]}</li>`; }
                 resultBox.innerHTML = `
 
                 <h2>${nodeData.name}</h2>
@@ -173,7 +170,7 @@ fetch("../data/dsa_nodes.json")
                     </ul>
                 ` : ""}
                 `;
-                }
+            }
 
         });
 
@@ -185,7 +182,7 @@ fetch("../data/dsa_nodes.json")
         console.log(error);
     });
 
-    globalData = data;
+globalData = data;
 
 function searchTopic() {
     const input = document.getElementById("searchInput").value;
