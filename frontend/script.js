@@ -185,32 +185,23 @@ fetch("http://localhost:3000/api/dsa")
 globalData = data;
 
 function searchTopic() {
-    const input = document.getElementById("searchInput").value;
+    const input = document.getElementById("searchInput").value.trim();
+    const resultBox = document.getElementById("resultBox");
 
-    const nodeData = globalData.find(item =>
-        item.name.toLowerCase().includes(input.toLowerCase().trim())
-    );
-
-    if (!nodeData) {
-        console.log("Node not found");
+    if (!input) {
+        resultBox.innerHTML = "<p>Please enter a search question.</p>";
         return;
     }
 
-    const node = window.cy.getElementById(nodeData.name);
-
-    if (!node || node.length === 0) {
-        console.log("Graph node not found");
-        return;
-    }
-
-    window.cy.animate({
-        fit: {
-            eles: node,
-            padding: 120
-        },
-        duration: 500
-    });
-
-    window.cy.elements().removeClass("highlight");
-    node.addClass("highlight");
+    fetch(`http://localhost:3000/api/search?q=${encodeURIComponent(input)}`)
+        .then(response => response.json())
+        .then(data => {
+            resultBox.innerHTML = `
+                <pre class="code-block">${data.answer}</pre>
+            `;
+        })
+        .catch(error => {
+            console.log("Search error:", error);
+            resultBox.innerHTML = "<p>Search failed. Check backend/C++ program.</p>";
+        });
 }

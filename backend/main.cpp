@@ -1,5 +1,8 @@
 #include <iostream>
 #include <fstream>
+#include <filesystem>
+#include <vector>
+#include <string>
 
 #include "json.hpp"
 #include "graph.h"
@@ -8,10 +11,11 @@
 using json = nlohmann::json;
 using namespace std;
 
-int main()
+int main(int argc, char *argv[])
 {
 
-    ifstream file("../data/dsa_nodes.json");
+    std::filesystem::path jsonPath = std::filesystem::path("..") / "data" / "dsa_nodes.json";
+    std::ifstream file(jsonPath);
 
     if (!file)
     {
@@ -118,25 +122,18 @@ int main()
     // Allows user to search test  might not be permanent
     Search search(&graph);
 
-    cout << "\n===== Interactive Search System =====\n";
-    cout << "Type a question, or type exit to quit.\n";
-
     string query;
 
-    while (true)
+    if (argc > 1)
     {
-        cout << "\nAsk something: ";
+        query = argv[1];
+    }
+    else
+    {
         getline(cin, query);
-
-        if (query == "exit")
-        {
-            break;
-        }
-
-        cout << search.generateResponse(query) << endl;
     }
 
-    system("pause");
+    cout << search.generateResponse(query);
 
     return 0;
 }
