@@ -204,8 +204,18 @@ function searchTopic() {
     fetch(`http://localhost:3000/api/search?q=${encodeURIComponent(input)}`)
         .then(response => response.json())
         .then(data => {
+            const cleanedInput = input
+                .toLowerCase()
+                .replace("what is", "")
+                .replace("define", "")
+                .replace("definition of", "")
+                .replace("?", "")
+                .trim();
+
             const nodeData = globalData.find(item =>
-                item.name.toLowerCase() === input.toLowerCase()
+                item.name.toLowerCase() === cleanedInput ||
+                item.name.toLowerCase().includes(cleanedInput) ||
+                cleanedInput.includes(item.name.toLowerCase())
             );
 
             if (!nodeData) {
