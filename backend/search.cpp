@@ -226,12 +226,12 @@ string Search::detectIntent(string query)
         return "math_relations";
     }
 
-    else if (query.find("bfs") != string::npos || query.find("breadth first") != string::npos)
+    else if (query.find("bfs traversal") != string::npos || query.find("traverse bfs") != string::npos || query.find("breadth first traversal") != string::npos || query.find("breadth first") != string::npos)
     {
         return "bfs";
     }
 
-    else if (query.find("dfs") != string::npos || query.find("depth first") != string::npos)
+    else if (query.find("dfs traversal") != string::npos || query.find("traverse dfs") != string::npos || query.find("depth first traversal") != string::npos || query.find("depth first") != string::npos)
     {
         return "dfs";
     }
@@ -288,11 +288,11 @@ string Search::extractTopic(string query)
         "relation",
         "of",
         "bfs",
-        "breadth first search",
-        "breadth first",
+        //"breadth first search",
+        //"breadth first",
         "dfs",
-        "depth first search",
-        "depth first",
+        //"depth first search",
+        //"depth first",
         "traversal",
         "traverse",
     };
