@@ -1,3 +1,4 @@
+
 let globalData = [];
 
 fetch("http://localhost:3000/api/dsa")
@@ -112,12 +113,129 @@ fetch("http://localhost:3000/api/dsa")
                 nodeRepulsion: 4000000,
                 edgeElasticity: 100,
                 gravity: 80,
-                animate: true
+                animate: true,
+
+                fit: true,
+                padding: 50
             }
+        });
+
+        cy.ready(() => {
+            if (window.innerWidth > 1600) {
+                cy.zoom(0.6);
+            }
+            else if (window.innerWidth > 1200) {
+                cy.zoom(0.75);
+            }
+            else {
+                cy.zoom(0.9);
+            }
+            cy.center();
         });
 
         console.log("GRAPH CREATED SUCCESSFULLY");
 
+        function renderNode(nodeData) {
+
+            // NAME
+            document.getElementById("name").innerText =
+                nodeData.name || "-";
+
+            // DEFINITION
+            document.getElementById("definition").innerHTML = `
+                <strong>Definition</strong><br>
+                ${nodeData.definition}
+            `;
+
+            // CATEGORY
+            document.getElementById("category").innerHTML = `
+                <strong>Category</strong><br>
+                ${nodeData.category}
+            `;
+
+            // OPERATIONS
+            document.getElementById("operations").innerHTML =
+                nodeData.operations?.length
+                    ? `
+                        <strong>Operations</strong>
+                        <ul>
+                            ${nodeData.operations
+                                .map(op => `<li>${op}</li>`)
+                                .join("")}
+                        </ul>
+                    `
+                    : "";
+
+            // CODE
+            const cppCode = nodeData.code_examples?.cpp;
+            document.getElementById("code").innerHTML =
+                cppCode
+                    ? `
+                        <strong>Code Example</strong>
+                        <pre class="code-block">${
+                            Array.isArray(cppCode)
+                                ? cppCode.join("\n")
+                                : cppCode
+                        }</pre>
+                    `
+                    : "";
+
+            // VISUAL / IMAGES
+            document.getElementById("visual").innerHTML =
+                nodeData.images?.length
+                    ? `
+                        <strong>Visual</strong>
+                        <div class="image-grid">
+                            ${nodeData.images.map(img => `
+                                <div class="image-card">
+                                    <img src="${img.url}" alt="${img.title}">
+                                    <p>${img.title}</p>
+                                </div>
+                            `).join("")}
+                        </div>
+                    `
+                    : "";
+
+            // STEP BY STEP
+            document.getElementById("stepbystep").innerHTML =
+                nodeData.step_by_step?.length
+                    ? `
+                        <strong>Step By Step</strong>
+                        <ol>
+                            ${nodeData.step_by_step
+                                .map(step => `<li>${step}</li>`)
+                                .join("")}
+                        </ol>
+                    `
+                    : "";
+
+            // COMPLEXITY
+            document.getElementById("complexity").innerHTML =
+                nodeData.time_complexity
+                    ? `
+                        <strong>Time Complexity</strong>
+                        <ul>
+                            ${Object.entries(nodeData.time_complexity)
+                                .map(([key, value]) =>
+                                    `<li>${key}: ${value}</li>`)
+                                .join("")}
+                        </ul>
+                    `
+                    : "";
+
+            // REAL LIFE EXAMPLES
+            document.getElementById("realexample").innerHTML =
+                nodeData.real_life_examples?.length
+                    ? `
+                        <strong>Real Life Examples</strong>
+                        <ul>
+                            ${nodeData.real_life_examples
+                                .map(ex => `<li>${ex}</li>`)
+                                .join("")}
+                        </ul>
+                    `
+                    : "";
+        }
         cy.on('tap', 'node', function (evt) {
             const node = evt.target;
 
@@ -131,7 +249,7 @@ fetch("http://localhost:3000/api/dsa")
             cy.animate({
                 fit: {
                     eles: node,
-                    padding: 120
+                    padding: Math.min(window.innerWidth * 0.08, 120)
                 },
                 duration: 600
             });
@@ -142,60 +260,10 @@ fetch("http://localhost:3000/api/dsa")
             console.log(nodeName);
 
             const nodeData = findNode(data, nodeName);
-            const resultBox = document.getElementById('resultBox');
-
-            if (nodeData) {
-                let complexityHTML = "";
-                for (const key in nodeData.time_complexity) { complexityHTML += `<li>${key}: ${nodeData.time_complexity[key]}</li>`; }
-                resultBox.innerHTML = `
-
-                <h2>${nodeData.name}</h2>
-
-                <p>
-                    <strong>Definition:</strong>
-                    ${nodeData.definition}
-                </p>
-                <p>
-                    <strong>Category:</strong>
-                    ${nodeData.category}
-                </p>
-                ${nodeData.operations && nodeData.operations.length > 0 ? `
-                    <p><strong>Operations:</strong></p>
-                    <ul>
-                        ${nodeData.operations.map(op => `<li>${op}</li>`).join("")}
-                    </ul>
-                ` : ""}
-
-                ${(nodeData.code_examples?.cpp || nodeData.code_examples)?.length ? `
-                    <p><strong>Code Examples:</strong></p>
-                    <pre class="code-block">${(nodeData.code_examples?.cpp || nodeData.code_examples).join("\n")}</pre>
-                ` : ""}
-                
-                ${nodeData.real_life_examples && nodeData.real_life_examples.length > 0 ? `
-                    <p><strong>Real Life Examples:</strong></p>
-                    <p>${nodeData.real_life_examples.join(", ")}</p>
-                ` : ""}
-
-                ${nodeData.math_relations?.length ? `
-                    <p><strong>Math Relations:</strong></p>
-                    <ul>
-                        ${nodeData.math_relations
-                            .map(math => `<li>${math}</li>`)
-                            .join("")}
-                    </ul>
-                ` : ""}
-
-                ${nodeData.time_complexity && Object.keys(nodeData.time_complexity).length > 0 ? `
-                    <p><strong>Time Complexity:</strong></p>
-                    <ul>
-                        ${Object.entries(nodeData.time_complexity)
-                            .map(([key, value]) => `<li>${key}: ${value}</li>`)
-                            .join("")}
-                    </ul>
-                ` : ""}
-                `;
+            
+            if (nodeData){
+                renderNode(nodeData);
             }
-
         });
 
     })
@@ -210,7 +278,6 @@ fetch("http://localhost:3000/api/dsa")
 
 function searchTopic() {
     const input = document.getElementById("searchInput").value.trim();
-    const resultBox = document.getElementById("resultBox");
 
     if (!input) {
         resultBox.innerHTML = "<p>Please enter a search question.</p>";
@@ -253,61 +320,14 @@ function searchTopic() {
                 window.cy.animate({
                     fit: {
                         eles: node,
-                        padding: 120
+                        padding: Math.min(window.innerWidth * 0.08, 120)
                     },
                     zoom: 1.2,
                     duration: 700
                 });
             }
 
-            resultBox.innerHTML = `
-                <h2>${nodeData.name}</h2>
-
-                <p>
-                    <strong>Definition:</strong>
-                    ${nodeData.definition}
-                </p>
-
-                <p>
-                    <strong>Category:</strong>
-                    ${nodeData.category}
-                </p>
-
-                ${nodeData.operations?.length ? `
-                    <p><strong>Operations:</strong></p>
-                    <ul>
-                        ${nodeData.operations.map(op => `<li>${op}</li>`).join("")}
-                    </ul>
-                ` : ""}
-
-                ${(nodeData.code_examples?.cpp || nodeData.code_examples)?.length ? `
-                    <p><strong>Code Examples:</strong></p>
-                    <pre class="code-block">${(nodeData.code_examples?.cpp || nodeData.code_examples).join("\n")}</pre>
-                ` : ""}
- 
-               ${nodeData.real_life_examples && nodeData.real_life_examples.length > 0 ? `
-                    <p><strong>Real Life Examples:</strong></p>
-                    <p>${nodeData.real_life_examples.join(", ")}</p>
-                ` : ""}
-
-                ${nodeData.math_relations?.length ? `
-                    <p><strong>Math Relations:</strong></p>
-                    <ul>
-                        ${nodeData.math_relations
-                        .map(math => `<li>${math}</li>`)
-                        .join("")}
-                    </ul>
-                ` : ""}
-
-               ${nodeData.time_complexity && Object.keys(nodeData.time_complexity).length > 0 ? `
-                    <p><strong>Time Complexity:</strong></p>
-                    <ul>
-                        ${Object.entries(nodeData.time_complexity)
-                        .map(([key, value]) => `<li>${key}: ${value}</li>`)
-                        .join("")}
-                    </ul>
-                ` : ""}
-            `;
+            renderNode(nodeData);        
         })
         .catch(error => {
             console.log("Search error:", error);

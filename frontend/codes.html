@@ -5,31 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DSA Knowledge Graph</title>
     <link rel="stylesheet" href="./style.css" />
+    <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+    <script src="script.js" defer></script>
   </head>
 
   <body>
-    <div class="container">
-      <h1>DSA Knowledge Graph</h1>
-      <div id="cy"></div>
-      <div class="search-box">
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Search a topic... (example: Queue)"
-        />
-        <button onclick="searchTopic()">Search</button>
-      </div>
+    <nav class="navbar">
+      <a href="#">Home</a>
+      <a href="#">DSA</a>
+      <a href="#">Practice Problem</a>
+      <a href="#">Quizzes</a>
+      <a href="#">Interview</a>
+    </nav>
+    <main class="mainlayout">
+      <section class="cygraph">
+        <div id="cy"></div>
+      </section>
 
-      <div class="result" id="resultBox">
-        <h2 class="placeholder1">How can I help you today?</h2>
-        <p class="placeholder2">Search for a DSA topic to view information.</p>
-      </div>
-    </div>
-
-    <!-- Cytoscape Library -->
-    <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
-
-    <!-- Your JavaScript -->
-    <script src="script.js"></script>
+      <section class="result">
+        <div class="searchbar">
+          <input
+            id="search"
+            type="text"
+            placeholder="Search for something... ex: what is graph?"
+          />
+          <button onclick="searchTopic()">Search</button>
+        </div>
+        <div class="content">
+          <section class="herosection" id="nodename">
+            <p id="name"></p>
+          </section>
+          <section class="definition">
+            <p id="definition"></p>
+          </section>
+          <section class="category">
+            <p id="category"></p>
+          </section>
+          <section class="operations">
+            <p id="operations"></p>
+          </section>
+          <section class="code">
+            <p id="code"></p>
+          </section>
+          <section class="visual">
+            <p id="visual"></p>
+          </section>
+          <section class="stepbystep">
+            <p id="stepbystep"></p>
+          </section>
+          <section class="complexity">
+            <p id="complexity"></p>
+          </section>
+          <section class="realexample">
+            <p id="realexample"></p>
+          </section>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
