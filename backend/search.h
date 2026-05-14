@@ -1,29 +1,32 @@
 #ifndef SEARCH_H
 #define SEARCH_H
 
+#include <string>
+#include <vector>
 #include "graph.h"
+#include "node.h"
+
+using namespace std;
 
 class Search
 {
 private:
-    Graph *graph;
+    Graph* graph;
 
 public:
-    Search(Graph *g) : graph(g) {};
+    Search(Graph* g);
 
-    // Basic search functions(algorithms)
     vector<Node> searchByName(string name);
     vector<Node> searchByCategory(string category);
     vector<Node> searchByOperation(string operation);
     vector<Node> searchByRelationship(string relationshipType);
+
     vector<string> bfsTraversal(string startNode);
     vector<string> dfsTraversal(string startNode);
 
-    // Advanced search features(Query understanding, intent detection, topic extraction)
     string detectIntent(string query);
     string extractTopic(string query);
 
-    // Responses
     string generateFullNodeResponse(Node node);
     string generateResponse(string query);
 };
