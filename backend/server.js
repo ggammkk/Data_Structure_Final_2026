@@ -50,3 +50,30 @@ app.get("/api/search", (req, res) => {
         }
     );
 });
+
+/*app.get("/api/quiz/:topic", (req, res) => {
+    const topic = req.params.topic;
+
+    execFile(
+        path.join(__dirname, "quiz_program.exe"),
+        [topic],
+        { cwd: __dirname },
+        (error, stdout, stderr) => {
+            if (error) {
+                return res.status(500).json({
+                    error: "C++ quiz failed",
+                    details: stdout || stderr || error.message
+                });
+            }
+
+            try {
+                res.json(JSON.parse(stdout));
+            } catch (e) {
+                res.status(500).json({
+                    error: "Quiz output was not valid JSON",
+                    details: stdout
+                });
+            }
+        }
+    );
+});*/ 
