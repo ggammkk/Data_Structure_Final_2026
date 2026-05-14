@@ -313,7 +313,7 @@ function highlightNode(nodeName) {
 // SEARCH
 // =========================
 
-/*function searchTopic() {
+function searchTopic() {
     const input = document.getElementById("searchInput").value.trim();
     const resultBox = document.getElementById("resultBox");
 
@@ -379,19 +379,7 @@ function highlightNode(nodeName) {
             console.log("Search error:", error);
             resultBox.innerHTML = "<p>Search failed. Check Node.js backend.</p>";
         });
-}*/
-
-function searchTopic() {
-    console.log("SEARCH BUTTON WORKS");
-
-    const resultBox = document.getElementById("resultBox");
-
-    resultBox.innerHTML = `
-        <h2>Search Test</h2>
-        <p>If this stays on screen, the reload problem is not the button.</p>
-    `;
 }
-
 
 function findBestNodeMatch(input) {
     const cleanedInput = input
