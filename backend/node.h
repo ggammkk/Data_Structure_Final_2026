@@ -7,25 +7,43 @@
 
 using namespace std;
 
-struct Relationship{
-
+struct Relationship
+{
     string target;
     string type;
 };
 
-struct Node{
+struct InterviewQuestion
+{
+    string question;
+    string answer;
+};
 
+struct ImageData
+{
+    string title;
+    string url;
+};
+
+struct Node
+{
     string name;
     string definition;
     string category;
+    string difficulty;
 
     vector<string> operations;
     vector<Relationship> relationships;
 
-    vector<string> code_examples;
-    vector<string> real_life_examples;
-    vector<string> math_relations;
     unordered_map<string, string> time_complexity;
+
+    vector<string> real_life_examples;
+    vector<InterviewQuestion> interview_questions;
+
+    unordered_map<string, string> code_examples;
+
+    vector<ImageData> images;
+    vector<string> step_by_step;
 };
 
 #endif
