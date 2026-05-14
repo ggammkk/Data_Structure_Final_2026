@@ -9,9 +9,6 @@
 
 using namespace std;
 
-// =========================
-// HELPER FUNCTION
-// =========================
 
 string toLowerCases(string text)
 {
