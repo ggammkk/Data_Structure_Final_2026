@@ -7,6 +7,8 @@
 #include <stack>
 using namespace std;
 
+// add intervwiew questions, focus on user accessiblity , try to get code example to run independently, similar to geeksforgeeks, mainly focus on user learning, litcode practise questions, Should be able on run on Wuhan server fpr future teaching purposes.
+
 // Basic search functions
 string toLowerCases(string text)
 {
