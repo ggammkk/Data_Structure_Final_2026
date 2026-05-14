@@ -1,316 +1,443 @@
 let globalData = [];
+let cy;
+
+// =========================
+// LOAD DATA FROM NODE.JS API
+// =========================
 
 fetch("http://localhost:3000/api/dsa")
     .then(response => response.json())
     .then(data => {
         globalData = data;
-        function normalize(str) {
-            return str.toLowerCase().trim();
-        }
-
-        function findNode(data, query) {
-            query = normalize(query);
-
-            return data.find(item =>
-                normalize(item.name) === query
-            );
-        }
 
         console.log("JSON LOADED SUCCESSFULLY");
         console.log(data);
 
-        function renderSection(title, itemsHTML) {
-            if (!itemsHTML) return "";
-            return `
-                <p><strong>${title}</strong></p>
-                ${itemsHTML}
-            `;
-        }
-
-        let elements = [];
-
-        data.forEach(item => {
-            elements.push({
-                data: {
-                    id: item.name,
-                    label: item.name
-                }
-            });
-        });
-
-        data.forEach(item => {
-            if (item.relationships) {
-                item.relationships.forEach(rel => {
-                    if (rel.target && rel.type) {
-                        elements.push({
-                            data: {
-                                source: item.name,
-                                target: rel.target,
-                                label: rel.type
-                            }
-                        });
-                    }
-                });
-            }
-        });
-
-        console.log("GRAPH ELEMENTS:");
-        console.log(elements);
-
-        window.cy = cytoscape({
-            container: document.getElementById('cy'),
-            elements: elements,
-
-            style: [
-                {
-                    selector: 'node',
-                    style: {
-                        'shape': 'round-rectangle',
-                        'corner-radius': 100,
-                        'width': 'label',
-                        'height': 'label',
-                        'padding': '10px',
-                        'background-color': '#041361',
-                        'label': 'data(label)',
-                        'color': 'white',
-                        'text-valign': 'center',
-                        'text-halign': 'center',
-                        'font-size': '20px',
-                        'text-wrap': 'wrap',
-                        'text-max-width': '200px'
-                    }
-                },
-
-                {
-                    selector: 'edge',
-                    style: {
-                        'width': 2,
-                        'line-color': '#999',
-                        'target-arrow-color': '#999',
-                        'target-arrow-shape': 'triangle',
-                        'curve-style': 'bezier',
-                        'label': 'data(label)',
-                        'font-size': '8px',
-                        'text-background-color': 'white',
-                        'text-background-opacity': 1,
-                        'text-background-padding': '2px'
-                    }
-                },
-
-                {
-                    selector: '.highlight',
-                    style: {
-                        'background-color': '#E5cbcc',
-                        'color': '#000',
-                    }
-                }
-            ],
-
-            layout: {
-                name: 'cose',
-                idealEdgeLength: 100,
-                nodeRepulsion: 4000000,
-                edgeElasticity: 100,
-                gravity: 80,
-                animate: true
-            }
-        });
-
-        console.log("GRAPH CREATED SUCCESSFULLY");
-
-        cy.on('tap', 'node', function (evt) {
-            const node = evt.target;
-
-            // remove previous highlight
-            cy.elements().removeClass("highlight");
-
-            // highlight clicked node
-            node.addClass("highlight");
-
-            // zoom + center properly
-            cy.animate({
-                fit: {
-                    eles: node,
-                    padding: 120
-                },
-                duration: 600
-            });
-
-            const nodeName = node.id();
-
-            console.log("CLICKED:");
-            console.log(nodeName);
-
-            const nodeData = findNode(data, nodeName);
-            const resultBox = document.getElementById('resultBox');
-
-            if (nodeData) {
-                let complexityHTML = "";
-                for (const key in nodeData.time_complexity) { complexityHTML += `<li>${key}: ${nodeData.time_complexity[key]}</li>`; }
-                resultBox.innerHTML = `
-
-                <h2>${nodeData.name}</h2>
-
-                <p>
-                    <strong>Definition:</strong>
-                    ${nodeData.definition}
-                </p>
-                <p>
-                    <strong>Category:</strong>
-                    ${nodeData.category}
-                </p>
-                ${nodeData.operations && nodeData.operations.length > 0 ? `
-                    <p><strong>Operations:</strong></p>
-                    <ul>
-                        ${nodeData.operations.map(op => `<li>${op}</li>`).join("")}
-                    </ul>
-                ` : ""}
-
-                ${(nodeData.code_examples?.cpp || nodeData.code_examples)?.length ? `
-                    <p><strong>Code Examples:</strong></p>
-                    <pre class="code-block">${(nodeData.code_examples?.cpp || nodeData.code_examples).join("\n")}</pre>
-                ` : ""}
-                
-                ${nodeData.real_life_examples && nodeData.real_life_examples.length > 0 ? `
-                    <p><strong>Real Life Examples:</strong></p>
-                    <p>${nodeData.real_life_examples.join(", ")}</p>
-                ` : ""}
-
-                ${nodeData.math_relations?.length ? `
-                    <p><strong>Math Relations:</strong></p>
-                    <ul>
-                        ${nodeData.math_relations
-                            .map(math => `<li>${math}</li>`)
-                            .join("")}
-                    </ul>
-                ` : ""}
-
-                ${nodeData.time_complexity && Object.keys(nodeData.time_complexity).length > 0 ? `
-                    <p><strong>Time Complexity:</strong></p>
-                    <ul>
-                        ${Object.entries(nodeData.time_complexity)
-                            .map(([key, value]) => `<li>${key}: ${value}</li>`)
-                            .join("")}
-                    </ul>
-                ` : ""}
-                `;
-            }
-
-        });
-
+        createGraph(data);
     })
-
-    // ERROR HANDLING
     .catch(error => {
         console.log("ERROR LOADING JSON:");
         console.log(error);
     });
 
-//globalData = data;
 
-function searchTopic() {
+// =========================
+// CREATE GRAPH
+// =========================
+
+function createGraph(data) {
+    const elements = [];
+
+    const nodeNames = new Set(data.map(item => item.name));
+
+    // Create nodes
+    data.forEach(item => {
+        elements.push({
+            data: {
+                id: item.name,
+                label: item.name
+            }
+        });
+    });
+
+    // Create edges safely
+    data.forEach(item => {
+        if(item.relationships && item.relationships.length > 0) {
+            item.relationships.forEach(rel => {
+                if(rel.target && rel.type && nodeNames.has(rel.target)) {
+                    elements.push({
+                        data: {
+                            source: item.name,
+                            target: rel.target,
+                            label: rel.type
+                        }
+                    });
+                }
+                else {
+                    console.warn("Skipped missing relationship target:", rel.target);
+                }
+            });
+        }
+    });
+
+    cy = cytoscape({
+        container: document.getElementById("cy"),
+
+        elements: elements,
+
+        style: [
+            {
+                selector: "node",
+                style: {
+                    "shape": "round-rectangle",
+                    "width": 130,
+                    "height": 45,
+                    "padding": "10px",
+                    "background-color": "#ffe75d",
+                    "label": "data(label)",
+                    "color": "#000",
+                    "text-valign": "center",
+                    "text-halign": "center",
+                    "font-size": "12px",
+                    "text-wrap": "wrap",
+                    "text-max-width": "120px"
+                }
+            },
+            {
+                selector: "edge",
+                style: {
+                    "width": 2,
+                    "line-color": "#9ca3af",
+                    "target-arrow-color": "#9ca3af",
+                    "target-arrow-shape": "triangle",
+                    "curve-style": "bezier",
+                    "label": "data(label)",
+                    "font-size": "8px",
+                    "text-background-color": "white",
+                    "text-background-opacity": 1,
+                    "text-background-padding": "2px"
+                }
+            },
+            {
+                selector: ".highlight",
+                style: {
+                    "background-color": "#ff2b2b",
+                    "color": "#fff"
+                }
+            }
+        ],
+
+        layout: {
+            name: "cose",
+            idealEdgeLength: 130,
+            nodeRepulsion: 500000,
+            edgeElasticity: 100,
+            gravity: 20,
+            animate: true
+        }
+    });
+
+    cy.on("tap", "node", function(event) {
+        const nodeName = event.target.id();
+        const nodeData = findNode(nodeName);
+
+        if(nodeData) {
+            highlightNode(nodeName);
+            displayNodeInfo(nodeData);
+        }
+    });
+}
+
+
+// =========================
+// FIND NODE
+// =========================
+
+function findNode(name) {
+    return globalData.find(item =>
+        item.name.toLowerCase() === name.toLowerCase()
+    );
+}
+
+
+// =========================
+// DISPLAY NODE INFO
+// =========================
+
+function displayNodeInfo(nodeData) {
+    const resultBox = document.getElementById("resultBox");
+
+    resultBox.innerHTML = `
+        <h2>${nodeData.name}</h2>
+
+        ${nodeData.difficulty ? `
+            <p><strong>Difficulty:</strong> ${nodeData.difficulty}</p>
+        ` : ""}
+
+        <p><strong>Category:</strong> ${nodeData.category || "N/A"}</p>
+
+        <p><strong>Definition:</strong> ${nodeData.definition || "No definition available."}</p>
+
+        ${renderListSection("Operations", nodeData.operations)}
+
+        ${renderComplexity(nodeData.time_complexity)}
+
+        ${renderListSection("Real Life Examples", nodeData.real_life_examples)}
+
+        ${renderInterviewQuestions(nodeData.interview_questions)}
+
+        ${renderCodeExamples(nodeData.code_examples)}
+
+        ${renderImages(nodeData.images)}
+
+        ${renderListSection("Step By Step", nodeData.step_by_step)}
+
+        ${renderRelationships(nodeData.relationships)}
+    `;
+}
+
+
+// =========================
+// RENDER HELPERS
+// =========================
+
+function renderListSection(title, list) {
+    if(!list || list.length === 0) {
+        return "";
+    }
+
+    return `
+        <h3>${title}</h3>
+        <ul>
+            ${list.map(item => `<li>${item}</li>`).join("")}
+        </ul>
+    `;
+}
+
+
+function renderRelationships(relationships) {
+    if(!relationships || relationships.length === 0) {
+        return "";
+    }
+
+    return `
+        <h3>Relationships</h3>
+        <ul>
+            ${relationships.map(rel => `
+                <li>${rel.type} → ${rel.target}</li>
+            `).join("")}
+        </ul>
+    `;
+}
+
+
+function renderComplexity(timeComplexity) {
+    if(!timeComplexity || Object.keys(timeComplexity).length === 0) {
+        return "";
+    }
+
+    return `
+        <h3>Time Complexity</h3>
+        <table class="complexity-table">
+            <tr>
+                <th>Operation</th>
+                <th>Complexity</th>
+            </tr>
+            ${Object.entries(timeComplexity).map(([key, value]) => `
+                <tr>
+                    <td>${key}</td>
+                    <td>${value}</td>
+                </tr>
+            `).join("")}
+        </table>
+    `;
+}
+
+
+function renderInterviewQuestions(questions) {
+    if(!questions || questions.length === 0) {
+        return "";
+    }
+
+    return `
+        <h3>Interview Questions</h3>
+        ${questions.map(q => `
+            <div class="question-card">
+                <p><strong>Q:</strong> ${q.question}</p>
+                <p><strong>A:</strong> ${q.answer}</p>
+            </div>
+        `).join("")}
+    `;
+}
+
+
+function renderCodeExamples(codeExamples) {
+    if(!codeExamples || Object.keys(codeExamples).length === 0) {
+        return "";
+    }
+
+    return `
+        <h3>Code Examples</h3>
+
+        ${Object.entries(codeExamples).map(([language, code]) => `
+            <h4>${language.toUpperCase()}</h4>
+            <pre class="code-block">${code}</pre>
+        `).join("")}
+    `;
+}
+
+
+function renderImages(images) {
+    if(!images || images.length === 0) {
+        return "";
+    }
+
+    return `
+        <h3>Images / Diagrams</h3>
+
+        ${images.map(img => `
+            <div class="image-card">
+                <p><strong>${img.title}</strong></p>
+                <img src="${img.url}" alt="${img.title}" class="topic-image">
+            </div>
+        `).join("")}
+    `;
+}
+
+
+// =========================
+// HIGHLIGHT NODE
+// =========================
+
+function highlightNode(nodeName) {
+    cy.elements().removeClass("highlight");
+
+    const node = cy.getElementById(nodeName);
+
+    if(node && node.length > 0) {
+        node.addClass("highlight");
+
+        cy.animate({
+            fit: {
+                eles: node,
+                padding: 120
+            }
+        }, {
+            duration: 500
+        });
+    }
+}
+
+
+// =========================
+// SEARCH
+// =========================
+
+/*function searchTopic() {
     const input = document.getElementById("searchInput").value.trim();
     const resultBox = document.getElementById("resultBox");
 
-    if (!input) {
+    if(!input) {
         resultBox.innerHTML = "<p>Please enter a search question.</p>";
         return;
     }
 
     fetch(`http://localhost:3000/api/search?q=${encodeURIComponent(input)}`)
         .then(response => response.json())
-        .then(data => {
-            const cleanedInput = input
-                .toLowerCase()
-                .replace("what is", "")
-                .replace("define", "")
-                .replace("definition of", "")
-                .replace("?", "")
-                .trim();
+        .then(searchResult => {
+            console.log("SEARCH RESULT:", searchResult);
 
-            const nodeData = globalData.find(item =>
-                item.name.toLowerCase() === cleanedInput ||
-                item.name.toLowerCase().includes(cleanedInput) ||
-                cleanedInput.includes(item.name.toLowerCase())
-            );
+            const nodeData = findBestNodeMatch(input);
 
-            if (!nodeData) {
-                resultBox.innerHTML = "<p>Topic not found.</p>";
+            if(!nodeData) {
+                resultBox.innerHTML = `
+                    <h2>Topic Not Found</h2>
+                    <p>${searchResult.answer || "No matching topic found."}</p>
+                `;
                 return;
             }
 
-            const node = window.cy.getElementById(nodeData.name);
+            highlightNode(nodeData.name);
 
-            if (node && node.length > 0) {
-
-                // remove previous highlights
-                window.cy.elements().removeClass("highlight");
-
-                // highlight current node
-                node.addClass("highlight");
-
-                // animate zoom
-                window.cy.animate({
-                    fit: {
-                        eles: node,
-                        padding: 120
-                    },
-                    zoom: 1.2,
-                    duration: 700
-                });
-            }
-
+            // If backend search returns an answer, show it first
             resultBox.innerHTML = `
                 <h2>${nodeData.name}</h2>
 
-                <p>
-                    <strong>Definition:</strong>
-                    ${nodeData.definition}
-                </p>
-
-                <p>
-                    <strong>Category:</strong>
-                    ${nodeData.category}
-                </p>
-
-                ${nodeData.operations?.length ? `
-                    <p><strong>Operations:</strong></p>
-                    <ul>
-                        ${nodeData.operations.map(op => `<li>${op}</li>`).join("")}
-                    </ul>
+                ${searchResult.answer ? `
+                    <div class="answer-box">
+                        <h3>Search Answer</h3>
+                        <p>${searchResult.answer.replace(/\n/g, "<br>")}</p>
+                    </div>
                 ` : ""}
 
-                ${(nodeData.code_examples?.cpp || nodeData.code_examples)?.length ? `
-                    <p><strong>Code Examples:</strong></p>
-                    <pre class="code-block">${(nodeData.code_examples?.cpp || nodeData.code_examples).join("\n")}</pre>
-                ` : ""}
- 
-               ${nodeData.real_life_examples && nodeData.real_life_examples.length > 0 ? `
-                    <p><strong>Real Life Examples:</strong></p>
-                    <p>${nodeData.real_life_examples.join(", ")}</p>
+                ${nodeData.difficulty ? `
+                    <p><strong>Difficulty:</strong> ${nodeData.difficulty}</p>
                 ` : ""}
 
-                ${nodeData.math_relations?.length ? `
-                    <p><strong>Math Relations:</strong></p>
-                    <ul>
-                        ${nodeData.math_relations
-                        .map(math => `<li>${math}</li>`)
-                        .join("")}
-                    </ul>
-                ` : ""}
+                <p><strong>Category:</strong> ${nodeData.category || "N/A"}</p>
 
-               ${nodeData.time_complexity && Object.keys(nodeData.time_complexity).length > 0 ? `
-                    <p><strong>Time Complexity:</strong></p>
-                    <ul>
-                        ${Object.entries(nodeData.time_complexity)
-                        .map(([key, value]) => `<li>${key}: ${value}</li>`)
-                        .join("")}
-                    </ul>
-                ` : ""}
+                <p><strong>Definition:</strong> ${nodeData.definition || "No definition available."}</p>
+
+                ${renderListSection("Operations", nodeData.operations)}
+
+                ${renderComplexity(nodeData.time_complexity)}
+
+                ${renderListSection("Real Life Examples", nodeData.real_life_examples)}
+
+                ${renderInterviewQuestions(nodeData.interview_questions)}
+
+                ${renderCodeExamples(nodeData.code_examples)}
+
+                ${renderImages(nodeData.images)}
+
+                ${renderListSection("Step By Step", nodeData.step_by_step)}
+
+                ${renderRelationships(nodeData.relationships)}
             `;
         })
         .catch(error => {
             console.log("Search error:", error);
-            resultBox.innerHTML = "<p>Search failed. Check backend/C++ program.</p>";
+            resultBox.innerHTML = "<p>Search failed. Check Node.js backend.</p>";
         });
+}*/
+
+function searchTopic() {
+    console.log("SEARCH BUTTON WORKS");
+
+    const resultBox = document.getElementById("resultBox");
+
+    resultBox.innerHTML = `
+        <h2>Search Test</h2>
+        <p>If this stays on screen, the reload problem is not the button.</p>
+    `;
 }
+
+
+function findBestNodeMatch(input) {
+    const cleanedInput = input
+        .toLowerCase()
+        .replace("what is", "")
+        .replace("define", "")
+        .replace("definition of", "")
+        .replace("operations of", "")
+        .replace("time complexity of", "")
+        .replace("code example of", "")
+        .replace("interview questions of", "")
+        .replace("step by step of", "")
+        .replace("diagram of", "")
+        .replace("image of", "")
+        .replace("?", "")
+        .trim();
+
+    let exactMatch = globalData.find(item =>
+        item.name.toLowerCase() === cleanedInput
+    );
+
+    if(exactMatch) {
+        return exactMatch;
+    }
+
+    let partialMatch = globalData.find(item =>
+        item.name.toLowerCase().includes(cleanedInput) ||
+        cleanedInput.includes(item.name.toLowerCase())
+    );
+
+    return partialMatch;
+}
+
+
+// =========================
+// EVENT LISTENERS
+// =========================
+
+document.getElementById("searchButton").addEventListener("click", function(event) {
+    event.preventDefault();
+    searchTopic();
+});
+
+document.getElementById("searchInput").addEventListener("keydown", function(event) {
+    if(event.key === "Enter") {
+        event.preventDefault();
+        searchTopic();
+    }
+});
