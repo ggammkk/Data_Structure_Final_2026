@@ -1,4 +1,4 @@
-/*#include <iostream>
+#include <iostream>
 #include <fstream>
 #include <filesystem>
 #include <vector>
@@ -137,10 +137,10 @@ int main(int argc, char *argv[])
     cout << search.generateResponse(query);
 
     return 0;
-}*/
+}
 
 #include "extract.h"
-
+/*
 int main()
 {
     Extractor extractor;
@@ -152,3 +152,4 @@ int main()
 
     return 0;
 }
+*/
