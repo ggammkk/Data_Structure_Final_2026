@@ -38,7 +38,7 @@ function showQuestion() {
         <h2>Question ${currentQuestion + 1}</h2>
         <p>${q.question}</p>
 
-        ${q.image ? `<img src="${q.image}" class="quiz-image" alt="Quiz image">` : ""}
+        ${q.image ? `<img src="../${q.image}" class="quiz-image" alt="Quiz image">` : ""}
 
         ${q.code ? `<pre class="code-block">${q.code}</pre>` : ""}
 

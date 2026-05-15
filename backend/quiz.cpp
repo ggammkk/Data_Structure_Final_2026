@@ -25,20 +25,23 @@ vector<QuizQuestion> Quiz::generateQuiz(string topic)
     json j;
     file >> j;
 
-    for (const auto& item : j)
+    if (!j.contains(topic))
     {
-        if (item["topic"].get<string>() == topic)
-        {
-            QuizQuestion q;
-            q.topic = item["topic"].get<string>();
-            q.question = item["question"].get<string>();
-            q.code = item.value("code", "");
-            q.image = item.value("image", "");
-            q.options = item["options"].get<vector<string>>();
-            q.answer = item["answer"].get<string>();
+        cerr << "Topic not found: " << topic << endl;
+        return quiz;
+    }
 
-            quiz.push_back(q);
-        }
+    for (const auto& item : j[topic])
+    {
+        QuizQuestion q;
+        q.topic = item.value("topic", topic);
+        q.question = item.value("question", "");
+        q.code = item.value("code", "");
+        q.image = item.value("image", "");
+        q.options = item["options"].get<vector<string>>();
+        q.answer = item.value("answer", "");
+
+        quiz.push_back(q);
     }
 
     return quiz;
