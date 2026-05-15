@@ -284,13 +284,14 @@ fetch("http://localhost:3000/api/dsa")
 
 function searchTopic() {
     const input = document.getElementById("searchInput").value.trim();
+    const resultBox = document.getElementById("resultBox");
 
     if(!input) {
         resultBox.innerHTML = "<p>Please enter a search question.</p>";
         return;
     }
-
     fetch(`http://localhost:3000/api/search?q=${encodeURIComponent(input)}`)
+    
         .then(response => response.json())
         .then(searchResult => {
             console.log("SEARCH RESULT:", searchResult);
@@ -372,14 +373,38 @@ function findBestNodeMatch(input) {
 // EVENT LISTENERS
 // =========================
 
-document.getElementById("searchButton").addEventListener("click", function(event) {
-    event.preventDefault();
-    searchTopic();
-});
+document.addEventListener("DOMContentLoaded", function() {
+    const searchForm = document.getElementById("searchForm");
+    const searchButton = document.getElementById("searchButton");
+    const searchInput = document.getElementById("searchInput");
 
-document.getElementById("searchInput").addEventListener("keydown", function(event) {
-    if(event.key === "Enter") {
-        event.preventDefault();
-        searchTopic();
+    if (window.onbeforeunload) {
+        window.onbeforeunload = null;
+    }
+
+    if (searchForm) {
+        searchForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            searchTopic();
+        });
+    }
+
+    if (searchButton) {
+        searchButton.addEventListener("click", function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            searchTopic();
+        });
+    }
+
+    if (searchInput) {
+        searchInput.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                event.stopPropagation();
+                searchTopic();
+            }
+        });
     }
 });

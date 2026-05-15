@@ -23,15 +23,15 @@
       </section>
 
       <section class="result">
-        <div class="searchbar">
+        <form id="searchForm" class="searchbar">
           <input
-            id="search"
+            id="searchInput"
             type="text"
             placeholder="Search for something... ex: what is graph?"
           />
-          <button onclick="searchTopic()">Search</button>
-        </div>
-        <div class="content">
+          <button id="searchButton" type="submit">Search</button>
+        </form>
+        <div class="content" id="resultBox">
           <section class="herosection" id="nodename">
             <p id="name"></p>
           </section>
