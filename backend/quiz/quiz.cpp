@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <filesystem>
-#include "json.hpp"
+#include "../json/json.hpp"
 
 using json = nlohmann::json;
 using namespace std;
@@ -12,7 +12,8 @@ vector<QuizQuestion> Quiz::generateQuiz(string topic)
     vector<QuizQuestion> quiz;
 
     filesystem::path quizPath =
-        filesystem::current_path().parent_path() / "data" / "quiz.json";
+    filesystem::current_path().parent_path().parent_path()
+    / "data" / "quiz.json";
 
     ifstream file(quizPath);
 
@@ -40,6 +41,12 @@ vector<QuizQuestion> Quiz::generateQuiz(string topic)
         q.image = item.value("image", "");
         q.options = item["options"].get<vector<string>>();
         q.answer = item.value("answer", "");
+        q.explanation = item.value("explanation", "");
+        if (item.contains("wrong_explanations")) 
+        {
+            q.wrong_explanations =
+                item["wrong_explanations"].get<map<string, string>>();
+        }
 
         quiz.push_back(q);
     }
@@ -59,7 +66,9 @@ string Quiz::quizTojson(vector<QuizQuestion> questions)
             {"code", q.code},
             {"image", q.image},
             {"options", q.options},
-            {"answer", q.answer}
+            {"answer", q.answer},
+            {"explanation", q.explanation},
+            {"wrong_explanations", q.wrong_explanations}
         });
     }
 

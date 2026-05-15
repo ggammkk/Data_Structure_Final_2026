@@ -4,7 +4,7 @@
 #include <vector>
 #include <string>
 
-#include "json.hpp"
+#include "../json/json.hpp"
 #include "graph.h"
 #include "search.h"
 

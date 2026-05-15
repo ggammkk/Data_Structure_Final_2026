@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
-const path = require("path");
 const fs = require("fs");
+const path = require("path");
 const { execFile } = require("child_process");
 
 
@@ -52,7 +52,7 @@ app.get("/api/quiz/:topic", (req, res) => {
     const topic = req.params.topic;
 
     execFile(
-        path.join(__dirname, "quiz_program.exe"),
+        path.join(__dirname, "quiz", "quiz_program.exe"),
         [topic],
         { cwd: __dirname },
         (error, stdout, stderr) => {
@@ -73,7 +73,10 @@ app.get("/api/quiz-topics", (req, res) => {
 
     fs.readFile(quizPath, "utf8", (err, data) => {
         if (err) {
-            return res.status(500).json({ error: "Could not read quiz.json" });
+            return res.status(500).json({
+                error: "Could not read quiz.json",
+                details: err.message
+            });
         }
 
         const quizData = JSON.parse(data);
