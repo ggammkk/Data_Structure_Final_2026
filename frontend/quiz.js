@@ -34,23 +34,25 @@ function showQuestion() {
     const q = questions[currentQuestion];
 
     quizBox.innerHTML = `
-        <div class="question-card">
-            <h2>Question ${currentQuestion + 1}</h2>
-            <p>${q.question}</p>
+    <div class="question-card">
+        <h2>Question ${currentQuestion + 1}</h2>
+        <p>${q.question}</p>
 
-            ${q.code ? `<pre class="code-block">${q.code}</pre>` : ""}
+        ${q.image ? `<img src="${q.image}" class="quiz-image" alt="Quiz image">` : ""}
 
-            <div class="options">
-                ${q.options.map(option => `
-                    <button onclick="checkAnswer('${escapeText(option)}')">
-                        ${option}
-                    </button>
-                `).join("")}
-            </div>
+        ${q.code ? `<pre class="code-block">${q.code}</pre>` : ""}
 
-            <p>Score: ${score}</p>
+        <div class="options">
+            ${q.options.map(option => `
+                <button onclick="checkAnswer('${escapeText(option)}')">
+                    ${option}
+                </button>
+            `).join("")}
         </div>
-    `;
+
+        <p>Score: ${score}</p>
+    </div>
+`;
 }
 
 function checkAnswer(selected) {

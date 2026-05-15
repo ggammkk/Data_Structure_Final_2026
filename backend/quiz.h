@@ -5,8 +5,10 @@
 using namespace std;
 
 struct QuizQuestion{
+    string topic;
     string question;
     string code;
+    string image;
     vector<string> options;
     string answer;
 };

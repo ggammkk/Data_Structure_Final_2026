@@ -30,8 +30,10 @@ vector<QuizQuestion> Quiz::generateQuiz(string topic)
         if (item["topic"].get<string>() == topic)
         {
             QuizQuestion q;
+            q.topic = item["topic"].get<string>();
             q.question = item["question"].get<string>();
             q.code = item.value("code", "");
+            q.image = item.value("image", "");
             q.options = item["options"].get<vector<string>>();
             q.answer = item["answer"].get<string>();
 
@@ -49,8 +51,10 @@ string Quiz::quizTojson(vector<QuizQuestion> questions)
     for (const auto& q : questions)
     {
         j.push_back({
+            {"topic", q.topic},
             {"question", q.question},
             {"code", q.code},
+            {"image", q.image},
             {"options", q.options},
             {"answer", q.answer}
         });
