@@ -101,12 +101,12 @@
       "question": "Which image file shows the diagram for Data?",
       "code": "int score = 95;\ncout << \"Stored data: \" << score << endl;",
       "options": [
-        "images/missing_diagram.png",
-        "images/data_diagram.png",
-        "images/data_example.png",
-        "assets/not_provided.png"
+        "Missing Diagram",
+        "Data Diagram",
+        "Data Example",
+        "Not Provided"
       ],
-      "answer": "images/data_diagram.png",
+      "answer": "Data Diagram",
       "image": "images/data_diagram.png"
     },
     {
@@ -114,12 +114,12 @@
       "question": "Which image file shows an example view for Data?",
       "code": "int score = 95;\ncout << \"Stored data: \" << score << endl;",
       "options": [
-        "images/data_diagram.png",
-        "images/missing_example.png",
-        "images/data_example.png",
-        "assets/not_provided.png"
+        "Data Diagram",
+        "Missing Example",
+        "Data Example",
+        "Not Provided"
       ],
-      "answer": "images/data_example.png",
+      "answer": "Data Example",
       "image": "images/data_example.png"
     },
     {
@@ -285,12 +285,12 @@
       "question": "Which image file shows the diagram for Data Structure?",
       "code": "vector<int> values = {10, 20, 30};\nvalues.push_back(40);\ncout << values[0];",
       "options": [
-        "images/data_structure_diagram.png",
-        "assets/not_provided.png",
-        "images/data_structure_example.png",
-        "images/missing_diagram.png"
+        "Data Structure Diagram",
+        "Not Provided",
+        "Data Structure Example",
+        "Missing Diagram"
       ],
-      "answer": "images/data_structure_diagram.png",
+      "answer": "Data Structure Diagram",
       "image": "images/data_structure_diagram.png"
     },
     {
@@ -298,12 +298,12 @@
       "question": "Which image file shows an example view for Data Structure?",
       "code": "vector<int> values = {10, 20, 30};\nvalues.push_back(40);\ncout << values[0];",
       "options": [
-        "images/data_structure_diagram.png",
-        "images/data_structure_example.png",
-        "assets/not_provided.png",
-        "images/missing_example.png"
+        "Data Structure Diagram",
+        "Data Structure Example",
+        "Not Provided",
+        "Missing Example"
       ],
-      "answer": "images/data_structure_example.png",
+      "answer": "Data Structure Example",
       "image": "images/data_structure_example.png"
     },
     {
@@ -469,12 +469,12 @@
       "question": "Which image file shows the diagram for Linear Data Structure?",
       "code": "vector<int> items = {1, 2, 3};\nfor(int x : items) {\n    cout << x << \" \";\n}",
       "options": [
-        "images/linear_data_structure_example.png",
-        "images/linear_data_structure_diagram.png",
-        "images/missing_diagram.png",
-        "assets/not_provided.png"
+        "Linear Data Structure Example",
+        "Linear Data Structure Diagram",
+        "Missing Diagram",
+        "Not Provided"
       ],
-      "answer": "images/linear_data_structure_diagram.png",
+      "answer": "Linear Data Structure Diagram",
       "image": "images/linear_data_structure_diagram.png"
     },
     {
@@ -482,12 +482,12 @@
       "question": "Which image file shows an example view for Linear Data Structure?",
       "code": "vector<int> items = {1, 2, 3};\nfor(int x : items) {\n    cout << x << \" \";\n}",
       "options": [
-        "images/linear_data_structure_diagram.png",
-        "images/linear_data_structure_example.png",
-        "assets/not_provided.png",
-        "images/missing_example.png"
+        "Linear Data Structure Diagram",
+        "Linear Data Structure Example",
+        "Not Provided",
+        "Missing Example"
       ],
-      "answer": "images/linear_data_structure_example.png",
+      "answer": "Linear Data Structure Example",
       "image": "images/linear_data_structure_example.png"
     },
     {
@@ -653,12 +653,12 @@
       "question": "Which image file shows the diagram for Array?",
       "code": "int arr[5] = {1,2,3,4,5};",
       "options": [
-        "images/array_diagram.png",
-        "assets/not_provided.png",
-        "images/array_example.png",
-        "images/missing_diagram.png"
+        "Array Diagram",
+        "Not Provided",
+        "Array Example",
+        "Missing Diagram"
       ],
-      "answer": "images/array_diagram.png",
+      "answer": "Array Diagram",
       "image": "images/array_diagram.png"
     },
     {
@@ -666,12 +666,12 @@
       "question": "Which image file shows an example view for Array?",
       "code": "int arr[5] = {1,2,3,4,5};",
       "options": [
-        "images/missing_example.png",
-        "images/array_example.png",
-        "assets/not_provided.png",
-        "images/array_diagram.png"
+        "Missing Example",
+        "Array Example",
+        "Not Provided",
+        "Array Diagram"
       ],
-      "answer": "images/array_example.png",
+      "answer": "Array Example",
       "image": "images/array_example.png"
     },
     {
@@ -837,12 +837,12 @@
       "question": "Which image file shows the diagram for One-Dimensional Array?",
       "code": "int arr[5];",
       "options": [
-        "images/missing_diagram.png",
-        "assets/not_provided.png",
-        "images/one_dimensional_array_example.png",
-        "images/one_dimensional_array_diagram.png"
+        "Missing Diagram",
+        "Not Provided",
+        "One Dimensional Array Example",
+        "One Dimensional Array Diagram"
       ],
-      "answer": "images/one_dimensional_array_diagram.png",
+      "answer": "One Dimensional Array Diagram",
       "image": "images/one_dimensional_array_diagram.png"
     },
     {
@@ -850,12 +850,12 @@
       "question": "Which image file shows an example view for One-Dimensional Array?",
       "code": "int arr[5];",
       "options": [
-        "images/missing_example.png",
-        "images/one_dimensional_array_example.png",
-        "assets/not_provided.png",
-        "images/one_dimensional_array_diagram.png"
+        "Missing Example",
+        "One Dimensional Array Example",
+        "Not Provided",
+        "One Dimensional Array Diagram"
       ],
-      "answer": "images/one_dimensional_array_example.png",
+      "answer": "One Dimensional Array Example",
       "image": "images/one_dimensional_array_example.png"
     },
     {
@@ -1021,12 +1021,12 @@
       "question": "Which image file shows the diagram for Two-Dimensional Array?",
       "code": "int matrix[3][3];",
       "options": [
-        "assets/not_provided.png",
-        "images/two_dimensional_array_diagram.png",
-        "images/missing_diagram.png",
-        "images/two_dimensional_array_example.png"
+        "Not Provided",
+        "Two Dimensional Array Diagram",
+        "Missing Diagram",
+        "Two Dimensional Array Example"
       ],
-      "answer": "images/two_dimensional_array_diagram.png",
+      "answer": "Two Dimensional Array Diagram",
       "image": "images/two_dimensional_array_diagram.png"
     },
     {
@@ -1034,12 +1034,12 @@
       "question": "Which image file shows an example view for Two-Dimensional Array?",
       "code": "int matrix[3][3];",
       "options": [
-        "images/two_dimensional_array_example.png",
-        "assets/not_provided.png",
-        "images/two_dimensional_array_diagram.png",
-        "images/missing_example.png"
+        "Two Dimensional Array Example",
+        "Not Provided",
+        "Two Dimensional Array Diagram",
+        "Missing Example"
       ],
-      "answer": "images/two_dimensional_array_example.png",
+      "answer": "Two Dimensional Array Example",
       "image": "images/two_dimensional_array_example.png"
     },
     {
@@ -1205,12 +1205,12 @@
       "question": "Which image file shows the diagram for Linked List?",
       "code": "class Node {\npublic:\nint data;\nNode *next;\n\nNode(int value) : data(value), next(nullptr) {}\n};\n\nint main() {\nNode* head = new Node(1);\nhead->next = new Node(2);\nhead->next->next = new Node(3);\nreturn 0;\n}",
       "options": [
-        "images/missing_diagram.png",
-        "images/linked_list_example.png",
-        "images/linked_list_diagram.png",
-        "assets/not_provided.png"
+        "Missing Diagram",
+        "Linked List Example",
+        "Linked List Diagram",
+        "Not Provided"
       ],
-      "answer": "images/linked_list_diagram.png",
+      "answer": "Linked List Diagram",
       "image": "images/linked_list_diagram.png"
     },
     {
@@ -1218,12 +1218,12 @@
       "question": "Which image file shows an example view for Linked List?",
       "code": "class Node {\npublic:\nint data;\nNode *next;\n\nNode(int value) : data(value), next(nullptr) {}\n};\n\nint main() {\nNode* head = new Node(1);\nhead->next = new Node(2);\nhead->next->next = new Node(3);\nreturn 0;\n}",
       "options": [
-        "images/linked_list_example.png",
-        "images/missing_example.png",
-        "assets/not_provided.png",
-        "images/linked_list_diagram.png"
+        "Linked List Example",
+        "Missing Example",
+        "Not Provided",
+        "Linked List Diagram"
       ],
-      "answer": "images/linked_list_example.png",
+      "answer": "Linked List Example",
       "image": "images/linked_list_example.png"
     },
     {
@@ -1389,12 +1389,12 @@
       "question": "Which image file shows the diagram for Singly Linked List?",
       "code": "class Node {\npublic:\nint data;\nNode *next;\n\nNode(int value) : data(value), next(nullptr) {}\n};\n\nint main() {\nNode* head = new Node(1);\nhead->next = new Node(2);\nhead->next->next = nullptr;\nreturn 0;\n}",
       "options": [
-        "images/singly_linked_list_example.png",
-        "assets/not_provided.png",
-        "images/missing_diagram.png",
-        "images/singly_linked_list_diagram.png"
+        "Singly Linked List Example",
+        "Not Provided",
+        "Missing Diagram",
+        "Singly Linked List Diagram"
       ],
-      "answer": "images/singly_linked_list_diagram.png",
+      "answer": "Singly Linked List Diagram",
       "image": "images/singly_linked_list_diagram.png"
     },
     {
@@ -1402,12 +1402,12 @@
       "question": "Which image file shows an example view for Singly Linked List?",
       "code": "class Node {\npublic:\nint data;\nNode *next;\n\nNode(int value) : data(value), next(nullptr) {}\n};\n\nint main() {\nNode* head = new Node(1);\nhead->next = new Node(2);\nhead->next->next = nullptr;\nreturn 0;\n}",
       "options": [
-        "images/singly_linked_list_diagram.png",
-        "images/missing_example.png",
-        "images/singly_linked_list_example.png",
-        "assets/not_provided.png"
+        "Singly Linked List Diagram",
+        "Missing Example",
+        "Singly Linked List Example",
+        "Not Provided"
       ],
-      "answer": "images/singly_linked_list_example.png",
+      "answer": "Singly Linked List Example",
       "image": "images/singly_linked_list_example.png"
     },
     {
@@ -1573,12 +1573,12 @@
       "question": "Which image file shows the diagram for Doubly Linked List?",
       "code": "class Node {\npublic:\nint data;\nNode *next;\nNode *prev;\n\nNode(int value) : data(value), next(nullptr), prev(nullptr) {}\n};\n\nint main() {\nNode* head = new Node(1);\nhead->next = new Node(2);\nhead->next->prev = head;\nhead->next->next = new Node(3);\nhead->next->next->prev = head->next;\nreturn 0;\n}",
       "options": [
-        "assets/not_provided.png",
-        "images/doubly_linked_list_diagram.png",
-        "images/missing_diagram.png",
-        "images/doubly_linked_list_example.png"
+        "Not Provided",
+        "Doubly Linked List Diagram",
+        "Missing Diagram",
+        "Doubly Linked List Example"
       ],
-      "answer": "images/doubly_linked_list_diagram.png",
+      "answer": "Doubly Linked List Diagram",
       "image": "images/doubly_linked_list_diagram.png"
     },
     {
@@ -1586,12 +1586,12 @@
       "question": "Which image file shows an example view for Doubly Linked List?",
       "code": "class Node {\npublic:\nint data;\nNode *next;\nNode *prev;\n\nNode(int value) : data(value), next(nullptr), prev(nullptr) {}\n};\n\nint main() {\nNode* head = new Node(1);\nhead->next = new Node(2);\nhead->next->prev = head;\nhead->next->next = new Node(3);\nhead->next->next->prev = head->next;\nreturn 0;\n}",
       "options": [
-        "assets/not_provided.png",
-        "images/doubly_linked_list_diagram.png",
-        "images/missing_example.png",
-        "images/doubly_linked_list_example.png"
+        "Not Provided",
+        "Doubly Linked List Diagram",
+        "Missing Example",
+        "Doubly Linked List Example"
       ],
-      "answer": "images/doubly_linked_list_example.png",
+      "answer": "Doubly Linked List Example",
       "image": "images/doubly_linked_list_example.png"
     },
     {
@@ -1757,12 +1757,12 @@
       "question": "Which image file shows the diagram for Circular Linked List?",
       "code": "class Node {\npublic:\nint data;\nNode *next;\n\nNode(int value) : data(value), next(this) {}\n};\n\nint main() {\nNode* head = new Node(1);\nNode* second = new Node(2);\nNode* third = new Node(3);\n\nhead->next = second;\nsecond->next = third;\nthird->next = head;\nreturn 0;\n}",
       "options": [
-        "images/circular_linked_list_example.png",
-        "assets/not_provided.png",
-        "images/missing_diagram.png",
-        "images/circular_linked_list_diagram.png"
+        "Circular Linked List Example",
+        "Not Provided",
+        "Missing Diagram",
+        "Circular Linked List Diagram"
       ],
-      "answer": "images/circular_linked_list_diagram.png",
+      "answer": "Circular Linked List Diagram",
       "image": "images/circular_linked_list_diagram.png"
     },
     {
@@ -1770,12 +1770,12 @@
       "question": "Which image file shows an example view for Circular Linked List?",
       "code": "class Node {\npublic:\nint data;\nNode *next;\n\nNode(int value) : data(value), next(this) {}\n};\n\nint main() {\nNode* head = new Node(1);\nNode* second = new Node(2);\nNode* third = new Node(3);\n\nhead->next = second;\nsecond->next = third;\nthird->next = head;\nreturn 0;\n}",
       "options": [
-        "images/missing_example.png",
-        "images/circular_linked_list_diagram.png",
-        "images/circular_linked_list_example.png",
-        "assets/not_provided.png"
+        "Missing Example",
+        "Circular Linked List Diagram",
+        "Circular Linked List Example",
+        "Not Provided"
       ],
-      "answer": "images/circular_linked_list_example.png",
+      "answer": "Circular Linked List Example",
       "image": "images/circular_linked_list_example.png"
     },
     {
@@ -1941,12 +1941,12 @@
       "question": "Which image file shows the diagram for Node?",
       "code": "class Node {\npublic:\nint data;\nNode *next;\n\nNode(int value) : data(value), next(nullptr) {}\n};",
       "options": [
-        "images/missing_diagram.png",
-        "assets/not_provided.png",
-        "images/node_example.png",
-        "images/node_diagram.png"
+        "Missing Diagram",
+        "Not Provided",
+        "Node Example",
+        "Node Diagram"
       ],
-      "answer": "images/node_diagram.png",
+      "answer": "Node Diagram",
       "image": "images/node_diagram.png"
     },
     {
@@ -1954,12 +1954,12 @@
       "question": "Which image file shows an example view for Node?",
       "code": "class Node {\npublic:\nint data;\nNode *next;\n\nNode(int value) : data(value), next(nullptr) {}\n};",
       "options": [
-        "images/node_example.png",
-        "assets/not_provided.png",
-        "images/missing_example.png",
-        "images/node_diagram.png"
+        "Node Example",
+        "Not Provided",
+        "Missing Example",
+        "Node Diagram"
       ],
-      "answer": "images/node_example.png",
+      "answer": "Node Example",
       "image": "images/node_example.png"
     },
     {
@@ -2125,12 +2125,12 @@
       "question": "Which image file shows the diagram for Pointer?",
       "code": "int main() {\nint value = 42;\nint* ptr = &value;\ncout << \"Value: \" << *ptr << endl;\nreturn 0;\n}",
       "options": [
-        "images/pointer_example.png",
-        "images/missing_diagram.png",
-        "assets/not_provided.png",
-        "images/pointer_diagram.png"
+        "Pointer Example",
+        "Missing Diagram",
+        "Not Provided",
+        "Pointer Diagram"
       ],
-      "answer": "images/pointer_diagram.png",
+      "answer": "Pointer Diagram",
       "image": "images/pointer_diagram.png"
     },
     {
@@ -2138,12 +2138,12 @@
       "question": "Which image file shows an example view for Pointer?",
       "code": "int main() {\nint value = 42;\nint* ptr = &value;\ncout << \"Value: \" << *ptr << endl;\nreturn 0;\n}",
       "options": [
-        "images/pointer_diagram.png",
-        "images/missing_example.png",
-        "assets/not_provided.png",
-        "images/pointer_example.png"
+        "Pointer Diagram",
+        "Missing Example",
+        "Not Provided",
+        "Pointer Example"
       ],
-      "answer": "images/pointer_example.png",
+      "answer": "Pointer Example",
       "image": "images/pointer_example.png"
     },
     {
@@ -2309,12 +2309,12 @@
       "question": "Which image file shows the diagram for Dynamic Memory Allocation?",
       "code": "#include <iostream>\nusing namespace std;\n\nint main() {\nint* arr = new int[5]; // Allocate memory for an array of 5 integers\nfor (int i = 0; i < 5; i++) {\narr[i] = i + 1; // Initialize the array\n}\nfor (int i = 0; i < 5; i++) {\ncout << arr[i] << \" \"; // Output the array elements\n}\ndelete[] arr; // Deallocate the memory\nreturn 0;\n}",
       "options": [
-        "images/dynamic_memory_allocation_example.png",
-        "images/dynamic_memory_allocation_diagram.png",
-        "assets/not_provided.png",
-        "images/missing_diagram.png"
+        "Dynamic Memory Allocation Example",
+        "Dynamic Memory Allocation Diagram",
+        "Not Provided",
+        "Missing Diagram"
       ],
-      "answer": "images/dynamic_memory_allocation_diagram.png",
+      "answer": "Dynamic Memory Allocation Diagram",
       "image": "images/dynamic_memory_allocation_diagram.png"
     },
     {
@@ -2322,12 +2322,12 @@
       "question": "Which image file shows an example view for Dynamic Memory Allocation?",
       "code": "#include <iostream>\nusing namespace std;\n\nint main() {\nint* arr = new int[5]; // Allocate memory for an array of 5 integers\nfor (int i = 0; i < 5; i++) {\narr[i] = i + 1; // Initialize the array\n}\nfor (int i = 0; i < 5; i++) {\ncout << arr[i] << \" \"; // Output the array elements\n}\ndelete[] arr; // Deallocate the memory\nreturn 0;\n}",
       "options": [
-        "images/missing_example.png",
-        "assets/not_provided.png",
-        "images/dynamic_memory_allocation_diagram.png",
-        "images/dynamic_memory_allocation_example.png"
+        "Missing Example",
+        "Not Provided",
+        "Dynamic Memory Allocation Diagram",
+        "Dynamic Memory Allocation Example"
       ],
-      "answer": "images/dynamic_memory_allocation_example.png",
+      "answer": "Dynamic Memory Allocation Example",
       "image": "images/dynamic_memory_allocation_example.png"
     },
     {
@@ -2493,12 +2493,12 @@
       "question": "Which image file shows the diagram for Stack?",
       "code": "#include <stack>\nusing namespace std;\n\nint main() {\nstack<int> s;\n\ns.push(10);\ns.push(20);\ns.pop();\n\nreturn 0;\n}",
       "options": [
-        "images/stack_example.png",
-        "images/missing_diagram.png",
-        "images/stack_diagram.png",
-        "assets/not_provided.png"
+        "Stack Example",
+        "Missing Diagram",
+        "Stack Diagram",
+        "Not Provided"
       ],
-      "answer": "images/stack_diagram.png",
+      "answer": "Stack Diagram",
       "image": "images/stack_diagram.png"
     },
     {
@@ -2506,12 +2506,12 @@
       "question": "Which image file shows an example view for Stack?",
       "code": "#include <stack>\nusing namespace std;\n\nint main() {\nstack<int> s;\n\ns.push(10);\ns.push(20);\ns.pop();\n\nreturn 0;\n}",
       "options": [
-        "images/missing_example.png",
-        "assets/not_provided.png",
-        "images/stack_example.png",
-        "images/stack_diagram.png"
+        "Missing Example",
+        "Not Provided",
+        "Stack Example",
+        "Stack Diagram"
       ],
-      "answer": "images/stack_example.png",
+      "answer": "Stack Example",
       "image": "images/stack_example.png"
     },
     {
@@ -2677,12 +2677,12 @@
       "question": "Which image file shows the diagram for Queue?",
       "code": "#include <iostream>\n#include <queue>\nusing namespace std;\n\nint main() {\nqueue<int> q;\nq.push(10);\nq.push(20);\ncout << q.front() << endl;\nq.pop();\nreturn 0;\n}",
       "options": [
-        "assets/not_provided.png",
-        "images/missing_diagram.png",
-        "images/queue_diagram.png",
-        "images/queue_example.png"
+        "Not Provided",
+        "Missing Diagram",
+        "Queue Diagram",
+        "Queue Example"
       ],
-      "answer": "images/queue_diagram.png",
+      "answer": "Queue Diagram",
       "image": "images/queue_diagram.png"
     },
     {
@@ -2690,12 +2690,12 @@
       "question": "Which image file shows an example view for Queue?",
       "code": "#include <iostream>\n#include <queue>\nusing namespace std;\n\nint main() {\nqueue<int> q;\nq.push(10);\nq.push(20);\ncout << q.front() << endl;\nq.pop();\nreturn 0;\n}",
       "options": [
-        "assets/not_provided.png",
-        "images/queue_example.png",
-        "images/queue_diagram.png",
-        "images/missing_example.png"
+        "Not Provided",
+        "Queue Example",
+        "Queue Diagram",
+        "Missing Example"
       ],
-      "answer": "images/queue_example.png",
+      "answer": "Queue Example",
       "image": "images/queue_example.png"
     },
     {
@@ -2861,12 +2861,12 @@
       "question": "Which image file shows the diagram for Circular Queue?",
       "code": "#include <iostream>\nusing namespace std;\n\nint arr[3], front = -1, rear = -1, n = 3;\n\nvoid enqueue(int x) {\nif ((rear + 1) % n == front) return;\nif (front == -1) front = 0;\nrear = (rear + 1) % n;\narr[rear] = x;\n}\n\nvoid dequeue() {\nif (front == -1) return;\nif (front == rear) front = rear = -1;\nelse front = (front + 1) % n;\n}\n\nint main() {\nenqueue(10);\nenqueue(20);\ndequeue();\nenqueue(30);\n}",
       "options": [
-        "images/missing_diagram.png",
-        "assets/not_provided.png",
-        "images/circular_queue_diagram.png",
-        "images/circular_queue_example.png"
+        "Missing Diagram",
+        "Not Provided",
+        "Circular Queue Diagram",
+        "Circular Queue Example"
       ],
-      "answer": "images/circular_queue_diagram.png",
+      "answer": "Circular Queue Diagram",
       "image": "images/circular_queue_diagram.png"
     },
     {
@@ -2874,12 +2874,12 @@
       "question": "Which image file shows an example view for Circular Queue?",
       "code": "#include <iostream>\nusing namespace std;\n\nint arr[3], front = -1, rear = -1, n = 3;\n\nvoid enqueue(int x) {\nif ((rear + 1) % n == front) return;\nif (front == -1) front = 0;\nrear = (rear + 1) % n;\narr[rear] = x;\n}\n\nvoid dequeue() {\nif (front == -1) return;\nif (front == rear) front = rear = -1;\nelse front = (front + 1) % n;\n}\n\nint main() {\nenqueue(10);\nenqueue(20);\ndequeue();\nenqueue(30);\n}",
       "options": [
-        "images/circular_queue_diagram.png",
-        "images/missing_example.png",
-        "images/circular_queue_example.png",
-        "assets/not_provided.png"
+        "Circular Queue Diagram",
+        "Missing Example",
+        "Circular Queue Example",
+        "Not Provided"
       ],
-      "answer": "images/circular_queue_example.png",
+      "answer": "Circular Queue Example",
       "image": "images/circular_queue_example.png"
     },
     {
@@ -3045,12 +3045,12 @@
       "question": "Which image file shows the diagram for Priority Queue?",
       "code": "#include <iostream>\n#include <queue>\nusing namespace std;\n\nint main() {\n\n// pair<priority, value>\npriority_queue<pair<int, int>> pq;\n\npq.push({3, 100});\npq.push({5, 200});\npq.push({1, 300});\n\n// top()\ncout << \"Top Element: \"\n<< pq.top().second\n<< \" with priority \"\n<< pq.top().first << endl;\n\npq.pop();\n\ncout << \"After pop(): \"\n<< pq.top().second << endl;\n\nreturn 0;\n}",
       "options": [
-        "assets/not_provided.png",
-        "images/priority_queue_example.png",
-        "images/missing_diagram.png",
-        "images/priority_queue_diagram.png"
+        "Not Provided",
+        "Priority Queue Example",
+        "Missing Diagram",
+        "Priority Queue Diagram"
       ],
-      "answer": "images/priority_queue_diagram.png",
+      "answer": "Priority Queue Diagram",
       "image": "images/priority_queue_diagram.png"
     },
     {
@@ -3058,12 +3058,12 @@
       "question": "Which image file shows an example view for Priority Queue?",
       "code": "#include <iostream>\n#include <queue>\nusing namespace std;\n\nint main() {\n\n// pair<priority, value>\npriority_queue<pair<int, int>> pq;\n\npq.push({3, 100});\npq.push({5, 200});\npq.push({1, 300});\n\n// top()\ncout << \"Top Element: \"\n<< pq.top().second\n<< \" with priority \"\n<< pq.top().first << endl;\n\npq.pop();\n\ncout << \"After pop(): \"\n<< pq.top().second << endl;\n\nreturn 0;\n}",
       "options": [
-        "images/priority_queue_diagram.png",
-        "images/missing_example.png",
-        "images/priority_queue_example.png",
-        "assets/not_provided.png"
+        "Priority Queue Diagram",
+        "Missing Example",
+        "Priority Queue Example",
+        "Not Provided"
       ],
-      "answer": "images/priority_queue_example.png",
+      "answer": "Priority Queue Example",
       "image": "images/priority_queue_example.png"
     },
     {
@@ -3229,12 +3229,12 @@
       "question": "Which image file shows the diagram for Deque?",
       "code": "#include <iostream>\n#include <deque>\nusing namespace std;\n\nint main() {\ndeque<int> dq;\n\ndq.push_back(10);\ndq.push_back(20);\ndq.push_front(30);\n\n// Print deque elements\nfor (int x : dq) cout << x << \" \";\ncout << endl;\n\n// Pop from front and back\ndq.pop_front();\ndq.pop_back();\n\n// Print deque elements after pop\nfor (int x : dq) cout << x << \" \";\n\nreturn 0;\n}",
       "options": [
-        "images/missing_diagram.png",
-        "images/deque_diagram.png",
-        "images/deque_example.png",
-        "assets/not_provided.png"
+        "Missing Diagram",
+        "Deque Diagram",
+        "Deque Example",
+        "Not Provided"
       ],
-      "answer": "images/deque_diagram.png",
+      "answer": "Deque Diagram",
       "image": "images/deque_diagram.png"
     },
     {
@@ -3242,12 +3242,12 @@
       "question": "Which image file shows an example view for Deque?",
       "code": "#include <iostream>\n#include <deque>\nusing namespace std;\n\nint main() {\ndeque<int> dq;\n\ndq.push_back(10);\ndq.push_back(20);\ndq.push_front(30);\n\n// Print deque elements\nfor (int x : dq) cout << x << \" \";\ncout << endl;\n\n// Pop from front and back\ndq.pop_front();\ndq.pop_back();\n\n// Print deque elements after pop\nfor (int x : dq) cout << x << \" \";\n\nreturn 0;\n}",
       "options": [
-        "images/deque_example.png",
-        "assets/not_provided.png",
-        "images/missing_example.png",
-        "images/deque_diagram.png"
+        "Deque Example",
+        "Not Provided",
+        "Missing Example",
+        "Deque Diagram"
       ],
-      "answer": "images/deque_example.png",
+      "answer": "Deque Example",
       "image": "images/deque_example.png"
     },
     {
@@ -3413,12 +3413,12 @@
       "question": "Which image file shows the diagram for Recursion?",
       "code": "int factorial(int n) {\n    if(n <= 1) return 1;\n    return n * factorial(n - 1);\n}",
       "options": [
-        "images/missing_diagram.png",
-        "images/recursion_example.png",
-        "images/recursion_diagram.png",
-        "assets/not_provided.png"
+        "Missing Diagram",
+        "Recursion Example",
+        "Recursion Diagram",
+        "Not Provided"
       ],
-      "answer": "images/recursion_diagram.png",
+      "answer": "Recursion Diagram",
       "image": "images/recursion_diagram.png"
     },
     {
@@ -3426,12 +3426,12 @@
       "question": "Which image file shows an example view for Recursion?",
       "code": "int factorial(int n) {\n    if(n <= 1) return 1;\n    return n * factorial(n - 1);\n}",
       "options": [
-        "images/recursion_example.png",
-        "assets/not_provided.png",
-        "images/recursion_diagram.png",
-        "images/missing_example.png"
+        "Recursion Example",
+        "Not Provided",
+        "Recursion Diagram",
+        "Missing Example"
       ],
-      "answer": "images/recursion_example.png",
+      "answer": "Recursion Example",
       "image": "images/recursion_example.png"
     },
     {
@@ -3597,12 +3597,12 @@
       "question": "Which image file shows the diagram for Recursive Function?",
       "code": "#include <iostream>\nusing namespace std;\n\nint factorial(int n) {\nif (n == 0 || n == 1) return 1;\nreturn n * factorial(n-1);\n}\n\nint main() {\nint n = 5;\nint result = factorial(n);\ncout << result << endl;\nreturn 0;\n}",
       "options": [
-        "images/missing_diagram.png",
-        "images/recursive_function_example.png",
-        "images/recursive_function_diagram.png",
-        "assets/not_provided.png"
+        "Missing Diagram",
+        "Recursive Function Example",
+        "Recursive Function Diagram",
+        "Not Provided"
       ],
-      "answer": "images/recursive_function_diagram.png",
+      "answer": "Recursive Function Diagram",
       "image": "images/recursive_function_diagram.png"
     },
     {
@@ -3610,12 +3610,12 @@
       "question": "Which image file shows an example view for Recursive Function?",
       "code": "#include <iostream>\nusing namespace std;\n\nint factorial(int n) {\nif (n == 0 || n == 1) return 1;\nreturn n * factorial(n-1);\n}\n\nint main() {\nint n = 5;\nint result = factorial(n);\ncout << result << endl;\nreturn 0;\n}",
       "options": [
-        "images/missing_example.png",
-        "images/recursive_function_diagram.png",
-        "assets/not_provided.png",
-        "images/recursive_function_example.png"
+        "Missing Example",
+        "Recursive Function Diagram",
+        "Not Provided",
+        "Recursive Function Example"
       ],
-      "answer": "images/recursive_function_example.png",
+      "answer": "Recursive Function Example",
       "image": "images/recursive_function_example.png"
     },
     {
@@ -3781,12 +3781,12 @@
       "question": "Which image file shows the diagram for Base Case?",
       "code": "int factorial(int n) {\n// The Base Case\nif (n <= 1) {\nreturn 1;\n}\n// The Recursive Step\nreturn n * factorial(n - 1);\n}",
       "options": [
-        "images/base_case_diagram.png",
-        "images/missing_diagram.png",
-        "images/base_case_example.png",
-        "assets/not_provided.png"
+        "Base Case Diagram",
+        "Missing Diagram",
+        "Base Case Example",
+        "Not Provided"
       ],
-      "answer": "images/base_case_diagram.png",
+      "answer": "Base Case Diagram",
       "image": "images/base_case_diagram.png"
     },
     {
@@ -3794,12 +3794,12 @@
       "question": "Which image file shows an example view for Base Case?",
       "code": "int factorial(int n) {\n// The Base Case\nif (n <= 1) {\nreturn 1;\n}\n// The Recursive Step\nreturn n * factorial(n - 1);\n}",
       "options": [
-        "images/base_case_diagram.png",
-        "images/base_case_example.png",
-        "images/missing_example.png",
-        "assets/not_provided.png"
+        "Base Case Diagram",
+        "Base Case Example",
+        "Missing Example",
+        "Not Provided"
       ],
-      "answer": "images/base_case_example.png",
+      "answer": "Base Case Example",
       "image": "images/base_case_example.png"
     },
     {
@@ -3965,12 +3965,12 @@
       "question": "Which image file shows the diagram for Call Stack?",
       "code": "#include <iostream>\nusing namespace std;\n\nvoid D() {\nfloat d = 40.5f;\ncout << \"In function D\\n\";\n}\n\nvoid C() {\ndouble c = 30.5;\ncout << \"In function C\\n\";\n}\n\nvoid B() {\nint b = 20;\nC();\ncout << \"In function B\\n\";\n}\n\nvoid A() {\nint a = 10;\nB();\ncout << \"In function A\\n\";\n}\n\nint main() {\nA();\nD();\nreturn 0;\n}",
       "options": [
-        "images/call_stack_example.png",
-        "assets/not_provided.png",
-        "images/call_stack_diagram.png",
-        "images/missing_diagram.png"
+        "Call Stack Example",
+        "Not Provided",
+        "Call Stack Diagram",
+        "Missing Diagram"
       ],
-      "answer": "images/call_stack_diagram.png",
+      "answer": "Call Stack Diagram",
       "image": "images/call_stack_diagram.png"
     },
     {
@@ -3978,12 +3978,12 @@
       "question": "Which image file shows an example view for Call Stack?",
       "code": "#include <iostream>\nusing namespace std;\n\nvoid D() {\nfloat d = 40.5f;\ncout << \"In function D\\n\";\n}\n\nvoid C() {\ndouble c = 30.5;\ncout << \"In function C\\n\";\n}\n\nvoid B() {\nint b = 20;\nC();\ncout << \"In function B\\n\";\n}\n\nvoid A() {\nint a = 10;\nB();\ncout << \"In function A\\n\";\n}\n\nint main() {\nA();\nD();\nreturn 0;\n}",
       "options": [
-        "images/call_stack_diagram.png",
-        "assets/not_provided.png",
-        "images/call_stack_example.png",
-        "images/missing_example.png"
+        "Call Stack Diagram",
+        "Not Provided",
+        "Call Stack Example",
+        "Missing Example"
       ],
-      "answer": "images/call_stack_example.png",
+      "answer": "Call Stack Example",
       "image": "images/call_stack_example.png"
     },
     {
@@ -4149,12 +4149,12 @@
       "question": "Which image file shows the diagram for Sparse Matrix?",
       "code": "struct Node {\nint row, col, val;\nNode* next;\n};\n// Linked list approach for insertion\nvoid insert(int r, int c, int v) {\n// Implementation logic to link new node\n}",
       "options": [
-        "images/sparse_matrix_diagram.png",
-        "assets/not_provided.png",
-        "images/sparse_matrix_example.png",
-        "images/missing_diagram.png"
+        "Sparse Matrix Diagram",
+        "Not Provided",
+        "Sparse Matrix Example",
+        "Missing Diagram"
       ],
-      "answer": "images/sparse_matrix_diagram.png",
+      "answer": "Sparse Matrix Diagram",
       "image": "images/sparse_matrix_diagram.png"
     },
     {
@@ -4162,12 +4162,12 @@
       "question": "Which image file shows an example view for Sparse Matrix?",
       "code": "struct Node {\nint row, col, val;\nNode* next;\n};\n// Linked list approach for insertion\nvoid insert(int r, int c, int v) {\n// Implementation logic to link new node\n}",
       "options": [
-        "images/sparse_matrix_diagram.png",
-        "assets/not_provided.png",
-        "images/missing_example.png",
-        "images/sparse_matrix_example.png"
+        "Sparse Matrix Diagram",
+        "Not Provided",
+        "Missing Example",
+        "Sparse Matrix Example"
       ],
-      "answer": "images/sparse_matrix_example.png",
+      "answer": "Sparse Matrix Example",
       "image": "images/sparse_matrix_example.png"
     },
     {
@@ -4333,12 +4333,12 @@
       "question": "Which image file shows the diagram for Polynomial Representation?",
       "code": "struct Term {\nint coeff;\nint exp;\nTerm* next;\n};\n\nvoid addTerm(Term** poly, int c, int e) {\nTerm* newNode = new Term{c, e, nullptr};\n// Implementation to keep terms sorted by exponent\n}",
       "options": [
-        "images/polynomial_representation_diagram.png",
-        "assets/not_provided.png",
-        "images/missing_diagram.png",
-        "images/polynomial_representation_example.png"
+        "Polynomial Representation Diagram",
+        "Not Provided",
+        "Missing Diagram",
+        "Polynomial Representation Example"
       ],
-      "answer": "images/polynomial_representation_diagram.png",
+      "answer": "Polynomial Representation Diagram",
       "image": "images/polynomial_representation_diagram.png"
     },
     {
@@ -4346,12 +4346,12 @@
       "question": "Which image file shows an example view for Polynomial Representation?",
       "code": "struct Term {\nint coeff;\nint exp;\nTerm* next;\n};\n\nvoid addTerm(Term** poly, int c, int e) {\nTerm* newNode = new Term{c, e, nullptr};\n// Implementation to keep terms sorted by exponent\n}",
       "options": [
-        "images/polynomial_representation_diagram.png",
-        "assets/not_provided.png",
-        "images/polynomial_representation_example.png",
-        "images/missing_example.png"
+        "Polynomial Representation Diagram",
+        "Not Provided",
+        "Polynomial Representation Example",
+        "Missing Example"
       ],
-      "answer": "images/polynomial_representation_example.png",
+      "answer": "Polynomial Representation Example",
       "image": "images/polynomial_representation_example.png"
     },
     {
@@ -4517,12 +4517,12 @@
       "question": "Which image file shows the diagram for Tree?",
       "code": "struct TreeNode {\n\nint data;\n\nvector<TreeNode*> children;\n\nTreeNode(int val) : data(val) {}\n\n};",
       "options": [
-        "images/tree_example.png",
-        "assets/not_provided.png",
-        "images/missing_diagram.png",
-        "images/tree_diagram.png"
+        "Tree Example",
+        "Not Provided",
+        "Missing Diagram",
+        "Tree Diagram"
       ],
-      "answer": "images/tree_diagram.png",
+      "answer": "Tree Diagram",
       "image": "images/tree_diagram.png"
     },
     {
@@ -4530,12 +4530,12 @@
       "question": "Which image file shows an example view for Tree?",
       "code": "struct TreeNode {\n\nint data;\n\nvector<TreeNode*> children;\n\nTreeNode(int val) : data(val) {}\n\n};",
       "options": [
-        "assets/not_provided.png",
-        "images/tree_example.png",
-        "images/missing_example.png",
-        "images/tree_diagram.png"
+        "Not Provided",
+        "Tree Example",
+        "Missing Example",
+        "Tree Diagram"
       ],
-      "answer": "images/tree_example.png",
+      "answer": "Tree Example",
       "image": "images/tree_example.png"
     },
     {
@@ -4701,12 +4701,12 @@
       "question": "Which image file shows the diagram for Binary Tree?",
       "code": "class Node {\n\npublic:\n\nT data;\n\nNode* left;\n\nNode* right;\n\nNode(T value) : data(value), left(nullptr), right(nullptr) {}\n\n};",
       "options": [
-        "images/missing_diagram.png",
-        "assets/not_provided.png",
-        "images/binary_tree_example.png",
-        "images/binary_tree_diagram.png"
+        "Missing Diagram",
+        "Not Provided",
+        "Binary Tree Example",
+        "Binary Tree Diagram"
       ],
-      "answer": "images/binary_tree_diagram.png",
+      "answer": "Binary Tree Diagram",
       "image": "images/binary_tree_diagram.png"
     },
     {
@@ -4714,12 +4714,12 @@
       "question": "Which image file shows an example view for Binary Tree?",
       "code": "class Node {\n\npublic:\n\nT data;\n\nNode* left;\n\nNode* right;\n\nNode(T value) : data(value), left(nullptr), right(nullptr) {}\n\n};",
       "options": [
-        "images/missing_example.png",
-        "assets/not_provided.png",
-        "images/binary_tree_example.png",
-        "images/binary_tree_diagram.png"
+        "Missing Example",
+        "Not Provided",
+        "Binary Tree Example",
+        "Binary Tree Diagram"
       ],
-      "answer": "images/binary_tree_example.png",
+      "answer": "Binary Tree Example",
       "image": "images/binary_tree_example.png"
     },
     {
@@ -4885,12 +4885,12 @@
       "question": "Which image file shows the diagram for Binary Search Tree?",
       "code": "struct Node {\n\nint data;\n\nNode* left;\n\nNode* right;\n\nNode(int val) : data(val), left(nullptr), right(nullptr) {}\n\n};",
       "options": [
-        "images/binary_search_tree_example.png",
-        "images/binary_search_tree_diagram.png",
-        "images/missing_diagram.png",
-        "assets/not_provided.png"
+        "Binary Search Tree Example",
+        "Binary Search Tree Diagram",
+        "Missing Diagram",
+        "Not Provided"
       ],
-      "answer": "images/binary_search_tree_diagram.png",
+      "answer": "Binary Search Tree Diagram",
       "image": "images/binary_search_tree_diagram.png"
     },
     {
@@ -4898,12 +4898,12 @@
       "question": "Which image file shows an example view for Binary Search Tree?",
       "code": "struct Node {\n\nint data;\n\nNode* left;\n\nNode* right;\n\nNode(int val) : data(val), left(nullptr), right(nullptr) {}\n\n};",
       "options": [
-        "assets/not_provided.png",
-        "images/binary_search_tree_example.png",
-        "images/missing_example.png",
-        "images/binary_search_tree_diagram.png"
+        "Not Provided",
+        "Binary Search Tree Example",
+        "Missing Example",
+        "Binary Search Tree Diagram"
       ],
-      "answer": "images/binary_search_tree_example.png",
+      "answer": "Binary Search Tree Example",
       "image": "images/binary_search_tree_example.png"
     },
     {
@@ -5069,12 +5069,12 @@
       "question": "Which image file shows the diagram for AVL Tree?",
       "code": "struct AVLNode {\n\npublic:\n\nint key;\n\nAVLNode* left;\n\nAVLNode* right;\n\nint height;\n\nAVLNode(int val) : key(val), left(nullptr), right(nullptr), height(1) {}\n\n};",
       "options": [
-        "assets/not_provided.png",
-        "images/missing_diagram.png",
-        "images/avl_tree_example.png",
-        "images/avl_tree_diagram.png"
+        "Not Provided",
+        "Missing Diagram",
+        "Avl Tree Example",
+        "Avl Tree Diagram"
       ],
-      "answer": "images/avl_tree_diagram.png",
+      "answer": "Avl Tree Diagram",
       "image": "images/avl_tree_diagram.png"
     },
     {
@@ -5082,12 +5082,12 @@
       "question": "Which image file shows an example view for AVL Tree?",
       "code": "struct AVLNode {\n\npublic:\n\nint key;\n\nAVLNode* left;\n\nAVLNode* right;\n\nint height;\n\nAVLNode(int val) : key(val), left(nullptr), right(nullptr), height(1) {}\n\n};",
       "options": [
-        "images/avl_tree_diagram.png",
-        "images/avl_tree_example.png",
-        "images/missing_example.png",
-        "assets/not_provided.png"
+        "Avl Tree Diagram",
+        "Avl Tree Example",
+        "Missing Example",
+        "Not Provided"
       ],
-      "answer": "images/avl_tree_example.png",
+      "answer": "Avl Tree Example",
       "image": "images/avl_tree_example.png"
     },
     {
@@ -5253,12 +5253,12 @@
       "question": "Which image file shows the diagram for Heap?",
       "code": "vector<int> heap = {50, 30, 20, 15, 10};",
       "options": [
-        "images/heap_diagram.png",
-        "assets/not_provided.png",
-        "images/heap_example.png",
-        "images/missing_diagram.png"
+        "Heap Diagram",
+        "Not Provided",
+        "Heap Example",
+        "Missing Diagram"
       ],
-      "answer": "images/heap_diagram.png",
+      "answer": "Heap Diagram",
       "image": "images/heap_diagram.png"
     },
     {
@@ -5266,12 +5266,12 @@
       "question": "Which image file shows an example view for Heap?",
       "code": "vector<int> heap = {50, 30, 20, 15, 10};",
       "options": [
-        "assets/not_provided.png",
-        "images/missing_example.png",
-        "images/heap_diagram.png",
-        "images/heap_example.png"
+        "Not Provided",
+        "Missing Example",
+        "Heap Diagram",
+        "Heap Example"
       ],
-      "answer": "images/heap_example.png",
+      "answer": "Heap Example",
       "image": "images/heap_example.png"
     },
     {
@@ -5437,12 +5437,12 @@
       "question": "Which image file shows the diagram for Max Heap?",
       "code": "class MaxHeap {\nprivate:\nvector<T> heap;\nint capacity;\nint size;\n\npublic:\nMaxHeap(int cap) : capacity(cap), size(0) {\nheap.resize(capacity);\n}\n};",
       "options": [
-        "assets/not_provided.png",
-        "images/max_heap_diagram.png",
-        "images/max_heap_example.png",
-        "images/missing_diagram.png"
+        "Not Provided",
+        "Max Heap Diagram",
+        "Max Heap Example",
+        "Missing Diagram"
       ],
-      "answer": "images/max_heap_diagram.png",
+      "answer": "Max Heap Diagram",
       "image": "images/max_heap_diagram.png"
     },
     {
@@ -5450,12 +5450,12 @@
       "question": "Which image file shows an example view for Max Heap?",
       "code": "class MaxHeap {\nprivate:\nvector<T> heap;\nint capacity;\nint size;\n\npublic:\nMaxHeap(int cap) : capacity(cap), size(0) {\nheap.resize(capacity);\n}\n};",
       "options": [
-        "assets/not_provided.png",
-        "images/max_heap_diagram.png",
-        "images/missing_example.png",
-        "images/max_heap_example.png"
+        "Not Provided",
+        "Max Heap Diagram",
+        "Missing Example",
+        "Max Heap Example"
       ],
-      "answer": "images/max_heap_example.png",
+      "answer": "Max Heap Example",
       "image": "images/max_heap_example.png"
     },
     {
@@ -5621,12 +5621,12 @@
       "question": "Which image file shows the diagram for Min Heap?",
       "code": "class MinHeap {\nprivate:\nvector<T> heap;\nint capacity;\nint size;\n\npublic:\nMinHeap(int cap) : capacity(cap), size(0) {\nheap.resize(capacity);\n}\n};",
       "options": [
-        "images/min_heap_diagram.png",
-        "images/missing_diagram.png",
-        "images/min_heap_example.png",
-        "assets/not_provided.png"
+        "Min Heap Diagram",
+        "Missing Diagram",
+        "Min Heap Example",
+        "Not Provided"
       ],
-      "answer": "images/min_heap_diagram.png",
+      "answer": "Min Heap Diagram",
       "image": "images/min_heap_diagram.png"
     },
     {
@@ -5634,12 +5634,12 @@
       "question": "Which image file shows an example view for Min Heap?",
       "code": "class MinHeap {\nprivate:\nvector<T> heap;\nint capacity;\nint size;\n\npublic:\nMinHeap(int cap) : capacity(cap), size(0) {\nheap.resize(capacity);\n}\n};",
       "options": [
-        "images/min_heap_example.png",
-        "assets/not_provided.png",
-        "images/min_heap_diagram.png",
-        "images/missing_example.png"
+        "Min Heap Example",
+        "Not Provided",
+        "Min Heap Diagram",
+        "Missing Example"
       ],
-      "answer": "images/min_heap_example.png",
+      "answer": "Min Heap Example",
       "image": "images/min_heap_example.png"
     },
     {
@@ -5805,12 +5805,12 @@
       "question": "Which image file shows the diagram for Adjacency Matrix?",
       "code": "vector<vector<int>> adj(V, vector<int>(V, 0));",
       "options": [
-        "images/missing_diagram.png",
-        "images/adjacency_matrix_diagram.png",
-        "assets/not_provided.png",
-        "images/adjacency_matrix_example.png"
+        "Missing Diagram",
+        "Adjacency Matrix Diagram",
+        "Not Provided",
+        "Adjacency Matrix Example"
       ],
-      "answer": "images/adjacency_matrix_diagram.png",
+      "answer": "Adjacency Matrix Diagram",
       "image": "images/adjacency_matrix_diagram.png"
     },
     {
@@ -5818,12 +5818,12 @@
       "question": "Which image file shows an example view for Adjacency Matrix?",
       "code": "vector<vector<int>> adj(V, vector<int>(V, 0));",
       "options": [
-        "images/adjacency_matrix_example.png",
-        "assets/not_provided.png",
-        "images/missing_example.png",
-        "images/adjacency_matrix_diagram.png"
+        "Adjacency Matrix Example",
+        "Not Provided",
+        "Missing Example",
+        "Adjacency Matrix Diagram"
       ],
-      "answer": "images/adjacency_matrix_example.png",
+      "answer": "Adjacency Matrix Example",
       "image": "images/adjacency_matrix_example.png"
     },
     {
@@ -5989,12 +5989,12 @@
       "question": "Which image file shows the diagram for Breadth First Search?",
       "code": "queue<int> q; q.push(src);",
       "options": [
-        "images/breadth_first_search_example.png",
-        "assets/not_provided.png",
-        "images/breadth_first_search_diagram.png",
-        "images/missing_diagram.png"
+        "Breadth First Search Example",
+        "Not Provided",
+        "Breadth First Search Diagram",
+        "Missing Diagram"
       ],
-      "answer": "images/breadth_first_search_diagram.png",
+      "answer": "Breadth First Search Diagram",
       "image": "images/breadth_first_search_diagram.png"
     },
     {
@@ -6002,12 +6002,12 @@
       "question": "Which image file shows an example view for Breadth First Search?",
       "code": "queue<int> q; q.push(src);",
       "options": [
-        "images/missing_example.png",
-        "images/breadth_first_search_diagram.png",
-        "assets/not_provided.png",
-        "images/breadth_first_search_example.png"
+        "Missing Example",
+        "Breadth First Search Diagram",
+        "Not Provided",
+        "Breadth First Search Example"
       ],
-      "answer": "images/breadth_first_search_example.png",
+      "answer": "Breadth First Search Example",
       "image": "images/breadth_first_search_example.png"
     },
     {
@@ -6173,12 +6173,12 @@
       "question": "Which image file shows the diagram for Depth First Search?",
       "code": "dfs(v) { visited[v]=true; for(n in adj[v]) if(!visited[n]) dfs(n); }",
       "options": [
-        "assets/not_provided.png",
-        "images/depth_first_search_example.png",
-        "images/missing_diagram.png",
-        "images/depth_first_search_diagram.png"
+        "Not Provided",
+        "Depth First Search Example",
+        "Missing Diagram",
+        "Depth First Search Diagram"
       ],
-      "answer": "images/depth_first_search_diagram.png",
+      "answer": "Depth First Search Diagram",
       "image": "images/depth_first_search_diagram.png"
     },
     {
@@ -6186,12 +6186,12 @@
       "question": "Which image file shows an example view for Depth First Search?",
       "code": "dfs(v) { visited[v]=true; for(n in adj[v]) if(!visited[n]) dfs(n); }",
       "options": [
-        "images/depth_first_search_diagram.png",
-        "images/depth_first_search_example.png",
-        "assets/not_provided.png",
-        "images/missing_example.png"
+        "Depth First Search Diagram",
+        "Depth First Search Example",
+        "Not Provided",
+        "Missing Example"
       ],
-      "answer": "images/depth_first_search_example.png",
+      "answer": "Depth First Search Example",
       "image": "images/depth_first_search_example.png"
     },
     {
@@ -6357,12 +6357,12 @@
       "question": "Which image file shows the diagram for Factorial?",
       "code": "int factorial(int n) { return n <= 1 ? 1 : n * factorial(n - 1); }",
       "options": [
-        "images/factorial_example.png",
-        "images/missing_diagram.png",
-        "images/factorial_diagram.png",
-        "assets/not_provided.png"
+        "Factorial Example",
+        "Missing Diagram",
+        "Factorial Diagram",
+        "Not Provided"
       ],
-      "answer": "images/factorial_diagram.png",
+      "answer": "Factorial Diagram",
       "image": "images/factorial_diagram.png"
     },
     {
@@ -6370,12 +6370,12 @@
       "question": "Which image file shows an example view for Factorial?",
       "code": "int factorial(int n) { return n <= 1 ? 1 : n * factorial(n - 1); }",
       "options": [
-        "images/missing_example.png",
-        "images/factorial_example.png",
-        "assets/not_provided.png",
-        "images/factorial_diagram.png"
+        "Missing Example",
+        "Factorial Example",
+        "Not Provided",
+        "Factorial Diagram"
       ],
-      "answer": "images/factorial_example.png",
+      "answer": "Factorial Example",
       "image": "images/factorial_example.png"
     },
     {
@@ -6541,12 +6541,12 @@
       "question": "Which image file shows the diagram for Fibonacci Sequence?",
       "code": "int fib(int n) { return n <= 1 ? n : fib(n - 1) + fib(n - 2); }",
       "options": [
-        "assets/not_provided.png",
-        "images/missing_diagram.png",
-        "images/fibonacci_sequence_diagram.png",
-        "images/fibonacci_sequence_example.png"
+        "Not Provided",
+        "Missing Diagram",
+        "Fibonacci Sequence Diagram",
+        "Fibonacci Sequence Example"
       ],
-      "answer": "images/fibonacci_sequence_diagram.png",
+      "answer": "Fibonacci Sequence Diagram",
       "image": "images/fibonacci_sequence_diagram.png"
     },
     {
@@ -6554,12 +6554,12 @@
       "question": "Which image file shows an example view for Fibonacci Sequence?",
       "code": "int fib(int n) { return n <= 1 ? n : fib(n - 1) + fib(n - 2); }",
       "options": [
-        "assets/not_provided.png",
-        "images/missing_example.png",
-        "images/fibonacci_sequence_example.png",
-        "images/fibonacci_sequence_diagram.png"
+        "Not Provided",
+        "Missing Example",
+        "Fibonacci Sequence Example",
+        "Fibonacci Sequence Diagram"
       ],
-      "answer": "images/fibonacci_sequence_example.png",
+      "answer": "Fibonacci Sequence Example",
       "image": "images/fibonacci_sequence_example.png"
     },
     {
@@ -6725,12 +6725,12 @@
       "question": "Which image file shows the diagram for Level Order Traversal?",
       "code": "for(int i = 0; i < n; i++) {\n    cout << arr[i] << \" \";\n}",
       "options": [
-        "images/level_order_traversal_example.png",
-        "assets/not_provided.png",
-        "images/missing_diagram.png",
-        "images/level_order_traversal_diagram.png"
+        "Level Order Traversal Example",
+        "Not Provided",
+        "Missing Diagram",
+        "Level Order Traversal Diagram"
       ],
-      "answer": "images/level_order_traversal_diagram.png",
+      "answer": "Level Order Traversal Diagram",
       "image": "images/level_order_traversal_diagram.png"
     },
     {
@@ -6738,12 +6738,12 @@
       "question": "Which image file shows an example view for Level Order Traversal?",
       "code": "for(int i = 0; i < n; i++) {\n    cout << arr[i] << \" \";\n}",
       "options": [
-        "images/level_order_traversal_example.png",
-        "assets/not_provided.png",
-        "images/level_order_traversal_diagram.png",
-        "images/missing_example.png"
+        "Level Order Traversal Example",
+        "Not Provided",
+        "Level Order Traversal Diagram",
+        "Missing Example"
       ],
-      "answer": "images/level_order_traversal_example.png",
+      "answer": "Level Order Traversal Example",
       "image": "images/level_order_traversal_example.png"
     },
     {
@@ -6909,12 +6909,12 @@
       "question": "Which image file shows the diagram for Memory Management?",
       "code": "int* data = new int[10]; delete[] data;",
       "options": [
-        "images/memory_management_example.png",
-        "images/memory_management_diagram.png",
-        "images/missing_diagram.png",
-        "assets/not_provided.png"
+        "Memory Management Example",
+        "Memory Management Diagram",
+        "Missing Diagram",
+        "Not Provided"
       ],
-      "answer": "images/memory_management_diagram.png",
+      "answer": "Memory Management Diagram",
       "image": "images/memory_management_diagram.png"
     },
     {
@@ -6922,12 +6922,12 @@
       "question": "Which image file shows an example view for Memory Management?",
       "code": "int* data = new int[10]; delete[] data;",
       "options": [
-        "images/memory_management_diagram.png",
-        "assets/not_provided.png",
-        "images/missing_example.png",
-        "images/memory_management_example.png"
+        "Memory Management Diagram",
+        "Not Provided",
+        "Missing Example",
+        "Memory Management Example"
       ],
-      "answer": "images/memory_management_example.png",
+      "answer": "Memory Management Example",
       "image": "images/memory_management_example.png"
     },
     {
@@ -7093,12 +7093,12 @@
       "question": "Which image file shows the diagram for Triplet Representation?",
       "code": "struct Triplet { int row, col, val; };",
       "options": [
-        "assets/not_provided.png",
-        "images/triplet_representation_diagram.png",
-        "images/triplet_representation_example.png",
-        "images/missing_diagram.png"
+        "Not Provided",
+        "Triplet Representation Diagram",
+        "Triplet Representation Example",
+        "Missing Diagram"
       ],
-      "answer": "images/triplet_representation_diagram.png",
+      "answer": "Triplet Representation Diagram",
       "image": "images/triplet_representation_diagram.png"
     },
     {
@@ -7106,12 +7106,12 @@
       "question": "Which image file shows an example view for Triplet Representation?",
       "code": "struct Triplet { int row, col, val; };",
       "options": [
-        "assets/not_provided.png",
-        "images/missing_example.png",
-        "images/triplet_representation_diagram.png",
-        "images/triplet_representation_example.png"
+        "Not Provided",
+        "Missing Example",
+        "Triplet Representation Diagram",
+        "Triplet Representation Example"
       ],
-      "answer": "images/triplet_representation_example.png",
+      "answer": "Triplet Representation Example",
       "image": "images/triplet_representation_example.png"
     },
     {
@@ -7277,12 +7277,12 @@
       "question": "Which image file shows the diagram for Graph?",
       "code": "vector<vector<int>> createGraph(int V, vector<vector<int>> &edges) {\nvector<vector<int>> mat(V, vector<int>(V, 0));\n\nfor (auto &it : edges) {\nint u = it[0];\nint v = it[1];\nmat[u][v] = 1;\nmat[v][u] = 1;\n}\n\nreturn mat;\n}",
       "options": [
-        "images/missing_diagram.png",
-        "images/graph_example.png",
-        "assets/not_provided.png",
-        "images/graph_diagram.png"
+        "Missing Diagram",
+        "Graph Example",
+        "Not Provided",
+        "Graph Diagram"
       ],
-      "answer": "images/graph_diagram.png",
+      "answer": "Graph Diagram",
       "image": "images/graph_diagram.png"
     },
     {
@@ -7290,12 +7290,12 @@
       "question": "Which image file shows an example view for Graph?",
       "code": "vector<vector<int>> createGraph(int V, vector<vector<int>> &edges) {\nvector<vector<int>> mat(V, vector<int>(V, 0));\n\nfor (auto &it : edges) {\nint u = it[0];\nint v = it[1];\nmat[u][v] = 1;\nmat[v][u] = 1;\n}\n\nreturn mat;\n}",
       "options": [
-        "images/graph_example.png",
-        "assets/not_provided.png",
-        "images/graph_diagram.png",
-        "images/missing_example.png"
+        "Graph Example",
+        "Not Provided",
+        "Graph Diagram",
+        "Missing Example"
       ],
-      "answer": "images/graph_example.png",
+      "answer": "Graph Example",
       "image": "images/graph_example.png"
     },
     {
@@ -7461,12 +7461,12 @@
       "question": "Which image file shows the diagram for Directed Graph?",
       "code": "vector<vector<int>> createGraph(int V, vector<vector<int>> &edges) {\nvector<vector<int>> mat(V, vector<int>(V, 0));\n\nfor (auto &it : edges) {\nint u = it[0];\nint v = it[1];\nmat[u][v] = 1;\n}\n\nreturn mat;\n}",
       "options": [
-        "images/missing_diagram.png",
-        "images/directed_graph_diagram.png",
-        "images/directed_graph_example.png",
-        "assets/not_provided.png"
+        "Missing Diagram",
+        "Directed Graph Diagram",
+        "Directed Graph Example",
+        "Not Provided"
       ],
-      "answer": "images/directed_graph_diagram.png",
+      "answer": "Directed Graph Diagram",
       "image": "images/directed_graph_diagram.png"
     },
     {
@@ -7474,12 +7474,12 @@
       "question": "Which image file shows an example view for Directed Graph?",
       "code": "vector<vector<int>> createGraph(int V, vector<vector<int>> &edges) {\nvector<vector<int>> mat(V, vector<int>(V, 0));\n\nfor (auto &it : edges) {\nint u = it[0];\nint v = it[1];\nmat[u][v] = 1;\n}\n\nreturn mat;\n}",
       "options": [
-        "images/missing_example.png",
-        "images/directed_graph_diagram.png",
-        "images/directed_graph_example.png",
-        "assets/not_provided.png"
+        "Missing Example",
+        "Directed Graph Diagram",
+        "Directed Graph Example",
+        "Not Provided"
       ],
-      "answer": "images/directed_graph_example.png",
+      "answer": "Directed Graph Example",
       "image": "images/directed_graph_example.png"
     },
     {
@@ -7645,12 +7645,12 @@
       "question": "Which image file shows the diagram for Undirected Graph?",
       "code": "vector<vector<int>> createGraph(int V, vector<vector<int>> &edges) {\nvector<vector<int>> adj(V);\n\nfor (auto &it : edges) {\nint u = it[0];\nint v = it[1];\nadj[u].push_back(v);\nadj[v].push_back(u);\n}\n\nreturn adj;\n}",
       "options": [
-        "images/missing_diagram.png",
-        "images/undirected_graph_diagram.png",
-        "images/undirected_graph_example.png",
-        "assets/not_provided.png"
+        "Missing Diagram",
+        "Undirected Graph Diagram",
+        "Undirected Graph Example",
+        "Not Provided"
       ],
-      "answer": "images/undirected_graph_diagram.png",
+      "answer": "Undirected Graph Diagram",
       "image": "images/undirected_graph_diagram.png"
     },
     {
@@ -7658,12 +7658,12 @@
       "question": "Which image file shows an example view for Undirected Graph?",
       "code": "vector<vector<int>> createGraph(int V, vector<vector<int>> &edges) {\nvector<vector<int>> adj(V);\n\nfor (auto &it : edges) {\nint u = it[0];\nint v = it[1];\nadj[u].push_back(v);\nadj[v].push_back(u);\n}\n\nreturn adj;\n}",
       "options": [
-        "images/undirected_graph_example.png",
-        "images/undirected_graph_diagram.png",
-        "assets/not_provided.png",
-        "images/missing_example.png"
+        "Undirected Graph Example",
+        "Undirected Graph Diagram",
+        "Not Provided",
+        "Missing Example"
       ],
-      "answer": "images/undirected_graph_example.png",
+      "answer": "Undirected Graph Example",
       "image": "images/undirected_graph_example.png"
     },
     {
@@ -7829,12 +7829,12 @@
       "question": "Which image file shows the diagram for Weighted Graph?",
       "code": "vector<vector<pair<int, int>>> createWeightedGraph(int V, vector<vector<int>> &edges) {\nvector<vector<pair<int, int>>> adj(V);\n\nfor (auto &it : edges) {\nint u = it[0];\nint v = it[1];\nint weight = it[2];\n\nadj[u].push_back({v, weight});\nadj[v].push_back({u, weight});\n}\n\nreturn adj;\n}",
       "options": [
-        "images/weighted_graph_example.png",
-        "images/weighted_graph_diagram.png",
-        "assets/not_provided.png",
-        "images/missing_diagram.png"
+        "Weighted Graph Example",
+        "Weighted Graph Diagram",
+        "Not Provided",
+        "Missing Diagram"
       ],
-      "answer": "images/weighted_graph_diagram.png",
+      "answer": "Weighted Graph Diagram",
       "image": "images/weighted_graph_diagram.png"
     },
     {
@@ -7842,12 +7842,12 @@
       "question": "Which image file shows an example view for Weighted Graph?",
       "code": "vector<vector<pair<int, int>>> createWeightedGraph(int V, vector<vector<int>> &edges) {\nvector<vector<pair<int, int>>> adj(V);\n\nfor (auto &it : edges) {\nint u = it[0];\nint v = it[1];\nint weight = it[2];\n\nadj[u].push_back({v, weight});\nadj[v].push_back({u, weight});\n}\n\nreturn adj;\n}",
       "options": [
-        "images/missing_example.png",
-        "images/weighted_graph_example.png",
-        "images/weighted_graph_diagram.png",
-        "assets/not_provided.png"
+        "Missing Example",
+        "Weighted Graph Example",
+        "Weighted Graph Diagram",
+        "Not Provided"
       ],
-      "answer": "images/weighted_graph_example.png",
+      "answer": "Weighted Graph Example",
       "image": "images/weighted_graph_example.png"
     },
     {
@@ -8013,12 +8013,12 @@
       "question": "Which image file shows the diagram for DFS (Depth First Search) Algorithm?",
       "code": "void dfsRec(vector<vector<int>> &adj, vector<bool> &visited, int s, vector<int> &res) {\nvisited[s] = true;\nres.push_back(s);\n\nfor (int i : adj[s]) {\nif (!visited[i]) {\ndfsRec(adj, visited, i, res);\n}\n}\n\nvector<int> dfs(vector<vector<int>> &adj) {\nvector<bool> visited(adj.size(), false);\nvector<int> res;\ndfsRec(adj, visited, 0, res);\nreturn res;\n}",
       "options": [
-        "assets/not_provided.png",
-        "images/dfs_depth_first_search_algorithm_diagram.png",
-        "images/missing_diagram.png",
-        "images/dfs_depth_first_search_algorithm_example.png"
+        "Not Provided",
+        "Dfs Depth First Search Algorithm Diagram",
+        "Missing Diagram",
+        "Dfs Depth First Search Algorithm Example"
       ],
-      "answer": "images/dfs_depth_first_search_algorithm_diagram.png",
+      "answer": "Dfs Depth First Search Algorithm Diagram",
       "image": "images/dfs_depth_first_search_algorithm_diagram.png"
     },
     {
@@ -8026,12 +8026,12 @@
       "question": "Which image file shows an example view for DFS (Depth First Search) Algorithm?",
       "code": "void dfsRec(vector<vector<int>> &adj, vector<bool> &visited, int s, vector<int> &res) {\nvisited[s] = true;\nres.push_back(s);\n\nfor (int i : adj[s]) {\nif (!visited[i]) {\ndfsRec(adj, visited, i, res);\n}\n}\n\nvector<int> dfs(vector<vector<int>> &adj) {\nvector<bool> visited(adj.size(), false);\nvector<int> res;\ndfsRec(adj, visited, 0, res);\nreturn res;\n}",
       "options": [
-        "images/dfs_depth_first_search_algorithm_diagram.png",
-        "images/dfs_depth_first_search_algorithm_example.png",
-        "assets/not_provided.png",
-        "images/missing_example.png"
+        "Dfs Depth First Search Algorithm Diagram",
+        "Dfs Depth First Search Algorithm Example",
+        "Not Provided",
+        "Missing Example"
       ],
-      "answer": "images/dfs_depth_first_search_algorithm_example.png",
+      "answer": "Dfs Depth First Search Algorithm Example",
       "image": "images/dfs_depth_first_search_algorithm_example.png"
     },
     {
@@ -8197,12 +8197,12 @@
       "question": "Which image file shows the diagram for BFS (Breadth First Search) Algorithm?",
       "code": "vector<int> bfs(vector<vector<int>>& adj) {\nint V = adj.size();\nvector<bool> visited(V, false);\nvector<int> res;\n\nqueue<int> q;\n\nint src = 0;\nvisited[src] = true;\nq.push(src);\n\nwhile (!q.empty()) {\nint curr = q.front();\nq.pop();\nres.push_back(curr);\n\nfor (int x : adj[curr]) {\nif (!visited[x]) {\nvisited[x] = true;\nq.push(x);\n}\n}\n}\n\nreturn res;\n}",
       "options": [
-        "assets/not_provided.png",
-        "images/missing_diagram.png",
-        "images/bfs_breadth_first_search_algorithm_example.png",
-        "images/bfs_breadth_first_search_algorithm_diagram.png"
+        "Not Provided",
+        "Missing Diagram",
+        "Bfs Breadth First Search Algorithm Example",
+        "Bfs Breadth First Search Algorithm Diagram"
       ],
-      "answer": "images/bfs_breadth_first_search_algorithm_diagram.png",
+      "answer": "Bfs Breadth First Search Algorithm Diagram",
       "image": "images/bfs_breadth_first_search_algorithm_diagram.png"
     },
     {
@@ -8210,12 +8210,12 @@
       "question": "Which image file shows an example view for BFS (Breadth First Search) Algorithm?",
       "code": "vector<int> bfs(vector<vector<int>>& adj) {\nint V = adj.size();\nvector<bool> visited(V, false);\nvector<int> res;\n\nqueue<int> q;\n\nint src = 0;\nvisited[src] = true;\nq.push(src);\n\nwhile (!q.empty()) {\nint curr = q.front();\nq.pop();\nres.push_back(curr);\n\nfor (int x : adj[curr]) {\nif (!visited[x]) {\nvisited[x] = true;\nq.push(x);\n}\n}\n}\n\nreturn res;\n}",
       "options": [
-        "images/missing_example.png",
-        "assets/not_provided.png",
-        "images/bfs_breadth_first_search_algorithm_diagram.png",
-        "images/bfs_breadth_first_search_algorithm_example.png"
+        "Missing Example",
+        "Not Provided",
+        "Bfs Breadth First Search Algorithm Diagram",
+        "Bfs Breadth First Search Algorithm Example"
       ],
-      "answer": "images/bfs_breadth_first_search_algorithm_example.png",
+      "answer": "Bfs Breadth First Search Algorithm Example",
       "image": "images/bfs_breadth_first_search_algorithm_example.png"
     },
     {
@@ -8381,12 +8381,12 @@
       "question": "Which image file shows the diagram for Dijkstra Algorithm?",
       "code": "vector<int> dijkstra(vector<vector<pair<int,int>>>& adj, int src) {\n\nint V = adj.size();\n\npriority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;\n\nvector<int> dist(V, INT_MAX);\n\ndist[src] = 0;\npq.emplace(0, src);\n\nwhile (!pq.empty()) {\nauto top = pq.top();\npq.pop();\n\nint d = top.first;\nint u = top.second;\n\nif (d > dist[u])\ncontinue;\n\nfor (auto &p : adj[u]) {\nint v = p.first;\nint w = p.second;\n\nif (dist[u] + w < dist[v]) {\ndist[v] = dist[u] + w;\npq.emplace(dist[v], v);\n}\n}\n}\n\nreturn dist;\n}",
       "options": [
-        "images/dijkstra_algorithm_example.png",
-        "images/dijkstra_algorithm_diagram.png",
-        "assets/not_provided.png",
-        "images/missing_diagram.png"
+        "Dijkstra Algorithm Example",
+        "Dijkstra Algorithm Diagram",
+        "Not Provided",
+        "Missing Diagram"
       ],
-      "answer": "images/dijkstra_algorithm_diagram.png",
+      "answer": "Dijkstra Algorithm Diagram",
       "image": "images/dijkstra_algorithm_diagram.png"
     },
     {
@@ -8394,12 +8394,12 @@
       "question": "Which image file shows an example view for Dijkstra Algorithm?",
       "code": "vector<int> dijkstra(vector<vector<pair<int,int>>>& adj, int src) {\n\nint V = adj.size();\n\npriority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;\n\nvector<int> dist(V, INT_MAX);\n\ndist[src] = 0;\npq.emplace(0, src);\n\nwhile (!pq.empty()) {\nauto top = pq.top();\npq.pop();\n\nint d = top.first;\nint u = top.second;\n\nif (d > dist[u])\ncontinue;\n\nfor (auto &p : adj[u]) {\nint v = p.first;\nint w = p.second;\n\nif (dist[u] + w < dist[v]) {\ndist[v] = dist[u] + w;\npq.emplace(dist[v], v);\n}\n}\n}\n\nreturn dist;\n}",
       "options": [
-        "images/dijkstra_algorithm_diagram.png",
-        "assets/not_provided.png",
-        "images/dijkstra_algorithm_example.png",
-        "images/missing_example.png"
+        "Dijkstra Algorithm Diagram",
+        "Not Provided",
+        "Dijkstra Algorithm Example",
+        "Missing Example"
       ],
-      "answer": "images/dijkstra_algorithm_example.png",
+      "answer": "Dijkstra Algorithm Example",
       "image": "images/dijkstra_algorithm_example.png"
     },
     {
@@ -8565,12 +8565,12 @@
       "question": "Which image file shows the diagram for Minimum Spanning Tree?",
       "code": "vector<pair<int, pair<int, int>>> minimumSpanningTree(int V, vector<vector<int>>& edges) {\nsort(edges.begin(), edges.end(), [](auto &a, auto &b) {\nreturn a[2] < b[2];\n});\n\nvector<pair<int, pair<int, int>>> mst;\n\nfor (auto &e : edges) {\nint u = e[0];\nint v = e[1];\nint w = e[2];\n\nmst.push_back({w, {u, v}});\n}\n\nreturn mst;\n}",
       "options": [
-        "images/minimum_spanning_tree_example.png",
-        "images/minimum_spanning_tree_diagram.png",
-        "assets/not_provided.png",
-        "images/missing_diagram.png"
+        "Minimum Spanning Tree Example",
+        "Minimum Spanning Tree Diagram",
+        "Not Provided",
+        "Missing Diagram"
       ],
-      "answer": "images/minimum_spanning_tree_diagram.png",
+      "answer": "Minimum Spanning Tree Diagram",
       "image": "images/minimum_spanning_tree_diagram.png"
     },
     {
@@ -8578,12 +8578,12 @@
       "question": "Which image file shows an example view for Minimum Spanning Tree?",
       "code": "vector<pair<int, pair<int, int>>> minimumSpanningTree(int V, vector<vector<int>>& edges) {\nsort(edges.begin(), edges.end(), [](auto &a, auto &b) {\nreturn a[2] < b[2];\n});\n\nvector<pair<int, pair<int, int>>> mst;\n\nfor (auto &e : edges) {\nint u = e[0];\nint v = e[1];\nint w = e[2];\n\nmst.push_back({w, {u, v}});\n}\n\nreturn mst;\n}",
       "options": [
-        "images/missing_example.png",
-        "images/minimum_spanning_tree_example.png",
-        "images/minimum_spanning_tree_diagram.png",
-        "assets/not_provided.png"
+        "Missing Example",
+        "Minimum Spanning Tree Example",
+        "Minimum Spanning Tree Diagram",
+        "Not Provided"
       ],
-      "answer": "images/minimum_spanning_tree_example.png",
+      "answer": "Minimum Spanning Tree Example",
       "image": "images/minimum_spanning_tree_example.png"
     },
     {
@@ -8749,12 +8749,12 @@
       "question": "Which image file shows the diagram for Prim Algorithm?",
       "code": "vector<pair<int, int>> prim(int V, vector<vector<pair<int, int>>> &adj) {\npriority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;\nvector<int> key(V, INT_MAX);\nvector<int> parent(V, -1);\nvector<bool> inMST(V, false);\n\npq.push({0, 0});\nkey[0] = 0;\n\nwhile (!pq.empty()) {\nint u = pq.top().second;\npq.pop();\n\nif (inMST[u])\ncontinue;\n\ninMST[u] = true;\n\nfor (auto &x : adj[u]) {\nint v = x.first;\nint weight = x.second;\n\nif (!inMST[v] && weight < key[v]) {\nkey[v] = weight;\npq.push({key[v], v});\nparent[v] = u;\n}\n}\n}\n\nvector<pair<int, int>> mst;\nfor (int i = 1; i < V; i++)\nmst.push_back({parent[i], i});\n\nreturn mst;\n}",
       "options": [
-        "images/missing_diagram.png",
-        "images/prim_algorithm_diagram.png",
-        "assets/not_provided.png",
-        "images/prim_algorithm_example.png"
+        "Missing Diagram",
+        "Prim Algorithm Diagram",
+        "Not Provided",
+        "Prim Algorithm Example"
       ],
-      "answer": "images/prim_algorithm_diagram.png",
+      "answer": "Prim Algorithm Diagram",
       "image": "images/prim_algorithm_diagram.png"
     },
     {
@@ -8762,12 +8762,12 @@
       "question": "Which image file shows an example view for Prim Algorithm?",
       "code": "vector<pair<int, int>> prim(int V, vector<vector<pair<int, int>>> &adj) {\npriority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;\nvector<int> key(V, INT_MAX);\nvector<int> parent(V, -1);\nvector<bool> inMST(V, false);\n\npq.push({0, 0});\nkey[0] = 0;\n\nwhile (!pq.empty()) {\nint u = pq.top().second;\npq.pop();\n\nif (inMST[u])\ncontinue;\n\ninMST[u] = true;\n\nfor (auto &x : adj[u]) {\nint v = x.first;\nint weight = x.second;\n\nif (!inMST[v] && weight < key[v]) {\nkey[v] = weight;\npq.push({key[v], v});\nparent[v] = u;\n}\n}\n}\n\nvector<pair<int, int>> mst;\nfor (int i = 1; i < V; i++)\nmst.push_back({parent[i], i});\n\nreturn mst;\n}",
       "options": [
-        "assets/not_provided.png",
-        "images/prim_algorithm_example.png",
-        "images/prim_algorithm_diagram.png",
-        "images/missing_example.png"
+        "Not Provided",
+        "Prim Algorithm Example",
+        "Prim Algorithm Diagram",
+        "Missing Example"
       ],
-      "answer": "images/prim_algorithm_example.png",
+      "answer": "Prim Algorithm Example",
       "image": "images/prim_algorithm_example.png"
     },
     {
@@ -8933,12 +8933,12 @@
       "question": "Which image file shows the diagram for Kruskal Algorithm?",
       "code": "vector<vector<int>> kruskal(int V, vector<vector<int>>& edges) {\nsort(edges.begin(), edges.end(), [](auto &a, auto &b) {\nreturn a[2] < b[2];\n});\n\nvector<vector<int>> mst;\n\nfor (auto &e : edges) {\nint u = e[0];\nint v = e[1];\nint w = e[2];\n\nmst.push_back({u, v, w});\n}\n\nreturn mst;\n}",
       "options": [
-        "images/kruskal_algorithm_example.png",
-        "images/missing_diagram.png",
-        "images/kruskal_algorithm_diagram.png",
-        "assets/not_provided.png"
+        "Kruskal Algorithm Example",
+        "Missing Diagram",
+        "Kruskal Algorithm Diagram",
+        "Not Provided"
       ],
-      "answer": "images/kruskal_algorithm_diagram.png",
+      "answer": "Kruskal Algorithm Diagram",
       "image": "images/kruskal_algorithm_diagram.png"
     },
     {
@@ -8946,12 +8946,12 @@
       "question": "Which image file shows an example view for Kruskal Algorithm?",
       "code": "vector<vector<int>> kruskal(int V, vector<vector<int>>& edges) {\nsort(edges.begin(), edges.end(), [](auto &a, auto &b) {\nreturn a[2] < b[2];\n});\n\nvector<vector<int>> mst;\n\nfor (auto &e : edges) {\nint u = e[0];\nint v = e[1];\nint w = e[2];\n\nmst.push_back({u, v, w});\n}\n\nreturn mst;\n}",
       "options": [
-        "images/kruskal_algorithm_example.png",
-        "images/missing_example.png",
-        "images/kruskal_algorithm_diagram.png",
-        "assets/not_provided.png"
+        "Kruskal Algorithm Example",
+        "Missing Example",
+        "Kruskal Algorithm Diagram",
+        "Not Provided"
       ],
-      "answer": "images/kruskal_algorithm_example.png",
+      "answer": "Kruskal Algorithm Example",
       "image": "images/kruskal_algorithm_example.png"
     },
     {
@@ -9117,12 +9117,12 @@
       "question": "Which image file shows the diagram for Topological Sorting?",
       "code": "vector<int> topologicalSort(int V, vector<vector<int>>& adj) {\nvector<int> indegree(V, 0);\n\nfor (int u = 0; u < V; u++)\nfor (int v : adj[u])\nindegree[v]++;\n\nqueue<int> q;\n\nfor (int i = 0; i < V; i++)\nif (indegree[i] == 0)\nq.push(i);\n\nvector<int> topo;\n\nwhile (!q.empty()) {\nint u = q.front();\nq.pop();\n\ntopo.push_back(u);\n\nfor (int v : adj[u]) {\nindegree[v]--;\n\nif (indegree[v] == 0)\nq.push(v);\n}\n}\n\nreturn topo;\n}",
       "options": [
-        "assets/not_provided.png",
-        "images/topological_sorting_example.png",
-        "images/missing_diagram.png",
-        "images/topological_sorting_diagram.png"
+        "Not Provided",
+        "Topological Sorting Example",
+        "Missing Diagram",
+        "Topological Sorting Diagram"
       ],
-      "answer": "images/topological_sorting_diagram.png",
+      "answer": "Topological Sorting Diagram",
       "image": "images/topological_sorting_diagram.png"
     },
     {
@@ -9130,12 +9130,12 @@
       "question": "Which image file shows an example view for Topological Sorting?",
       "code": "vector<int> topologicalSort(int V, vector<vector<int>>& adj) {\nvector<int> indegree(V, 0);\n\nfor (int u = 0; u < V; u++)\nfor (int v : adj[u])\nindegree[v]++;\n\nqueue<int> q;\n\nfor (int i = 0; i < V; i++)\nif (indegree[i] == 0)\nq.push(i);\n\nvector<int> topo;\n\nwhile (!q.empty()) {\nint u = q.front();\nq.pop();\n\ntopo.push_back(u);\n\nfor (int v : adj[u]) {\nindegree[v]--;\n\nif (indegree[v] == 0)\nq.push(v);\n}\n}\n\nreturn topo;\n}",
       "options": [
-        "images/topological_sorting_example.png",
-        "images/missing_example.png",
-        "images/topological_sorting_diagram.png",
-        "assets/not_provided.png"
+        "Topological Sorting Example",
+        "Missing Example",
+        "Topological Sorting Diagram",
+        "Not Provided"
       ],
-      "answer": "images/topological_sorting_example.png",
+      "answer": "Topological Sorting Example",
       "image": "images/topological_sorting_example.png"
     },
     {
@@ -9301,12 +9301,12 @@
       "question": "Which image file shows the diagram for Hash Table?",
       "code": "class HashTable {\nprivate:\nvector<list<pair<int, string>>> table;\nint size;\n\nint hashFunction(int key) {\nreturn key % size;\n}\n\npublic:\nHashTable(int s) : size(s) {\ntable.resize(size);\n}\n};",
       "options": [
-        "images/hash_table_example.png",
-        "assets/not_provided.png",
-        "images/missing_diagram.png",
-        "images/hash_table_diagram.png"
+        "Hash Table Example",
+        "Not Provided",
+        "Missing Diagram",
+        "Hash Table Diagram"
       ],
-      "answer": "images/hash_table_diagram.png",
+      "answer": "Hash Table Diagram",
       "image": "images/hash_table_diagram.png"
     },
     {
@@ -9314,12 +9314,12 @@
       "question": "Which image file shows an example view for Hash Table?",
       "code": "class HashTable {\nprivate:\nvector<list<pair<int, string>>> table;\nint size;\n\nint hashFunction(int key) {\nreturn key % size;\n}\n\npublic:\nHashTable(int s) : size(s) {\ntable.resize(size);\n}\n};",
       "options": [
-        "assets/not_provided.png",
-        "images/hash_table_diagram.png",
-        "images/hash_table_example.png",
-        "images/missing_example.png"
+        "Not Provided",
+        "Hash Table Diagram",
+        "Hash Table Example",
+        "Missing Example"
       ],
-      "answer": "images/hash_table_example.png",
+      "answer": "Hash Table Example",
       "image": "images/hash_table_example.png"
     },
     {
@@ -9485,12 +9485,12 @@
       "question": "Which image file shows the diagram for Hash Function?",
       "code": "class HashFunction {\npublic:\nint computeHashCode(int key) {\nreturn key;\n}\n\nint mapKeyToIndex(int key, int tableSize) {\nreturn computeHashCode(key) % tableSize;\n}\n};",
       "options": [
-        "assets/not_provided.png",
-        "images/missing_diagram.png",
-        "images/hash_function_diagram.png",
-        "images/hash_function_example.png"
+        "Not Provided",
+        "Missing Diagram",
+        "Hash Function Diagram",
+        "Hash Function Example"
       ],
-      "answer": "images/hash_function_diagram.png",
+      "answer": "Hash Function Diagram",
       "image": "images/hash_function_diagram.png"
     },
     {
@@ -9498,12 +9498,12 @@
       "question": "Which image file shows an example view for Hash Function?",
       "code": "class HashFunction {\npublic:\nint computeHashCode(int key) {\nreturn key;\n}\n\nint mapKeyToIndex(int key, int tableSize) {\nreturn computeHashCode(key) % tableSize;\n}\n};",
       "options": [
-        "images/hash_function_diagram.png",
-        "images/missing_example.png",
-        "images/hash_function_example.png",
-        "assets/not_provided.png"
+        "Hash Function Diagram",
+        "Missing Example",
+        "Hash Function Example",
+        "Not Provided"
       ],
-      "answer": "images/hash_function_example.png",
+      "answer": "Hash Function Example",
       "image": "images/hash_function_example.png"
     },
     {
@@ -9669,12 +9669,12 @@
       "question": "Which image file shows the diagram for Collision Resolution?",
       "code": "class HashTable {\nprivate:\nvector<int> table;\nint size;\n\npublic:\nHashTable(int s) : size(s) {\ntable.resize(size, -1);\n}\n\nvoid linearProbing(int key) {\nint index = key % size;\n\nwhile (table[index] != -1) {\nindex = (index + 1) % size;\n}\n\ntable[index] = key;\n}\n};",
       "options": [
-        "images/collision_resolution_diagram.png",
-        "images/missing_diagram.png",
-        "assets/not_provided.png",
-        "images/collision_resolution_example.png"
+        "Collision Resolution Diagram",
+        "Missing Diagram",
+        "Not Provided",
+        "Collision Resolution Example"
       ],
-      "answer": "images/collision_resolution_diagram.png",
+      "answer": "Collision Resolution Diagram",
       "image": "images/collision_resolution_diagram.png"
     },
     {
@@ -9682,12 +9682,12 @@
       "question": "Which image file shows an example view for Collision Resolution?",
       "code": "class HashTable {\nprivate:\nvector<int> table;\nint size;\n\npublic:\nHashTable(int s) : size(s) {\ntable.resize(size, -1);\n}\n\nvoid linearProbing(int key) {\nint index = key % size;\n\nwhile (table[index] != -1) {\nindex = (index + 1) % size;\n}\n\ntable[index] = key;\n}\n};",
       "options": [
-        "images/collision_resolution_diagram.png",
-        "assets/not_provided.png",
-        "images/collision_resolution_example.png",
-        "images/missing_example.png"
+        "Collision Resolution Diagram",
+        "Not Provided",
+        "Collision Resolution Example",
+        "Missing Example"
       ],
-      "answer": "images/collision_resolution_example.png",
+      "answer": "Collision Resolution Example",
       "image": "images/collision_resolution_example.png"
     },
     {
@@ -9853,12 +9853,12 @@
       "question": "Which image file shows the diagram for Sorting Algorithm?",
       "code": "void sortArray(vector<int>& arr) {\nsort(arr.begin(), arr.end());\n}",
       "options": [
-        "images/missing_diagram.png",
-        "assets/not_provided.png",
-        "images/sorting_algorithm_diagram.png",
-        "images/sorting_algorithm_example.png"
+        "Missing Diagram",
+        "Not Provided",
+        "Sorting Algorithm Diagram",
+        "Sorting Algorithm Example"
       ],
-      "answer": "images/sorting_algorithm_diagram.png",
+      "answer": "Sorting Algorithm Diagram",
       "image": "images/sorting_algorithm_diagram.png"
     },
     {
@@ -9866,12 +9866,12 @@
       "question": "Which image file shows an example view for Sorting Algorithm?",
       "code": "void sortArray(vector<int>& arr) {\nsort(arr.begin(), arr.end());\n}",
       "options": [
-        "images/sorting_algorithm_diagram.png",
-        "assets/not_provided.png",
-        "images/sorting_algorithm_example.png",
-        "images/missing_example.png"
+        "Sorting Algorithm Diagram",
+        "Not Provided",
+        "Sorting Algorithm Example",
+        "Missing Example"
       ],
-      "answer": "images/sorting_algorithm_example.png",
+      "answer": "Sorting Algorithm Example",
       "image": "images/sorting_algorithm_example.png"
     },
     {
@@ -10037,12 +10037,12 @@
       "question": "Which image file shows the diagram for Bubble Sort?",
       "code": "void bubbleSort(vector<int>& arr) {\nint n = arr.size();\nbool swapped;\n\nfor (int i = 0; i < n - 1; i++) {\nswapped = false;\n\nfor (int j = 0; j < n - i - 1; j++) {\nif (arr[j] > arr[j + 1]) {\nswap(arr[j], arr[j + 1]);\nswapped = true;\n}\n}\n\nif (!swapped)\nbreak;\n}\n}",
       "options": [
-        "images/bubble_sort_diagram.png",
-        "assets/not_provided.png",
-        "images/missing_diagram.png",
-        "images/bubble_sort_example.png"
+        "Bubble Sort Diagram",
+        "Not Provided",
+        "Missing Diagram",
+        "Bubble Sort Example"
       ],
-      "answer": "images/bubble_sort_diagram.png",
+      "answer": "Bubble Sort Diagram",
       "image": "images/bubble_sort_diagram.png"
     },
     {
@@ -10050,12 +10050,12 @@
       "question": "Which image file shows an example view for Bubble Sort?",
       "code": "void bubbleSort(vector<int>& arr) {\nint n = arr.size();\nbool swapped;\n\nfor (int i = 0; i < n - 1; i++) {\nswapped = false;\n\nfor (int j = 0; j < n - i - 1; j++) {\nif (arr[j] > arr[j + 1]) {\nswap(arr[j], arr[j + 1]);\nswapped = true;\n}\n}\n\nif (!swapped)\nbreak;\n}\n}",
       "options": [
-        "images/bubble_sort_diagram.png",
-        "images/missing_example.png",
-        "assets/not_provided.png",
-        "images/bubble_sort_example.png"
+        "Bubble Sort Diagram",
+        "Missing Example",
+        "Not Provided",
+        "Bubble Sort Example"
       ],
-      "answer": "images/bubble_sort_example.png",
+      "answer": "Bubble Sort Example",
       "image": "images/bubble_sort_example.png"
     },
     {
@@ -10221,12 +10221,12 @@
       "question": "Which image file shows the diagram for Selection Sort?",
       "code": "void selectionSort(vector<int>& arr) {\nint n = arr.size();\n\nfor (int i = 0; i < n - 1; i++) {\nint minIndex = i;\n\nfor (int j = i + 1; j < n; j++) {\nif (arr[j] < arr[minIndex]) {\nminIndex = j;\n}\n}\n\nswap(arr[i], arr[minIndex]);\n}\n}",
       "options": [
-        "assets/not_provided.png",
-        "images/selection_sort_diagram.png",
-        "images/selection_sort_example.png",
-        "images/missing_diagram.png"
+        "Not Provided",
+        "Selection Sort Diagram",
+        "Selection Sort Example",
+        "Missing Diagram"
       ],
-      "answer": "images/selection_sort_diagram.png",
+      "answer": "Selection Sort Diagram",
       "image": "images/selection_sort_diagram.png"
     },
     {
@@ -10234,12 +10234,12 @@
       "question": "Which image file shows an example view for Selection Sort?",
       "code": "void selectionSort(vector<int>& arr) {\nint n = arr.size();\n\nfor (int i = 0; i < n - 1; i++) {\nint minIndex = i;\n\nfor (int j = i + 1; j < n; j++) {\nif (arr[j] < arr[minIndex]) {\nminIndex = j;\n}\n}\n\nswap(arr[i], arr[minIndex]);\n}\n}",
       "options": [
-        "images/selection_sort_diagram.png",
-        "assets/not_provided.png",
-        "images/selection_sort_example.png",
-        "images/missing_example.png"
+        "Selection Sort Diagram",
+        "Not Provided",
+        "Selection Sort Example",
+        "Missing Example"
       ],
-      "answer": "images/selection_sort_example.png",
+      "answer": "Selection Sort Example",
       "image": "images/selection_sort_example.png"
     },
     {
@@ -10405,12 +10405,12 @@
       "question": "Which image file shows the diagram for Insertion Sort?",
       "code": "void insertionSort(vector<int>& arr) {\nint n = arr.size();\n\nfor (int i = 1; i < n; i++) {\nint key = arr[i];\nint j = i - 1;\n\nwhile (j >= 0 && arr[j] > key) {\narr[j + 1] = arr[j];\nj--;\n}\n\narr[j + 1] = key;\n}\n}",
       "options": [
-        "assets/not_provided.png",
-        "images/missing_diagram.png",
-        "images/insertion_sort_example.png",
-        "images/insertion_sort_diagram.png"
+        "Not Provided",
+        "Missing Diagram",
+        "Insertion Sort Example",
+        "Insertion Sort Diagram"
       ],
-      "answer": "images/insertion_sort_diagram.png",
+      "answer": "Insertion Sort Diagram",
       "image": "images/insertion_sort_diagram.png"
     },
     {
@@ -10418,12 +10418,12 @@
       "question": "Which image file shows an example view for Insertion Sort?",
       "code": "void insertionSort(vector<int>& arr) {\nint n = arr.size();\n\nfor (int i = 1; i < n; i++) {\nint key = arr[i];\nint j = i - 1;\n\nwhile (j >= 0 && arr[j] > key) {\narr[j + 1] = arr[j];\nj--;\n}\n\narr[j + 1] = key;\n}\n}",
       "options": [
-        "images/missing_example.png",
-        "images/insertion_sort_diagram.png",
-        "images/insertion_sort_example.png",
-        "assets/not_provided.png"
+        "Missing Example",
+        "Insertion Sort Diagram",
+        "Insertion Sort Example",
+        "Not Provided"
       ],
-      "answer": "images/insertion_sort_example.png",
+      "answer": "Insertion Sort Example",
       "image": "images/insertion_sort_example.png"
     },
     {
@@ -10589,12 +10589,12 @@
       "question": "Which image file shows the diagram for Merge Sort?",
       "code": "void merge(vector<int>& arr, int left, int mid, int right);\n\nvoid mergeSort(vector<int>& arr, int left, int right) {\nif (left >= right) return;\n\nint mid = left + (right - left) / 2;\nmergeSort(arr, left, mid);\nmergeSort(arr, mid + 1, right);\nmerge(arr, left, mid, right);\n}\n\nvoid merge(vector<int>& arr, int left, int mid, int right) {\nvector<int> temp(right - left + 1);\nint i = left, j = mid + 1, k = 0;\n\nwhile (i <= mid && j <= right) {\nif (arr[i] <= arr[j]) {\ntemp[k++] = arr[i++];\n} else {\ntemp[k++] = arr[j++];\n}\n}\n\nwhile (i <= mid) {\ntemp[k++] = arr[i++];\n}\n\nwhile (j <= right) {\ntemp[k++] = arr[j++];\n}\n\nfor (int i = 0; i < k; i++) {\narr[left + i] = temp[i];\n}\n}",
       "options": [
-        "images/merge_sort_diagram.png",
-        "assets/not_provided.png",
-        "images/merge_sort_example.png",
-        "images/missing_diagram.png"
+        "Merge Sort Diagram",
+        "Not Provided",
+        "Merge Sort Example",
+        "Missing Diagram"
       ],
-      "answer": "images/merge_sort_diagram.png",
+      "answer": "Merge Sort Diagram",
       "image": "images/merge_sort_diagram.png"
     },
     {
@@ -10602,12 +10602,12 @@
       "question": "Which image file shows an example view for Merge Sort?",
       "code": "void merge(vector<int>& arr, int left, int mid, int right);\n\nvoid mergeSort(vector<int>& arr, int left, int right) {\nif (left >= right) return;\n\nint mid = left + (right - left) / 2;\nmergeSort(arr, left, mid);\nmergeSort(arr, mid + 1, right);\nmerge(arr, left, mid, right);\n}\n\nvoid merge(vector<int>& arr, int left, int mid, int right) {\nvector<int> temp(right - left + 1);\nint i = left, j = mid + 1, k = 0;\n\nwhile (i <= mid && j <= right) {\nif (arr[i] <= arr[j]) {\ntemp[k++] = arr[i++];\n} else {\ntemp[k++] = arr[j++];\n}\n}\n\nwhile (i <= mid) {\ntemp[k++] = arr[i++];\n}\n\nwhile (j <= right) {\ntemp[k++] = arr[j++];\n}\n\nfor (int i = 0; i < k; i++) {\narr[left + i] = temp[i];\n}\n}",
       "options": [
-        "images/missing_example.png",
-        "images/merge_sort_diagram.png",
-        "assets/not_provided.png",
-        "images/merge_sort_example.png"
+        "Missing Example",
+        "Merge Sort Diagram",
+        "Not Provided",
+        "Merge Sort Example"
       ],
-      "answer": "images/merge_sort_example.png",
+      "answer": "Merge Sort Example",
       "image": "images/merge_sort_example.png"
     },
     {
@@ -10773,12 +10773,12 @@
       "question": "Which image file shows the diagram for Quick Sort?",
       "code": "int partition(vector<int>& arr, int low, int high) {\nint pivot = arr[high];\nint i = low - 1;\n\nfor (int j = low; j < high; j++) {\nif (arr[j] < pivot) {\ni++;\nswap(arr[i], arr[j]);\n}\n}\n\nswap(arr[i + 1], arr[high]);\nreturn i + 1;\n}\n\nvoid quickSort(vector<int>& arr, int low, int high) {\nif (low < high) {\nint pi = partition(arr, low, high);\n\nquickSort(arr, low, pi - 1);\nquickSort(arr, pi + 1, high);\n}\n}",
       "options": [
-        "assets/not_provided.png",
-        "images/quick_sort_diagram.png",
-        "images/quick_sort_example.png",
-        "images/missing_diagram.png"
+        "Not Provided",
+        "Quick Sort Diagram",
+        "Quick Sort Example",
+        "Missing Diagram"
       ],
-      "answer": "images/quick_sort_diagram.png",
+      "answer": "Quick Sort Diagram",
       "image": "images/quick_sort_diagram.png"
     },
     {
@@ -10786,12 +10786,12 @@
       "question": "Which image file shows an example view for Quick Sort?",
       "code": "int partition(vector<int>& arr, int low, int high) {\nint pivot = arr[high];\nint i = low - 1;\n\nfor (int j = low; j < high; j++) {\nif (arr[j] < pivot) {\ni++;\nswap(arr[i], arr[j]);\n}\n}\n\nswap(arr[i + 1], arr[high]);\nreturn i + 1;\n}\n\nvoid quickSort(vector<int>& arr, int low, int high) {\nif (low < high) {\nint pi = partition(arr, low, high);\n\nquickSort(arr, low, pi - 1);\nquickSort(arr, pi + 1, high);\n}\n}",
       "options": [
-        "images/missing_example.png",
-        "assets/not_provided.png",
-        "images/quick_sort_diagram.png",
-        "images/quick_sort_example.png"
+        "Missing Example",
+        "Not Provided",
+        "Quick Sort Diagram",
+        "Quick Sort Example"
       ],
-      "answer": "images/quick_sort_example.png",
+      "answer": "Quick Sort Example",
       "image": "images/quick_sort_example.png"
     },
     {
@@ -10957,12 +10957,12 @@
       "question": "Which image file shows the diagram for Binary Search?",
       "code": "int binarySearch(vector<int>& arr, int target, int low, int high) {\nif (low > high) return -1;\n\nint mid = low + (high - low) / 2;\nif (arr[mid] == target) return mid;\n\nif (arr[mid] > target) return binarySearch(arr, target, low, mid - 1);\nreturn binarySearch(arr, target, mid + 1, high);\n}",
       "options": [
-        "images/missing_diagram.png",
-        "images/binary_search_example.png",
-        "images/binary_search_diagram.png",
-        "assets/not_provided.png"
+        "Missing Diagram",
+        "Binary Search Example",
+        "Binary Search Diagram",
+        "Not Provided"
       ],
-      "answer": "images/binary_search_diagram.png",
+      "answer": "Binary Search Diagram",
       "image": "images/binary_search_diagram.png"
     },
     {
@@ -10970,12 +10970,12 @@
       "question": "Which image file shows an example view for Binary Search?",
       "code": "int binarySearch(vector<int>& arr, int target, int low, int high) {\nif (low > high) return -1;\n\nint mid = low + (high - low) / 2;\nif (arr[mid] == target) return mid;\n\nif (arr[mid] > target) return binarySearch(arr, target, low, mid - 1);\nreturn binarySearch(arr, target, mid + 1, high);\n}",
       "options": [
-        "images/binary_search_diagram.png",
-        "assets/not_provided.png",
-        "images/missing_example.png",
-        "images/binary_search_example.png"
+        "Binary Search Diagram",
+        "Not Provided",
+        "Missing Example",
+        "Binary Search Example"
       ],
-      "answer": "images/binary_search_example.png",
+      "answer": "Binary Search Example",
       "image": "images/binary_search_example.png"
     },
     {
@@ -11141,12 +11141,12 @@
       "question": "Which image file shows the diagram for STL (Standard Template Library) Components?",
       "code": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main() {\nvector<int> nums = {5, 2, 8, 1, 3};\n\nsort(nums.begin(), nums.end());\n\nfor (int x : nums) {\ncout << x << \" \";\n}\n\nreturn 0;\n}",
       "options": [
-        "images/stl_standard_template_library_components_diagram.png",
-        "assets/not_provided.png",
-        "images/stl_standard_template_library_components_example.png",
-        "images/missing_diagram.png"
+        "Stl Standard Template Library Components Diagram",
+        "Not Provided",
+        "Stl Standard Template Library Components Example",
+        "Missing Diagram"
       ],
-      "answer": "images/stl_standard_template_library_components_diagram.png",
+      "answer": "Stl Standard Template Library Components Diagram",
       "image": "images/stl_standard_template_library_components_diagram.png"
     },
     {
@@ -11154,12 +11154,12 @@
       "question": "Which image file shows an example view for STL (Standard Template Library) Components?",
       "code": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main() {\nvector<int> nums = {5, 2, 8, 1, 3};\n\nsort(nums.begin(), nums.end());\n\nfor (int x : nums) {\ncout << x << \" \";\n}\n\nreturn 0;\n}",
       "options": [
-        "images/missing_example.png",
-        "images/stl_standard_template_library_components_example.png",
-        "assets/not_provided.png",
-        "images/stl_standard_template_library_components_diagram.png"
+        "Missing Example",
+        "Stl Standard Template Library Components Example",
+        "Not Provided",
+        "Stl Standard Template Library Components Diagram"
       ],
-      "answer": "images/stl_standard_template_library_components_example.png",
+      "answer": "Stl Standard Template Library Components Example",
       "image": "images/stl_standard_template_library_components_example.png"
     },
     {
@@ -11325,12 +11325,12 @@
       "question": "Which image file shows the diagram for Multidimensional Array?",
       "code": "int arr[2][3][4];",
       "options": [
-        "images/missing_diagram.png",
-        "images/multidimensional_array_example.png",
-        "images/multidimensional_array_diagram.png",
-        "assets/not_provided.png"
+        "Missing Diagram",
+        "Multidimensional Array Example",
+        "Multidimensional Array Diagram",
+        "Not Provided"
       ],
-      "answer": "images/multidimensional_array_diagram.png",
+      "answer": "Multidimensional Array Diagram",
       "image": "images/multidimensional_array_diagram.png"
     },
     {
@@ -11338,12 +11338,12 @@
       "question": "Which image file shows an example view for Multidimensional Array?",
       "code": "int arr[2][3][4];",
       "options": [
-        "assets/not_provided.png",
-        "images/missing_example.png",
-        "images/multidimensional_array_example.png",
-        "images/multidimensional_array_diagram.png"
+        "Not Provided",
+        "Missing Example",
+        "Multidimensional Array Example",
+        "Multidimensional Array Diagram"
       ],
-      "answer": "images/multidimensional_array_example.png",
+      "answer": "Multidimensional Array Example",
       "image": "images/multidimensional_array_example.png"
     },
     {
@@ -11509,12 +11509,12 @@
       "question": "Which image file shows the diagram for Modular Arithmetic?",
       "code": "int result = a % b;",
       "options": [
-        "images/modular_arithmetic_example.png",
-        "images/modular_arithmetic_diagram.png",
-        "images/missing_diagram.png",
-        "assets/not_provided.png"
+        "Modular Arithmetic Example",
+        "Modular Arithmetic Diagram",
+        "Missing Diagram",
+        "Not Provided"
       ],
-      "answer": "images/modular_arithmetic_diagram.png",
+      "answer": "Modular Arithmetic Diagram",
       "image": "images/modular_arithmetic_diagram.png"
     },
     {
@@ -11522,12 +11522,12 @@
       "question": "Which image file shows an example view for Modular Arithmetic?",
       "code": "int result = a % b;",
       "options": [
-        "images/modular_arithmetic_example.png",
-        "assets/not_provided.png",
-        "images/missing_example.png",
-        "images/modular_arithmetic_diagram.png"
+        "Modular Arithmetic Example",
+        "Not Provided",
+        "Missing Example",
+        "Modular Arithmetic Diagram"
       ],
-      "answer": "images/modular_arithmetic_example.png",
+      "answer": "Modular Arithmetic Example",
       "image": "images/modular_arithmetic_example.png"
     },
     {
@@ -11693,12 +11693,12 @@
       "question": "Which image file shows the diagram for Algorithm?",
       "code": "def add(a, b): return a + b",
       "options": [
-        "images/missing_diagram.png",
-        "images/algorithm_example.png",
-        "images/algorithm_diagram.png",
-        "assets/not_provided.png"
+        "Missing Diagram",
+        "Algorithm Example",
+        "Algorithm Diagram",
+        "Not Provided"
       ],
-      "answer": "images/algorithm_diagram.png",
+      "answer": "Algorithm Diagram",
       "image": "images/algorithm_diagram.png"
     },
     {
@@ -11706,12 +11706,12 @@
       "question": "Which image file shows an example view for Algorithm?",
       "code": "def add(a, b): return a + b",
       "options": [
-        "images/algorithm_example.png",
-        "images/algorithm_diagram.png",
-        "assets/not_provided.png",
-        "images/missing_example.png"
+        "Algorithm Example",
+        "Algorithm Diagram",
+        "Not Provided",
+        "Missing Example"
       ],
-      "answer": "images/algorithm_example.png",
+      "answer": "Algorithm Example",
       "image": "images/algorithm_example.png"
     },
     {
@@ -11877,12 +11877,12 @@
       "question": "Which image file shows the diagram for Vector?",
       "code": "std::vector<int> v;\nArrayList<Integer> list = new ArrayList<>();",
       "options": [
-        "images/vector_diagram.png",
-        "images/vector_example.png",
-        "assets/not_provided.png",
-        "images/missing_diagram.png"
+        "Vector Diagram",
+        "Vector Example",
+        "Not Provided",
+        "Missing Diagram"
       ],
-      "answer": "images/vector_diagram.png",
+      "answer": "Vector Diagram",
       "image": "images/vector_diagram.png"
     },
     {
@@ -11890,12 +11890,12 @@
       "question": "Which image file shows an example view for Vector?",
       "code": "std::vector<int> v;\nArrayList<Integer> list = new ArrayList<>();",
       "options": [
-        "assets/not_provided.png",
-        "images/vector_diagram.png",
-        "images/vector_example.png",
-        "images/missing_example.png"
+        "Not Provided",
+        "Vector Diagram",
+        "Vector Example",
+        "Missing Example"
       ],
-      "answer": "images/vector_example.png",
+      "answer": "Vector Example",
       "image": "images/vector_example.png"
     },
     {
@@ -12061,12 +12061,12 @@
       "question": "Which image file shows the diagram for Matrix?",
       "code": "int matrix[3][3];",
       "options": [
-        "images/matrix_diagram.png",
-        "assets/not_provided.png",
-        "images/matrix_example.png",
-        "images/missing_diagram.png"
+        "Matrix Diagram",
+        "Not Provided",
+        "Matrix Example",
+        "Missing Diagram"
       ],
-      "answer": "images/matrix_diagram.png",
+      "answer": "Matrix Diagram",
       "image": "images/matrix_diagram.png"
     },
     {
@@ -12074,12 +12074,12 @@
       "question": "Which image file shows an example view for Matrix?",
       "code": "int matrix[3][3];",
       "options": [
-        "images/missing_example.png",
-        "images/matrix_example.png",
-        "images/matrix_diagram.png",
-        "assets/not_provided.png"
+        "Missing Example",
+        "Matrix Example",
+        "Matrix Diagram",
+        "Not Provided"
       ],
-      "answer": "images/matrix_example.png",
+      "answer": "Matrix Example",
       "image": "images/matrix_example.png"
     },
     {
@@ -12245,12 +12245,12 @@
       "question": "Which image file shows the diagram for Set?",
       "code": "Set<Integer> s = new HashSet<>();\nmy_set = {1, 2, 3}",
       "options": [
-        "images/set_example.png",
-        "assets/not_provided.png",
-        "images/missing_diagram.png",
-        "images/set_diagram.png"
+        "Set Example",
+        "Not Provided",
+        "Missing Diagram",
+        "Set Diagram"
       ],
-      "answer": "images/set_diagram.png",
+      "answer": "Set Diagram",
       "image": "images/set_diagram.png"
     },
     {
@@ -12258,12 +12258,12 @@
       "question": "Which image file shows an example view for Set?",
       "code": "Set<Integer> s = new HashSet<>();\nmy_set = {1, 2, 3}",
       "options": [
-        "images/missing_example.png",
-        "images/set_diagram.png",
-        "images/set_example.png",
-        "assets/not_provided.png"
+        "Missing Example",
+        "Set Diagram",
+        "Set Example",
+        "Not Provided"
       ],
-      "answer": "images/set_example.png",
+      "answer": "Set Example",
       "image": "images/set_example.png"
     },
     {
@@ -12429,12 +12429,12 @@
       "question": "Which image file shows the diagram for Map?",
       "code": "Map<String, Int> m = new HashMap<>();\nmy_dict = {'key': 'value'}",
       "options": [
-        "images/map_diagram.png",
-        "assets/not_provided.png",
-        "images/map_example.png",
-        "images/missing_diagram.png"
+        "Map Diagram",
+        "Not Provided",
+        "Map Example",
+        "Missing Diagram"
       ],
-      "answer": "images/map_diagram.png",
+      "answer": "Map Diagram",
       "image": "images/map_diagram.png"
     },
     {
@@ -12442,12 +12442,12 @@
       "question": "Which image file shows an example view for Map?",
       "code": "Map<String, Int> m = new HashMap<>();\nmy_dict = {'key': 'value'}",
       "options": [
-        "images/map_diagram.png",
-        "images/map_example.png",
-        "images/missing_example.png",
-        "assets/not_provided.png"
+        "Map Diagram",
+        "Map Example",
+        "Missing Example",
+        "Not Provided"
       ],
-      "answer": "images/map_example.png",
+      "answer": "Map Example",
       "image": "images/map_example.png"
     },
     {
@@ -12613,12 +12613,12 @@
       "question": "Which image file shows the diagram for Polynomial?",
       "code": "3x^2 + 2x + 5",
       "options": [
-        "assets/not_provided.png",
-        "images/polynomial_diagram.png",
-        "images/missing_diagram.png",
-        "images/polynomial_example.png"
+        "Not Provided",
+        "Polynomial Diagram",
+        "Missing Diagram",
+        "Polynomial Example"
       ],
-      "answer": "images/polynomial_diagram.png",
+      "answer": "Polynomial Diagram",
       "image": "images/polynomial_diagram.png"
     },
     {
@@ -12626,12 +12626,12 @@
       "question": "Which image file shows an example view for Polynomial?",
       "code": "3x^2 + 2x + 5",
       "options": [
-        "images/polynomial_diagram.png",
-        "images/missing_example.png",
-        "assets/not_provided.png",
-        "images/polynomial_example.png"
+        "Polynomial Diagram",
+        "Missing Example",
+        "Not Provided",
+        "Polynomial Example"
       ],
-      "answer": "images/polynomial_example.png",
+      "answer": "Polynomial Example",
       "image": "images/polynomial_example.png"
     },
     {
@@ -12797,12 +12797,12 @@
       "question": "Which image file shows the diagram for Sorted Data?",
       "code": "[1, 2, 3, 4, 5]",
       "options": [
-        "images/missing_diagram.png",
-        "images/sorted_data_example.png",
-        "assets/not_provided.png",
-        "images/sorted_data_diagram.png"
+        "Missing Diagram",
+        "Sorted Data Example",
+        "Not Provided",
+        "Sorted Data Diagram"
       ],
-      "answer": "images/sorted_data_diagram.png",
+      "answer": "Sorted Data Diagram",
       "image": "images/sorted_data_diagram.png"
     },
     {
@@ -12810,12 +12810,12 @@
       "question": "Which image file shows an example view for Sorted Data?",
       "code": "[1, 2, 3, 4, 5]",
       "options": [
-        "assets/not_provided.png",
-        "images/sorted_data_diagram.png",
-        "images/sorted_data_example.png",
-        "images/missing_example.png"
+        "Not Provided",
+        "Sorted Data Diagram",
+        "Sorted Data Example",
+        "Missing Example"
       ],
-      "answer": "images/sorted_data_example.png",
+      "answer": "Sorted Data Example",
       "image": "images/sorted_data_example.png"
     },
     {
@@ -12981,12 +12981,12 @@
       "question": "Which image file shows the diagram for Search Algorithm?",
       "code": "for(int i = 0; i < n; i++) {\n    cout << arr[i] << \" \";\n}",
       "options": [
-        "images/search_algorithm_diagram.png",
-        "images/missing_diagram.png",
-        "assets/not_provided.png",
-        "images/search_algorithm_example.png"
+        "Search Algorithm Diagram",
+        "Missing Diagram",
+        "Not Provided",
+        "Search Algorithm Example"
       ],
-      "answer": "images/search_algorithm_diagram.png",
+      "answer": "Search Algorithm Diagram",
       "image": "images/search_algorithm_diagram.png"
     },
     {
@@ -12994,12 +12994,12 @@
       "question": "Which image file shows an example view for Search Algorithm?",
       "code": "for(int i = 0; i < n; i++) {\n    cout << arr[i] << \" \";\n}",
       "options": [
-        "images/search_algorithm_example.png",
-        "images/search_algorithm_diagram.png",
-        "images/missing_example.png",
-        "assets/not_provided.png"
+        "Search Algorithm Example",
+        "Search Algorithm Diagram",
+        "Missing Example",
+        "Not Provided"
       ],
-      "answer": "images/search_algorithm_example.png",
+      "answer": "Search Algorithm Example",
       "image": "images/search_algorithm_example.png"
     },
     {
@@ -13165,12 +13165,12 @@
       "question": "Which image file shows the diagram for Complete Binary Tree?",
       "code": "class Node {\npublic:\n    int data;\n    vector<Node*> children;\n\n    Node(int x) {\n        data = x;\n    }\n};",
       "options": [
-        "images/complete_binary_tree_diagram.png",
-        "assets/not_provided.png",
-        "images/complete_binary_tree_example.png",
-        "images/missing_diagram.png"
+        "Complete Binary Tree Diagram",
+        "Not Provided",
+        "Complete Binary Tree Example",
+        "Missing Diagram"
       ],
-      "answer": "images/complete_binary_tree_diagram.png",
+      "answer": "Complete Binary Tree Diagram",
       "image": "images/complete_binary_tree_diagram.png"
     },
     {
@@ -13178,12 +13178,12 @@
       "question": "Which image file shows an example view for Complete Binary Tree?",
       "code": "class Node {\npublic:\n    int data;\n    vector<Node*> children;\n\n    Node(int x) {\n        data = x;\n    }\n};",
       "options": [
-        "assets/not_provided.png",
-        "images/complete_binary_tree_example.png",
-        "images/complete_binary_tree_diagram.png",
-        "images/missing_example.png"
+        "Not Provided",
+        "Complete Binary Tree Example",
+        "Complete Binary Tree Diagram",
+        "Missing Example"
       ],
-      "answer": "images/complete_binary_tree_example.png",
+      "answer": "Complete Binary Tree Example",
       "image": "images/complete_binary_tree_example.png"
     },
     {
@@ -13349,12 +13349,12 @@
       "question": "Which image file shows the diagram for Tree Traversal?",
       "code": "for(int i = 0; i < n; i++) {\n    cout << arr[i] << \" \";\n}",
       "options": [
-        "images/missing_diagram.png",
-        "images/tree_traversal_diagram.png",
-        "assets/not_provided.png",
-        "images/tree_traversal_example.png"
+        "Missing Diagram",
+        "Tree Traversal Diagram",
+        "Not Provided",
+        "Tree Traversal Example"
       ],
-      "answer": "images/tree_traversal_diagram.png",
+      "answer": "Tree Traversal Diagram",
       "image": "images/tree_traversal_diagram.png"
     },
     {
@@ -13362,12 +13362,12 @@
       "question": "Which image file shows an example view for Tree Traversal?",
       "code": "for(int i = 0; i < n; i++) {\n    cout << arr[i] << \" \";\n}",
       "options": [
-        "images/tree_traversal_diagram.png",
-        "images/tree_traversal_example.png",
-        "images/missing_example.png",
-        "assets/not_provided.png"
+        "Tree Traversal Diagram",
+        "Tree Traversal Example",
+        "Missing Example",
+        "Not Provided"
       ],
-      "answer": "images/tree_traversal_example.png",
+      "answer": "Tree Traversal Example",
       "image": "images/tree_traversal_example.png"
     },
     {
@@ -13533,12 +13533,12 @@
       "question": "Which image file shows the diagram for BFS?",
       "code": "queue.enqueue(root);",
       "options": [
-        "images/bfs_diagram.png",
-        "assets/not_provided.png",
-        "images/bfs_example.png",
-        "images/missing_diagram.png"
+        "Bfs Diagram",
+        "Not Provided",
+        "Bfs Example",
+        "Missing Diagram"
       ],
-      "answer": "images/bfs_diagram.png",
+      "answer": "Bfs Diagram",
       "image": "images/bfs_diagram.png"
     },
     {
@@ -13546,12 +13546,12 @@
       "question": "Which image file shows an example view for BFS?",
       "code": "queue.enqueue(root);",
       "options": [
-        "images/missing_example.png",
-        "images/bfs_diagram.png",
-        "images/bfs_example.png",
-        "assets/not_provided.png"
+        "Missing Example",
+        "Bfs Diagram",
+        "Bfs Example",
+        "Not Provided"
       ],
-      "answer": "images/bfs_example.png",
+      "answer": "Bfs Example",
       "image": "images/bfs_example.png"
     },
     {
@@ -13717,12 +13717,12 @@
       "question": "Which image file shows the diagram for DFS?",
       "code": "for(int i = 0; i < n; i++) {\n    cout << arr[i] << \" \";\n}",
       "options": [
-        "images/dfs_diagram.png",
-        "images/dfs_example.png",
-        "images/missing_diagram.png",
-        "assets/not_provided.png"
+        "Dfs Diagram",
+        "Dfs Example",
+        "Missing Diagram",
+        "Not Provided"
       ],
-      "answer": "images/dfs_diagram.png",
+      "answer": "Dfs Diagram",
       "image": "images/dfs_diagram.png"
     },
     {
@@ -13730,12 +13730,12 @@
       "question": "Which image file shows an example view for DFS?",
       "code": "for(int i = 0; i < n; i++) {\n    cout << arr[i] << \" \";\n}",
       "options": [
-        "images/dfs_example.png",
-        "assets/not_provided.png",
-        "images/dfs_diagram.png",
-        "images/missing_example.png"
+        "Dfs Example",
+        "Not Provided",
+        "Dfs Diagram",
+        "Missing Example"
       ],
-      "answer": "images/dfs_example.png",
+      "answer": "Dfs Example",
       "image": "images/dfs_example.png"
     },
     {
@@ -13901,12 +13901,12 @@
       "question": "Which image file shows the diagram for DAG?",
       "code": "class Node {\npublic:\n    int data;\n    vector<Node*> children;\n\n    Node(int x) {\n        data = x;\n    }\n};",
       "options": [
-        "images/dag_example.png",
-        "images/dag_diagram.png",
-        "images/missing_diagram.png",
-        "assets/not_provided.png"
+        "Dag Example",
+        "Dag Diagram",
+        "Missing Diagram",
+        "Not Provided"
       ],
-      "answer": "images/dag_diagram.png",
+      "answer": "Dag Diagram",
       "image": "images/dag_diagram.png"
     },
     {
@@ -13914,12 +13914,12 @@
       "question": "Which image file shows an example view for DAG?",
       "code": "class Node {\npublic:\n    int data;\n    vector<Node*> children;\n\n    Node(int x) {\n        data = x;\n    }\n};",
       "options": [
-        "images/dag_example.png",
-        "images/dag_diagram.png",
-        "assets/not_provided.png",
-        "images/missing_example.png"
+        "Dag Example",
+        "Dag Diagram",
+        "Not Provided",
+        "Missing Example"
       ],
-      "answer": "images/dag_example.png",
+      "answer": "Dag Example",
       "image": "images/dag_example.png"
     },
     {
@@ -14085,12 +14085,12 @@
       "question": "Which image file shows the diagram for Weighted Undirected Graph?",
       "code": "class Node {\npublic:\n    int data;\n    vector<Node*> children;\n\n    Node(int x) {\n        data = x;\n    }\n};",
       "options": [
-        "assets/not_provided.png",
-        "images/missing_diagram.png",
-        "images/weighted_undirected_graph_diagram.png",
-        "images/weighted_undirected_graph_example.png"
+        "Not Provided",
+        "Missing Diagram",
+        "Weighted Undirected Graph Diagram",
+        "Weighted Undirected Graph Example"
       ],
-      "answer": "images/weighted_undirected_graph_diagram.png",
+      "answer": "Weighted Undirected Graph Diagram",
       "image": "images/weighted_undirected_graph_diagram.png"
     },
     {
@@ -14098,12 +14098,12 @@
       "question": "Which image file shows an example view for Weighted Undirected Graph?",
       "code": "class Node {\npublic:\n    int data;\n    vector<Node*> children;\n\n    Node(int x) {\n        data = x;\n    }\n};",
       "options": [
-        "images/missing_example.png",
-        "images/weighted_undirected_graph_example.png",
-        "assets/not_provided.png",
-        "images/weighted_undirected_graph_diagram.png"
+        "Missing Example",
+        "Weighted Undirected Graph Example",
+        "Not Provided",
+        "Weighted Undirected Graph Diagram"
       ],
-      "answer": "images/weighted_undirected_graph_example.png",
+      "answer": "Weighted Undirected Graph Example",
       "image": "images/weighted_undirected_graph_example.png"
     },
     {
@@ -14269,12 +14269,12 @@
       "question": "Which image file shows the diagram for Shortest Path (unweighted graphs)?",
       "code": "for(int i = 0; i < n; i++) {\n    cout << arr[i] << \" \";\n}",
       "options": [
-        "assets/not_provided.png",
-        "images/shortest_path_unweighted_graphs_example.png",
-        "images/shortest_path_unweighted_graphs_diagram.png",
-        "images/missing_diagram.png"
+        "Not Provided",
+        "Shortest Path Unweighted Graphs Example",
+        "Shortest Path Unweighted Graphs Diagram",
+        "Missing Diagram"
       ],
-      "answer": "images/shortest_path_unweighted_graphs_diagram.png",
+      "answer": "Shortest Path Unweighted Graphs Diagram",
       "image": "images/shortest_path_unweighted_graphs_diagram.png"
     },
     {
@@ -14282,12 +14282,12 @@
       "question": "Which image file shows an example view for Shortest Path (unweighted graphs)?",
       "code": "for(int i = 0; i < n; i++) {\n    cout << arr[i] << \" \";\n}",
       "options": [
-        "images/shortest_path_unweighted_graphs_example.png",
-        "images/missing_example.png",
-        "images/shortest_path_unweighted_graphs_diagram.png",
-        "assets/not_provided.png"
+        "Shortest Path Unweighted Graphs Example",
+        "Missing Example",
+        "Shortest Path Unweighted Graphs Diagram",
+        "Not Provided"
       ],
-      "answer": "images/shortest_path_unweighted_graphs_example.png",
+      "answer": "Shortest Path Unweighted Graphs Example",
       "image": "images/shortest_path_unweighted_graphs_example.png"
     },
     {
@@ -14453,12 +14453,12 @@
       "question": "Which image file shows the diagram for Connected Components?",
       "code": "for(int i = 0; i < n; i++) {\n    cout << arr[i] << \" \";\n}",
       "options": [
-        "images/connected_components_example.png",
-        "images/connected_components_diagram.png",
-        "assets/not_provided.png",
-        "images/missing_diagram.png"
+        "Connected Components Example",
+        "Connected Components Diagram",
+        "Not Provided",
+        "Missing Diagram"
       ],
-      "answer": "images/connected_components_diagram.png",
+      "answer": "Connected Components Diagram",
       "image": "images/connected_components_diagram.png"
     },
     {
@@ -14466,12 +14466,12 @@
       "question": "Which image file shows an example view for Connected Components?",
       "code": "for(int i = 0; i < n; i++) {\n    cout << arr[i] << \" \";\n}",
       "options": [
-        "images/connected_components_diagram.png",
-        "assets/not_provided.png",
-        "images/connected_components_example.png",
-        "images/missing_example.png"
+        "Connected Components Diagram",
+        "Not Provided",
+        "Connected Components Example",
+        "Missing Example"
       ],
-      "answer": "images/connected_components_example.png",
+      "answer": "Connected Components Example",
       "image": "images/connected_components_example.png"
     },
     {
@@ -14637,12 +14637,12 @@
       "question": "Which image file shows the diagram for Spanning Tree?",
       "code": "class Node {\npublic:\n    int data;\n    vector<Node*> children;\n\n    Node(int x) {\n        data = x;\n    }\n};",
       "options": [
-        "images/missing_diagram.png",
-        "assets/not_provided.png",
-        "images/spanning_tree_example.png",
-        "images/spanning_tree_diagram.png"
+        "Missing Diagram",
+        "Not Provided",
+        "Spanning Tree Example",
+        "Spanning Tree Diagram"
       ],
-      "answer": "images/spanning_tree_diagram.png",
+      "answer": "Spanning Tree Diagram",
       "image": "images/spanning_tree_diagram.png"
     },
     {
@@ -14650,12 +14650,12 @@
       "question": "Which image file shows an example view for Spanning Tree?",
       "code": "class Node {\npublic:\n    int data;\n    vector<Node*> children;\n\n    Node(int x) {\n        data = x;\n    }\n};",
       "options": [
-        "images/missing_example.png",
-        "images/spanning_tree_example.png",
-        "images/spanning_tree_diagram.png",
-        "assets/not_provided.png"
+        "Missing Example",
+        "Spanning Tree Example",
+        "Spanning Tree Diagram",
+        "Not Provided"
       ],
-      "answer": "images/spanning_tree_example.png",
+      "answer": "Spanning Tree Example",
       "image": "images/spanning_tree_example.png"
     },
     {
@@ -14821,12 +14821,12 @@
       "question": "Which image file shows the diagram for Topological Sort?",
       "code": "Kahn's Algorithm",
       "options": [
-        "images/missing_diagram.png",
-        "images/topological_sort_example.png",
-        "assets/not_provided.png",
-        "images/topological_sort_diagram.png"
+        "Missing Diagram",
+        "Topological Sort Example",
+        "Not Provided",
+        "Topological Sort Diagram"
       ],
-      "answer": "images/topological_sort_diagram.png",
+      "answer": "Topological Sort Diagram",
       "image": "images/topological_sort_diagram.png"
     },
     {
@@ -14834,12 +14834,12 @@
       "question": "Which image file shows an example view for Topological Sort?",
       "code": "Kahn's Algorithm",
       "options": [
-        "assets/not_provided.png",
-        "images/missing_example.png",
-        "images/topological_sort_example.png",
-        "images/topological_sort_diagram.png"
+        "Not Provided",
+        "Missing Example",
+        "Topological Sort Example",
+        "Topological Sort Diagram"
       ],
-      "answer": "images/topological_sort_example.png",
+      "answer": "Topological Sort Example",
       "image": "images/topological_sort_example.png"
     },
     {
@@ -15005,12 +15005,12 @@
       "question": "Which image file shows the diagram for Dynamic Programming?",
       "code": "vector<int> dp(n + 1);\ndp[0] = 0;\ndp[1] = 1;\nfor(int i = 2; i <= n; i++) {\ndp[i] = dp[i - 1] + dp[i - 2];\n}",
       "options": [
-        "assets/not_provided.png",
-        "images/dynamic_programming_example.png",
-        "images/missing_diagram.png",
-        "images/dynamic_programming_diagram.png"
+        "Not Provided",
+        "Dynamic Programming Example",
+        "Missing Diagram",
+        "Dynamic Programming Diagram"
       ],
-      "answer": "images/dynamic_programming_diagram.png",
+      "answer": "Dynamic Programming Diagram",
       "image": "images/dynamic_programming_diagram.png"
     },
     {
@@ -15018,12 +15018,12 @@
       "question": "Which image file shows an example view for Dynamic Programming?",
       "code": "vector<int> dp(n + 1);\ndp[0] = 0;\ndp[1] = 1;\nfor(int i = 2; i <= n; i++) {\ndp[i] = dp[i - 1] + dp[i - 2];\n}",
       "options": [
-        "images/dynamic_programming_diagram.png",
-        "images/missing_example.png",
-        "assets/not_provided.png",
-        "images/dynamic_programming_example.png"
+        "Dynamic Programming Diagram",
+        "Missing Example",
+        "Not Provided",
+        "Dynamic Programming Example"
       ],
-      "answer": "images/dynamic_programming_example.png",
+      "answer": "Dynamic Programming Example",
       "image": "images/dynamic_programming_example.png"
     },
     {
@@ -15189,12 +15189,12 @@
       "question": "Which image file shows the diagram for Greedy Algorithm?",
       "code": "sort(items.begin(), items.end());\nfor(auto item : items) {\nif(canChoose(item)) choose(item);\n}",
       "options": [
-        "images/greedy_algorithm_diagram.png",
-        "images/missing_diagram.png",
-        "assets/not_provided.png",
-        "images/greedy_algorithm_example.png"
+        "Greedy Algorithm Diagram",
+        "Missing Diagram",
+        "Not Provided",
+        "Greedy Algorithm Example"
       ],
-      "answer": "images/greedy_algorithm_diagram.png",
+      "answer": "Greedy Algorithm Diagram",
       "image": "images/greedy_algorithm_diagram.png"
     },
     {
@@ -15202,12 +15202,12 @@
       "question": "Which image file shows an example view for Greedy Algorithm?",
       "code": "sort(items.begin(), items.end());\nfor(auto item : items) {\nif(canChoose(item)) choose(item);\n}",
       "options": [
-        "images/missing_example.png",
-        "assets/not_provided.png",
-        "images/greedy_algorithm_diagram.png",
-        "images/greedy_algorithm_example.png"
+        "Missing Example",
+        "Not Provided",
+        "Greedy Algorithm Diagram",
+        "Greedy Algorithm Example"
       ],
-      "answer": "images/greedy_algorithm_example.png",
+      "answer": "Greedy Algorithm Example",
       "image": "images/greedy_algorithm_example.png"
     },
     {
@@ -15373,12 +15373,12 @@
       "question": "Which image file shows the diagram for Backtracking?",
       "code": "void backtrack() {\nif(done()) return;\nfor(auto choice : choices) {\nchoose(choice);\nbacktrack();\nundo(choice);\n}\n}",
       "options": [
-        "assets/not_provided.png",
-        "images/backtracking_example.png",
-        "images/missing_diagram.png",
-        "images/backtracking_diagram.png"
+        "Not Provided",
+        "Backtracking Example",
+        "Missing Diagram",
+        "Backtracking Diagram"
       ],
-      "answer": "images/backtracking_diagram.png",
+      "answer": "Backtracking Diagram",
       "image": "images/backtracking_diagram.png"
     },
     {
@@ -15386,12 +15386,12 @@
       "question": "Which image file shows an example view for Backtracking?",
       "code": "void backtrack() {\nif(done()) return;\nfor(auto choice : choices) {\nchoose(choice);\nbacktrack();\nundo(choice);\n}\n}",
       "options": [
-        "images/backtracking_diagram.png",
-        "images/missing_example.png",
-        "assets/not_provided.png",
-        "images/backtracking_example.png"
+        "Backtracking Diagram",
+        "Missing Example",
+        "Not Provided",
+        "Backtracking Example"
       ],
-      "answer": "images/backtracking_example.png",
+      "answer": "Backtracking Example",
       "image": "images/backtracking_example.png"
     },
     {
@@ -15557,12 +15557,12 @@
       "question": "Which image file shows the diagram for Sliding Window?",
       "code": "int left = 0;\nfor(int right = 0; right < n; right++) {\n// add arr[right]\nwhile(windowInvalid()) {\n// remove arr[left]\nleft++;\n}\n}",
       "options": [
-        "images/sliding_window_diagram.png",
-        "images/missing_diagram.png",
-        "images/sliding_window_example.png",
-        "assets/not_provided.png"
+        "Sliding Window Diagram",
+        "Missing Diagram",
+        "Sliding Window Example",
+        "Not Provided"
       ],
-      "answer": "images/sliding_window_diagram.png",
+      "answer": "Sliding Window Diagram",
       "image": "images/sliding_window_diagram.png"
     },
     {
@@ -15570,12 +15570,12 @@
       "question": "Which image file shows an example view for Sliding Window?",
       "code": "int left = 0;\nfor(int right = 0; right < n; right++) {\n// add arr[right]\nwhile(windowInvalid()) {\n// remove arr[left]\nleft++;\n}\n}",
       "options": [
-        "images/missing_example.png",
-        "assets/not_provided.png",
-        "images/sliding_window_example.png",
-        "images/sliding_window_diagram.png"
+        "Missing Example",
+        "Not Provided",
+        "Sliding Window Example",
+        "Sliding Window Diagram"
       ],
-      "answer": "images/sliding_window_example.png",
+      "answer": "Sliding Window Example",
       "image": "images/sliding_window_example.png"
     },
     {
@@ -15741,12 +15741,12 @@
       "question": "Which image file shows the diagram for Union Find?",
       "code": "int find(int x) {\nif(parent[x] == x) return x;\nreturn parent[x] = find(parent[x]);\n}",
       "options": [
-        "images/union_find_example.png",
-        "images/missing_diagram.png",
-        "images/union_find_diagram.png",
-        "assets/not_provided.png"
+        "Union Find Example",
+        "Missing Diagram",
+        "Union Find Diagram",
+        "Not Provided"
       ],
-      "answer": "images/union_find_diagram.png",
+      "answer": "Union Find Diagram",
       "image": "images/union_find_diagram.png"
     },
     {
@@ -15754,12 +15754,12 @@
       "question": "Which image file shows an example view for Union Find?",
       "code": "int find(int x) {\nif(parent[x] == x) return x;\nreturn parent[x] = find(parent[x]);\n}",
       "options": [
-        "images/union_find_diagram.png",
-        "images/union_find_example.png",
-        "images/missing_example.png",
-        "assets/not_provided.png"
+        "Union Find Diagram",
+        "Union Find Example",
+        "Missing Example",
+        "Not Provided"
       ],
-      "answer": "images/union_find_example.png",
+      "answer": "Union Find Example",
       "image": "images/union_find_example.png"
     },
     {
@@ -15925,12 +15925,12 @@
       "question": "Which image file shows the diagram for Trie?",
       "code": "struct TrieNode {\nTrieNode* child[26];\nbool isEnd;\n};",
       "options": [
-        "images/trie_diagram.png",
-        "images/missing_diagram.png",
-        "images/trie_example.png",
-        "assets/not_provided.png"
+        "Trie Diagram",
+        "Missing Diagram",
+        "Trie Example",
+        "Not Provided"
       ],
-      "answer": "images/trie_diagram.png",
+      "answer": "Trie Diagram",
       "image": "images/trie_diagram.png"
     },
     {
@@ -15938,12 +15938,12 @@
       "question": "Which image file shows an example view for Trie?",
       "code": "struct TrieNode {\nTrieNode* child[26];\nbool isEnd;\n};",
       "options": [
-        "images/trie_example.png",
-        "images/trie_diagram.png",
-        "assets/not_provided.png",
-        "images/missing_example.png"
+        "Trie Example",
+        "Trie Diagram",
+        "Not Provided",
+        "Missing Example"
       ],
-      "answer": "images/trie_example.png",
+      "answer": "Trie Example",
       "image": "images/trie_example.png"
     },
     {
@@ -16109,12 +16109,12 @@
       "question": "Which image file shows the diagram for Memoization?",
       "code": "unordered_map<int, int> memo;",
       "options": [
-        "images/missing_diagram.png",
-        "images/memoization_example.png",
-        "images/memoization_diagram.png",
-        "assets/not_provided.png"
+        "Missing Diagram",
+        "Memoization Example",
+        "Memoization Diagram",
+        "Not Provided"
       ],
-      "answer": "images/memoization_diagram.png",
+      "answer": "Memoization Diagram",
       "image": "images/memoization_diagram.png"
     },
     {
@@ -16122,12 +16122,12 @@
       "question": "Which image file shows an example view for Memoization?",
       "code": "unordered_map<int, int> memo;",
       "options": [
-        "images/memoization_example.png",
-        "images/missing_example.png",
-        "images/memoization_diagram.png",
-        "assets/not_provided.png"
+        "Memoization Example",
+        "Missing Example",
+        "Memoization Diagram",
+        "Not Provided"
       ],
-      "answer": "images/memoization_example.png",
+      "answer": "Memoization Example",
       "image": "images/memoization_example.png"
     },
     {
@@ -16293,12 +16293,12 @@
       "question": "Which image file shows the diagram for Tabulation?",
       "code": "vector<int> dp(n + 1, 0);",
       "options": [
-        "assets/not_provided.png",
-        "images/tabulation_diagram.png",
-        "images/missing_diagram.png",
-        "images/tabulation_example.png"
+        "Not Provided",
+        "Tabulation Diagram",
+        "Missing Diagram",
+        "Tabulation Example"
       ],
-      "answer": "images/tabulation_diagram.png",
+      "answer": "Tabulation Diagram",
       "image": "images/tabulation_diagram.png"
     },
     {
@@ -16306,12 +16306,12 @@
       "question": "Which image file shows an example view for Tabulation?",
       "code": "vector<int> dp(n + 1, 0);",
       "options": [
-        "images/tabulation_example.png",
-        "images/missing_example.png",
-        "assets/not_provided.png",
-        "images/tabulation_diagram.png"
+        "Tabulation Example",
+        "Missing Example",
+        "Not Provided",
+        "Tabulation Diagram"
       ],
-      "answer": "images/tabulation_example.png",
+      "answer": "Tabulation Example",
       "image": "images/tabulation_example.png"
     },
     {
@@ -16477,12 +16477,12 @@
       "question": "Which image file shows the diagram for String Matching?",
       "code": "text.find(pattern);",
       "options": [
-        "images/missing_diagram.png",
-        "assets/not_provided.png",
-        "images/string_matching_diagram.png",
-        "images/string_matching_example.png"
+        "Missing Diagram",
+        "Not Provided",
+        "String Matching Diagram",
+        "String Matching Example"
       ],
-      "answer": "images/string_matching_diagram.png",
+      "answer": "String Matching Diagram",
       "image": "images/string_matching_diagram.png"
     },
     {
@@ -16490,12 +16490,12 @@
       "question": "Which image file shows an example view for String Matching?",
       "code": "text.find(pattern);",
       "options": [
-        "images/missing_example.png",
-        "images/string_matching_example.png",
-        "images/string_matching_diagram.png",
-        "assets/not_provided.png"
+        "Missing Example",
+        "String Matching Example",
+        "String Matching Diagram",
+        "Not Provided"
       ],
-      "answer": "images/string_matching_example.png",
+      "answer": "String Matching Example",
       "image": "images/string_matching_example.png"
     },
     {
