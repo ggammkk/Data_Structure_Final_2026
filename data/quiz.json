@@ -1254,16 +1254,16 @@
       "code": "",
       "options": [
         "Insert",
-        "insert",
         "delete",
-        "search"
+        "search",
+        "traverse"
       ],
       "answer": "Insert",
       "explanation": "Correct: 'Insert' is an operation associated with Linked List in the knowledge graph. The other options may be valid operations somewhere else, but they are not the listed operation for this question.",
       "wrong_explanations": {
-        "insert": "Wrong: 'insert' is not the operation selected for Linked List in this quiz entry.",
         "delete": "Wrong: 'delete' is not the operation selected for Linked List in this quiz entry.",
-        "search": "Wrong: 'search' is not the operation selected for Linked List in this quiz entry."
+        "search": "Wrong: 'search' is not the operation selected for Linked List in this quiz entry.",
+        "traverse": "Wrong: 'traverse' is not the operation selected for Linked List in this quiz entry."
       }
     },
     {
@@ -1456,16 +1456,16 @@
       "code": "",
       "options": [
         "Insert",
-        "insert",
         "delete",
-        "search"
+        "search",
+        "traverse"
       ],
       "answer": "Insert",
       "explanation": "Correct: 'Insert' is an operation associated with Singly Linked List in the knowledge graph. The other options may be valid operations somewhere else, but they are not the listed operation for this question.",
       "wrong_explanations": {
-        "insert": "Wrong: 'insert' is not the operation selected for Singly Linked List in this quiz entry.",
         "delete": "Wrong: 'delete' is not the operation selected for Singly Linked List in this quiz entry.",
-        "search": "Wrong: 'search' is not the operation selected for Singly Linked List in this quiz entry."
+        "search": "Wrong: 'search' is not the operation selected for Singly Linked List in this quiz entry.",
+        "traverse": "Wrong: 'traverse' is not the operation selected for Singly Linked List in this quiz entry."
       }
     },
     {
@@ -1658,16 +1658,16 @@
       "code": "",
       "options": [
         "Insert",
-        "insert",
         "delete",
-        "search"
+        "search",
+        "traverse"
       ],
       "answer": "Insert",
       "explanation": "Correct: 'Insert' is an operation associated with Doubly Linked List in the knowledge graph. The other options may be valid operations somewhere else, but they are not the listed operation for this question.",
       "wrong_explanations": {
-        "insert": "Wrong: 'insert' is not the operation selected for Doubly Linked List in this quiz entry.",
         "delete": "Wrong: 'delete' is not the operation selected for Doubly Linked List in this quiz entry.",
-        "search": "Wrong: 'search' is not the operation selected for Doubly Linked List in this quiz entry."
+        "search": "Wrong: 'search' is not the operation selected for Doubly Linked List in this quiz entry.",
+        "traverse": "Wrong: 'traverse' is not the operation selected for Doubly Linked List in this quiz entry."
       }
     },
     {
@@ -1860,16 +1860,16 @@
       "code": "",
       "options": [
         "Insert",
-        "insert",
         "delete",
-        "search"
+        "search",
+        "traverse"
       ],
       "answer": "Insert",
       "explanation": "Correct: 'Insert' is an operation associated with Circular Linked List in the knowledge graph. The other options may be valid operations somewhere else, but they are not the listed operation for this question.",
       "wrong_explanations": {
-        "insert": "Wrong: 'insert' is not the operation selected for Circular Linked List in this quiz entry.",
         "delete": "Wrong: 'delete' is not the operation selected for Circular Linked List in this quiz entry.",
-        "search": "Wrong: 'search' is not the operation selected for Circular Linked List in this quiz entry."
+        "search": "Wrong: 'search' is not the operation selected for Circular Linked List in this quiz entry.",
+        "traverse": "Wrong: 'traverse' is not the operation selected for Circular Linked List in this quiz entry."
       }
     },
     {
