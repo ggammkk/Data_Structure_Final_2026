@@ -51,7 +51,7 @@ app.get("/api/search", (req, res) => {
     );
 });
 
-/*app.get("/api/quiz/:topic", (req, res) => {
+app.get("/api/quiz/:topic", (req, res) => {
     const topic = req.params.topic;
 
     execFile(
@@ -66,14 +66,7 @@ app.get("/api/search", (req, res) => {
                 });
             }
 
-            try {
-                res.json(JSON.parse(stdout));
-            } catch (e) {
-                res.status(500).json({
-                    error: "Quiz output was not valid JSON",
-                    details: stdout
-                });
-            }
+            res.json(JSON.parse(stdout));
         }
     );
-});*/ 
+});
