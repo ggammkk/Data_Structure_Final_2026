@@ -1,13 +1,33 @@
-<ul id="topicList"></ul>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSA Quiz</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="quiz.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="../../index.html">Home</a>
+      <a href="../../dsa.html">DSA</a>
+      <a href="../../practice.html">Practice Problem</a>
+      <a href="../quiz-index.html">Quizzes</a>
+      <a href="../../interview.html">Interview</a>
+    </nav>
+    <div class="quiz-layout">
+      <aside class="sidebar">
+        <h2>Topics</h2>
+        <div id="sidebarTopics"></div>
+      </aside>
 
-<script>
-  fetch("../quiz.json")
-    .then((res) => res.json())
-    .then((data) => {
-      const topics = [...new Set(data.Data.map((q) => q.topic))];
+      <main class="quiz-content">
+        <h1 id="quizTitle"></h1>
+        <div id="quizBox"></div>
+        <div id="scoreBoard">Score: 0</div>
+      </main>
+    </div>
 
-      document.getElementById("topicList").innerHTML = topics
-        .map((t) => `<li><a href="quiz/quiz.html?topic=${t}">${t}</a></li>`)
-        .join("");
-    });
-</script>
+    <script src="quiz.js"></script>
+  </body>
+</html>

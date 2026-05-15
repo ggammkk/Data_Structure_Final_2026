@@ -1,9 +1,26 @@
-fetch("../../../data/quiz.json")
+let quizData = {};
+
+fetch("../../data/quiz.json")
   .then(res => res.json())
   .then(data => {
-    const topic = new URLSearchParams(window.location.search).get("topic");
-
-    const questions = data[topic];
-
-    startQuiz(questions);
+    quizData = data;
+    loadTopics();
   });
+
+function loadTopics() {
+
+  const topics = Object.keys(quizData);
+
+  document.getElementById("topicList").innerHTML =
+    `
+      <ul class="topic-ul">
+        ${topics.map(topic => `
+          <li>
+            <a href="quiz/quiz.html?topic=${encodeURIComponent(topic)}">
+              ${topic}
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `;
+}
