@@ -1,6 +1,6 @@
 let quizData = {};
 
-fetch("../../data/quiz.json")
+fetch("http://localhost:3000/api/quiz-topics")
   .then(res => res.json())
   .then(data => {
     quizData = data;
@@ -9,7 +9,7 @@ fetch("../../data/quiz.json")
 
 function loadTopics() {
 
-  const topics = Object.keys(quizData);
+  const topics = quizData;
 
   document.getElementById("topicList").innerHTML =
     `

@@ -54,7 +54,7 @@ app.get("/api/quiz/:topic", (req, res) => {
     execFile(
         path.join(__dirname, "quiz", "quiz_program.exe"),
         [topic],
-        { cwd: __dirname },
+        { cwd: path.join(__dirname, "quiz") },
         (error, stdout, stderr) => {
             if (error) {
                 return res.status(500).json({

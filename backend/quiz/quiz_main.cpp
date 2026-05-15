@@ -11,7 +11,17 @@ int main(int argc, char* argv[])
 
     if (argc > 1)
     {
-        topic = argv[1];
+        topic = "";
+
+        for (int i = 1; i < argc; i++)
+        {
+            if (i > 1)
+            {
+                topic += " ";
+            }
+
+            topic += argv[i];
+        }
     }
 
     Quiz quiz;
