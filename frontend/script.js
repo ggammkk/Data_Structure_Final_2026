@@ -1,5 +1,5 @@
 let globalData = [];
-
+let cy;
 
 function renderNode(nodeData) {
 
@@ -32,7 +32,7 @@ function renderNode(nodeData) {
             : "";
 
     // CODE
-    const cppCode = nodeData.code_examples?.cpp;
+    const cppCode = nodeData.code_examples?.cpp || "";
 
     document.getElementById("code").innerHTML =
         cppCode
@@ -87,7 +87,7 @@ function renderNode(nodeData) {
                         .join("")}
                 </ul>
             `
-            : "<strong>Time Complexity</strong><br>-";
+            : "";
 
     // REAL LIFE EXAMPLES
     document.getElementById("realexample").innerHTML =
@@ -282,12 +282,14 @@ fetch("http://localhost:3000/api/dsa")
 
 //globalData = data;
 
+/*
 function searchTopic() {
     const input = document.getElementById("searchInput").value.trim();
-    const resultBox = document.getElementById("resultBox");
 
     if(!input) {
-        resultBox.innerHTML = "<p>Please enter a search question.</p>";
+        document.getElementById("definition").innerHTML = `
+        <br>Please enter a search question.
+        `;
         return;
     }
     fetch(`http://localhost:3000/api/search?q=${encodeURIComponent(input)}`)
@@ -299,10 +301,8 @@ function searchTopic() {
             const nodeData = findBestNodeMatch(input);
 
             if(!nodeData) {
-                resultBox.innerHTML = `
-                    <h2>Topic Not Found</h2>
-                    <p>${searchResult.answer || "No matching topic found."}</p>
-                `;
+                document.getElementById("definition").innerHTML =
+                    "<strong>Error</strong><br>No matching topic found.";
                 return;
             }
 
@@ -331,9 +331,32 @@ function searchTopic() {
         })
         .catch(error => {
             console.log("Search error:", error);
-            resultBox.innerHTML = "<p>Search failed. Check Node.js backend.</p>";
+            document.getElementById("definition").innerHTML =
+                "<strong>Error</strong><br>Search failed.";
         });
+}
+*/
+
+function searchTopic() {
+
+    const input = document.getElementById("searchInput").value.trim();
+
+    console.log("SEARCH START");
+
+    const nodeData = findBestNodeMatch(input);
+
+    console.log("FOUND NODE:", nodeData);
+
+    if(!nodeData) {
+        document.getElementById("definition").innerHTML =
+            "No matching topic found.";
+        return;
     }
+
+    renderNode(nodeData);
+
+    console.log("RENDER FINISHED");
+}
 
 function findBestNodeMatch(input) {
     const cleanedInput = input
@@ -374,37 +397,16 @@ function findBestNodeMatch(input) {
 // =========================
 
 document.addEventListener("DOMContentLoaded", function() {
-    const searchForm = document.getElementById("searchForm");
-    const searchButton = document.getElementById("searchButton");
-    const searchInput = document.getElementById("searchInput");
 
-    if (window.onbeforeunload) {
-        window.onbeforeunload = null;
-    }
+    document.getElementById("searchButton")
+        .addEventListener("click", searchTopic);
 
-    if (searchForm) {
-        searchForm.addEventListener("submit", function(event) {
-            event.preventDefault();
-            event.stopPropagation();
-            searchTopic();
-        });
-    }
+    document.getElementById("searchInput")
+        .addEventListener("keydown", function(event) {
 
-    if (searchButton) {
-        searchButton.addEventListener("click", function(event) {
-            event.preventDefault();
-            event.stopPropagation();
-            searchTopic();
-        });
-    }
-
-    if (searchInput) {
-        searchInput.addEventListener("keydown", function(event) {
-            if (event.key === "Enter") {
+            if(event.key === "Enter") {
                 event.preventDefault();
-                event.stopPropagation();
                 searchTopic();
             }
         });
-    }
 });
