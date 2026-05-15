@@ -1,0 +1,13 @@
+<ul id="topicList"></ul>
+
+<script>
+  fetch("../quiz.json")
+    .then((res) => res.json())
+    .then((data) => {
+      const topics = [...new Set(data.Data.map((q) => q.topic))];
+
+      document.getElementById("topicList").innerHTML = topics
+        .map((t) => `<li><a href="quiz/quiz.html?topic=${t}">${t}</a></li>`)
+        .join("");
+    });
+</script>
