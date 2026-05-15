@@ -282,61 +282,6 @@ fetch("http://localhost:3000/api/dsa")
 
 //globalData = data;
 
-/*
-function searchTopic() {
-    const input = document.getElementById("searchInput").value.trim();
-
-    if(!input) {
-        document.getElementById("definition").innerHTML = `
-        <br>Please enter a search question.
-        `;
-        return;
-    }
-    fetch(`http://localhost:3000/api/search?q=${encodeURIComponent(input)}`)
-    
-        .then(response => response.json())
-        .then(searchResult => {
-            console.log("SEARCH RESULT:", searchResult);
-
-            const nodeData = findBestNodeMatch(input);
-
-            if(!nodeData) {
-                document.getElementById("definition").innerHTML =
-                    "<strong>Error</strong><br>No matching topic found.";
-                return;
-            }
-
-            const node = cy.nodes().filter(n =>
-                n.id().toLowerCase() === nodeData.name.toLowerCase()
-            );
-
-            if (node && node.length > 0) {
-
-                // remove previous highlights
-                cy.elements().removeClass("highlight");
-
-                // highlight current node
-                node.addClass("highlight");
-
-                // animate zoom
-                cy.animate({
-                    fit: {
-                        eles: node,
-                        padding: 120
-                    },
-                    duration: 600
-                });
-            }
-            renderNode(nodeData);
-        })
-        .catch(error => {
-            console.log("Search error:", error);
-            document.getElementById("definition").innerHTML =
-                "<strong>Error</strong><br>Search failed.";
-        });
-}
-*/
-
 function searchTopic() {
 
     const input = document.getElementById("searchInput").value.trim();
@@ -352,10 +297,31 @@ function searchTopic() {
             "No matching topic found.";
         return;
     }
-
+    
     renderNode(nodeData);
 
     console.log("RENDER FINISHED");
+
+    if (window.cy) {
+        const node = cy.$(`node[id = "${nodeData.name}"]`);
+
+        if (node.length > 0) {
+
+            cy.elements().removeClass("highlight");
+            node.addClass("highlight");
+
+            const padding = Math.min(window.innerWidth, window.innerHeight) * 0.15;
+
+            cy.animate({
+                fit: {
+                    eles: node,
+                    padding: padding
+                },
+                duration: 600,
+                easing: "ease-out-cubic"
+            });
+        }
+    }
 }
 
 function findBestNodeMatch(input) {
