@@ -1,19 +1,24 @@
-/*#include "quiz.h"
 #include <iostream>
-#include <fstream>
-//edit this line below to the quiz json later
-#include "json.hpp"
+#include <string>
+#include <vector>
+#include "quiz.h"
 
-using json = nlohmann::json;
 using namespace std;
 
-vector<QuizQuestion> Quiz::generateQuiz(string topic){
-    vector<QuizQuestion> quiz;
-    ifstream file("quiz.json");
-    if (file.is_open()){
-        cerr << "Failed to open quiz.json" << endl;
-        return quiz;
-    }
-}*/
+int main(int argc, char* argv[])
+{
+    string topic = "Data";
 
-//Change all this nonsense
+    if (argc > 1)
+    {
+        topic = argv[1];
+    }
+
+    Quiz quiz;
+
+    vector<QuizQuestion> questions = quiz.generateQuiz(topic);
+
+    cout << quiz.quizTojson(questions);
+
+    return 0;
+}
