@@ -1,6 +1,9 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+const fs = require("fs");
+const { execFile } = require("child_process");
+
 
 const app = express();
 
@@ -16,12 +19,6 @@ app.get("/api/dsa", (req, res) => {
         )
     );
 });
-
-app.listen(3000, () => {
-    console.log("Server running on port 3000");
-});
-
-const { execFile } = require("child_process");
 
 app.get("/api/search", (req, res) => {
     const query = req.query.q;
@@ -69,4 +66,21 @@ app.get("/api/quiz/:topic", (req, res) => {
             res.json(JSON.parse(stdout));
         }
     );
+});
+
+app.get("/api/quiz-topics", (req, res) => {
+    const quizPath = path.join(__dirname, "..", "data", "quiz.json");
+
+    fs.readFile(quizPath, "utf8", (err, data) => {
+        if (err) {
+            return res.status(500).json({ error: "Could not read quiz.json" });
+        }
+
+        const quizData = JSON.parse(data);
+        res.json(Object.keys(quizData));
+    });
+});
+
+app.listen(3000, () => {
+    console.log("Server running on port 3000");
 });

@@ -75,6 +75,33 @@ function escapeText(text) {
         .replace(/'/g, "\\'");
 }
 
-window.onload = function () {
+/*window.onload = function () {
     loadQuiz("Data");
+};*/
+
+function loadTopics() {
+    fetch("http://localhost:3000/api/quiz-topics")
+        .then(response => response.json())
+        .then(topics => {
+            const select = document.getElementById("topicSelect");
+            select.innerHTML = "";
+
+            topics.forEach(topic => {
+                const option = document.createElement("option");
+                option.value = topic;
+                option.textContent = topic;
+                select.appendChild(option);
+            });
+
+            if (topics.length > 0) {
+                loadQuiz(topics[0]);
+            }
+        })
+        .catch(error => {
+            console.log("Topic load error:", error);
+        });
+}
+
+window.onload = function () {
+    loadTopics();
 };
