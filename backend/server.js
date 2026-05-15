@@ -84,6 +84,50 @@ app.get("/api/quiz-topics", (req, res) => {
     });
 });
 
+app.get("/api/practice/:topic", (req, res) => {
+
+    const topic = req.params.topic;
+
+    execFile(
+        path.join(__dirname, "practice", "practice_program.exe"),
+        [topic],
+        { cwd: path.join(__dirname, "practice") },
+
+        (error, stdout, stderr) => {
+
+            if (error) {
+
+                return res.status(500).json({
+                    error: "C++ practice failed",
+                    details: stdout || stderr || error.message
+                });
+            }
+
+            res.json(JSON.parse(stdout));
+        }
+    );
+});
+
+app.get("/api/practice-topics", (req, res) => {
+
+    const practicePath =
+        path.join(__dirname, "..", "data", "practice.json");
+
+    fs.readFile(practicePath, "utf8", (err, data) => {
+
+        if (err) {
+
+            return res.status(500).json({
+                error: "Could not read practice.json"
+            });
+        }
+
+        const practiceData = JSON.parse(data);
+
+        res.json(Object.keys(practiceData));
+    });
+});
+
 app.listen(3000, () => {
     console.log("Server running on port 3000");
 });

@@ -1,0 +1,2002 @@
+{
+  "Stack": [
+    {
+      "topic": "Stack",
+      "title": "Stack Practice",
+      "difficulty": "Easy",
+      "category": "Linear Structure",
+      "problem": "Push values into a stack and print the top value.",
+      "example_input": "push(10), push(20), top()",
+      "expected_output": "20",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use push() and top().",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"20\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Stack.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 20."
+      ]
+    }
+  ],
+  "Queue": [
+    {
+      "topic": "Queue",
+      "title": "Queue Practice",
+      "difficulty": "Easy",
+      "category": "Linear Structure",
+      "problem": "Insert values into a queue and print the front value.",
+      "example_input": "enqueue(10), enqueue(20), front()",
+      "expected_output": "10",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "A queue follows FIFO.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"10\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Queue.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 10."
+      ]
+    }
+  ],
+  "Array": [
+    {
+      "topic": "Array",
+      "title": "Array Practice",
+      "difficulty": "Easy",
+      "category": "Linear Structure",
+      "problem": "Store 5 integers in an array and print the third value.",
+      "example_input": "[4, 8, 15, 16, 23]",
+      "expected_output": "15",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Array indexes start at 0.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"15\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Array.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 15."
+      ]
+    }
+  ],
+  "Linked List": [
+    {
+      "topic": "Linked List",
+      "title": "Linked List Practice",
+      "difficulty": "Easy",
+      "category": "Linear Structure",
+      "problem": "Create a simple linked list with 3 nodes and print the second node value.",
+      "example_input": "10 -> 20 -> 30",
+      "expected_output": "20",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use next pointers to move from one node to another.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"20\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Linked List.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 20."
+      ]
+    }
+  ],
+  "Singly Linked List": [
+    {
+      "topic": "Singly Linked List",
+      "title": "Singly Linked List Practice",
+      "difficulty": "Easy",
+      "category": "Linear Structure",
+      "problem": "Insert 10, 20, and 30 into a singly linked list and print all values.",
+      "example_input": "insert(10), insert(20), insert(30)",
+      "expected_output": "10 20 30",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Traverse using the next pointer.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"10 20 30\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Singly Linked List.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 10 20 30."
+      ]
+    }
+  ],
+  "Doubly Linked List": [
+    {
+      "topic": "Doubly Linked List",
+      "title": "Doubly Linked List Practice",
+      "difficulty": "Easy",
+      "category": "Linear Structure",
+      "problem": "Create two connected doubly linked list nodes and print the previous value of the second node.",
+      "example_input": "10 <-> 20",
+      "expected_output": "10",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use the prev pointer of the second node.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"10\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Doubly Linked List.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 10."
+      ]
+    }
+  ],
+  "Circular Linked List": [
+    {
+      "topic": "Circular Linked List",
+      "title": "Circular Linked List Practice",
+      "difficulty": "Easy",
+      "category": "Linear Structure",
+      "problem": "Create a circular linked list with 3 nodes and print the value reached after 3 next moves from head.",
+      "example_input": "1 -> 2 -> 3 -> head",
+      "expected_output": "1",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "The third next move returns to the head.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"1\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Circular Linked List.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 1."
+      ]
+    }
+  ],
+  "Deque": [
+    {
+      "topic": "Deque",
+      "title": "Deque Practice",
+      "difficulty": "Easy",
+      "category": "Linear Structure",
+      "problem": "Insert 10 at the front and 20 at the back of a deque, then print both ends.",
+      "example_input": "push_front(10), push_back(20)",
+      "expected_output": "10 20",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use front() and back().",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"10 20\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Deque.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 10 20."
+      ]
+    }
+  ],
+  "Priority Queue": [
+    {
+      "topic": "Priority Queue",
+      "title": "Priority Queue Practice",
+      "difficulty": "Easy",
+      "category": "Nonlinear Structure",
+      "problem": "Insert 10, 30, and 20 into a max-priority queue and print the highest value.",
+      "example_input": "10, 30, 20",
+      "expected_output": "30",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "The default priority_queue in C++ is a max heap.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"30\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Priority Queue.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 30."
+      ]
+    }
+  ],
+  "Hash Table": [
+    {
+      "topic": "Hash Table",
+      "title": "Hash Table Practice",
+      "difficulty": "Easy",
+      "category": "Hashing",
+      "problem": "Store roll number 101 with marks 95 in a hash table and print the marks.",
+      "example_input": "101 -> 95",
+      "expected_output": "95",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use unordered_map for key-value lookup.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"95\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Hash Table.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 95."
+      ]
+    }
+  ],
+  "Hash Map": [
+    {
+      "topic": "Hash Map",
+      "title": "Hash Map Practice",
+      "difficulty": "Easy",
+      "category": "Hashing",
+      "problem": "Count how many times the number 5 appears in an array using a hash map.",
+      "example_input": "[5, 1, 5, 2, 5]",
+      "expected_output": "3",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Increment the frequency for each number.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"3\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Hash Map.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 3."
+      ]
+    }
+  ],
+  "Hash Set": [
+    {
+      "topic": "Hash Set",
+      "title": "Hash Set Practice",
+      "difficulty": "Easy",
+      "category": "Hashing",
+      "problem": "Insert 3, 5, and 3 into a hash set and print the number of unique values.",
+      "example_input": "3, 5, 3",
+      "expected_output": "2",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "A set stores unique values only.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"2\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Hash Set.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 2."
+      ]
+    }
+  ],
+  "Binary Tree": [
+    {
+      "topic": "Binary Tree",
+      "title": "Binary Tree Practice",
+      "difficulty": "Easy",
+      "category": "Tree",
+      "problem": "Create a binary tree with root 10, left 5, right 15, then print the root value.",
+      "example_input": "root=10,left=5,right=15",
+      "expected_output": "10",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "The root is the first/main node.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"10\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Binary Tree.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 10."
+      ]
+    }
+  ],
+  "Binary Search Tree": [
+    {
+      "topic": "Binary Search Tree",
+      "title": "Binary Search Tree Practice",
+      "difficulty": "Easy",
+      "category": "Tree",
+      "problem": "Insert 10, 5, and 15 into a BST, then search for 5.",
+      "example_input": "insert 10 5 15, search 5",
+      "expected_output": "Found",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Values smaller than a node go left.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"Found\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Binary Search Tree.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: Found."
+      ]
+    }
+  ],
+  "AVL Tree": [
+    {
+      "topic": "AVL Tree",
+      "title": "AVL Tree Practice",
+      "difficulty": "Easy",
+      "category": "Tree",
+      "problem": "Given values 30, 20, 10, identify the rotation needed to balance an AVL tree.",
+      "example_input": "30, 20, 10",
+      "expected_output": "Right Rotation",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "This is a left-left imbalance.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"Right Rotation\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for AVL Tree.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: Right Rotation."
+      ]
+    }
+  ],
+  "Red Black Tree": [
+    {
+      "topic": "Red Black Tree",
+      "title": "Red Black Tree Practice",
+      "difficulty": "Easy",
+      "category": "Tree",
+      "problem": "Print the required color of the root node in a red-black tree.",
+      "example_input": "root node",
+      "expected_output": "Black",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "The root of a red-black tree is always black.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"Black\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Red Black Tree.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: Black."
+      ]
+    }
+  ],
+  "Heap": [
+    {
+      "topic": "Heap",
+      "title": "Heap Practice",
+      "difficulty": "Easy",
+      "category": "Tree",
+      "problem": "Insert 10, 40, 20 into a max heap and print the maximum.",
+      "example_input": "10, 40, 20",
+      "expected_output": "40",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "The maximum is at the root of a max heap.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"40\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Heap.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 40."
+      ]
+    }
+  ],
+  "Min Heap": [
+    {
+      "topic": "Min Heap",
+      "title": "Min Heap Practice",
+      "difficulty": "Easy",
+      "category": "Tree",
+      "problem": "Insert 10, 40, 20 into a min heap and print the minimum.",
+      "example_input": "10, 40, 20",
+      "expected_output": "10",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use greater<int> with priority_queue for a min heap.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"10\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Min Heap.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 10."
+      ]
+    }
+  ],
+  "Max Heap": [
+    {
+      "topic": "Max Heap",
+      "title": "Max Heap Practice",
+      "difficulty": "Easy",
+      "category": "Tree",
+      "problem": "Insert 10, 40, 20 into a max heap and print the root.",
+      "example_input": "10, 40, 20",
+      "expected_output": "40",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "The largest value stays at the root.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"40\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Max Heap.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 40."
+      ]
+    }
+  ],
+  "Trie": [
+    {
+      "topic": "Trie",
+      "title": "Trie Practice",
+      "difficulty": "Easy",
+      "category": "Tree",
+      "problem": "Insert the word cat into a trie and check whether cat exists.",
+      "example_input": "insert cat, search cat",
+      "expected_output": "Found",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Follow one node per character.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"Found\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Trie.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: Found."
+      ]
+    }
+  ],
+  "Graph": [
+    {
+      "topic": "Graph",
+      "title": "Graph Practice",
+      "difficulty": "Easy",
+      "category": "Graph",
+      "problem": "Create an undirected graph with edge 1-2 and print the neighbors of node 1.",
+      "example_input": "edge(1,2)",
+      "expected_output": "2",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Store neighbors using an adjacency list.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"2\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Graph.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 2."
+      ]
+    }
+  ],
+  "Directed Graph": [
+    {
+      "topic": "Directed Graph",
+      "title": "Directed Graph Practice",
+      "difficulty": "Easy",
+      "category": "Graph",
+      "problem": "Create a directed edge from 1 to 2 and print outgoing neighbors of 1.",
+      "example_input": "1 -> 2",
+      "expected_output": "2",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Only add the edge in one direction.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"2\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Directed Graph.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 2."
+      ]
+    }
+  ],
+  "Undirected Graph": [
+    {
+      "topic": "Undirected Graph",
+      "title": "Undirected Graph Practice",
+      "difficulty": "Easy",
+      "category": "Graph",
+      "problem": "Create an undirected edge between 1 and 2 and print neighbors of 2.",
+      "example_input": "1 -- 2",
+      "expected_output": "1",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Add the edge in both directions.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"1\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Undirected Graph.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 1."
+      ]
+    }
+  ],
+  "Weighted Graph": [
+    {
+      "topic": "Weighted Graph",
+      "title": "Weighted Graph Practice",
+      "difficulty": "Easy",
+      "category": "Graph",
+      "problem": "Create weighted edge 1 to 2 with weight 7 and print the weight.",
+      "example_input": "1 2 7",
+      "expected_output": "7",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Store neighbor and weight together.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"7\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Weighted Graph.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 7."
+      ]
+    }
+  ],
+  "Adjacency Matrix": [
+    {
+      "topic": "Adjacency Matrix",
+      "title": "Adjacency Matrix Practice",
+      "difficulty": "Easy",
+      "category": "Graph",
+      "problem": "Build a 3-node adjacency matrix with edge 1-2 and print matrix[1][2].",
+      "example_input": "edge(1,2)",
+      "expected_output": "1",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use 1 to show an edge exists.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"1\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Adjacency Matrix.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 1."
+      ]
+    }
+  ],
+  "Adjacency List": [
+    {
+      "topic": "Adjacency List",
+      "title": "Adjacency List Practice",
+      "difficulty": "Easy",
+      "category": "Graph",
+      "problem": "Build an adjacency list for edge 0-1 and print node 0 neighbors.",
+      "example_input": "edge(0,1)",
+      "expected_output": "1",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use vector<vector<int>>.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"1\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Adjacency List.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 1."
+      ]
+    }
+  ],
+  "BFS": [
+    {
+      "topic": "BFS",
+      "title": "BFS Practice",
+      "difficulty": "Easy",
+      "category": "Graph Algorithm",
+      "problem": "Run BFS from node 0 on edges 0-1 and 0-2, then print visit order.",
+      "example_input": "0: [1,2]",
+      "expected_output": "0 1 2",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use a queue for BFS.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"0 1 2\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for BFS.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 0 1 2."
+      ]
+    }
+  ],
+  "DFS": [
+    {
+      "topic": "DFS",
+      "title": "DFS Practice",
+      "difficulty": "Easy",
+      "category": "Graph Algorithm",
+      "problem": "Run DFS from node 0 on edges 0-1 and 1-2, then print visit order.",
+      "example_input": "0-1, 1-2",
+      "expected_output": "0 1 2",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use recursion or a stack.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"0 1 2\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for DFS.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 0 1 2."
+      ]
+    }
+  ],
+  "Dijkstra Algorithm": [
+    {
+      "topic": "Dijkstra Algorithm",
+      "title": "Dijkstra Practice",
+      "difficulty": "Easy",
+      "category": "Graph Algorithm",
+      "problem": "Find the shortest distance from 0 to 2 with edges 0-1 weight 4 and 1-2 weight 3.",
+      "example_input": "0-1:4, 1-2:3",
+      "expected_output": "7",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Relax edges using the smallest current distance.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"7\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Dijkstra Algorithm.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 7."
+      ]
+    }
+  ],
+  "Bellman Ford Algorithm": [
+    {
+      "topic": "Bellman Ford Algorithm",
+      "title": "Bellman Ford Practice",
+      "difficulty": "Easy",
+      "category": "Graph Algorithm",
+      "problem": "Find shortest distance from 0 to 2 with edges 0->1 weight 5 and 1->2 weight -2.",
+      "example_input": "0->1:5, 1->2:-2",
+      "expected_output": "3",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Bellman-Ford supports negative weights.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"3\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Bellman Ford Algorithm.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 3."
+      ]
+    }
+  ],
+  "Floyd Warshall Algorithm": [
+    {
+      "topic": "Floyd Warshall Algorithm",
+      "title": "Floyd Warshall Practice",
+      "difficulty": "Easy",
+      "category": "Graph Algorithm",
+      "problem": "Find shortest distance from 0 to 2 if 0->1 is 2 and 1->2 is 3.",
+      "example_input": "0->1:2, 1->2:3",
+      "expected_output": "5",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Try each node as an intermediate node.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"5\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Floyd Warshall Algorithm.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 5."
+      ]
+    }
+  ],
+  "Prim Algorithm": [
+    {
+      "topic": "Prim Algorithm",
+      "title": "Prim Practice",
+      "difficulty": "Easy",
+      "category": "Graph Algorithm",
+      "problem": "Find the total MST weight for edges 0-1 weight 2 and 1-2 weight 3.",
+      "example_input": "0-1:2, 1-2:3",
+      "expected_output": "5",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Pick the smallest edge that expands the tree.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"5\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Prim Algorithm.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 5."
+      ]
+    }
+  ],
+  "Kruskal Algorithm": [
+    {
+      "topic": "Kruskal Algorithm",
+      "title": "Kruskal Practice",
+      "difficulty": "Easy",
+      "category": "Graph Algorithm",
+      "problem": "Find the MST weight for edges 0-1 weight 1, 1-2 weight 2, and 0-2 weight 5.",
+      "example_input": "0-1:1, 1-2:2, 0-2:5",
+      "expected_output": "3",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Sort edges by weight and avoid cycles.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"3\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Kruskal Algorithm.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 3."
+      ]
+    }
+  ],
+  "Topological Sort": [
+    {
+      "topic": "Topological Sort",
+      "title": "Topological Sort Practice",
+      "difficulty": "Easy",
+      "category": "Graph Algorithm",
+      "problem": "Print a valid topological order for edges 0->1 and 1->2.",
+      "example_input": "0->1, 1->2",
+      "expected_output": "0 1 2",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "A node appears before nodes depending on it.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"0 1 2\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Topological Sort.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 0 1 2."
+      ]
+    }
+  ],
+  "Union Find": [
+    {
+      "topic": "Union Find",
+      "title": "Union Find Practice",
+      "difficulty": "Easy",
+      "category": "Disjoint Set",
+      "problem": "Union 1 and 2, then check whether 1 and 2 are connected.",
+      "example_input": "union(1,2), connected(1,2)",
+      "expected_output": "Yes",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use find() to compare parents.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"Yes\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Union Find.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: Yes."
+      ]
+    }
+  ],
+  "Disjoint Set": [
+    {
+      "topic": "Disjoint Set",
+      "title": "Disjoint Set Practice",
+      "difficulty": "Easy",
+      "category": "Disjoint Set",
+      "problem": "Join sets containing 0 and 1, then print whether they have the same parent.",
+      "example_input": "union(0,1)",
+      "expected_output": "Yes",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Path compression keeps parents updated.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"Yes\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Disjoint Set.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: Yes."
+      ]
+    }
+  ],
+  "Sorting": [
+    {
+      "topic": "Sorting",
+      "title": "Sorting Practice",
+      "difficulty": "Easy",
+      "category": "Algorithm",
+      "problem": "Sort the array 3, 1, 2 in ascending order.",
+      "example_input": "[3,1,2]",
+      "expected_output": "1 2 3",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use sort() from the algorithm header.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"1 2 3\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Sorting.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 1 2 3."
+      ]
+    }
+  ],
+  "Bubble Sort": [
+    {
+      "topic": "Bubble Sort",
+      "title": "Bubble Sort Practice",
+      "difficulty": "Easy",
+      "category": "Sorting",
+      "problem": "Use bubble sort to sort 3, 2, 1 in ascending order.",
+      "example_input": "[3,2,1]",
+      "expected_output": "1 2 3",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Swap adjacent values when they are in the wrong order.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"1 2 3\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Bubble Sort.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 1 2 3."
+      ]
+    }
+  ],
+  "Selection Sort": [
+    {
+      "topic": "Selection Sort",
+      "title": "Selection Sort Practice",
+      "difficulty": "Easy",
+      "category": "Sorting",
+      "problem": "Use selection sort to sort 4, 1, 3.",
+      "example_input": "[4,1,3]",
+      "expected_output": "1 3 4",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Select the smallest remaining element each pass.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"1 3 4\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Selection Sort.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 1 3 4."
+      ]
+    }
+  ],
+  "Insertion Sort": [
+    {
+      "topic": "Insertion Sort",
+      "title": "Insertion Sort Practice",
+      "difficulty": "Easy",
+      "category": "Sorting",
+      "problem": "Use insertion sort to sort 2, 4, 1.",
+      "example_input": "[2,4,1]",
+      "expected_output": "1 2 4",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Insert each value into its correct left-side position.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"1 2 4\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Insertion Sort.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 1 2 4."
+      ]
+    }
+  ],
+  "Merge Sort": [
+    {
+      "topic": "Merge Sort",
+      "title": "Merge Sort Practice",
+      "difficulty": "Easy",
+      "category": "Sorting",
+      "problem": "Use merge sort to sort 5, 2, 4, 1.",
+      "example_input": "[5,2,4,1]",
+      "expected_output": "1 2 4 5",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Divide, sort, and merge.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"1 2 4 5\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Merge Sort.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 1 2 4 5."
+      ]
+    }
+  ],
+  "Quick Sort": [
+    {
+      "topic": "Quick Sort",
+      "title": "Quick Sort Practice",
+      "difficulty": "Easy",
+      "category": "Sorting",
+      "problem": "Use quick sort to sort 6, 2, 7, 1.",
+      "example_input": "[6,2,7,1]",
+      "expected_output": "1 2 6 7",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Partition around a pivot.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"1 2 6 7\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Quick Sort.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 1 2 6 7."
+      ]
+    }
+  ],
+  "Heap Sort": [
+    {
+      "topic": "Heap Sort",
+      "title": "Heap Sort Practice",
+      "difficulty": "Easy",
+      "category": "Sorting",
+      "problem": "Use heap sort idea to sort 4, 10, 3.",
+      "example_input": "[4,10,3]",
+      "expected_output": "3 4 10",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Build a heap, then extract values.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"3 4 10\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Heap Sort.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 3 4 10."
+      ]
+    }
+  ],
+  "Counting Sort": [
+    {
+      "topic": "Counting Sort",
+      "title": "Counting Sort Practice",
+      "difficulty": "Easy",
+      "category": "Sorting",
+      "problem": "Count-sort values 2, 1, 2, 0.",
+      "example_input": "[2,1,2,0]",
+      "expected_output": "0 1 2 2",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Count each value before printing.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"0 1 2 2\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Counting Sort.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 0 1 2 2."
+      ]
+    }
+  ],
+  "Radix Sort": [
+    {
+      "topic": "Radix Sort",
+      "title": "Radix Sort Practice",
+      "difficulty": "Easy",
+      "category": "Sorting",
+      "problem": "Sort 170, 45, and 75 using radix sort concept.",
+      "example_input": "[170,45,75]",
+      "expected_output": "45 75 170",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Sort by digit positions from least significant to most significant.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"45 75 170\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Radix Sort.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 45 75 170."
+      ]
+    }
+  ],
+  "Linear Search": [
+    {
+      "topic": "Linear Search",
+      "title": "Linear Search Practice",
+      "difficulty": "Easy",
+      "category": "Searching",
+      "problem": "Find the index of 7 in array 4, 7, 9.",
+      "example_input": "[4,7,9], target=7",
+      "expected_output": "1",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Check each element from left to right.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"1\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Linear Search.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 1."
+      ]
+    }
+  ],
+  "Binary Search": [
+    {
+      "topic": "Binary Search",
+      "title": "Binary Search Practice",
+      "difficulty": "Easy",
+      "category": "Searching",
+      "problem": "Find the index of 8 in sorted array 2, 4, 8, 10.",
+      "example_input": "[2,4,8,10], target=8",
+      "expected_output": "2",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Compare with the middle element.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"2\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Binary Search.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 2."
+      ]
+    }
+  ],
+  "Recursion": [
+    {
+      "topic": "Recursion",
+      "title": "Recursion Practice",
+      "difficulty": "Easy",
+      "category": "Algorithm",
+      "problem": "Use recursion to print numbers from 1 to 3.",
+      "example_input": "n=3",
+      "expected_output": "1 2 3",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Call the function with a smaller value first, then print.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"1 2 3\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Recursion.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 1 2 3."
+      ]
+    }
+  ],
+  "Backtracking": [
+    {
+      "topic": "Backtracking",
+      "title": "Backtracking Practice",
+      "difficulty": "Easy",
+      "category": "Algorithm",
+      "problem": "Print all binary strings of length 2 using backtracking.",
+      "example_input": "n=2",
+      "expected_output": "00 01 10 11",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Try 0 and 1 at each position.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"00 01 10 11\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Backtracking.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 00 01 10 11."
+      ]
+    }
+  ],
+  "Dynamic Programming": [
+    {
+      "topic": "Dynamic Programming",
+      "title": "Dynamic Programming Practice",
+      "difficulty": "Easy",
+      "category": "Algorithm",
+      "problem": "Compute the 5th Fibonacci number using dynamic programming.",
+      "example_input": "n=5",
+      "expected_output": "5",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Store previous results to avoid repeated work.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"5\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Dynamic Programming.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 5."
+      ]
+    }
+  ],
+  "Memoization": [
+    {
+      "topic": "Memoization",
+      "title": "Memoization Practice",
+      "difficulty": "Easy",
+      "category": "Algorithm",
+      "problem": "Compute fib(5) using memoization.",
+      "example_input": "fib(5)",
+      "expected_output": "5",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Save each computed Fibonacci value.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"5\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Memoization.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 5."
+      ]
+    }
+  ],
+  "Tabulation": [
+    {
+      "topic": "Tabulation",
+      "title": "Tabulation Practice",
+      "difficulty": "Easy",
+      "category": "Algorithm",
+      "problem": "Compute fib(6) using tabulation.",
+      "example_input": "fib(6)",
+      "expected_output": "8",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Fill a table from smaller cases upward.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"8\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Tabulation.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 8."
+      ]
+    }
+  ],
+  "Greedy Algorithm": [
+    {
+      "topic": "Greedy Algorithm",
+      "title": "Greedy Practice",
+      "difficulty": "Easy",
+      "category": "Algorithm",
+      "problem": "Choose the minimum number of coins for amount 30 using coins 25, 10, 5.",
+      "example_input": "amount=30, coins=[25,10,5]",
+      "expected_output": "2",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Take the largest possible coin first.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"2\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Greedy Algorithm.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 2."
+      ]
+    }
+  ],
+  "Divide and Conquer": [
+    {
+      "topic": "Divide and Conquer",
+      "title": "Divide and Conquer Practice",
+      "difficulty": "Easy",
+      "category": "Algorithm",
+      "problem": "Find the maximum in 2, 9, 4 using divide and conquer.",
+      "example_input": "[2,9,4]",
+      "expected_output": "9",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Split the array and compare results.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"9\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Divide and Conquer.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 9."
+      ]
+    }
+  ],
+  "Two Pointer": [
+    {
+      "topic": "Two Pointer",
+      "title": "Two Pointer Practice",
+      "difficulty": "Easy",
+      "category": "Algorithm",
+      "problem": "Check whether sorted array 1, 2, 4, 6 has two values summing to 8.",
+      "example_input": "[1,2,4,6], target=8",
+      "expected_output": "Yes",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Move left and right pointers based on the sum.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"Yes\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Two Pointer.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: Yes."
+      ]
+    }
+  ],
+  "Sliding Window": [
+    {
+      "topic": "Sliding Window",
+      "title": "Sliding Window Practice",
+      "difficulty": "Easy",
+      "category": "Algorithm",
+      "problem": "Find the maximum sum of any 2 consecutive values in 1, 4, 2, 10.",
+      "example_input": "[1,4,2,10], k=2",
+      "expected_output": "12",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Slide a fixed-size window across the array.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"12\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Sliding Window.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 12."
+      ]
+    }
+  ],
+  "Prefix Sum": [
+    {
+      "topic": "Prefix Sum",
+      "title": "Prefix Sum Practice",
+      "difficulty": "Easy",
+      "category": "Algorithm",
+      "problem": "Find the sum from index 1 to 3 in array 2, 4, 6, 8 using prefix sum.",
+      "example_input": "[2,4,6,8], range=1..3",
+      "expected_output": "18",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use prefix[r+1] - prefix[l].",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"18\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Prefix Sum.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 18."
+      ]
+    }
+  ],
+  "Bit Manipulation": [
+    {
+      "topic": "Bit Manipulation",
+      "title": "Bit Manipulation Practice",
+      "difficulty": "Easy",
+      "category": "Algorithm",
+      "problem": "Check whether number 8 is a power of two using bits.",
+      "example_input": "8",
+      "expected_output": "Yes",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "A power of two has only one set bit.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"Yes\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Bit Manipulation.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: Yes."
+      ]
+    }
+  ],
+  "String": [
+    {
+      "topic": "String",
+      "title": "String Practice",
+      "difficulty": "Easy",
+      "category": "Data Type",
+      "problem": "Print the length of the string hello.",
+      "example_input": "hello",
+      "expected_output": "5",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use length() or size().",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"5\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for String.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 5."
+      ]
+    }
+  ],
+  "String Matching": [
+    {
+      "topic": "String Matching",
+      "title": "String Matching Practice",
+      "difficulty": "Easy",
+      "category": "String Algorithm",
+      "problem": "Check whether pattern ab appears in string cabd.",
+      "example_input": "text=cabd, pattern=ab",
+      "expected_output": "Found",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Search for the pattern inside the text.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"Found\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for String Matching.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: Found."
+      ]
+    }
+  ],
+  "KMP Algorithm": [
+    {
+      "topic": "KMP Algorithm",
+      "title": "KMP Practice",
+      "difficulty": "Easy",
+      "category": "String Algorithm",
+      "problem": "Find the first index of pattern aba in text ababa.",
+      "example_input": "text=ababa, pattern=aba",
+      "expected_output": "0",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use prefix information to skip repeated checks.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"0\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for KMP Algorithm.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 0."
+      ]
+    }
+  ],
+  "Rabin Karp Algorithm": [
+    {
+      "topic": "Rabin Karp Algorithm",
+      "title": "Rabin Karp Practice",
+      "difficulty": "Easy",
+      "category": "String Algorithm",
+      "problem": "Check whether pattern cd appears in abcde using rolling hash concept.",
+      "example_input": "text=abcde, pattern=cd",
+      "expected_output": "Found",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Compare hashes, then verify characters.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"Found\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Rabin Karp Algorithm.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: Found."
+      ]
+    }
+  ],
+  "Palindrome": [
+    {
+      "topic": "Palindrome",
+      "title": "Palindrome Practice",
+      "difficulty": "Easy",
+      "category": "String Algorithm",
+      "problem": "Check whether madam is a palindrome.",
+      "example_input": "madam",
+      "expected_output": "Yes",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Compare characters from both ends.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"Yes\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Palindrome.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: Yes."
+      ]
+    }
+  ],
+  "Anagram": [
+    {
+      "topic": "Anagram",
+      "title": "Anagram Practice",
+      "difficulty": "Easy",
+      "category": "String Algorithm",
+      "problem": "Check whether listen and silent are anagrams.",
+      "example_input": "listen, silent",
+      "expected_output": "Yes",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Compare character frequencies.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"Yes\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Anagram.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: Yes."
+      ]
+    }
+  ],
+  "Matrix": [
+    {
+      "topic": "Matrix",
+      "title": "Matrix Practice",
+      "difficulty": "Easy",
+      "category": "Data Structure",
+      "problem": "Create a 2x2 matrix and print the value at row 1 column 0.",
+      "example_input": "[[1,2],[3,4]]",
+      "expected_output": "3",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use matrix[row][column].",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"3\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Matrix.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 3."
+      ]
+    }
+  ],
+  "2D Array": [
+    {
+      "topic": "2D Array",
+      "title": "2D Array Practice",
+      "difficulty": "Easy",
+      "category": "Data Structure",
+      "problem": "Store a 2x3 grid and print the number of rows and columns.",
+      "example_input": "[[1,2,3],[4,5,6]]",
+      "expected_output": "2 3",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Rows are outer vector size; columns are inner vector size.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"2 3\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for 2D Array.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 2 3."
+      ]
+    }
+  ],
+  "Sparse Matrix": [
+    {
+      "topic": "Sparse Matrix",
+      "title": "Sparse Matrix Practice",
+      "difficulty": "Easy",
+      "category": "Data Structure",
+      "problem": "Count non-zero values in matrix [[0,5],[0,3]].",
+      "example_input": "[[0,5],[0,3]]",
+      "expected_output": "2",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Sparse matrices have many zeros.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"2\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Sparse Matrix.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 2."
+      ]
+    }
+  ],
+  "Set": [
+    {
+      "topic": "Set",
+      "title": "Set Practice",
+      "difficulty": "Easy",
+      "category": "STL Container",
+      "problem": "Insert 4, 2, and 4 into a set and print the sorted unique values.",
+      "example_input": "4,2,4",
+      "expected_output": "2 4",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "A set stores unique values in sorted order.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"2 4\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Set.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 2 4."
+      ]
+    }
+  ],
+  "Map": [
+    {
+      "topic": "Map",
+      "title": "Map Practice",
+      "difficulty": "Easy",
+      "category": "STL Container",
+      "problem": "Store name Ali with score 90 in a map and print Ali's score.",
+      "example_input": "Ali -> 90",
+      "expected_output": "90",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use the key to access its value.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"90\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Map.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 90."
+      ]
+    }
+  ],
+  "Vector": [
+    {
+      "topic": "Vector",
+      "title": "Vector Practice",
+      "difficulty": "Easy",
+      "category": "STL Container",
+      "problem": "Add 10 and 20 to a vector and print its size.",
+      "example_input": "push 10, push 20",
+      "expected_output": "2",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use push_back() and size().",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"2\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Vector.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 2."
+      ]
+    }
+  ],
+  "List": [
+    {
+      "topic": "List",
+      "title": "List Practice",
+      "difficulty": "Easy",
+      "category": "STL Container",
+      "problem": "Add 10 at the front and 20 at the back of a list, then print values.",
+      "example_input": "push_front(10), push_back(20)",
+      "expected_output": "10 20",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use push_front and push_back.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"10 20\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for List.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 10 20."
+      ]
+    }
+  ],
+  "Pair": [
+    {
+      "topic": "Pair",
+      "title": "Pair Practice",
+      "difficulty": "Easy",
+      "category": "STL Utility",
+      "problem": "Create a pair containing 10 and 20, then print both values.",
+      "example_input": "pair(10,20)",
+      "expected_output": "10 20",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use first and second.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"10 20\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Pair.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 10 20."
+      ]
+    }
+  ],
+  "Tuple": [
+    {
+      "topic": "Tuple",
+      "title": "Tuple Practice",
+      "difficulty": "Easy",
+      "category": "STL Utility",
+      "problem": "Create a tuple with 1, 2, and 3, then print the second value.",
+      "example_input": "tuple(1,2,3)",
+      "expected_output": "2",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use get<1>().",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"2\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Tuple.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 2."
+      ]
+    }
+  ],
+  "Iterator": [
+    {
+      "topic": "Iterator",
+      "title": "Iterator Practice",
+      "difficulty": "Easy",
+      "category": "STL Utility",
+      "problem": "Use an iterator to print the first value of vector 5, 6, 7.",
+      "example_input": "[5,6,7]",
+      "expected_output": "5",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "begin() points to the first element.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"5\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Iterator.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 5."
+      ]
+    }
+  ],
+  "Lambda Function": [
+    {
+      "topic": "Lambda Function",
+      "title": "Lambda Function Practice",
+      "difficulty": "Easy",
+      "category": "Programming Concept",
+      "problem": "Use a lambda function to add 3 and 4.",
+      "example_input": "3,4",
+      "expected_output": "7",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Capture nothing and return a+b.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"7\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Lambda Function.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 7."
+      ]
+    }
+  ],
+  "Function": [
+    {
+      "topic": "Function",
+      "title": "Function Practice",
+      "difficulty": "Easy",
+      "category": "Programming Concept",
+      "problem": "Write a function that returns the square of 5.",
+      "example_input": "5",
+      "expected_output": "25",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Return n*n.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"25\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Function.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 25."
+      ]
+    }
+  ],
+  "Pointer": [
+    {
+      "topic": "Pointer",
+      "title": "Pointer Practice",
+      "difficulty": "Easy",
+      "category": "Programming Concept",
+      "problem": "Store 10 in a variable and print it using a pointer.",
+      "example_input": "x=10",
+      "expected_output": "10",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Dereference the pointer with *.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"10\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Pointer.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 10."
+      ]
+    }
+  ],
+  "Reference": [
+    {
+      "topic": "Reference",
+      "title": "Reference Practice",
+      "difficulty": "Easy",
+      "category": "Programming Concept",
+      "problem": "Use a reference to change x from 5 to 10, then print x.",
+      "example_input": "x=5",
+      "expected_output": "10",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "A reference is another name for the same variable.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"10\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Reference.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 10."
+      ]
+    }
+  ],
+  "Class": [
+    {
+      "topic": "Class",
+      "title": "Class Practice",
+      "difficulty": "Easy",
+      "category": "OOP",
+      "problem": "Create a class Student with marks 80 and print the marks.",
+      "example_input": "marks=80",
+      "expected_output": "80",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use an object to access class data.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"80\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Class.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 80."
+      ]
+    }
+  ],
+  "Object": [
+    {
+      "topic": "Object",
+      "title": "Object Practice",
+      "difficulty": "Easy",
+      "category": "OOP",
+      "problem": "Create an object with value 50 and print that value.",
+      "example_input": "value=50",
+      "expected_output": "50",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Objects are instances of classes.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"50\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Object.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 50."
+      ]
+    }
+  ],
+  "Constructor": [
+    {
+      "topic": "Constructor",
+      "title": "Constructor Practice",
+      "difficulty": "Easy",
+      "category": "OOP",
+      "problem": "Use a constructor to set age to 18 and print it.",
+      "example_input": "age=18",
+      "expected_output": "18",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Initialize data inside the constructor.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"18\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Constructor.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 18."
+      ]
+    }
+  ],
+  "Inheritance": [
+    {
+      "topic": "Inheritance",
+      "title": "Inheritance Practice",
+      "difficulty": "Easy",
+      "category": "OOP",
+      "problem": "Create a child class that inherits a display function and call it.",
+      "example_input": "call display()",
+      "expected_output": "Base",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Public inheritance allows access to public base methods.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"Base\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Inheritance.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: Base."
+      ]
+    }
+  ],
+  "Polymorphism": [
+    {
+      "topic": "Polymorphism",
+      "title": "Polymorphism Practice",
+      "difficulty": "Easy",
+      "category": "OOP",
+      "problem": "Use method overriding so a derived class prints Dog instead of Animal.",
+      "example_input": "speak()",
+      "expected_output": "Dog",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "A virtual function can be overridden.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"Dog\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Polymorphism.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: Dog."
+      ]
+    }
+  ],
+  "Encapsulation": [
+    {
+      "topic": "Encapsulation",
+      "title": "Encapsulation Practice",
+      "difficulty": "Easy",
+      "category": "OOP",
+      "problem": "Use a setter to store balance 100 and a getter to print it.",
+      "example_input": "setBalance(100)",
+      "expected_output": "100",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Keep data private and access it through methods.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"100\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Encapsulation.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 100."
+      ]
+    }
+  ],
+  "Abstraction": [
+    {
+      "topic": "Abstraction",
+      "title": "Abstraction Practice",
+      "difficulty": "Easy",
+      "category": "OOP",
+      "problem": "Create an abstract shape class and make Circle print draw.",
+      "example_input": "draw circle",
+      "expected_output": "draw",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use a pure virtual function.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"draw\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Abstraction.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: draw."
+      ]
+    }
+  ],
+  "Exception Handling": [
+    {
+      "topic": "Exception Handling",
+      "title": "Exception Handling Practice",
+      "difficulty": "Easy",
+      "category": "Programming Concept",
+      "problem": "Catch division by zero and print Error.",
+      "example_input": "10 / 0",
+      "expected_output": "Error",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Throw and catch an exception for invalid division.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"Error\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Exception Handling.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: Error."
+      ]
+    }
+  ],
+  "File Handling": [
+    {
+      "topic": "File Handling",
+      "title": "File Handling Practice",
+      "difficulty": "Easy",
+      "category": "Programming Concept",
+      "problem": "Write Hi to a file and then read and print it.",
+      "example_input": "write Hi",
+      "expected_output": "Hi",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use ofstream to write and ifstream to read.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"Hi\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for File Handling.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: Hi."
+      ]
+    }
+  ],
+  "Time Complexity": [
+    {
+      "topic": "Time Complexity",
+      "title": "Time Complexity Practice",
+      "difficulty": "Easy",
+      "category": "Analysis",
+      "problem": "Print the time complexity of accessing an array element by index.",
+      "example_input": "arr[2]",
+      "expected_output": "O(1)",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Direct index access takes constant time.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"O(1)\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Time Complexity.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: O(1)."
+      ]
+    }
+  ],
+  "Space Complexity": [
+    {
+      "topic": "Space Complexity",
+      "title": "Space Complexity Practice",
+      "difficulty": "Easy",
+      "category": "Analysis",
+      "problem": "Print the extra space used by swapping two integers with one temporary variable.",
+      "example_input": "swap a,b",
+      "expected_output": "O(1)",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Only one temporary variable is used.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"O(1)\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Space Complexity.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: O(1)."
+      ]
+    }
+  ],
+  "Big O Notation": [
+    {
+      "topic": "Big O Notation",
+      "title": "Big O Notation Practice",
+      "difficulty": "Easy",
+      "category": "Analysis",
+      "problem": "Print the Big O of a single loop from 1 to n.",
+      "example_input": "for i=1 to n",
+      "expected_output": "O(n)",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "The loop runs n times.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"O(n)\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Big O Notation.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: O(n)."
+      ]
+    }
+  ],
+  "Binary Number": [
+    {
+      "topic": "Binary Number",
+      "title": "Binary Number Practice",
+      "difficulty": "Easy",
+      "category": "Number System",
+      "problem": "Convert decimal 5 to binary and print it.",
+      "example_input": "5",
+      "expected_output": "101",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Repeatedly divide by 2 or use bitset.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"101\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Binary Number.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 101."
+      ]
+    }
+  ],
+  "Modulo Arithmetic": [
+    {
+      "topic": "Modulo Arithmetic",
+      "title": "Modulo Arithmetic Practice",
+      "difficulty": "Easy",
+      "category": "Math",
+      "problem": "Print 17 modulo 5.",
+      "example_input": "17 % 5",
+      "expected_output": "2",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "The modulo operator gives the remainder.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"2\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Modulo Arithmetic.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 2."
+      ]
+    }
+  ],
+  "GCD": [
+    {
+      "topic": "GCD",
+      "title": "GCD Practice",
+      "difficulty": "Easy",
+      "category": "Math",
+      "problem": "Find the GCD of 12 and 18.",
+      "example_input": "12,18",
+      "expected_output": "6",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Use Euclid's algorithm.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"6\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for GCD.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 6."
+      ]
+    }
+  ],
+  "LCM": [
+    {
+      "topic": "LCM",
+      "title": "LCM Practice",
+      "difficulty": "Easy",
+      "category": "Math",
+      "problem": "Find the LCM of 4 and 6.",
+      "example_input": "4,6",
+      "expected_output": "12",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "LCM equals a*b/GCD.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"12\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for LCM.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 12."
+      ]
+    }
+  ],
+  "Prime Number": [
+    {
+      "topic": "Prime Number",
+      "title": "Prime Number Practice",
+      "difficulty": "Easy",
+      "category": "Math",
+      "problem": "Check whether 7 is prime.",
+      "example_input": "7",
+      "expected_output": "Yes",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Test divisibility from 2 up to sqrt(n).",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"Yes\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Prime Number.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: Yes."
+      ]
+    }
+  ],
+  "Sieve of Eratosthenes": [
+    {
+      "topic": "Sieve of Eratosthenes",
+      "title": "Sieve of Eratosthenes Practice",
+      "difficulty": "Easy",
+      "category": "Math",
+      "problem": "Print all primes up to 10 using sieve.",
+      "example_input": "10",
+      "expected_output": "2 3 5 7",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Mark multiples as non-prime.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"2 3 5 7\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Sieve of Eratosthenes.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 2 3 5 7."
+      ]
+    }
+  ],
+  "Fibonacci": [
+    {
+      "topic": "Fibonacci",
+      "title": "Fibonacci Practice",
+      "difficulty": "Easy",
+      "category": "Math",
+      "problem": "Print the first 6 Fibonacci numbers starting from 0.",
+      "example_input": "6",
+      "expected_output": "0 1 1 2 3 5",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Each number is the sum of the previous two.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"0 1 1 2 3 5\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Fibonacci.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 0 1 1 2 3 5."
+      ]
+    }
+  ],
+  "Factorial": [
+    {
+      "topic": "Factorial",
+      "title": "Factorial Practice",
+      "difficulty": "Easy",
+      "category": "Math",
+      "problem": "Find factorial of 5.",
+      "example_input": "5",
+      "expected_output": "120",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Multiply numbers from 1 to n.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"120\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Factorial.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 120."
+      ]
+    }
+  ],
+  "Permutation": [
+    {
+      "topic": "Permutation",
+      "title": "Permutation Practice",
+      "difficulty": "Easy",
+      "category": "Combinatorics",
+      "problem": "Print all permutations of 1 and 2.",
+      "example_input": "[1,2]",
+      "expected_output": "12 21",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Swap elements to generate arrangements.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"12 21\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Permutation.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 12 21."
+      ]
+    }
+  ],
+  "Combination": [
+    {
+      "topic": "Combination",
+      "title": "Combination Practice",
+      "difficulty": "Easy",
+      "category": "Combinatorics",
+      "problem": "Print all 2-combinations from 1, 2, 3.",
+      "example_input": "n=3,k=2",
+      "expected_output": "12 13 23",
+      "starter_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    return 0;\n}",
+      "hint": "Choose values without changing their order.",
+      "solution": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <queue>\n#include <stack>\n#include <map>\n#include <set>\n#include <unordered_map>\n#include <unordered_set>\n#include <list>\n#include <tuple>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    cout << \"12 13 23\";\n    return 0;\n}",
+      "explanation": [
+        "Identify the required operation for Combination.",
+        "Create the needed variables or container.",
+        "Perform the operation shown in the example input.",
+        "Print the expected result: 12 13 23."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+}
+
+.practice-layout {
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+.practice-sidebar {
+    width: 260px;
+    background: #0f172a;
+    color: white;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.topic-link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+
+.topic-link:hover {
+    background: #1e293b;
+}
+
+.practice-main {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.problem-meta {
+    margin-bottom: 20px;
+}
+
+#difficultyBadge,
+#categoryBadge {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1e3a8a;
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.problem-section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+pre {
+    background: #0f172a;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+#codeEditor {
+    width: 100%;
+    min-height: 320px;
+    background: #020617;
+    color: #e5e7eb;
+    font-family: Consolas, monospace;
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    resize: vertical;
+}
+
+.editor-buttons {
+    margin-top: 15px;
+}
+
+.editor-buttons button {
+    padding: 10px 16px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+}
+
+.editor-buttons button:hover {
+    background: #1d4ed8;
+}
