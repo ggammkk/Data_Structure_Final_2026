@@ -2,6 +2,7 @@ DSA KNOWLEDGE GRAPH SOURCE TEXT
 Format: Upgraded educational website format for C++ extraction into JSON.
 Total Topics: 87
 Note: Image paths are placeholders. Add actual image files into the frontend/images folder using the same names.
+Note: This simplified version keeps CPP code only, removes interview questions, and includes Math Relations.
 
 Topic ID: 1
 Topic: Data
@@ -24,15 +25,10 @@ Real Life Examples:
 - Student scores
 - Temperature readings
 
-Interview Questions:
-- What is Data? | Raw facts and information that can be processed.
-- When should we use Data? | Use Data when its structure, operations, or performance match the problem requirement, especially in Fundamental Concept topics.
+Math Relations:
+- None
 
 CPP Code:
-
-Python Code:
-
-Java Code:
 
 Images:
 - Data Diagram -> images/data_diagram.png
@@ -68,15 +64,10 @@ Time Complexity:
 Real Life Examples:
 - Database organization
 
-Interview Questions:
-- What is Data Structure? | A method of organizing and storing data efficiently.
-- When should we use Data Structure? | Use Data Structure when its structure, operations, or performance match the problem requirement, especially in Fundamental Concept topics.
+Math Relations:
+- None
 
 CPP Code:
-
-Python Code:
-
-Java Code:
 
 Images:
 - Data Structure Diagram -> images/data_structure_diagram.png
@@ -111,15 +102,10 @@ Time Complexity:
 Real Life Examples:
 - Queue line
 
-Interview Questions:
-- What is Linear Data Structure? | Data elements arranged sequentially.
-- When should we use Linear Data Structure? | Use Linear Data Structure when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics.
+Math Relations:
+- size_relation : n = number of stored elements
 
 CPP Code:
-
-Python Code:
-
-Java Code:
 
 Images:
 - Linear Data Structure Diagram -> images/linear_data_structure_diagram.png
@@ -161,16 +147,12 @@ Time Complexity:
 Real Life Examples:
 - Student score list
 
-Interview Questions:
-- What is Array? | A collection of elements stored in contiguous memory locations.
-- When should we use Array? | Use Array when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics.
+Math Relations:
+- index_range : 0 <= i < n
+- memory_address : address(A[i]) = base + i * element_size
 
 CPP Code:
 int arr[5] = {1,2,3,4,5};
-
-Python Code:
-
-Java Code:
 
 Images:
 - Array Diagram -> images/array_diagram.png
@@ -205,16 +187,12 @@ Time Complexity:
 Real Life Examples:
 - List of exam scores
 
-Interview Questions:
-- What is One-Dimensional Array? | Array containing elements in a single row.
-- When should we use One-Dimensional Array? | Use One-Dimensional Array when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics.
+Math Relations:
+- index_range : 0 <= i < n
+- memory_address : address(A[i]) = base + i * element_size
 
 CPP Code:
 int arr[5];
-
-Python Code:
-
-Java Code:
 
 Images:
 - One-Dimensional Array Diagram -> images/one_dimensional_array_diagram.png
@@ -249,16 +227,12 @@ Time Complexity:
 Real Life Examples:
 - Spreadsheet table
 
-Interview Questions:
-- What is Two-Dimensional Array? | Array organized in rows and columns.
-- When should we use Two-Dimensional Array? | Use Two-Dimensional Array when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics.
+Math Relations:
+- index_range : 0 <= i < n
+- memory_address : address(A[i]) = base + i * element_size
 
 CPP Code:
 int matrix[3][3];
-
-Python Code:
-
-Java Code:
 
 Images:
 - Two-Dimensional Array Diagram -> images/two_dimensional_array_diagram.png
@@ -305,9 +279,9 @@ Real Life Examples:
 - Music playlists navigation
 - Browser history navigation
 
-Interview Questions:
-- What is Linked List? | A linked list is a linear data structure made of nodes, where elements are stored non-contiguously in memory. Each node contains data and a pointer to the next node in the sequence.
-- When should we use Linked List? | Use Linked List when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics.
+Math Relations:
+- node_relation : n_i.next = n_{i+1}
+- traversal_cost : T(n) = O(n)
 
 CPP Code:
 class Node {
@@ -324,10 +298,6 @@ int main() {
     head->next->next = new Node(3);
     return 0;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Linked List Diagram -> images/linked_list_diagram.png
@@ -374,9 +344,9 @@ Real Life Examples:
 - Browser forward navigation
 - Music playlist next song navigation
 
-Interview Questions:
-- What is Singly Linked List? | Singly linked list is a linked list where each node points only to the next node in the sequence.
-- When should we use Singly Linked List? | Use Singly Linked List when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics.
+Math Relations:
+- node_relation : n_i.next = n_{i+1}
+- traversal_cost : T(n) = O(n)
 
 CPP Code:
 class Node {
@@ -393,10 +363,6 @@ int main() {
     head->next->next = nullptr;
     return 0;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Singly Linked List Diagram -> images/singly_linked_list_diagram.png
@@ -443,9 +409,9 @@ Real Life Examples:
 - Browser back and forward navigation
 - Undo and redo functionality in software
 
-Interview Questions:
-- What is Doubly Linked List? | A linked list where each node contains pointers to both the next and previous nodes.
-- When should we use Doubly Linked List? | Use Doubly Linked List when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics.
+Math Relations:
+- node_relation : n_i.next = n_{i+1}
+- traversal_cost : T(n) = O(n)
 
 CPP Code:
 class Node {
@@ -465,10 +431,6 @@ int main() {
     head->next->next->prev = head->next;
     return 0;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Doubly Linked List Diagram -> images/doubly_linked_list_diagram.png
@@ -515,9 +477,9 @@ Real Life Examples:
 - Round-robin scheduling
 - Looping music playlists
 
-Interview Questions:
-- What is Circular Linked List? | A linked list where the last node points back to the first node, forming a circular structure.
-- When should we use Circular Linked List? | Use Circular Linked List when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics.
+Math Relations:
+- node_relation : n_i.next = n_{i+1}
+- traversal_cost : T(n) = O(n)
 
 CPP Code:
 class Node {
@@ -538,10 +500,6 @@ int main() {
     third->next = head;
     return 0;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Circular Linked List Diagram -> images/circular_linked_list_diagram.png
@@ -582,9 +540,8 @@ Real Life Examples:
 - People connected in a social network
 - Webpages connected by hyperlinks
 
-Interview Questions:
-- What is Node? | A fundamental building block used in data structures such as linked lists, trees, and graphs, where each node stores data and one or more references to other nodes.
-- When should we use Node? | Use Node when its structure, operations, or performance match the problem requirement, especially in Component topics.
+Math Relations:
+- None
 
 CPP Code:
 class Node {
@@ -594,10 +551,6 @@ public:
 
     Node(int value) : data(value), next(nullptr) {}
 };
-
-Python Code:
-
-Java Code:
 
 Images:
 - Node Diagram -> images/node_diagram.png
@@ -638,9 +591,9 @@ Real Life Examples:
 - Navigation systems using memory references
 - Dynamic data structures in programming
 
-Interview Questions:
-- What is Pointer? | A variable that stores the memory address of another variable.
-- When should we use Pointer? | Use Pointer when its structure, operations, or performance match the problem requirement, especially in Memory Concept topics.
+Math Relations:
+- pointer_assignment : p = &x
+- dereference : *p = value_at_address(p)
 
 CPP Code:
 int main() {
@@ -649,10 +602,6 @@ int main() {
     cout << "Value: " << *ptr << endl;
     return 0;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Pointer Diagram -> images/pointer_diagram.png
@@ -695,9 +644,8 @@ Real Life Examples:
 - Creating dynamic data structures like linked lists and trees
 - Operating systems allocating memory to processes
 
-Interview Questions:
-- What is Dynamic Memory Allocation? | Dynamic memory allocation is the process of allocating memory for a program at runtime (while it is running), rather than at compile time. This allows for more flexible and efficient use of memory, as the program can request and release memory as needed.
-- When should we use Dynamic Memory Allocation? | Use Dynamic Memory Allocation when its structure, operations, or performance match the problem requirement, especially in Memory Concept topics.
+Math Relations:
+- None
 
 CPP Code:
 #include <iostream>
@@ -714,10 +662,6 @@ int main() {
     delete[] arr; // Deallocate the memory
     return 0;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Dynamic Memory Allocation Diagram -> images/dynamic_memory_allocation_diagram.png
@@ -766,9 +710,10 @@ Real Life Examples:
 - Stack of books
 - Stack of boxes
 
-Interview Questions:
-- What is Stack? | A linear data structure where operations are performed only at one end, the last element added to the stack is the first to be removed (LIFO: Last In First Out).
-- When should we use Stack? | Use Stack when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics.
+Math Relations:
+- lifo_property : Last In = First Out
+- top_update_push : top = top + 1
+- top_update_pop : top = top - 1
 
 CPP Code:
 #include <stack>
@@ -783,10 +728,6 @@ int main() {
 
     return 0;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Stack Diagram -> images/stack_diagram.png
@@ -836,9 +777,10 @@ Real Life Examples:
 - Print queue in a printer
 - CPU task scheduling
 
-Interview Questions:
-- What is Queue? | A linear structure where the first element added is the first to be removed (FIFO: First In First Out), elements are inserted at the rear and removed from the front.
-- When should we use Queue? | Use Queue when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics.
+Math Relations:
+- fifo_property : First In = First Out
+- enqueue_update : rear = rear + 1
+- dequeue_update : front = front + 1
 
 CPP Code:
 #include <iostream>
@@ -853,10 +795,6 @@ int main() {
    q.pop();
    return 0;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Queue Diagram -> images/queue_diagram.png
@@ -904,9 +842,11 @@ Real Life Examples:
 - Traffic lights
 - Printer queue
 
-Interview Questions:
-- What is Circular Queue? | A queue where the rear wraps around to the front using circular indexing, efficiently reusing empty spaces created by dequeued elements.
-- When should we use Circular Queue? | Use Circular Queue when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics.
+Math Relations:
+- fifo_property : First In = First Out
+- enqueue_update : rear = rear + 1
+- dequeue_update : front = front + 1
+- circular_index : i = (i + 1) mod n
 
 CPP Code:
 #include <iostream>
@@ -933,10 +873,6 @@ int main() {
     dequeue();
     enqueue(30);
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Circular Queue Diagram -> images/circular_queue_diagram.png
@@ -978,9 +914,10 @@ Real Life Examples:
 - Hospital emergency room system
 - Network packet routing
 
-Interview Questions:
-- What is Priority Queue? | A queue where elements are removed based on priority instead of insertion order.
-- When should we use Priority Queue? | Use Priority Queue when its structure, operations, or performance match the problem requirement, especially in Specialized Structure topics.
+Math Relations:
+- fifo_property : First In = First Out
+- enqueue_update : rear = rear + 1
+- dequeue_update : front = front + 1
 
 CPP Code:
 #include <iostream>
@@ -1009,10 +946,6 @@ int main() {
 
    return 0;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Priority Queue Diagram -> images/priority_queue_diagram.png
@@ -1057,9 +990,10 @@ Real Life Examples:
 - Browser history navigation
 - Sliding window algorithms
 
-Interview Questions:
-- What is Deque? | A double-ended queue that allows insertion and deletion at both the front and rear.
-- When should we use Deque? | Use Deque when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics.
+Math Relations:
+- fifo_property : First In = First Out
+- enqueue_update : rear = rear + 1
+- dequeue_update : front = front + 1
 
 CPP Code:
 #include <iostream>
@@ -1086,10 +1020,6 @@ int main() {
 
     return 0;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Deque Diagram -> images/deque_diagram.png
@@ -1127,15 +1057,11 @@ Real Life Examples:
 - Folder traversal
 - Tower of hanoi
 
-Interview Questions:
-- What is Recursion? | Recursion is a technique where a function solves a problem by calling itself on smaller subproblems.
-- When should we use Recursion? | Use Recursion when its structure, operations, or performance match the problem requirement, especially in Algorithmic Technique topics.
+Math Relations:
+- recurrence_relation : T(n) = T(n-1) + O(1)
+- base_case_required : recursion stops when condition is met
 
 CPP Code:
-
-Python Code:
-
-Java Code:
 
 Images:
 - Recursion Diagram -> images/recursion_diagram.png
@@ -1172,9 +1098,9 @@ Real Life Examples:
 - Factorial calculation
 - Tower of hanoi
 
-Interview Questions:
-- What is Recursive Function? | A function that calls itself to solve smaller instances of a problem.
-- When should we use Recursive Function? | Use Recursive Function when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- recurrence_relation : T(n) = T(n-1) + O(1)
+- base_case_required : recursion stops when condition is met
 
 CPP Code:
 #include <iostream>
@@ -1191,10 +1117,6 @@ int main() {
    cout << result << endl;
    return 0;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Recursive Function Diagram -> images/recursive_function_diagram.png
@@ -1231,9 +1153,8 @@ Real Life Examples:
 - A GPS stopping its search once the destination coordinates are reached
 - Walking down a staircase and stopping once our foot touches the ground floor
 
-Interview Questions:
-- What is Base Case? | The stopping condition in a recursive algorithm that prevents infinite recursion.
-- When should we use Base Case? | Use Base Case when its structure, operations, or performance match the problem requirement, especially in Algorithmic Technique topics.
+Math Relations:
+- time_complexity_relation : T(n) depends on input size n
 
 CPP Code:
 int factorial(int n) {
@@ -1244,10 +1165,6 @@ int factorial(int n) {
     // The Recursive Step
     return n * factorial(n - 1);
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Base Case Diagram -> images/base_case_diagram.png
@@ -1285,9 +1202,10 @@ Real Life Examples:
 - Tracking active function calls in a program
 - Managing recursive function execution
 
-Interview Questions:
-- What is Call Stack? | A stack used by programs to manage active function calls. Each time a function is called, it is added to the stack, executes its statements, and finally returns to where it was called from.
-- When should we use Call Stack? | Use Call Stack when its structure, operations, or performance match the problem requirement, especially in Memory Concept topics.
+Math Relations:
+- lifo_property : Last In = First Out
+- top_update_push : top = top + 1
+- top_update_pop : top = top - 1
 
 CPP Code:
 #include <iostream>
@@ -1320,10 +1238,6 @@ int main() {
     D();
     return 0;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Call Stack Diagram -> images/call_stack_diagram.png
@@ -1366,9 +1280,9 @@ Real Life Examples:
 - Adjacency matrix of sparse graphs
 - Image compression
 
-Interview Questions:
-- What is Sparse Matrix? | A matrix in which most of the elements are zero.
-- When should we use Sparse Matrix? | Use Sparse Matrix when its structure, operations, or performance match the problem requirement, especially in Specialized Structure topics.
+Math Relations:
+- matrix_dimension : A is m x n
+- element_position : A[i][j]
 
 CPP Code:
 struct Node {
@@ -1379,10 +1293,6 @@ struct Node {
 void insert(int r, int c, int v) {
     // Implementation logic to link new node
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Sparse Matrix Diagram -> images/sparse_matrix_diagram.png
@@ -1424,9 +1334,9 @@ Real Life Examples:
 - Equation simplification
 - Scientific calculator
 
-Interview Questions:
-- What is Polynomial Representation? | A method of storing and manipulating polynomial expressions using arrays or linked lists.
-- When should we use Polynomial Representation? | Use Polynomial Representation when its structure, operations, or performance match the problem requirement, especially in Representation Technique topics.
+Math Relations:
+- polynomial_form : P(x) = a_nx^n + ... + a_0
+- term_form : coefficient * x^exponent
 
 CPP Code:
 struct Term {
@@ -1439,10 +1349,6 @@ void addTerm(Term** poly, int c, int e) {
     Term* newNode = new Term{c, e, nullptr};
     // Implementation to keep terms sorted by exponent
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Polynomial Representation Diagram -> images/polynomial_representation_diagram.png
@@ -1483,9 +1389,9 @@ Real Life Examples:
 - Organizational charts
 - Family trees
 
-Interview Questions:
-- What is Tree? | A hierarchical data structure consisting of nodes connected by edges with one root node and zero or more subtrees.
-- When should we use Tree? | Use Tree when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics.
+Math Relations:
+- tree_edges : edges = nodes - 1
+- height_relation : height = longest path from root to leaf
 
 CPP Code:
 struct TreeNode {
@@ -1497,10 +1403,6 @@ vector<TreeNode*> children;
 TreeNode(int val) : data(val) {}
 
 };
-
-Python Code:
-
-Java Code:
 
 Images:
 - Tree Diagram -> images/tree_diagram.png
@@ -1543,9 +1445,11 @@ Real Life Examples:
 - Expression trees
 - Decision making/trees
 
-Interview Questions:
-- What is Binary Tree? | A tree in which each node has at most two children called the left child and right child.
-- When should we use Binary Tree? | Use Binary Tree when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics.
+Math Relations:
+- tree_edges : edges = nodes - 1
+- height_relation : height = longest path from root to leaf
+- max_nodes_level_i : 2^i
+- max_nodes_height_h : 2^(h+1) - 1
 
 CPP Code:
 class Node {
@@ -1561,10 +1465,6 @@ public:
 Node(T value) : data(value), left(nullptr), right(nullptr) {}
 
 };
-
-Python Code:
-
-Java Code:
 
 Images:
 - Binary Tree Diagram -> images/binary_tree_diagram.png
@@ -1606,9 +1506,13 @@ Real Life Examples:
 - Dictionary/ Word lookup
 - Databases and Indexing
 
-Interview Questions:
-- What is Binary Search Tree? | A binary tree where all values in the left subtree are smaller than the root and all values in the right subtree are larger than the root.
-- When should we use Binary Search Tree? | Use Binary Search Tree when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics.
+Math Relations:
+- tree_edges : edges = nodes - 1
+- height_relation : height = longest path from root to leaf
+- max_nodes_level_i : 2^i
+- max_nodes_height_h : 2^(h+1) - 1
+- bst_property : left_subtree < root < right_subtree
+- average_search_height : O(log n)
 
 CPP Code:
 struct Node {
@@ -1622,10 +1526,6 @@ Node* right;
 Node(int val) : data(val), left(nullptr), right(nullptr) {}
 
 };
-
-Python Code:
-
-Java Code:
 
 Images:
 - Binary Search Tree Diagram -> images/binary_search_tree_diagram.png
@@ -1669,9 +1569,11 @@ Real Life Examples:
 - Gaming and Simulation Engines
 - Memory management in operating systems
 
-Interview Questions:
-- What is AVL Tree? | A self-balancing binary search tree where the difference between heights of left and right subtrees cannot be more than one for any node.
-- When should we use AVL Tree? | Use AVL Tree when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics.
+Math Relations:
+- tree_edges : edges = nodes - 1
+- height_relation : height = longest path from root to leaf
+- balance_factor : height(left) - height(right)
+- avl_condition : -1 <= balance_factor <= 1
 
 CPP Code:
 struct AVLNode {
@@ -1689,10 +1591,6 @@ int height;
 AVLNode(int val) : key(val), left(nullptr), right(nullptr), height(1) {}
 
 };
-
-Python Code:
-
-Java Code:
 
 Images:
 - AVL Tree Diagram -> images/avl_tree_diagram.png
@@ -1732,16 +1630,13 @@ Real Life Examples:
 - Bandwidth management in networks
 - Job scheduling in cloud computing
 
-Interview Questions:
-- What is Heap? | A complete binary tree that satisfies the heap-order property.
-- When should we use Heap? | Use Heap when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics.
+Math Relations:
+- parent_index : floor((i - 1) / 2)
+- left_child_index : 2i + 1
+- right_child_index : 2i + 2
 
 CPP Code:
 vector<int> heap = {50, 30, 20, 15, 10};
-
-Python Code:
-
-Java Code:
 
 Images:
 - Heap Diagram -> images/heap_diagram.png
@@ -1786,9 +1681,11 @@ Real Life Examples:
 - Gaming leaderboards
 - Stock market systems
 
-Interview Questions:
-- What is Max Heap? | A heap where each parent node is greater than or equal to its children.
-- When should we use Max Heap? | Use Max Heap when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics.
+Math Relations:
+- parent_index : floor((i - 1) / 2)
+- left_child_index : 2i + 1
+- right_child_index : 2i + 2
+- max_heap_property : parent >= child
 
 CPP Code:
 class MaxHeap {
@@ -1802,10 +1699,6 @@ public:
         heap.resize(capacity);
     }
 };
-
-Python Code:
-
-Java Code:
 
 Images:
 - Max Heap Diagram -> images/max_heap_diagram.png
@@ -1851,9 +1744,11 @@ Real Life Examples:
 - Navigation systems (shortest path algorithms)
 - Task scheduling in operating systems
 
-Interview Questions:
-- What is Min Heap? | A heap where each parent node is less than or equal to its children.
-- When should we use Min Heap? | Use Min Heap when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics.
+Math Relations:
+- parent_index : floor((i - 1) / 2)
+- left_child_index : 2i + 1
+- right_child_index : 2i + 2
+- min_heap_property : parent <= child
 
 CPP Code:
 class MinHeap {
@@ -1867,10 +1762,6 @@ public:
         heap.resize(capacity);
     }
 };
-
-Python Code:
-
-Java Code:
 
 Images:
 - Min Heap Diagram -> images/min_heap_diagram.png
@@ -1905,16 +1796,12 @@ Time Complexity:
 Real Life Examples:
 - Network connectivity tables
 
-Interview Questions:
-- What is Adjacency Matrix? | A matrix used to represent a graph, where each cell indicates if an edge exists between two vertices.
-- When should we use Adjacency Matrix? | Use Adjacency Matrix when its structure, operations, or performance match the problem requirement, especially in Representation Technique topics.
+Math Relations:
+- matrix_dimension : A is m x n
+- element_position : A[i][j]
 
 CPP Code:
 vector<vector<int>> adj(V, vector<int>(V, 0));
-
-Python Code:
-
-Java Code:
 
 Images:
 - Adjacency Matrix Diagram -> images/adjacency_matrix_diagram.png
@@ -1952,16 +1839,12 @@ Time Complexity:
 Real Life Examples:
 - Finding shortest paths in unweighted graphs
 
-Interview Questions:
-- What is Breadth First Search? | An algorithm for traversing or searching graph or tree data structures level by level.
-- When should we use Breadth First Search? | Use Breadth First Search when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- search_space_reduction : n -> n/2
+- middle_index : mid = low + (high - low) / 2
 
 CPP Code:
 queue<int> q; q.push(src);
-
-Python Code:
-
-Java Code:
 
 Images:
 - Breadth First Search Diagram -> images/breadth_first_search_diagram.png
@@ -1998,16 +1881,12 @@ Time Complexity:
 Real Life Examples:
 - Maze solving
 
-Interview Questions:
-- What is Depth First Search? | An algorithm for traversing or searching graph or tree data structures by exploring as far down a branch as possible before backtracking.
-- When should we use Depth First Search? | Use Depth First Search when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- search_space_reduction : n -> n/2
+- middle_index : mid = low + (high - low) / 2
 
 CPP Code:
 dfs(v) { visited[v]=true; for(n in adj[v]) if(!visited[n]) dfs(n); }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Depth First Search Diagram -> images/depth_first_search_diagram.png
@@ -2042,16 +1921,12 @@ Time Complexity:
 Real Life Examples:
 - Counting permutations
 
-Interview Questions:
-- What is Factorial? | The product of all positive integers up to a given number, used in recursion and mathematical computations.
-- When should we use Factorial? | Use Factorial when its structure, operations, or performance match the problem requirement, especially in Mathematics topics.
+Math Relations:
+- factorial_relation : n! = n * (n - 1)!
+- base_case : 0! = 1
 
 CPP Code:
 int factorial(int n) { return n <= 1 ? 1 : n * factorial(n - 1); }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Factorial Diagram -> images/factorial_diagram.png
@@ -2086,16 +1961,12 @@ Time Complexity:
 Real Life Examples:
 - Population growth models
 
-Interview Questions:
-- What is Fibonacci Sequence? | A sequence where each number is the sum of the two preceding numbers, often defined recursively.
-- When should we use Fibonacci Sequence? | Use Fibonacci Sequence when its structure, operations, or performance match the problem requirement, especially in Mathematics topics.
+Math Relations:
+- recurrence : F(n) = F(n-1) + F(n-2)
+- base_cases : F(0)=0, F(1)=1
 
 CPP Code:
 int fib(int n) { return n <= 1 ? n : fib(n - 1) + fib(n - 2); }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Fibonacci Sequence Diagram -> images/fibonacci_sequence_diagram.png
@@ -2131,16 +2002,11 @@ Time Complexity:
 Real Life Examples:
 - Breadth-first exploration
 
-Interview Questions:
-- What is Level Order Traversal? | A tree traversal method that visits nodes level by level, from top to bottom.
-- When should we use Level Order Traversal? | Use Level Order Traversal when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- time_complexity_relation : T(n) depends on input size n
 
 CPP Code:
 queue<Node*> q; q.push(root); while(!q.empty()) { ... }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Level Order Traversal Diagram -> images/level_order_traversal_diagram.png
@@ -2177,16 +2043,11 @@ Time Complexity:
 Real Life Examples:
 - Managing RAM for running applications
 
-Interview Questions:
-- What is Memory Management? | The process of allocating and freeing memory in a program, often important in dynamic data structures and recursion.
-- When should we use Memory Management? | Use Memory Management when its structure, operations, or performance match the problem requirement, especially in Computer Science Concept topics.
+Math Relations:
+- None
 
 CPP Code:
 int* data = new int[10]; delete[] data;
-
-Python Code:
-
-Java Code:
 
 Images:
 - Memory Management Diagram -> images/memory_management_diagram.png
@@ -2220,16 +2081,11 @@ Time Complexity:
 Real Life Examples:
 - Storing sparse datasets efficiently
 
-Interview Questions:
-- What is Triplet Representation? | A sparse matrix representation that stores only non-zero elements as triplets of row, column, and value.
-- When should we use Triplet Representation? | Use Triplet Representation when its structure, operations, or performance match the problem requirement, especially in Representation Technique topics.
+Math Relations:
+- None
 
 CPP Code:
 struct Triplet { int row, col, val; };
-
-Python Code:
-
-Java Code:
 
 Images:
 - Triplet Representation Diagram -> images/triplet_representation_diagram.png
@@ -2284,9 +2140,9 @@ Real Life Examples:
 - Computer networks
 - Power grids
 
-Interview Questions:
-- What is Graph? | A collection or set of nodes(vertices) connected by edges.
-- When should we use Graph? | Use Graph when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics.
+Math Relations:
+- graph_definition : G = (V, E)
+- traversal_complexity : O(V + E)
 
 CPP Code:
 vector<vector<int>> createGraph(int V, vector<vector<int>> &edges) {
@@ -2301,10 +2157,6 @@ vector<vector<int>> createGraph(int V, vector<vector<int>> &edges) {
 
     return mat;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Graph Diagram -> images/graph_diagram.png
@@ -2356,9 +2208,10 @@ Real Life Examples:
 - Social media following/follower relationships
 - Web page linking
 
-Interview Questions:
-- What is Directed Graph? | A graph where edges have a direction, indicating a one-way relationship between vertices.
-- When should we use Directed Graph? | Use Directed Graph when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics.
+Math Relations:
+- graph_definition : G = (V, E)
+- traversal_complexity : O(V + E)
+- max_edges_directed : n(n - 1)
 
 CPP Code:
 vector<vector<int>> createGraph(int V, vector<vector<int>> &edges) {
@@ -2372,10 +2225,6 @@ vector<vector<int>> createGraph(int V, vector<vector<int>> &edges) {
 
     return mat;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Directed Graph Diagram -> images/directed_graph_diagram.png
@@ -2425,9 +2274,11 @@ Real Life Examples:
 - Social media friend networks(mutual friendships)
 - Computer LAN networks
 
-Interview Questions:
-- What is Undirected Graph? | A graph where edges have no direction, indicating a two-way relationship between vertices.
-- When should we use Undirected Graph? | Use Undirected Graph when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics.
+Math Relations:
+- graph_definition : G = (V, E)
+- traversal_complexity : O(V + E)
+- max_edges_undirected : n(n - 1) / 2
+- max_edges_directed : n(n - 1)
 
 CPP Code:
 vector<vector<int>> createGraph(int V, vector<vector<int>> &edges) {
@@ -2442,10 +2293,6 @@ vector<vector<int>> createGraph(int V, vector<vector<int>> &edges) {
 
     return adj;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Undirected Graph Diagram -> images/undirected_graph_diagram.png
@@ -2497,9 +2344,10 @@ Real Life Examples:
 - Game maps
 - Supply chain and logistics networks
 
-Interview Questions:
-- What is Weighted Graph? | A graph where edges have weights, indicating the cost or distance between vertices.
-- When should we use Weighted Graph? | Use Weighted Graph when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics.
+Math Relations:
+- graph_definition : G = (V, E)
+- traversal_complexity : O(V + E)
+- weighted_graph : G = (V, E, W)
 
 CPP Code:
 vector<vector<pair<int, int>>> createWeightedGraph(int V, vector<vector<int>> &edges) {
@@ -2516,10 +2364,6 @@ vector<vector<pair<int, int>>> createWeightedGraph(int V, vector<vector<int>> &e
 
     return adj;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Weighted Graph Diagram -> images/weighted_graph_diagram.png
@@ -2567,9 +2411,9 @@ Real Life Examples:
 - File system navigation
 - Maze solving
 
-Interview Questions:
-- What is DFS (Depth First Search) Algorithm? | An algorithm for traversing or searching tree or graph data structures, starting at the root and exploring as far as possible along each branch before backtracking.
-- When should we use DFS (Depth First Search) Algorithm? | Use DFS (Depth First Search) Algorithm when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- graph_definition : G = (V, E)
+- traversal_complexity : O(V + E)
 
 CPP Code:
 void dfsRec(vector<vector<int>> &adj, vector<bool> &visited, int s, vector<int> &res) {
@@ -2588,10 +2432,6 @@ vector<int> dfs(vector<vector<int>> &adj) {
     dfsRec(adj, visited, 0, res);
     return res;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - DFS (Depth First Search) Algorithm Diagram -> images/dfs_depth_first_search_algorithm_diagram.png
@@ -2639,9 +2479,9 @@ Real Life Examples:
 - Connected Component Detection
 - Web Crawlers
 
-Interview Questions:
-- What is BFS (Breadth First Search) Algorithm? | An algorithm for traversing or searching tree or graph data structures, starting at the root and exploring all neighbors at the present depth prior to moving to the next level(exploring nodes level-by-level).
-- When should we use BFS (Breadth First Search) Algorithm? | Use BFS (Breadth First Search) Algorithm when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- graph_definition : G = (V, E)
+- traversal_complexity : O(V + E)
 
 CPP Code:
 vector<int> bfs(vector<vector<int>>& adj) {
@@ -2670,10 +2510,6 @@ vector<int> bfs(vector<vector<int>>& adj) {
 
     return res;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - BFS (Breadth First Search) Algorithm Diagram -> images/bfs_breadth_first_search_algorithm_diagram.png
@@ -2719,9 +2555,11 @@ Real Life Examples:
 - Robot Navigation
 - Network cable routing
 
-Interview Questions:
-- What is Dijkstra Algorithm? | A greedy shortest-path algorithm for weighted graphs with non-negative weights.
-- When should we use Dijkstra Algorithm? | Use Dijkstra Algorithm when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- graph_definition : G = (V, E)
+- traversal_complexity : O(V + E)
+- weighted_graph : G = (V, E, W)
+- relaxation : dist[v] = min(dist[v], dist[u] + w(u,v))
 
 CPP Code:
 vector<int> dijkstra(vector<vector<pair<int,int>>>& adj, int src) {
@@ -2758,10 +2596,6 @@ vector<int> dijkstra(vector<vector<pair<int,int>>>& adj, int src) {
 
     return dist;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Dijkstra Algorithm Diagram -> images/dijkstra_algorithm_diagram.png
@@ -2806,9 +2640,9 @@ Real Life Examples:
 - Water pipeline Systems
 - Railway System Planning
 
-Interview Questions:
-- What is Minimum Spanning Tree? | A spanning tree connecting all vertices with minimum total edge weight and no cycles.
-- When should we use Minimum Spanning Tree? | Use Minimum Spanning Tree when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- tree_edges : edges = nodes - 1
+- height_relation : height = longest path from root to leaf
 
 CPP Code:
 vector<pair<int, pair<int, int>>> minimumSpanningTree(int V, vector<vector<int>>& edges) {
@@ -2828,10 +2662,6 @@ vector<pair<int, pair<int, int>>> minimumSpanningTree(int V, vector<vector<int>>
 
     return mst;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Minimum Spanning Tree Diagram -> images/minimum_spanning_tree_diagram.png
@@ -2876,9 +2706,10 @@ Real Life Examples:
 - Sensor Networks
 - Computer Chip Design
 
-Interview Questions:
-- What is Prim Algorithm? | A greedy MST algorithm expanding the tree using the minimum outgoing edge.
-- When should we use Prim Algorithm? | Use Prim Algorithm when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- graph_definition : G = (V, E)
+- traversal_complexity : O(V + E)
+- mst_edges : |V| - 1
 
 CPP Code:
 vector<pair<int, int>> prim(int V, vector<vector<pair<int, int>>> &adj) {
@@ -2917,10 +2748,6 @@ vector<pair<int, int>> prim(int V, vector<vector<pair<int, int>>> &adj) {
 
     return mst;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Prim Algorithm Diagram -> images/prim_algorithm_diagram.png
@@ -2963,9 +2790,10 @@ Real Life Examples:
 - Circuit Wiring
 - Cluster Analysis
 
-Interview Questions:
-- What is Kruskal Algorithm? | A greedy MST algorithm sorting edges by weight and adding them if they don't form a cycle/ A greedy MST algorithm selecting the smallest non-cycling edge.
-- When should we use Kruskal Algorithm? | Use Kruskal Algorithm when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- graph_definition : G = (V, E)
+- traversal_complexity : O(V + E)
+- mst_edges : |V| - 1
 
 CPP Code:
 vector<vector<int>> kruskal(int V, vector<vector<int>>& edges) {
@@ -2985,10 +2813,6 @@ vector<vector<int>> kruskal(int V, vector<vector<int>>& edges) {
 
     return mst;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Kruskal Algorithm Diagram -> images/kruskal_algorithm_diagram.png
@@ -3035,9 +2859,9 @@ Real Life Examples:
 - Package Management
 - Project Task Scheduling
 
-Interview Questions:
-- What is Topological Sorting? | A linear ordering of vertices in a Directed Acyclic Graph (DAG).
-- When should we use Topological Sorting? | Use Topological Sorting when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- graph_definition : G = (V, E)
+- traversal_complexity : O(V + E)
 
 CPP Code:
 vector<int> topologicalSort(int V, vector<vector<int>>& adj) {
@@ -3071,10 +2895,6 @@ vector<int> topologicalSort(int V, vector<vector<int>>& adj) {
 
     return topo;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Topological Sorting Diagram -> images/topological_sorting_diagram.png
@@ -3119,9 +2939,9 @@ Real Life Examples:
 - Blockchain Systems
 - Password Authentication
 
-Interview Questions:
-- What is Hash Table? | A data structure that maps keys to values using a hash function(uses hash indexing).
-- When should we use Hash Table? | Use Hash Table when its structure, operations, or performance match the problem requirement, especially in Specialized Structure topics.
+Math Relations:
+- hash_function : h(k) = k mod m
+- collision_condition : h(k1) = h(k2), k1 != k2
 
 CPP Code:
 class HashTable {
@@ -3138,10 +2958,6 @@ public:
         table.resize(size);
     }
 };
-
-Python Code:
-
-Java Code:
 
 Images:
 - Hash Table Diagram -> images/hash_table_diagram.png
@@ -3179,9 +2995,9 @@ Real Life Examples:
 - Digital Signatures
 - Distributed Systems
 
-Interview Questions:
-- What is Hash Function? | A function mapping keys to table indices.
-- When should we use Hash Function? | Use Hash Function when its structure, operations, or performance match the problem requirement, especially in Component topics.
+Math Relations:
+- hash_function : h(k) = k mod m
+- collision_condition : h(k1) = h(k2), k1 != k2
 
 CPP Code:
 class HashFunction {
@@ -3194,10 +3010,6 @@ public:
         return computeHashCode(key) % tableSize;
     }
 };
-
-Python Code:
-
-Java Code:
 
 Images:
 - Hash Function Diagram -> images/hash_function_diagram.png
@@ -3239,9 +3051,8 @@ Real Life Examples:
 - Database Systems
 - Web Browser Caching
 
-Interview Questions:
-- What is Collision Resolution? | Methods for handling multiple keys mapped to the same index.
-- When should we use Collision Resolution? | Use Collision Resolution when its structure, operations, or performance match the problem requirement, especially in Component topics.
+Math Relations:
+- None
 
 CPP Code:
 class HashTable {
@@ -3264,10 +3075,6 @@ public:
         table[index] = key;
     }
 };
-
-Python Code:
-
-Java Code:
 
 Images:
 - Collision Resolution Diagram -> images/collision_resolution_diagram.png
@@ -3313,18 +3120,14 @@ Real Life Examples:
 - Student ranking system
 - Search engine result ranking
 
-Interview Questions:
-- What is Sorting Algorithm? | Arranging elements into a specific order.
-- When should we use Sorting Algorithm? | Use Sorting Algorithm when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- comparison_relation : a[i] <= a[j]
+- sorting_goal : a_1 <= a_2 <= ... <= a_n
 
 CPP Code:
 void sortArray(vector<int>& arr) {
     sort(arr.begin(), arr.end());
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Sorting Algorithm Diagram -> images/sorting_algorithm_diagram.png
@@ -3362,9 +3165,9 @@ Real Life Examples:
 - Alphabetical Word Sorting
 - Game Leaderboards
 
-Interview Questions:
-- What is Bubble Sort? | A sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order.
-- When should we use Bubble Sort? | Use Bubble Sort when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- comparison_relation : a[i] <= a[j]
+- sorting_goal : a_1 <= a_2 <= ... <= a_n
 
 CPP Code:
 void bubbleSort(vector<int>& arr) {
@@ -3385,10 +3188,6 @@ void bubbleSort(vector<int>& arr) {
             break;
     }
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Bubble Sort Diagram -> images/bubble_sort_diagram.png
@@ -3426,9 +3225,9 @@ Real Life Examples:
 - Sorting playing cards by rank
 - Organizing books alphabetically by title
 
-Interview Questions:
-- What is Selection Sort? | A sorting algorithm repeatedly selecting the minimum element.
-- When should we use Selection Sort? | Use Selection Sort when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- comparison_relation : a[i] <= a[j]
+- sorting_goal : a_1 <= a_2 <= ... <= a_n
 
 CPP Code:
 void selectionSort(vector<int>& arr) {
@@ -3446,10 +3245,6 @@ void selectionSort(vector<int>& arr) {
         swap(arr[i], arr[minIndex]);
     }
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Selection Sort Diagram -> images/selection_sort_diagram.png
@@ -3487,9 +3282,9 @@ Real Life Examples:
 - Sorting playing cards in hand
 - Organizing files by date modified
 
-Interview Questions:
-- What is Insertion Sort? | A sorting algorithm building the sorted array one item at a time by repeatedly taking the next item and inserting it into the correct position.
-- When should we use Insertion Sort? | Use Insertion Sort when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- comparison_relation : a[i] <= a[j]
+- sorting_goal : a_1 <= a_2 <= ... <= a_n
 
 CPP Code:
 void insertionSort(vector<int>& arr) {
@@ -3507,10 +3302,6 @@ void insertionSort(vector<int>& arr) {
         arr[j + 1] = key;
     }
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Insertion Sort Diagram -> images/insertion_sort_diagram.png
@@ -3549,9 +3340,10 @@ Real Life Examples:
 - Sorting large database records
 - External sorting of files on disk
 
-Interview Questions:
-- What is Merge Sort? | A sorting algorithm that divides the array into smaller subarrays, sorts them, and then merges them back together.
-- When should we use Merge Sort? | Use Merge Sort when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- comparison_relation : a[i] <= a[j]
+- sorting_goal : a_1 <= a_2 <= ... <= a_n
+- recurrence : T(n) = 2T(n/2) + O(n)
 
 CPP Code:
 void merge(vector<int>& arr, int left, int mid, int right);
@@ -3589,10 +3381,6 @@ void merge(vector<int>& arr, int left, int mid, int right) {
         arr[left + i] = temp[i];
     }
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Merge Sort Diagram -> images/merge_sort_diagram.png
@@ -3633,9 +3421,10 @@ Real Life Examples:
 - E-commerce product sorting
 - File system organization
 
-Interview Questions:
-- What is Quick Sort? | A sorting algorithm that picks an element as a pivot and partitions the array around the pivot(A divide-and-conquer sorting algorithm partitioning around a pivot).
-- When should we use Quick Sort? | Use Quick Sort when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- comparison_relation : a[i] <= a[j]
+- sorting_goal : a_1 <= a_2 <= ... <= a_n
+- partition_property : left <= pivot <= right
 
 CPP Code:
 int partition(vector<int>& arr, int low, int high) {
@@ -3661,10 +3450,6 @@ void quickSort(vector<int>& arr, int low, int high) {
         quickSort(arr, pi + 1, high);
     }
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Quick Sort Diagram -> images/quick_sort_diagram.png
@@ -3707,9 +3492,9 @@ Real Life Examples:
 - Database query optimization
 - File system search
 
-Interview Questions:
-- What is Binary Search? | A searching algorithm repeatedly dividing a sorted search space in half.
-- When should we use Binary Search? | Use Binary Search when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- search_space_reduction : n -> n/2
+- middle_index : mid = low + (high - low) / 2
 
 CPP Code:
 int binarySearch(vector<int>& arr, int target, int low, int high) {
@@ -3721,10 +3506,6 @@ int binarySearch(vector<int>& arr, int target, int low, int high) {
     if (arr[mid] > target) return binarySearch(arr, target, low, mid - 1);
     return binarySearch(arr, target, mid + 1, high);
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Binary Search Diagram -> images/binary_search_diagram.png
@@ -3775,9 +3556,8 @@ Real Life Examples:
 - Database record management using vectors and maps
 - Browser history management using stacks
 
-Interview Questions:
-- What is STL (Standard Template Library) Components? | Standard Template Library components in C++ including containers, iterators, algorithms, and functors.
-- When should we use STL (Standard Template Library) Components? | Use STL (Standard Template Library) Components when its structure, operations, or performance match the problem requirement, especially in Specialized Structure topics.
+Math Relations:
+- size_relation : n = number of stored elements
 
 CPP Code:
 #include <iostream>
@@ -3796,10 +3576,6 @@ int main() {
 
     return 0;
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - STL (Standard Template Library) Components Diagram -> images/stl_standard_template_library_components_diagram.png
@@ -3837,16 +3613,12 @@ Real Life Examples:
 - 3D game coordinates
 - Scientific simulation data
 
-Interview Questions:
-- What is Multidimensional Array? | An array with more than two dimensions.
-- When should we use Multidimensional Array? | Use Multidimensional Array when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics.
+Math Relations:
+- index_range : 0 <= i < n
+- memory_address : address(A[i]) = base + i * element_size
 
 CPP Code:
 int arr[2][3][4];
-
-Python Code:
-
-Java Code:
 
 Images:
 - Multidimensional Array Diagram -> images/multidimensional_array_diagram.png
@@ -3883,16 +3655,11 @@ Real Life Examples:
 - Clock arithmetic
 - Hash functions
 
-Interview Questions:
-- What is Modular Arithmetic? | A system of arithmetic where numbers wrap around after reaching a certain value.
-- When should we use Modular Arithmetic? | Use Modular Arithmetic when its structure, operations, or performance match the problem requirement, especially in Mathematics topics.
+Math Relations:
+- mathematical_definition : based on recurrence, formula, or algebraic relation
 
 CPP Code:
 int result = a % b;
-
-Python Code:
-
-Java Code:
 
 Images:
 - Modular Arithmetic Diagram -> images/modular_arithmetic_diagram.png
@@ -3927,16 +3694,11 @@ Real Life Examples:
 - Cooking recipes
 - Google Search
 
-Interview Questions:
-- What is Algorithm? | A step-by-step procedure or set of rules to be followed in calculations or other problem-solving operations.
-- When should we use Algorithm? | Use Algorithm when its structure, operations, or performance match the problem requirement, especially in Fundamental Concept topics.
+Math Relations:
+- None
 
 CPP Code:
 def add(a, b): return a + b
-
-Python Code:
-
-Java Code:
 
 Images:
 - Algorithm Diagram -> images/algorithm_diagram.png
@@ -3974,17 +3736,12 @@ Time Complexity:
 Real Life Examples:
 - Dynamic list of items in a shopping cart
 
-Interview Questions:
-- What is Vector? | A dynamic array that can resize itself automatically when an element is inserted or deleted.
-- When should we use Vector? | Use Vector when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics.
+Math Relations:
+- size_relation : n = number of stored elements
 
 CPP Code:
 std::vector<int> v;
 ArrayList<Integer> list = new ArrayList<>();
-
-Python Code:
-
-Java Code:
 
 Images:
 - Vector Diagram -> images/vector_diagram.png
@@ -4021,16 +3778,12 @@ Real Life Examples:
 - Image pixels
 - Spreadsheet
 
-Interview Questions:
-- What is Matrix? | A collection of numbers arranged in a fixed number of rows and columns.
-- When should we use Matrix? | Use Matrix when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics.
+Math Relations:
+- matrix_dimension : A is m x n
+- element_position : A[i][j]
 
 CPP Code:
 int matrix[3][3];
-
-Python Code:
-
-Java Code:
 
 Images:
 - Matrix Diagram -> images/matrix_diagram.png
@@ -4069,17 +3822,14 @@ Real Life Examples:
 - Unique IDs
 - Distinct words in a book
 
-Interview Questions:
-- What is Set? | A collection of distinct elements where no duplicate values are allowed.
-- When should we use Set? | Use Set when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics.
+Math Relations:
+- set_uniqueness : x appears at most once
+- union : A ∪ B
+- intersection : A ∩ B
 
 CPP Code:
 Set<Integer> s = new HashSet<>();
 my_set = {1, 2, 3}
-
-Python Code:
-
-Java Code:
 
 Images:
 - Set Diagram -> images/set_diagram.png
@@ -4117,17 +3867,13 @@ Real Life Examples:
 - Dictionary
 - Phone book
 
-Interview Questions:
-- What is Map? | A collection of key-value pairs where each key is unique and maps to a specific value.
-- When should we use Map? | Use Map when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics.
+Math Relations:
+- mapping_relation : key -> value
+- function_property : each key maps to one value
 
 CPP Code:
 Map<String, Int> m = new HashMap<>();
 my_dict = {'key': 'value'}
-
-Python Code:
-
-Java Code:
 
 Images:
 - Map Diagram -> images/map_diagram.png
@@ -4164,16 +3910,12 @@ Real Life Examples:
 - Physics formulas
 - Economic modeling
 
-Interview Questions:
-- What is Polynomial? | An expression consisting of variables and coefficients, involving only addition, subtraction, and multiplication.
-- When should we use Polynomial? | Use Polynomial when its structure, operations, or performance match the problem requirement, especially in Mathematics topics.
+Math Relations:
+- polynomial_form : P(x) = a_nx^n + ... + a_0
+- term_form : coefficient * x^exponent
 
 CPP Code:
 3x^2 + 2x + 5
-
-Python Code:
-
-Java Code:
 
 Images:
 - Polynomial Diagram -> images/polynomial_diagram.png
@@ -4208,16 +3950,12 @@ Real Life Examples:
 - Alphabetized contact list
 - Leaderboard
 
-Interview Questions:
-- What is Sorted Data? | Data that has been arranged in a systematic order, such as numerical or alphabetical.
-- When should we use Sorted Data? | Use Sorted Data when its structure, operations, or performance match the problem requirement, especially in Fundamental Concept topics.
+Math Relations:
+- comparison_relation : a[i] <= a[j]
+- sorting_goal : a_1 <= a_2 <= ... <= a_n
 
 CPP Code:
 [1, 2, 3, 4, 5]
-
-Python Code:
-
-Java Code:
 
 Images:
 - Sorted Data Diagram -> images/sorted_data_diagram.png
@@ -4259,16 +3997,12 @@ Real Life Examples:
 - Searching for a word in a dictionary
 - Looking up a record in a database
 
-Interview Questions:
-- What is Search Algorithm? | An algorithm designed to find a target element or determine whether it exists in a collection of data.
-- When should we use Search Algorithm? | Use Search Algorithm when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- search_space_reduction : n -> n/2
+- middle_index : mid = low + (high - low) / 2
 
 CPP Code:
 int binarySearch(vector<int>& arr, int target, int low, int high) { /* ... */ }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Search Algorithm Diagram -> images/search_algorithm_diagram.png
@@ -4304,15 +4038,13 @@ Time Complexity:
 Real Life Examples:
 - Binary Heap storage
 
-Interview Questions:
-- What is Complete Binary Tree? | A binary tree in which every level is completely filled, except possibly the last level, which is filled from left to right.
-- When should we use Complete Binary Tree? | Use Complete Binary Tree when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics.
+Math Relations:
+- tree_edges : edges = nodes - 1
+- height_relation : height = longest path from root to leaf
+- max_nodes_level_i : 2^i
+- max_nodes_height_h : 2^(h+1) - 1
 
 CPP Code:
-
-Python Code:
-
-Java Code:
 
 Images:
 - Complete Binary Tree Diagram -> images/complete_binary_tree_diagram.png
@@ -4348,16 +4080,12 @@ Time Complexity:
 Real Life Examples:
 - File system exploration
 
-Interview Questions:
-- What is Tree Traversal? | The process of visiting all nodes in a tree in a specific order.
-- When should we use Tree Traversal? | Use Tree Traversal when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- tree_edges : edges = nodes - 1
+- height_relation : height = longest path from root to leaf
 
 CPP Code:
 void preorder(Node n) { ... }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Tree Traversal Diagram -> images/tree_traversal_diagram.png
@@ -4393,16 +4121,12 @@ Real Life Examples:
 - GPS navigation
 - Social networking (friend levels)
 
-Interview Questions:
-- What is BFS? | Breadth-First Search: An algorithm for traversing or searching tree or graph data structures level by level.
-- When should we use BFS? | Use BFS when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- graph_definition : G = (V, E)
+- traversal_complexity : O(V + E)
 
 CPP Code:
 queue.enqueue(root);
-
-Python Code:
-
-Java Code:
 
 Images:
 - BFS Diagram -> images/bfs_diagram.png
@@ -4438,16 +4162,12 @@ Time Complexity:
 Real Life Examples:
 - Solving puzzles (mazes)
 
-Interview Questions:
-- What is DFS? | Depth-First Search: An algorithm for traversing or searching tree or graph data structures by exploring as far as possible along each branch before backtracking.
-- When should we use DFS? | Use DFS when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- graph_definition : G = (V, E)
+- traversal_complexity : O(V + E)
 
 CPP Code:
 dfs(vertex) { visited[vertex]=true; for... }
-
-Python Code:
-
-Java Code:
 
 Images:
 - DFS Diagram -> images/dfs_diagram.png
@@ -4482,15 +4202,10 @@ Real Life Examples:
 - Task scheduling
 - Git commit history
 
-Interview Questions:
-- What is DAG? | Directed Acyclic Graph: A directed graph with no directed cycles.
-- When should we use DAG? | Use DAG when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics.
+Math Relations:
+- size_relation : n = number of stored elements
 
 CPP Code:
-
-Python Code:
-
-Java Code:
 
 Images:
 - DAG Diagram -> images/dag_diagram.png
@@ -4524,15 +4239,14 @@ Time Complexity:
 Real Life Examples:
 - Road networks with distances
 
-Interview Questions:
-- What is Weighted Undirected Graph? | An undirected graph where each edge has an associated numerical value (weight).
-- When should we use Weighted Undirected Graph? | Use Weighted Undirected Graph when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics.
+Math Relations:
+- graph_definition : G = (V, E)
+- traversal_complexity : O(V + E)
+- weighted_graph : G = (V, E, W)
+- max_edges_undirected : n(n - 1) / 2
+- max_edges_directed : n(n - 1)
 
 CPP Code:
-
-Python Code:
-
-Java Code:
 
 Images:
 - Weighted Undirected Graph Diagram -> images/weighted_undirected_graph_diagram.png
@@ -4565,15 +4279,12 @@ Time Complexity:
 Real Life Examples:
 - Six degrees of separation
 
-Interview Questions:
-- What is Shortest Path (unweighted graphs)? | Finding the path between two vertices such that the number of edges is minimized.
-- When should we use Shortest Path (unweighted graphs)? | Use Shortest Path (unweighted graphs) when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- graph_definition : G = (V, E)
+- traversal_complexity : O(V + E)
+- weighted_graph : G = (V, E, W)
 
 CPP Code:
-
-Python Code:
-
-Java Code:
 
 Images:
 - Shortest Path (unweighted graphs) Diagram -> images/shortest_path_unweighted_graphs_diagram.png
@@ -4608,15 +4319,10 @@ Time Complexity:
 Real Life Examples:
 - Social network clusters
 
-Interview Questions:
-- What is Connected Components? | Subgraphs in which any two vertices are connected to each other by paths.
-- When should we use Connected Components? | Use Connected Components when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- time_complexity_relation : T(n) depends on input size n
 
 CPP Code:
-
-Python Code:
-
-Java Code:
 
 Images:
 - Connected Components Diagram -> images/connected_components_diagram.png
@@ -4649,15 +4355,11 @@ Time Complexity:
 Real Life Examples:
 - Network design (cabling)
 
-Interview Questions:
-- What is Spanning Tree? | A subset of an undirected graph that connects all vertices together without any cycles.
-- When should we use Spanning Tree? | Use Spanning Tree when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics.
+Math Relations:
+- tree_edges : edges = nodes - 1
+- height_relation : height = longest path from root to leaf
 
 CPP Code:
-
-Python Code:
-
-Java Code:
 
 Images:
 - Spanning Tree Diagram -> images/spanning_tree_diagram.png
@@ -4692,16 +4394,12 @@ Real Life Examples:
 - University course prerequisites
 - Build systems
 
-Interview Questions:
-- What is Topological Sort? | A linear ordering of vertices such that for every directed edge (u, v), vertex u comes before v.
-- When should we use Topological Sort? | Use Topological Sort when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- graph_definition : G = (V, E)
+- traversal_complexity : O(V + E)
 
 CPP Code:
 Kahn's Algorithm
-
-Python Code:
-
-Java Code:
 
 Images:
 - Topological Sort Diagram -> images/topological_sort_diagram.png
@@ -4742,9 +4440,9 @@ Real Life Examples:
 - Knapsack problem
 - Path counting
 
-Interview Questions:
-- What is Dynamic Programming? | An optimization technique that solves complex problems by breaking them into overlapping subproblems and storing previous results.
-- When should we use Dynamic Programming? | Use Dynamic Programming when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- optimal_substructure : solution built from subproblem solutions
+- overlapping_subproblems : repeated subproblems are reused
 
 CPP Code:
 vector<int> dp(n + 1);
@@ -4753,10 +4451,6 @@ dp[1] = 1;
 for(int i = 2; i <= n; i++) {
     dp[i] = dp[i - 1] + dp[i - 2];
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Dynamic Programming Diagram -> images/dynamic_programming_diagram.png
@@ -4796,19 +4490,14 @@ Real Life Examples:
 - Activity selection
 - Minimum spanning tree algorithms
 
-Interview Questions:
-- What is Greedy Algorithm? | An algorithmic strategy that makes the locally best choice at each step hoping to reach a globally optimal solution.
-- When should we use Greedy Algorithm? | Use Greedy Algorithm when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- time_complexity_relation : T(n) depends on input size n
 
 CPP Code:
 sort(items.begin(), items.end());
 for(auto item : items) {
     if(canChoose(item)) choose(item);
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Greedy Algorithm Diagram -> images/greedy_algorithm_diagram.png
@@ -4849,9 +4538,8 @@ Real Life Examples:
 - Sudoku solver
 - Generating permutations
 
-Interview Questions:
-- What is Backtracking? | A recursive problem-solving technique that builds candidates step by step and abandons a candidate when it cannot lead to a valid solution.
-- When should we use Backtracking? | Use Backtracking when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- time_complexity_relation : T(n) depends on input size n
 
 CPP Code:
 void backtrack() {
@@ -4862,10 +4550,6 @@ void backtrack() {
         undo(choice);
     }
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Backtracking Diagram -> images/backtracking_diagram.png
@@ -4903,9 +4587,9 @@ Real Life Examples:
 - Maximum sum subarray of size k
 - Longest substring without repeating characters
 
-Interview Questions:
-- What is Sliding Window? | A technique used to process contiguous subarrays or substrings efficiently by maintaining a moving window over the data.
-- When should we use Sliding Window? | Use Sliding Window when its structure, operations, or performance match the problem requirement, especially in Algorithm topics.
+Math Relations:
+- window_size : right - left + 1
+- two_pointer_update : move left or right boundary
 
 CPP Code:
 int left = 0;
@@ -4916,10 +4600,6 @@ for(int right = 0; right < n; right++) {
         left++;
     }
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Sliding Window Diagram -> images/sliding_window_diagram.png
@@ -4959,19 +4639,15 @@ Real Life Examples:
 - Kruskal algorithm
 - Network connectivity
 
-Interview Questions:
-- What is Union Find? | A data structure that keeps track of disjoint sets and supports efficient union and find operations.
-- When should we use Union Find? | Use Union Find when its structure, operations, or performance match the problem requirement, especially in Specialized Structure topics.
+Math Relations:
+- find_relation : representative(parent[x])
+- union_relation : merge two sets by parent/root
 
 CPP Code:
 int find(int x) {
     if(parent[x] == x) return x;
     return parent[x] = find(parent[x]);
 }
-
-Python Code:
-
-Java Code:
 
 Images:
 - Union Find Diagram -> images/union_find_diagram.png
@@ -5009,19 +4685,15 @@ Real Life Examples:
 - Spell checker
 - Dictionary search
 
-Interview Questions:
-- What is Trie? | A tree-like data structure used to store strings where each path represents a prefix.
-- When should we use Trie? | Use Trie when its structure, operations, or performance match the problem requirement, especially in Specialized Structure topics.
+Math Relations:
+- prefix_relation : path(root,node) = prefix
+- search_complexity : O(L), where L is word length
 
 CPP Code:
 struct TrieNode {
     TrieNode* child[26];
     bool isEnd;
 };
-
-Python Code:
-
-Java Code:
 
 Images:
 - Trie Diagram -> images/trie_diagram.png
@@ -5032,7 +4704,7 @@ Step By Step:
 - For each character, move to or create a child node
 - Mark the end of a word
 - Search by following character links
-==================================================
+
 Topic: Memoization
 Category: Algorithmic Technique
 Difficulty: Medium
@@ -5056,17 +4728,8 @@ Real Life Examples:
 - Caching website data
 - Saving repeated calculations
 
-Interview Questions:
-- What is memoization? | Memoization is an optimization technique that stores computed results for reuse.
-
 CPP Code:
 unordered_map<int, int> memo;
-
-Python Code:
-memo = {}
-
-Java Code:
-HashMap<Integer, Integer> memo = new HashMap<>();
 
 Images:
 - Memoization Cache -> images/memoization_cache.png
@@ -5077,7 +4740,7 @@ Step By Step:
 - If no, compute answer
 - Store answer in cache
 - Return result
-==================================================
+
 Topic: Tabulation
 Category: Algorithmic Technique
 Difficulty: Medium
@@ -5101,17 +4764,8 @@ Real Life Examples:
 - Building a score table
 - Filling spreadsheet calculations
 
-Interview Questions:
-- What is tabulation? | Tabulation solves subproblems iteratively from the smallest case to the final answer.
-
 CPP Code:
 vector<int> dp(n + 1, 0);
-
-Python Code:
-dp = [0] * (n + 1)
-
-Java Code:
-int[] dp = new int[n + 1];
 
 Images:
 - Tabulation Table -> images/tabulation_table.png
@@ -5121,7 +4775,7 @@ Step By Step:
 - Set base cases
 - Fill table from smaller problems
 - Use final cell as answer
-==================================================
+
 Topic: String Matching
 Category: Algorithm
 Difficulty: Medium
@@ -5145,17 +4799,8 @@ Real Life Examples:
 - Search bar autocomplete
 - Finding words in documents
 
-Interview Questions:
-- What is string matching? | String matching finds occurrences of a pattern inside a larger text.
-
 CPP Code:
 text.find(pattern);
-
-Python Code:
-pattern in text
-
-Java Code:
-text.contains(pattern);
 
 Images:
 - String Matching Example -> images/string_matching.png

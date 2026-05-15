@@ -12,17 +12,10 @@
         },
         "real_life_examples": [
             "Student scores",
-            "Temperature readings"
+            "Temperature readings",
+            "Math Relations:"
         ],
         "interview_questions": [
-            {
-                "question": "What is Data?",
-                "answer": "Raw facts and information that can be processed."
-            },
-            {
-                "question": "When should we use Data?",
-                "answer": "Use Data when its structure, operations, or performance match the problem requirement, especially in Fundamental Concept topics."
-            }
         ],
         "code_examples": {
         },
@@ -63,17 +56,10 @@
         "time_complexity": {
         },
         "real_life_examples": [
-            "Database organization"
+            "Database organization",
+            "Math Relations:"
         ],
         "interview_questions": [
-            {
-                "question": "What is Data Structure?",
-                "answer": "A method of organizing and storing data efficiently."
-            },
-            {
-                "question": "When should we use Data Structure?",
-                "answer": "Use Data Structure when its structure, operations, or performance match the problem requirement, especially in Fundamental Concept topics."
-            }
         ],
         "code_examples": {
         },
@@ -113,17 +99,11 @@
         "time_complexity": {
         },
         "real_life_examples": [
-            "Queue line"
+            "Queue line",
+            "Math Relations:",
+            "size_relation : n = number of stored elements"
         ],
         "interview_questions": [
-            {
-                "question": "What is Linear Data Structure?",
-                "answer": "Data elements arranged sequentially."
-            },
-            {
-                "question": "When should we use Linear Data Structure?",
-                "answer": "Use Linear Data Structure when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics."
-            }
         ],
         "code_examples": {
         },
@@ -180,17 +160,12 @@
             "search": "O(n)"
         },
         "real_life_examples": [
-            "Student score list"
+            "Student score list",
+            "Math Relations:",
+            "index_range : 0 <= i < n",
+            "memory_address : address(A[i]) = base + i * element_size"
         ],
         "interview_questions": [
-            {
-                "question": "What is Array?",
-                "answer": "A collection of elements stored in contiguous memory locations."
-            },
-            {
-                "question": "When should we use Array?",
-                "answer": "Use Array when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "int arr[5] = {1,2,3,4,5};\n"
@@ -228,17 +203,12 @@
             "access": "O(1)"
         },
         "real_life_examples": [
-            "List of exam scores"
+            "List of exam scores",
+            "Math Relations:",
+            "index_range : 0 <= i < n",
+            "memory_address : address(A[i]) = base + i * element_size"
         ],
         "interview_questions": [
-            {
-                "question": "What is One-Dimensional Array?",
-                "answer": "Array containing elements in a single row."
-            },
-            {
-                "question": "When should we use One-Dimensional Array?",
-                "answer": "Use One-Dimensional Array when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "int arr[5];\n"
@@ -276,17 +246,12 @@
             "access": "O(1)"
         },
         "real_life_examples": [
-            "Spreadsheet table"
+            "Spreadsheet table",
+            "Math Relations:",
+            "index_range : 0 <= i < n",
+            "memory_address : address(A[i]) = base + i * element_size"
         ],
         "interview_questions": [
-            {
-                "question": "What is Two-Dimensional Array?",
-                "answer": "Array organized in rows and columns."
-            },
-            {
-                "question": "When should we use Two-Dimensional Array?",
-                "answer": "Use Two-Dimensional Array when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "int matrix[3][3];\n"
@@ -352,17 +317,12 @@
         },
         "real_life_examples": [
             "Music playlists navigation",
-            "Browser history navigation"
+            "Browser history navigation",
+            "Math Relations:",
+            "node_relation : n_i.next = n_{i+1}",
+            "traversal_cost : T(n) = O(n)"
         ],
         "interview_questions": [
-            {
-                "question": "What is Linked List?",
-                "answer": "A linked list is a linear data structure made of nodes, where elements are stored non-contiguously in memory. Each node contains data and a pointer to the next node in the sequence."
-            },
-            {
-                "question": "When should we use Linked List?",
-                "answer": "Use Linked List when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "class Node {\npublic:\nint data;\nNode *next;\n\nNode(int value) : data(value), next(nullptr) {}\n};\n\nint main() {\nNode* head = new Node(1);\nhead->next = new Node(2);\nhead->next->next = new Node(3);\nreturn 0;\n}\n"
@@ -425,17 +385,12 @@
         "real_life_examples": [
             "Simple task scheduling",
             "Browser forward navigation",
-            "Music playlist next song navigation"
+            "Music playlist next song navigation",
+            "Math Relations:",
+            "node_relation : n_i.next = n_{i+1}",
+            "traversal_cost : T(n) = O(n)"
         ],
         "interview_questions": [
-            {
-                "question": "What is Singly Linked List?",
-                "answer": "Singly linked list is a linked list where each node points only to the next node in the sequence."
-            },
-            {
-                "question": "When should we use Singly Linked List?",
-                "answer": "Use Singly Linked List when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "class Node {\npublic:\nint data;\nNode *next;\n\nNode(int value) : data(value), next(nullptr) {}\n};\n\nint main() {\nNode* head = new Node(1);\nhead->next = new Node(2);\nhead->next->next = nullptr;\nreturn 0;\n}\n"
@@ -495,17 +450,12 @@
         "real_life_examples": [
             "Music playlist next and previous song navigation",
             "Browser back and forward navigation",
-            "Undo and redo functionality in software"
+            "Undo and redo functionality in software",
+            "Math Relations:",
+            "node_relation : n_i.next = n_{i+1}",
+            "traversal_cost : T(n) = O(n)"
         ],
         "interview_questions": [
-            {
-                "question": "What is Doubly Linked List?",
-                "answer": "A linked list where each node contains pointers to both the next and previous nodes."
-            },
-            {
-                "question": "When should we use Doubly Linked List?",
-                "answer": "Use Doubly Linked List when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "class Node {\npublic:\nint data;\nNode *next;\nNode *prev;\n\nNode(int value) : data(value), next(nullptr), prev(nullptr) {}\n};\n\nint main() {\nNode* head = new Node(1);\nhead->next = new Node(2);\nhead->next->prev = head;\nhead->next->next = new Node(3);\nhead->next->next->prev = head->next;\nreturn 0;\n}\n"
@@ -565,17 +515,12 @@
         "real_life_examples": [
             "Circular buffer implementation",
             "Round-robin scheduling",
-            "Looping music playlists"
+            "Looping music playlists",
+            "Math Relations:",
+            "node_relation : n_i.next = n_{i+1}",
+            "traversal_cost : T(n) = O(n)"
         ],
         "interview_questions": [
-            {
-                "question": "What is Circular Linked List?",
-                "answer": "A linked list where the last node points back to the first node, forming a circular structure."
-            },
-            {
-                "question": "When should we use Circular Linked List?",
-                "answer": "Use Circular Linked List when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "class Node {\npublic:\nint data;\nNode *next;\n\nNode(int value) : data(value), next(this) {}\n};\n\nint main() {\nNode* head = new Node(1);\nNode* second = new Node(2);\nNode* third = new Node(3);\n\nhead->next = second;\nsecond->next = third;\nthird->next = head;\nreturn 0;\n}\n"
@@ -634,17 +579,10 @@
         },
         "real_life_examples": [
             "People connected in a social network",
-            "Webpages connected by hyperlinks"
+            "Webpages connected by hyperlinks",
+            "Math Relations:"
         ],
         "interview_questions": [
-            {
-                "question": "What is Node?",
-                "answer": "A fundamental building block used in data structures such as linked lists, trees, and graphs, where each node stores data and one or more references to other nodes."
-            },
-            {
-                "question": "When should we use Node?",
-                "answer": "Use Node when its structure, operations, or performance match the problem requirement, especially in Component topics."
-            }
         ],
         "code_examples": {
             "cpp": "class Node {\npublic:\nint data;\nNode *next;\n\nNode(int value) : data(value), next(nullptr) {}\n};\n"
@@ -700,17 +638,12 @@
         "real_life_examples": [
             "Memory management in operating systems",
             "Navigation systems using memory references",
-            "Dynamic data structures in programming"
+            "Dynamic data structures in programming",
+            "Math Relations:",
+            "pointer_assignment : p = &x",
+            "dereference : *p = value_at_address(p)"
         ],
         "interview_questions": [
-            {
-                "question": "What is Pointer?",
-                "answer": "A variable that stores the memory address of another variable."
-            },
-            {
-                "question": "When should we use Pointer?",
-                "answer": "Use Pointer when its structure, operations, or performance match the problem requirement, especially in Memory Concept topics."
-            }
         ],
         "code_examples": {
             "cpp": "int main() {\nint value = 42;\nint* ptr = &value;\ncout << \"Value: \" << *ptr << endl;\nreturn 0;\n}\n"
@@ -769,17 +702,10 @@
         "real_life_examples": [
             "Managing memory for applications while they are running",
             "Creating dynamic data structures like linked lists and trees",
-            "Operating systems allocating memory to processes"
+            "Operating systems allocating memory to processes",
+            "Math Relations:"
         ],
         "interview_questions": [
-            {
-                "question": "What is Dynamic Memory Allocation?",
-                "answer": "Dynamic memory allocation is the process of allocating memory for a program at runtime (while it is running), rather than at compile time. This allows for more flexible and efficient use of memory, as the program can request and release memory as needed."
-            },
-            {
-                "question": "When should we use Dynamic Memory Allocation?",
-                "answer": "Use Dynamic Memory Allocation when its structure, operations, or performance match the problem requirement, especially in Memory Concept topics."
-            }
         ],
         "code_examples": {
             "cpp": "#include <iostream>\nusing namespace std;\n\nint main() {\nint* arr = new int[5]; // Allocate memory for an array of 5 integers\nfor (int i = 0; i < 5; i++) {\narr[i] = i + 1; // Initialize the array\n}\nfor (int i = 0; i < 5; i++) {\ncout << arr[i] << \" \"; // Output the array elements\n}\ndelete[] arr; // Deallocate the memory\nreturn 0;\n}\n"
@@ -841,17 +767,13 @@
             "Browser back button",
             "Stack of plates",
             "Stack of books",
-            "Stack of boxes"
+            "Stack of boxes",
+            "Math Relations:",
+            "lifo_property : Last In = First Out",
+            "top_update_push : top = top + 1",
+            "top_update_pop : top = top - 1"
         ],
         "interview_questions": [
-            {
-                "question": "What is Stack?",
-                "answer": "A linear data structure where operations are performed only at one end, the last element added to the stack is the first to be removed (LIFO: Last In First Out)."
-            },
-            {
-                "question": "When should we use Stack?",
-                "answer": "Use Stack when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "#include <stack>\nusing namespace std;\n\nint main() {\nstack<int> s;\n\ns.push(10);\ns.push(20);\ns.pop();\n\nreturn 0;\n}\n"
@@ -923,17 +845,13 @@
         "real_life_examples": [
             "Store customer lines, first come, first served",
             "Print queue in a printer",
-            "CPU task scheduling"
+            "CPU task scheduling",
+            "Math Relations:",
+            "fifo_property : First In = First Out",
+            "enqueue_update : rear = rear + 1",
+            "dequeue_update : front = front + 1"
         ],
         "interview_questions": [
-            {
-                "question": "What is Queue?",
-                "answer": "A linear structure where the first element added is the first to be removed (FIFO: First In First Out), elements are inserted at the rear and removed from the front."
-            },
-            {
-                "question": "When should we use Queue?",
-                "answer": "Use Queue when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "#include <iostream>\n#include <queue>\nusing namespace std;\n\nint main() {\nqueue<int> q;\nq.push(10);\nq.push(20);\ncout << q.front() << endl;\nq.pop();\nreturn 0;\n}\n"
@@ -994,17 +912,14 @@
             "Round-robin scheduling",
             "Circular buffer implementation",
             "Traffic lights",
-            "Printer queue"
+            "Printer queue",
+            "Math Relations:",
+            "fifo_property : First In = First Out",
+            "enqueue_update : rear = rear + 1",
+            "dequeue_update : front = front + 1",
+            "circular_index : i = (i + 1) mod n"
         ],
         "interview_questions": [
-            {
-                "question": "What is Circular Queue?",
-                "answer": "A queue where the rear wraps around to the front using circular indexing, efficiently reusing empty spaces created by dequeued elements."
-            },
-            {
-                "question": "When should we use Circular Queue?",
-                "answer": "Use Circular Queue when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "#include <iostream>\nusing namespace std;\n\nint arr[3], front = -1, rear = -1, n = 3;\n\nvoid enqueue(int x) {\nif ((rear + 1) % n == front) return;\nif (front == -1) front = 0;\nrear = (rear + 1) % n;\narr[rear] = x;\n}\n\nvoid dequeue() {\nif (front == -1) return;\nif (front == rear) front = rear = -1;\nelse front = (front + 1) % n;\n}\n\nint main() {\nenqueue(10);\nenqueue(20);\ndequeue();\nenqueue(30);\n}\n"
@@ -1062,17 +977,13 @@
         "real_life_examples": [
             "CPU task scheduling",
             "Hospital emergency room system",
-            "Network packet routing"
+            "Network packet routing",
+            "Math Relations:",
+            "fifo_property : First In = First Out",
+            "enqueue_update : rear = rear + 1",
+            "dequeue_update : front = front + 1"
         ],
         "interview_questions": [
-            {
-                "question": "What is Priority Queue?",
-                "answer": "A queue where elements are removed based on priority instead of insertion order."
-            },
-            {
-                "question": "When should we use Priority Queue?",
-                "answer": "Use Priority Queue when its structure, operations, or performance match the problem requirement, especially in Specialized Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "#include <iostream>\n#include <queue>\nusing namespace std;\n\nint main() {\n\n// pair<priority, value>\npriority_queue<pair<int, int>> pq;\n\npq.push({3, 100});\npq.push({5, 200});\npq.push({1, 300});\n\n// top()\ncout << \"Top Element: \"\n<< pq.top().second\n<< \" with priority \"\n<< pq.top().first << endl;\n\npq.pop();\n\ncout << \"After pop(): \"\n<< pq.top().second << endl;\n\nreturn 0;\n}\n"
@@ -1127,17 +1038,13 @@
         },
         "real_life_examples": [
             "Browser history navigation",
-            "Sliding window algorithms"
+            "Sliding window algorithms",
+            "Math Relations:",
+            "fifo_property : First In = First Out",
+            "enqueue_update : rear = rear + 1",
+            "dequeue_update : front = front + 1"
         ],
         "interview_questions": [
-            {
-                "question": "What is Deque?",
-                "answer": "A double-ended queue that allows insertion and deletion at both the front and rear."
-            },
-            {
-                "question": "When should we use Deque?",
-                "answer": "Use Deque when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "#include <iostream>\n#include <deque>\nusing namespace std;\n\nint main() {\ndeque<int> dq;\n\ndq.push_back(10);\ndq.push_back(20);\ndq.push_front(30);\n\n// Print deque elements\nfor (int x : dq) cout << x << \" \";\ncout << endl;\n\n// Pop from front and back\ndq.pop_front();\ndq.pop_back();\n\n// Print deque elements after pop\nfor (int x : dq) cout << x << \" \";\n\nreturn 0;\n}\n"
@@ -1191,17 +1098,12 @@
         },
         "real_life_examples": [
             "Folder traversal",
-            "Tower of hanoi"
+            "Tower of hanoi",
+            "Math Relations:",
+            "recurrence_relation : T(n) = T(n-1) + O(1)",
+            "base_case_required : recursion stops when condition is met"
         ],
         "interview_questions": [
-            {
-                "question": "What is Recursion?",
-                "answer": "Recursion is a technique where a function solves a problem by calling itself on smaller subproblems."
-            },
-            {
-                "question": "When should we use Recursion?",
-                "answer": "Use Recursion when its structure, operations, or performance match the problem requirement, especially in Algorithmic Technique topics."
-            }
         ],
         "code_examples": {
         },
@@ -1253,17 +1155,12 @@
         },
         "real_life_examples": [
             "Factorial calculation",
-            "Tower of hanoi"
+            "Tower of hanoi",
+            "Math Relations:",
+            "recurrence_relation : T(n) = T(n-1) + O(1)",
+            "base_case_required : recursion stops when condition is met"
         ],
         "interview_questions": [
-            {
-                "question": "What is Recursive Function?",
-                "answer": "A function that calls itself to solve smaller instances of a problem."
-            },
-            {
-                "question": "When should we use Recursive Function?",
-                "answer": "Use Recursive Function when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "#include <iostream>\nusing namespace std;\n\nint factorial(int n) {\nif (n == 0 || n == 1) return 1;\nreturn n * factorial(n-1);\n}\n\nint main() {\nint n = 5;\nint result = factorial(n);\ncout << result << endl;\nreturn 0;\n}\n"
@@ -1310,17 +1207,11 @@
         },
         "real_life_examples": [
             "A GPS stopping its search once the destination coordinates are reached",
-            "Walking down a staircase and stopping once our foot touches the ground floor"
+            "Walking down a staircase and stopping once our foot touches the ground floor",
+            "Math Relations:",
+            "time_complexity_relation : T(n) depends on input size n"
         ],
         "interview_questions": [
-            {
-                "question": "What is Base Case?",
-                "answer": "The stopping condition in a recursive algorithm that prevents infinite recursion."
-            },
-            {
-                "question": "When should we use Base Case?",
-                "answer": "Use Base Case when its structure, operations, or performance match the problem requirement, especially in Algorithmic Technique topics."
-            }
         ],
         "code_examples": {
             "cpp": "int factorial(int n) {\n// The Base Case\nif (n <= 1) {\nreturn 1;\n}\n// The Recursive Step\nreturn n * factorial(n - 1);\n}\n"
@@ -1371,17 +1262,13 @@
         },
         "real_life_examples": [
             "Tracking active function calls in a program",
-            "Managing recursive function execution"
+            "Managing recursive function execution",
+            "Math Relations:",
+            "lifo_property : Last In = First Out",
+            "top_update_push : top = top + 1",
+            "top_update_pop : top = top - 1"
         ],
         "interview_questions": [
-            {
-                "question": "What is Call Stack?",
-                "answer": "A stack used by programs to manage active function calls. Each time a function is called, it is added to the stack, executes its statements, and finally returns to where it was called from."
-            },
-            {
-                "question": "When should we use Call Stack?",
-                "answer": "Use Call Stack when its structure, operations, or performance match the problem requirement, especially in Memory Concept topics."
-            }
         ],
         "code_examples": {
             "cpp": "#include <iostream>\nusing namespace std;\n\nvoid D() {\nfloat d = 40.5f;\ncout << \"In function D\\n\";\n}\n\nvoid C() {\ndouble c = 30.5;\ncout << \"In function C\\n\";\n}\n\nvoid B() {\nint b = 20;\nC();\ncout << \"In function B\\n\";\n}\n\nvoid A() {\nint a = 10;\nB();\ncout << \"In function A\\n\";\n}\n\nint main() {\nA();\nD();\nreturn 0;\n}\n"
@@ -1440,17 +1327,12 @@
         },
         "real_life_examples": [
             "Adjacency matrix of sparse graphs",
-            "Image compression"
+            "Image compression",
+            "Math Relations:",
+            "matrix_dimension : A is m x n",
+            "element_position : A[i][j]"
         ],
         "interview_questions": [
-            {
-                "question": "What is Sparse Matrix?",
-                "answer": "A matrix in which most of the elements are zero."
-            },
-            {
-                "question": "When should we use Sparse Matrix?",
-                "answer": "Use Sparse Matrix when its structure, operations, or performance match the problem requirement, especially in Specialized Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "struct Node {\nint row, col, val;\nNode* next;\n};\n// Linked list approach for insertion\nvoid insert(int r, int c, int v) {\n// Implementation logic to link new node\n}\n"
@@ -1505,17 +1387,12 @@
         },
         "real_life_examples": [
             "Equation simplification",
-            "Scientific calculator"
+            "Scientific calculator",
+            "Math Relations:",
+            "polynomial_form : P(x) = a_nx^n + ... + a_0",
+            "term_form : coefficient * x^exponent"
         ],
         "interview_questions": [
-            {
-                "question": "What is Polynomial Representation?",
-                "answer": "A method of storing and manipulating polynomial expressions using arrays or linked lists."
-            },
-            {
-                "question": "When should we use Polynomial Representation?",
-                "answer": "Use Polynomial Representation when its structure, operations, or performance match the problem requirement, especially in Representation Technique topics."
-            }
         ],
         "code_examples": {
             "cpp": "struct Term {\nint coeff;\nint exp;\nTerm* next;\n};\n\nvoid addTerm(Term** poly, int c, int e) {\nTerm* newNode = new Term{c, e, nullptr};\n// Implementation to keep terms sorted by exponent\n}\n"
@@ -1563,17 +1440,12 @@
         "real_life_examples": [
             "File systems",
             "Organizational charts",
-            "Family trees"
+            "Family trees",
+            "Math Relations:",
+            "tree_edges : edges = nodes - 1",
+            "height_relation : height = longest path from root to leaf"
         ],
         "interview_questions": [
-            {
-                "question": "What is Tree?",
-                "answer": "A hierarchical data structure consisting of nodes connected by edges with one root node and zero or more subtrees."
-            },
-            {
-                "question": "When should we use Tree?",
-                "answer": "Use Tree when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "struct TreeNode {\n\nint data;\n\nvector<TreeNode*> children;\n\nTreeNode(int val) : data(val) {}\n\n};\n"
@@ -1623,17 +1495,14 @@
         "real_life_examples": [
             "Tournament brackets",
             "Expression trees",
-            "Decision making/trees"
+            "Decision making/trees",
+            "Math Relations:",
+            "tree_edges : edges = nodes - 1",
+            "height_relation : height = longest path from root to leaf",
+            "max_nodes_level_i : 2^i",
+            "max_nodes_height_h : 2^(h+1) - 1"
         ],
         "interview_questions": [
-            {
-                "question": "What is Binary Tree?",
-                "answer": "A tree in which each node has at most two children called the left child and right child."
-            },
-            {
-                "question": "When should we use Binary Tree?",
-                "answer": "Use Binary Tree when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "class Node {\n\npublic:\n\nT data;\n\nNode* left;\n\nNode* right;\n\nNode(T value) : data(value), left(nullptr), right(nullptr) {}\n\n};\n"
@@ -1682,17 +1551,16 @@
         },
         "real_life_examples": [
             "Dictionary/ Word lookup",
-            "Databases and Indexing"
+            "Databases and Indexing",
+            "Math Relations:",
+            "tree_edges : edges = nodes - 1",
+            "height_relation : height = longest path from root to leaf",
+            "max_nodes_level_i : 2^i",
+            "max_nodes_height_h : 2^(h+1) - 1",
+            "bst_property : left_subtree < root < right_subtree",
+            "average_search_height : O(log n)"
         ],
         "interview_questions": [
-            {
-                "question": "What is Binary Search Tree?",
-                "answer": "A binary tree where all values in the left subtree are smaller than the root and all values in the right subtree are larger than the root."
-            },
-            {
-                "question": "When should we use Binary Search Tree?",
-                "answer": "Use Binary Search Tree when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "struct Node {\n\nint data;\n\nNode* left;\n\nNode* right;\n\nNode(int val) : data(val), left(nullptr), right(nullptr) {}\n\n};\n"
@@ -1743,17 +1611,14 @@
         },
         "real_life_examples": [
             "Gaming and Simulation Engines",
-            "Memory management in operating systems"
+            "Memory management in operating systems",
+            "Math Relations:",
+            "tree_edges : edges = nodes - 1",
+            "height_relation : height = longest path from root to leaf",
+            "balance_factor : height(left) - height(right)",
+            "avl_condition : -1 <= balance_factor <= 1"
         ],
         "interview_questions": [
-            {
-                "question": "What is AVL Tree?",
-                "answer": "A self-balancing binary search tree where the difference between heights of left and right subtrees cannot be more than one for any node."
-            },
-            {
-                "question": "When should we use AVL Tree?",
-                "answer": "Use AVL Tree when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "struct AVLNode {\n\npublic:\n\nint key;\n\nAVLNode* left;\n\nAVLNode* right;\n\nint height;\n\nAVLNode(int val) : key(val), left(nullptr), right(nullptr), height(1) {}\n\n};\n"
@@ -1800,17 +1665,13 @@
         },
         "real_life_examples": [
             "Bandwidth management in networks",
-            "Job scheduling in cloud computing"
+            "Job scheduling in cloud computing",
+            "Math Relations:",
+            "parent_index : floor((i - 1) / 2)",
+            "left_child_index : 2i + 1",
+            "right_child_index : 2i + 2"
         ],
         "interview_questions": [
-            {
-                "question": "What is Heap?",
-                "answer": "A complete binary tree that satisfies the heap-order property."
-            },
-            {
-                "question": "When should we use Heap?",
-                "answer": "Use Heap when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "vector<int> heap = {50, 30, 20, 15, 10};\n"
@@ -1865,17 +1726,14 @@
         },
         "real_life_examples": [
             "Gaming leaderboards",
-            "Stock market systems"
+            "Stock market systems",
+            "Math Relations:",
+            "parent_index : floor((i - 1) / 2)",
+            "left_child_index : 2i + 1",
+            "right_child_index : 2i + 2",
+            "max_heap_property : parent >= child"
         ],
         "interview_questions": [
-            {
-                "question": "What is Max Heap?",
-                "answer": "A heap where each parent node is greater than or equal to its children."
-            },
-            {
-                "question": "When should we use Max Heap?",
-                "answer": "Use Max Heap when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "class MaxHeap {\nprivate:\nvector<T> heap;\nint capacity;\nint size;\n\npublic:\nMaxHeap(int cap) : capacity(cap), size(0) {\nheap.resize(capacity);\n}\n};\n"
@@ -1934,17 +1792,14 @@
         },
         "real_life_examples": [
             "Navigation systems (shortest path algorithms)",
-            "Task scheduling in operating systems"
+            "Task scheduling in operating systems",
+            "Math Relations:",
+            "parent_index : floor((i - 1) / 2)",
+            "left_child_index : 2i + 1",
+            "right_child_index : 2i + 2",
+            "min_heap_property : parent <= child"
         ],
         "interview_questions": [
-            {
-                "question": "What is Min Heap?",
-                "answer": "A heap where each parent node is less than or equal to its children."
-            },
-            {
-                "question": "When should we use Min Heap?",
-                "answer": "Use Min Heap when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "class MinHeap {\nprivate:\nvector<T> heap;\nint capacity;\nint size;\n\npublic:\nMinHeap(int cap) : capacity(cap), size(0) {\nheap.resize(capacity);\n}\n};\n"
@@ -1989,17 +1844,12 @@
             "lookupEdge": "O(1)"
         },
         "real_life_examples": [
-            "Network connectivity tables"
+            "Network connectivity tables",
+            "Math Relations:",
+            "matrix_dimension : A is m x n",
+            "element_position : A[i][j]"
         ],
         "interview_questions": [
-            {
-                "question": "What is Adjacency Matrix?",
-                "answer": "A matrix used to represent a graph, where each cell indicates if an edge exists between two vertices."
-            },
-            {
-                "question": "When should we use Adjacency Matrix?",
-                "answer": "Use Adjacency Matrix when its structure, operations, or performance match the problem requirement, especially in Representation Technique topics."
-            }
         ],
         "code_examples": {
             "cpp": "vector<vector<int>> adj(V, vector<int>(V, 0));\n"
@@ -2050,17 +1900,12 @@
             "traverse": "O(V + E)"
         },
         "real_life_examples": [
-            "Finding shortest paths in unweighted graphs"
+            "Finding shortest paths in unweighted graphs",
+            "Math Relations:",
+            "search_space_reduction : n -> n/2",
+            "middle_index : mid = low + (high - low) / 2"
         ],
         "interview_questions": [
-            {
-                "question": "What is Breadth First Search?",
-                "answer": "An algorithm for traversing or searching graph or tree data structures level by level."
-            },
-            {
-                "question": "When should we use Breadth First Search?",
-                "answer": "Use Breadth First Search when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "queue<int> q; q.push(src);\n"
@@ -2110,17 +1955,12 @@
             "traverse": "O(V + E)"
         },
         "real_life_examples": [
-            "Maze solving"
+            "Maze solving",
+            "Math Relations:",
+            "search_space_reduction : n -> n/2",
+            "middle_index : mid = low + (high - low) / 2"
         ],
         "interview_questions": [
-            {
-                "question": "What is Depth First Search?",
-                "answer": "An algorithm for traversing or searching graph or tree data structures by exploring as far down a branch as possible before backtracking."
-            },
-            {
-                "question": "When should we use Depth First Search?",
-                "answer": "Use Depth First Search when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "dfs(v) { visited[v]=true; for(n in adj[v]) if(!visited[n]) dfs(n); }\n"
@@ -2165,17 +2005,12 @@
             "compute": "O(n)"
         },
         "real_life_examples": [
-            "Counting permutations"
+            "Counting permutations",
+            "Math Relations:",
+            "factorial_relation : n! = n * (n - 1)!",
+            "base_case : 0! = 1"
         ],
         "interview_questions": [
-            {
-                "question": "What is Factorial?",
-                "answer": "The product of all positive integers up to a given number, used in recursion and mathematical computations."
-            },
-            {
-                "question": "When should we use Factorial?",
-                "answer": "Use Factorial when its structure, operations, or performance match the problem requirement, especially in Mathematics topics."
-            }
         ],
         "code_examples": {
             "cpp": "int factorial(int n) { return n <= 1 ? 1 : n * factorial(n - 1); }\n"
@@ -2220,17 +2055,12 @@
             "generate": "O(2^n)"
         },
         "real_life_examples": [
-            "Population growth models"
+            "Population growth models",
+            "Math Relations:",
+            "recurrence : F(n) = F(n-1) + F(n-2)",
+            "base_cases : F(0)=0, F(1)=1"
         ],
         "interview_questions": [
-            {
-                "question": "What is Fibonacci Sequence?",
-                "answer": "A sequence where each number is the sum of the two preceding numbers, often defined recursively."
-            },
-            {
-                "question": "When should we use Fibonacci Sequence?",
-                "answer": "Use Fibonacci Sequence when its structure, operations, or performance match the problem requirement, especially in Mathematics topics."
-            }
         ],
         "code_examples": {
             "cpp": "int fib(int n) { return n <= 1 ? n : fib(n - 1) + fib(n - 2); }\n"
@@ -2276,17 +2106,11 @@
             "traverse": "O(n)"
         },
         "real_life_examples": [
-            "Breadth-first exploration"
+            "Breadth-first exploration",
+            "Math Relations:",
+            "time_complexity_relation : T(n) depends on input size n"
         ],
         "interview_questions": [
-            {
-                "question": "What is Level Order Traversal?",
-                "answer": "A tree traversal method that visits nodes level by level, from top to bottom."
-            },
-            {
-                "question": "When should we use Level Order Traversal?",
-                "answer": "Use Level Order Traversal when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "queue<Node*> q; q.push(root); while(!q.empty()) { ... }\n"
@@ -2333,17 +2157,10 @@
             "deallocate": "O(1)"
         },
         "real_life_examples": [
-            "Managing RAM for running applications"
+            "Managing RAM for running applications",
+            "Math Relations:"
         ],
         "interview_questions": [
-            {
-                "question": "What is Memory Management?",
-                "answer": "The process of allocating and freeing memory in a program, often important in dynamic data structures and recursion."
-            },
-            {
-                "question": "When should we use Memory Management?",
-                "answer": "Use Memory Management when its structure, operations, or performance match the problem requirement, especially in Computer Science Concept topics."
-            }
         ],
         "code_examples": {
             "cpp": "int* data = new int[10]; delete[] data;\n"
@@ -2384,17 +2201,10 @@
             "storeNonZero": "O(1)"
         },
         "real_life_examples": [
-            "Storing sparse datasets efficiently"
+            "Storing sparse datasets efficiently",
+            "Math Relations:"
         ],
         "interview_questions": [
-            {
-                "question": "What is Triplet Representation?",
-                "answer": "A sparse matrix representation that stores only non-zero elements as triplets of row, column, and value."
-            },
-            {
-                "question": "When should we use Triplet Representation?",
-                "answer": "Use Triplet Representation when its structure, operations, or performance match the problem requirement, especially in Representation Technique topics."
-            }
         ],
         "code_examples": {
             "cpp": "struct Triplet { int row, col, val; };\n"
@@ -2459,17 +2269,12 @@
             "Airplane flight routes",
             "Social networks",
             "Computer networks",
-            "Power grids"
+            "Power grids",
+            "Math Relations:",
+            "graph_definition : G = (V, E)",
+            "traversal_complexity : O(V + E)"
         ],
         "interview_questions": [
-            {
-                "question": "What is Graph?",
-                "answer": "A collection or set of nodes(vertices) connected by edges."
-            },
-            {
-                "question": "When should we use Graph?",
-                "answer": "Use Graph when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "vector<vector<int>> createGraph(int V, vector<vector<int>> &edges) {\nvector<vector<int>> mat(V, vector<int>(V, 0));\n\nfor (auto &it : edges) {\nint u = it[0];\nint v = it[1];\nmat[u][v] = 1;\nmat[v][u] = 1;\n}\n\nreturn mat;\n}\n"
@@ -2531,17 +2336,13 @@
         "real_life_examples": [
             "Airplane flight routes",
             "Social media following/follower relationships",
-            "Web page linking"
+            "Web page linking",
+            "Math Relations:",
+            "graph_definition : G = (V, E)",
+            "traversal_complexity : O(V + E)",
+            "max_edges_directed : n(n - 1)"
         ],
         "interview_questions": [
-            {
-                "question": "What is Directed Graph?",
-                "answer": "A graph where edges have a direction, indicating a one-way relationship between vertices."
-            },
-            {
-                "question": "When should we use Directed Graph?",
-                "answer": "Use Directed Graph when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "vector<vector<int>> createGraph(int V, vector<vector<int>> &edges) {\nvector<vector<int>> mat(V, vector<int>(V, 0));\n\nfor (auto &it : edges) {\nint u = it[0];\nint v = it[1];\nmat[u][v] = 1;\n}\n\nreturn mat;\n}\n"
@@ -2601,17 +2402,14 @@
         "real_life_examples": [
             "Road networks",
             "Social media friend networks(mutual friendships)",
-            "Computer LAN networks"
+            "Computer LAN networks",
+            "Math Relations:",
+            "graph_definition : G = (V, E)",
+            "traversal_complexity : O(V + E)",
+            "max_edges_undirected : n(n - 1) / 2",
+            "max_edges_directed : n(n - 1)"
         ],
         "interview_questions": [
-            {
-                "question": "What is Undirected Graph?",
-                "answer": "A graph where edges have no direction, indicating a two-way relationship between vertices."
-            },
-            {
-                "question": "When should we use Undirected Graph?",
-                "answer": "Use Undirected Graph when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "vector<vector<int>> createGraph(int V, vector<vector<int>> &edges) {\nvector<vector<int>> adj(V);\n\nfor (auto &it : edges) {\nint u = it[0];\nint v = it[1];\nadj[u].push_back(v);\nadj[v].push_back(u);\n}\n\nreturn adj;\n}\n"
@@ -2679,17 +2477,13 @@
         "real_life_examples": [
             "Google Maps and navigation systems",
             "Game maps",
-            "Supply chain and logistics networks"
+            "Supply chain and logistics networks",
+            "Math Relations:",
+            "graph_definition : G = (V, E)",
+            "traversal_complexity : O(V + E)",
+            "weighted_graph : G = (V, E, W)"
         ],
         "interview_questions": [
-            {
-                "question": "What is Weighted Graph?",
-                "answer": "A graph where edges have weights, indicating the cost or distance between vertices."
-            },
-            {
-                "question": "When should we use Weighted Graph?",
-                "answer": "Use Weighted Graph when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "vector<vector<pair<int, int>>> createWeightedGraph(int V, vector<vector<int>> &edges) {\nvector<vector<pair<int, int>>> adj(V);\n\nfor (auto &it : edges) {\nint u = it[0];\nint v = it[1];\nint weight = it[2];\n\nadj[u].push_back({v, weight});\nadj[v].push_back({u, weight});\n}\n\nreturn adj;\n}\n"
@@ -2756,17 +2550,12 @@
         },
         "real_life_examples": [
             "File system navigation",
-            "Maze solving"
+            "Maze solving",
+            "Math Relations:",
+            "graph_definition : G = (V, E)",
+            "traversal_complexity : O(V + E)"
         ],
         "interview_questions": [
-            {
-                "question": "What is DFS (Depth First Search) Algorithm?",
-                "answer": "An algorithm for traversing or searching tree or graph data structures, starting at the root and exploring as far as possible along each branch before backtracking."
-            },
-            {
-                "question": "When should we use DFS (Depth First Search) Algorithm?",
-                "answer": "Use DFS (Depth First Search) Algorithm when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "void dfsRec(vector<vector<int>> &adj, vector<bool> &visited, int s, vector<int> &res) {\nvisited[s] = true;\nres.push_back(s);\n\nfor (int i : adj[s]) {\nif (!visited[i]) {\ndfsRec(adj, visited, i, res);\n}\n}\n\nvector<int> dfs(vector<vector<int>> &adj) {\nvector<bool> visited(adj.size(), false);\nvector<int> res;\ndfsRec(adj, visited, 0, res);\nreturn res;\n}\n"
@@ -2827,17 +2616,12 @@
         },
         "real_life_examples": [
             "Connected Component Detection",
-            "Web Crawlers"
+            "Web Crawlers",
+            "Math Relations:",
+            "graph_definition : G = (V, E)",
+            "traversal_complexity : O(V + E)"
         ],
         "interview_questions": [
-            {
-                "question": "What is BFS (Breadth First Search) Algorithm?",
-                "answer": "An algorithm for traversing or searching tree or graph data structures, starting at the root and exploring all neighbors at the present depth prior to moving to the next level(exploring nodes level-by-level)."
-            },
-            {
-                "question": "When should we use BFS (Breadth First Search) Algorithm?",
-                "answer": "Use BFS (Breadth First Search) Algorithm when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "vector<int> bfs(vector<vector<int>>& adj) {\nint V = adj.size();\nvector<bool> visited(V, false);\nvector<int> res;\n\nqueue<int> q;\n\nint src = 0;\nvisited[src] = true;\nq.push(src);\n\nwhile (!q.empty()) {\nint curr = q.front();\nq.pop();\nres.push_back(curr);\n\nfor (int x : adj[curr]) {\nif (!visited[x]) {\nvisited[x] = true;\nq.push(x);\n}\n}\n}\n\nreturn res;\n}\n"
@@ -2896,17 +2680,14 @@
         },
         "real_life_examples": [
             "Robot Navigation",
-            "Network cable routing"
+            "Network cable routing",
+            "Math Relations:",
+            "graph_definition : G = (V, E)",
+            "traversal_complexity : O(V + E)",
+            "weighted_graph : G = (V, E, W)",
+            "relaxation : dist[v] = min(dist[v], dist[u] + w(u,v))"
         ],
         "interview_questions": [
-            {
-                "question": "What is Dijkstra Algorithm?",
-                "answer": "A greedy shortest-path algorithm for weighted graphs with non-negative weights."
-            },
-            {
-                "question": "When should we use Dijkstra Algorithm?",
-                "answer": "Use Dijkstra Algorithm when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "vector<int> dijkstra(vector<vector<pair<int,int>>>& adj, int src) {\n\nint V = adj.size();\n\npriority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;\n\nvector<int> dist(V, INT_MAX);\n\ndist[src] = 0;\npq.emplace(0, src);\n\nwhile (!pq.empty()) {\nauto top = pq.top();\npq.pop();\n\nint d = top.first;\nint u = top.second;\n\nif (d > dist[u])\ncontinue;\n\nfor (auto &p : adj[u]) {\nint v = p.first;\nint w = p.second;\n\nif (dist[u] + w < dist[v]) {\ndist[v] = dist[u] + w;\npq.emplace(dist[v], v);\n}\n}\n}\n\nreturn dist;\n}\n"
@@ -2967,17 +2748,12 @@
         },
         "real_life_examples": [
             "Water pipeline Systems",
-            "Railway System Planning"
+            "Railway System Planning",
+            "Math Relations:",
+            "tree_edges : edges = nodes - 1",
+            "height_relation : height = longest path from root to leaf"
         ],
         "interview_questions": [
-            {
-                "question": "What is Minimum Spanning Tree?",
-                "answer": "A spanning tree connecting all vertices with minimum total edge weight and no cycles."
-            },
-            {
-                "question": "When should we use Minimum Spanning Tree?",
-                "answer": "Use Minimum Spanning Tree when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "vector<pair<int, pair<int, int>>> minimumSpanningTree(int V, vector<vector<int>>& edges) {\nsort(edges.begin(), edges.end(), [](auto &a, auto &b) {\nreturn a[2] < b[2];\n});\n\nvector<pair<int, pair<int, int>>> mst;\n\nfor (auto &e : edges) {\nint u = e[0];\nint v = e[1];\nint w = e[2];\n\nmst.push_back({w, {u, v}});\n}\n\nreturn mst;\n}\n"
@@ -3032,17 +2808,13 @@
         },
         "real_life_examples": [
             "Sensor Networks",
-            "Computer Chip Design"
+            "Computer Chip Design",
+            "Math Relations:",
+            "graph_definition : G = (V, E)",
+            "traversal_complexity : O(V + E)",
+            "mst_edges : |V| - 1"
         ],
         "interview_questions": [
-            {
-                "question": "What is Prim Algorithm?",
-                "answer": "A greedy MST algorithm expanding the tree using the minimum outgoing edge."
-            },
-            {
-                "question": "When should we use Prim Algorithm?",
-                "answer": "Use Prim Algorithm when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "vector<pair<int, int>> prim(int V, vector<vector<pair<int, int>>> &adj) {\npriority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;\nvector<int> key(V, INT_MAX);\nvector<int> parent(V, -1);\nvector<bool> inMST(V, false);\n\npq.push({0, 0});\nkey[0] = 0;\n\nwhile (!pq.empty()) {\nint u = pq.top().second;\npq.pop();\n\nif (inMST[u])\ncontinue;\n\ninMST[u] = true;\n\nfor (auto &x : adj[u]) {\nint v = x.first;\nint weight = x.second;\n\nif (!inMST[v] && weight < key[v]) {\nkey[v] = weight;\npq.push({key[v], v});\nparent[v] = u;\n}\n}\n}\n\nvector<pair<int, int>> mst;\nfor (int i = 1; i < V; i++)\nmst.push_back({parent[i], i});\n\nreturn mst;\n}\n"
@@ -3095,17 +2867,13 @@
         },
         "real_life_examples": [
             "Circuit Wiring",
-            "Cluster Analysis"
+            "Cluster Analysis",
+            "Math Relations:",
+            "graph_definition : G = (V, E)",
+            "traversal_complexity : O(V + E)",
+            "mst_edges : |V| - 1"
         ],
         "interview_questions": [
-            {
-                "question": "What is Kruskal Algorithm?",
-                "answer": "A greedy MST algorithm sorting edges by weight and adding them if they don't form a cycle/ A greedy MST algorithm selecting the smallest non-cycling edge."
-            },
-            {
-                "question": "When should we use Kruskal Algorithm?",
-                "answer": "Use Kruskal Algorithm when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "vector<vector<int>> kruskal(int V, vector<vector<int>>& edges) {\nsort(edges.begin(), edges.end(), [](auto &a, auto &b) {\nreturn a[2] < b[2];\n});\n\nvector<vector<int>> mst;\n\nfor (auto &e : edges) {\nint u = e[0];\nint v = e[1];\nint w = e[2];\n\nmst.push_back({u, v, w});\n}\n\nreturn mst;\n}\n"
@@ -3168,17 +2936,12 @@
         },
         "real_life_examples": [
             "Package Management",
-            "Project Task Scheduling"
+            "Project Task Scheduling",
+            "Math Relations:",
+            "graph_definition : G = (V, E)",
+            "traversal_complexity : O(V + E)"
         ],
         "interview_questions": [
-            {
-                "question": "What is Topological Sorting?",
-                "answer": "A linear ordering of vertices in a Directed Acyclic Graph (DAG)."
-            },
-            {
-                "question": "When should we use Topological Sorting?",
-                "answer": "Use Topological Sorting when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "vector<int> topologicalSort(int V, vector<vector<int>>& adj) {\nvector<int> indegree(V, 0);\n\nfor (int u = 0; u < V; u++)\nfor (int v : adj[u])\nindegree[v]++;\n\nqueue<int> q;\n\nfor (int i = 0; i < V; i++)\nif (indegree[i] == 0)\nq.push(i);\n\nvector<int> topo;\n\nwhile (!q.empty()) {\nint u = q.front();\nq.pop();\n\ntopo.push_back(u);\n\nfor (int v : adj[u]) {\nindegree[v]--;\n\nif (indegree[v] == 0)\nq.push(v);\n}\n}\n\nreturn topo;\n}\n"
@@ -3233,17 +2996,12 @@
         },
         "real_life_examples": [
             "Blockchain Systems",
-            "Password Authentication"
+            "Password Authentication",
+            "Math Relations:",
+            "hash_function : h(k) = k mod m",
+            "collision_condition : h(k1) = h(k2), k1 != k2"
         ],
         "interview_questions": [
-            {
-                "question": "What is Hash Table?",
-                "answer": "A data structure that maps keys to values using a hash function(uses hash indexing)."
-            },
-            {
-                "question": "When should we use Hash Table?",
-                "answer": "Use Hash Table when its structure, operations, or performance match the problem requirement, especially in Specialized Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "class HashTable {\nprivate:\nvector<list<pair<int, string>>> table;\nint size;\n\nint hashFunction(int key) {\nreturn key % size;\n}\n\npublic:\nHashTable(int s) : size(s) {\ntable.resize(size);\n}\n};\n"
@@ -3288,17 +3046,12 @@
         },
         "real_life_examples": [
             "Digital Signatures",
-            "Distributed Systems"
+            "Distributed Systems",
+            "Math Relations:",
+            "hash_function : h(k) = k mod m",
+            "collision_condition : h(k1) = h(k2), k1 != k2"
         ],
         "interview_questions": [
-            {
-                "question": "What is Hash Function?",
-                "answer": "A function mapping keys to table indices."
-            },
-            {
-                "question": "When should we use Hash Function?",
-                "answer": "Use Hash Function when its structure, operations, or performance match the problem requirement, especially in Component topics."
-            }
         ],
         "code_examples": {
             "cpp": "class HashFunction {\npublic:\nint computeHashCode(int key) {\nreturn key;\n}\n\nint mapKeyToIndex(int key, int tableSize) {\nreturn computeHashCode(key) % tableSize;\n}\n};\n"
@@ -3347,17 +3100,10 @@
         },
         "real_life_examples": [
             "Database Systems",
-            "Web Browser Caching"
+            "Web Browser Caching",
+            "Math Relations:"
         ],
         "interview_questions": [
-            {
-                "question": "What is Collision Resolution?",
-                "answer": "Methods for handling multiple keys mapped to the same index."
-            },
-            {
-                "question": "When should we use Collision Resolution?",
-                "answer": "Use Collision Resolution when its structure, operations, or performance match the problem requirement, especially in Component topics."
-            }
         ],
         "code_examples": {
             "cpp": "class HashTable {\nprivate:\nvector<int> table;\nint size;\n\npublic:\nHashTable(int s) : size(s) {\ntable.resize(size, -1);\n}\n\nvoid linearProbing(int key) {\nint index = key % size;\n\nwhile (table[index] != -1) {\nindex = (index + 1) % size;\n}\n\ntable[index] = key;\n}\n};\n"
@@ -3422,17 +3168,12 @@
         },
         "real_life_examples": [
             "Student ranking system",
-            "Search engine result ranking"
+            "Search engine result ranking",
+            "Math Relations:",
+            "comparison_relation : a[i] <= a[j]",
+            "sorting_goal : a_1 <= a_2 <= ... <= a_n"
         ],
         "interview_questions": [
-            {
-                "question": "What is Sorting Algorithm?",
-                "answer": "Arranging elements into a specific order."
-            },
-            {
-                "question": "When should we use Sorting Algorithm?",
-                "answer": "Use Sorting Algorithm when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "void sortArray(vector<int>& arr) {\nsort(arr.begin(), arr.end());\n}\n"
@@ -3477,17 +3218,12 @@
         },
         "real_life_examples": [
             "Alphabetical Word Sorting",
-            "Game Leaderboards"
+            "Game Leaderboards",
+            "Math Relations:",
+            "comparison_relation : a[i] <= a[j]",
+            "sorting_goal : a_1 <= a_2 <= ... <= a_n"
         ],
         "interview_questions": [
-            {
-                "question": "What is Bubble Sort?",
-                "answer": "A sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order."
-            },
-            {
-                "question": "When should we use Bubble Sort?",
-                "answer": "Use Bubble Sort when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "void bubbleSort(vector<int>& arr) {\nint n = arr.size();\nbool swapped;\n\nfor (int i = 0; i < n - 1; i++) {\nswapped = false;\n\nfor (int j = 0; j < n - i - 1; j++) {\nif (arr[j] > arr[j + 1]) {\nswap(arr[j], arr[j + 1]);\nswapped = true;\n}\n}\n\nif (!swapped)\nbreak;\n}\n}\n"
@@ -3532,17 +3268,12 @@
         },
         "real_life_examples": [
             "Sorting playing cards by rank",
-            "Organizing books alphabetically by title"
+            "Organizing books alphabetically by title",
+            "Math Relations:",
+            "comparison_relation : a[i] <= a[j]",
+            "sorting_goal : a_1 <= a_2 <= ... <= a_n"
         ],
         "interview_questions": [
-            {
-                "question": "What is Selection Sort?",
-                "answer": "A sorting algorithm repeatedly selecting the minimum element."
-            },
-            {
-                "question": "When should we use Selection Sort?",
-                "answer": "Use Selection Sort when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "void selectionSort(vector<int>& arr) {\nint n = arr.size();\n\nfor (int i = 0; i < n - 1; i++) {\nint minIndex = i;\n\nfor (int j = i + 1; j < n; j++) {\nif (arr[j] < arr[minIndex]) {\nminIndex = j;\n}\n}\n\nswap(arr[i], arr[minIndex]);\n}\n}\n"
@@ -3587,17 +3318,12 @@
         },
         "real_life_examples": [
             "Sorting playing cards in hand",
-            "Organizing files by date modified"
+            "Organizing files by date modified",
+            "Math Relations:",
+            "comparison_relation : a[i] <= a[j]",
+            "sorting_goal : a_1 <= a_2 <= ... <= a_n"
         ],
         "interview_questions": [
-            {
-                "question": "What is Insertion Sort?",
-                "answer": "A sorting algorithm building the sorted array one item at a time by repeatedly taking the next item and inserting it into the correct position."
-            },
-            {
-                "question": "When should we use Insertion Sort?",
-                "answer": "Use Insertion Sort when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "void insertionSort(vector<int>& arr) {\nint n = arr.size();\n\nfor (int i = 1; i < n; i++) {\nint key = arr[i];\nint j = i - 1;\n\nwhile (j >= 0 && arr[j] > key) {\narr[j + 1] = arr[j];\nj--;\n}\n\narr[j + 1] = key;\n}\n}\n"
@@ -3646,17 +3372,13 @@
         },
         "real_life_examples": [
             "Sorting large database records",
-            "External sorting of files on disk"
+            "External sorting of files on disk",
+            "Math Relations:",
+            "comparison_relation : a[i] <= a[j]",
+            "sorting_goal : a_1 <= a_2 <= ... <= a_n",
+            "recurrence : T(n) = 2T(n/2) + O(n)"
         ],
         "interview_questions": [
-            {
-                "question": "What is Merge Sort?",
-                "answer": "A sorting algorithm that divides the array into smaller subarrays, sorts them, and then merges them back together."
-            },
-            {
-                "question": "When should we use Merge Sort?",
-                "answer": "Use Merge Sort when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "void merge(vector<int>& arr, int left, int mid, int right);\n\nvoid mergeSort(vector<int>& arr, int left, int right) {\nif (left >= right) return;\n\nint mid = left + (right - left) / 2;\nmergeSort(arr, left, mid);\nmergeSort(arr, mid + 1, right);\nmerge(arr, left, mid, right);\n}\n\nvoid merge(vector<int>& arr, int left, int mid, int right) {\nvector<int> temp(right - left + 1);\nint i = left, j = mid + 1, k = 0;\n\nwhile (i <= mid && j <= right) {\nif (arr[i] <= arr[j]) {\ntemp[k++] = arr[i++];\n} else {\ntemp[k++] = arr[j++];\n}\n}\n\nwhile (i <= mid) {\ntemp[k++] = arr[i++];\n}\n\nwhile (j <= right) {\ntemp[k++] = arr[j++];\n}\n\nfor (int i = 0; i < k; i++) {\narr[left + i] = temp[i];\n}\n}\n"
@@ -3707,17 +3429,13 @@
         },
         "real_life_examples": [
             "E-commerce product sorting",
-            "File system organization"
+            "File system organization",
+            "Math Relations:",
+            "comparison_relation : a[i] <= a[j]",
+            "sorting_goal : a_1 <= a_2 <= ... <= a_n",
+            "partition_property : left <= pivot <= right"
         ],
         "interview_questions": [
-            {
-                "question": "What is Quick Sort?",
-                "answer": "A sorting algorithm that picks an element as a pivot and partitions the array around the pivot(A divide-and-conquer sorting algorithm partitioning around a pivot)."
-            },
-            {
-                "question": "When should we use Quick Sort?",
-                "answer": "Use Quick Sort when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "int partition(vector<int>& arr, int low, int high) {\nint pivot = arr[high];\nint i = low - 1;\n\nfor (int j = low; j < high; j++) {\nif (arr[j] < pivot) {\ni++;\nswap(arr[i], arr[j]);\n}\n}\n\nswap(arr[i + 1], arr[high]);\nreturn i + 1;\n}\n\nvoid quickSort(vector<int>& arr, int low, int high) {\nif (low < high) {\nint pi = partition(arr, low, high);\n\nquickSort(arr, low, pi - 1);\nquickSort(arr, pi + 1, high);\n}\n}\n"
@@ -3770,17 +3488,12 @@
         },
         "real_life_examples": [
             "Database query optimization",
-            "File system search"
+            "File system search",
+            "Math Relations:",
+            "search_space_reduction : n -> n/2",
+            "middle_index : mid = low + (high - low) / 2"
         ],
         "interview_questions": [
-            {
-                "question": "What is Binary Search?",
-                "answer": "A searching algorithm repeatedly dividing a sorted search space in half."
-            },
-            {
-                "question": "When should we use Binary Search?",
-                "answer": "Use Binary Search when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "int binarySearch(vector<int>& arr, int target, int low, int high) {\nif (low > high) return -1;\n\nint mid = low + (high - low) / 2;\nif (arr[mid] == target) return mid;\n\nif (arr[mid] > target) return binarySearch(arr, target, low, mid - 1);\nreturn binarySearch(arr, target, mid + 1, high);\n}\n"
@@ -3853,17 +3566,11 @@
         },
         "real_life_examples": [
             "Database record management using vectors and maps",
-            "Browser history management using stacks"
+            "Browser history management using stacks",
+            "Math Relations:",
+            "size_relation : n = number of stored elements"
         ],
         "interview_questions": [
-            {
-                "question": "What is STL (Standard Template Library) Components?",
-                "answer": "Standard Template Library components in C++ including containers, iterators, algorithms, and functors."
-            },
-            {
-                "question": "When should we use STL (Standard Template Library) Components?",
-                "answer": "Use STL (Standard Template Library) Components when its structure, operations, or performance match the problem requirement, especially in Specialized Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main() {\nvector<int> nums = {5, 2, 8, 1, 3};\n\nsort(nums.begin(), nums.end());\n\nfor (int x : nums) {\ncout << x << \" \";\n}\n\nreturn 0;\n}\n"
@@ -3908,17 +3615,12 @@
         },
         "real_life_examples": [
             "3D game coordinates",
-            "Scientific simulation data"
+            "Scientific simulation data",
+            "Math Relations:",
+            "index_range : 0 <= i < n",
+            "memory_address : address(A[i]) = base + i * element_size"
         ],
         "interview_questions": [
-            {
-                "question": "What is Multidimensional Array?",
-                "answer": "An array with more than two dimensions."
-            },
-            {
-                "question": "When should we use Multidimensional Array?",
-                "answer": "Use Multidimensional Array when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "int arr[2][3][4];\n"
@@ -3961,17 +3663,11 @@
         },
         "real_life_examples": [
             "Clock arithmetic",
-            "Hash functions"
+            "Hash functions",
+            "Math Relations:",
+            "mathematical_definition : based on recurrence, formula, or algebraic relation"
         ],
         "interview_questions": [
-            {
-                "question": "What is Modular Arithmetic?",
-                "answer": "A system of arithmetic where numbers wrap around after reaching a certain value."
-            },
-            {
-                "question": "When should we use Modular Arithmetic?",
-                "answer": "Use Modular Arithmetic when its structure, operations, or performance match the problem requirement, especially in Mathematics topics."
-            }
         ],
         "code_examples": {
             "cpp": "int result = a % b;\n"
@@ -4012,17 +3708,10 @@
         },
         "real_life_examples": [
             "Cooking recipes",
-            "Google Search"
+            "Google Search",
+            "Math Relations:"
         ],
         "interview_questions": [
-            {
-                "question": "What is Algorithm?",
-                "answer": "A step-by-step procedure or set of rules to be followed in calculations or other problem-solving operations."
-            },
-            {
-                "question": "When should we use Algorithm?",
-                "answer": "Use Algorithm when its structure, operations, or performance match the problem requirement, especially in Fundamental Concept topics."
-            }
         ],
         "code_examples": {
             "cpp": "def add(a, b): return a + b\n"
@@ -4067,17 +3756,11 @@
             "insertion": "O(1) amortized"
         },
         "real_life_examples": [
-            "Dynamic list of items in a shopping cart"
+            "Dynamic list of items in a shopping cart",
+            "Math Relations:",
+            "size_relation : n = number of stored elements"
         ],
         "interview_questions": [
-            {
-                "question": "What is Vector?",
-                "answer": "A dynamic array that can resize itself automatically when an element is inserted or deleted."
-            },
-            {
-                "question": "When should we use Vector?",
-                "answer": "Use Vector when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "std::vector<int> v;\nArrayList<Integer> list = new ArrayList<>();\n"
@@ -4121,17 +3804,12 @@
         },
         "real_life_examples": [
             "Image pixels",
-            "Spreadsheet"
+            "Spreadsheet",
+            "Math Relations:",
+            "matrix_dimension : A is m x n",
+            "element_position : A[i][j]"
         ],
         "interview_questions": [
-            {
-                "question": "What is Matrix?",
-                "answer": "A collection of numbers arranged in a fixed number of rows and columns."
-            },
-            {
-                "question": "When should we use Matrix?",
-                "answer": "Use Matrix when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "int matrix[3][3];\n"
@@ -4177,17 +3855,13 @@
         },
         "real_life_examples": [
             "Unique IDs",
-            "Distinct words in a book"
+            "Distinct words in a book",
+            "Math Relations:",
+            "set_uniqueness : x appears at most once",
+            "union : A ∪ B",
+            "intersection : A ∩ B"
         ],
         "interview_questions": [
-            {
-                "question": "What is Set?",
-                "answer": "A collection of distinct elements where no duplicate values are allowed."
-            },
-            {
-                "question": "When should we use Set?",
-                "answer": "Use Set when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "Set<Integer> s = new HashSet<>();\nmy_set = {1, 2, 3}\n"
@@ -4232,17 +3906,12 @@
         },
         "real_life_examples": [
             "Dictionary",
-            "Phone book"
+            "Phone book",
+            "Math Relations:",
+            "mapping_relation : key -> value",
+            "function_property : each key maps to one value"
         ],
         "interview_questions": [
-            {
-                "question": "What is Map?",
-                "answer": "A collection of key-value pairs where each key is unique and maps to a specific value."
-            },
-            {
-                "question": "When should we use Map?",
-                "answer": "Use Map when its structure, operations, or performance match the problem requirement, especially in Linear Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "Map<String, Int> m = new HashMap<>();\nmy_dict = {'key': 'value'}\n"
@@ -4285,17 +3954,12 @@
         },
         "real_life_examples": [
             "Physics formulas",
-            "Economic modeling"
+            "Economic modeling",
+            "Math Relations:",
+            "polynomial_form : P(x) = a_nx^n + ... + a_0",
+            "term_form : coefficient * x^exponent"
         ],
         "interview_questions": [
-            {
-                "question": "What is Polynomial?",
-                "answer": "An expression consisting of variables and coefficients, involving only addition, subtraction, and multiplication."
-            },
-            {
-                "question": "When should we use Polynomial?",
-                "answer": "Use Polynomial when its structure, operations, or performance match the problem requirement, especially in Mathematics topics."
-            }
         ],
         "code_examples": {
             "cpp": "3x^2 + 2x + 5\n"
@@ -4337,17 +4001,12 @@
         },
         "real_life_examples": [
             "Alphabetized contact list",
-            "Leaderboard"
+            "Leaderboard",
+            "Math Relations:",
+            "comparison_relation : a[i] <= a[j]",
+            "sorting_goal : a_1 <= a_2 <= ... <= a_n"
         ],
         "interview_questions": [
-            {
-                "question": "What is Sorted Data?",
-                "answer": "Data that has been arranged in a systematic order, such as numerical or alphabetical."
-            },
-            {
-                "question": "When should we use Sorted Data?",
-                "answer": "Use Sorted Data when its structure, operations, or performance match the problem requirement, especially in Fundamental Concept topics."
-            }
         ],
         "code_examples": {
             "cpp": "[1, 2, 3, 4, 5]\n"
@@ -4402,17 +4061,12 @@
         "real_life_examples": [
             "Finding a name in a phone book",
             "Searching for a word in a dictionary",
-            "Looking up a record in a database"
+            "Looking up a record in a database",
+            "Math Relations:",
+            "search_space_reduction : n -> n/2",
+            "middle_index : mid = low + (high - low) / 2"
         ],
         "interview_questions": [
-            {
-                "question": "What is Search Algorithm?",
-                "answer": "An algorithm designed to find a target element or determine whether it exists in a collection of data."
-            },
-            {
-                "question": "When should we use Search Algorithm?",
-                "answer": "Use Search Algorithm when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "int binarySearch(vector<int>& arr, int target, int low, int high) { /* ... */ }\n"
@@ -4458,17 +4112,14 @@
             "height": "O(log n)"
         },
         "real_life_examples": [
-            "Binary Heap storage"
+            "Binary Heap storage",
+            "Math Relations:",
+            "tree_edges : edges = nodes - 1",
+            "height_relation : height = longest path from root to leaf",
+            "max_nodes_level_i : 2^i",
+            "max_nodes_height_h : 2^(h+1) - 1"
         ],
         "interview_questions": [
-            {
-                "question": "What is Complete Binary Tree?",
-                "answer": "A binary tree in which every level is completely filled, except possibly the last level, which is filled from left to right."
-            },
-            {
-                "question": "When should we use Complete Binary Tree?",
-                "answer": "Use Complete Binary Tree when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics."
-            }
         ],
         "code_examples": {
         },
@@ -4510,17 +4161,12 @@
             "traversal": "O(n)"
         },
         "real_life_examples": [
-            "File system exploration"
+            "File system exploration",
+            "Math Relations:",
+            "tree_edges : edges = nodes - 1",
+            "height_relation : height = longest path from root to leaf"
         ],
         "interview_questions": [
-            {
-                "question": "What is Tree Traversal?",
-                "answer": "The process of visiting all nodes in a tree in a specific order."
-            },
-            {
-                "question": "When should we use Tree Traversal?",
-                "answer": "Use Tree Traversal when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "void preorder(Node n) { ... }\n"
@@ -4566,17 +4212,12 @@
         },
         "real_life_examples": [
             "GPS navigation",
-            "Social networking (friend levels)"
+            "Social networking (friend levels)",
+            "Math Relations:",
+            "graph_definition : G = (V, E)",
+            "traversal_complexity : O(V + E)"
         ],
         "interview_questions": [
-            {
-                "question": "What is BFS?",
-                "answer": "Breadth-First Search: An algorithm for traversing or searching tree or graph data structures level by level."
-            },
-            {
-                "question": "When should we use BFS?",
-                "answer": "Use BFS when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "queue.enqueue(root);\n"
@@ -4625,17 +4266,12 @@
             "traversal": "O(V + E)"
         },
         "real_life_examples": [
-            "Solving puzzles (mazes)"
+            "Solving puzzles (mazes)",
+            "Math Relations:",
+            "graph_definition : G = (V, E)",
+            "traversal_complexity : O(V + E)"
         ],
         "interview_questions": [
-            {
-                "question": "What is DFS?",
-                "answer": "Depth-First Search: An algorithm for traversing or searching tree or graph data structures by exploring as far as possible along each branch before backtracking."
-            },
-            {
-                "question": "When should we use DFS?",
-                "answer": "Use DFS when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "dfs(vertex) { visited[vertex]=true; for... }\n"
@@ -4676,17 +4312,11 @@
         },
         "real_life_examples": [
             "Task scheduling",
-            "Git commit history"
+            "Git commit history",
+            "Math Relations:",
+            "size_relation : n = number of stored elements"
         ],
         "interview_questions": [
-            {
-                "question": "What is DAG?",
-                "answer": "Directed Acyclic Graph: A directed graph with no directed cycles."
-            },
-            {
-                "question": "When should we use DAG?",
-                "answer": "Use DAG when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics."
-            }
         ],
         "code_examples": {
         },
@@ -4725,17 +4355,15 @@
         "time_complexity": {
         },
         "real_life_examples": [
-            "Road networks with distances"
+            "Road networks with distances",
+            "Math Relations:",
+            "graph_definition : G = (V, E)",
+            "traversal_complexity : O(V + E)",
+            "weighted_graph : G = (V, E, W)",
+            "max_edges_undirected : n(n - 1) / 2",
+            "max_edges_directed : n(n - 1)"
         ],
         "interview_questions": [
-            {
-                "question": "What is Weighted Undirected Graph?",
-                "answer": "An undirected graph where each edge has an associated numerical value (weight)."
-            },
-            {
-                "question": "When should we use Weighted Undirected Graph?",
-                "answer": "Use Weighted Undirected Graph when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics."
-            }
         ],
         "code_examples": {
         },
@@ -4774,17 +4402,13 @@
             "search": "O(V + E)"
         },
         "real_life_examples": [
-            "Six degrees of separation"
+            "Six degrees of separation",
+            "Math Relations:",
+            "graph_definition : G = (V, E)",
+            "traversal_complexity : O(V + E)",
+            "weighted_graph : G = (V, E, W)"
         ],
         "interview_questions": [
-            {
-                "question": "What is Shortest Path (unweighted graphs)?",
-                "answer": "Finding the path between two vertices such that the number of edges is minimized."
-            },
-            {
-                "question": "When should we use Shortest Path (unweighted graphs)?",
-                "answer": "Use Shortest Path (unweighted graphs) when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
         },
@@ -4828,17 +4452,11 @@
             "find": "O(V + E)"
         },
         "real_life_examples": [
-            "Social network clusters"
+            "Social network clusters",
+            "Math Relations:",
+            "time_complexity_relation : T(n) depends on input size n"
         ],
         "interview_questions": [
-            {
-                "question": "What is Connected Components?",
-                "answer": "Subgraphs in which any two vertices are connected to each other by paths."
-            },
-            {
-                "question": "When should we use Connected Components?",
-                "answer": "Use Connected Components when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
         },
@@ -4876,17 +4494,12 @@
         "time_complexity": {
         },
         "real_life_examples": [
-            "Network design (cabling)"
+            "Network design (cabling)",
+            "Math Relations:",
+            "tree_edges : edges = nodes - 1",
+            "height_relation : height = longest path from root to leaf"
         ],
         "interview_questions": [
-            {
-                "question": "What is Spanning Tree?",
-                "answer": "A subset of an undirected graph that connects all vertices together without any cycles."
-            },
-            {
-                "question": "When should we use Spanning Tree?",
-                "answer": "Use Spanning Tree when its structure, operations, or performance match the problem requirement, especially in Non-Linear Structure topics."
-            }
         ],
         "code_examples": {
         },
@@ -4930,17 +4543,12 @@
         },
         "real_life_examples": [
             "University course prerequisites",
-            "Build systems"
+            "Build systems",
+            "Math Relations:",
+            "graph_definition : G = (V, E)",
+            "traversal_complexity : O(V + E)"
         ],
         "interview_questions": [
-            {
-                "question": "What is Topological Sort?",
-                "answer": "A linear ordering of vertices such that for every directed edge (u, v), vertex u comes before v."
-            },
-            {
-                "question": "When should we use Topological Sort?",
-                "answer": "Use Topological Sort when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "Kahn's Algorithm\n"
@@ -4994,17 +4602,12 @@
         "real_life_examples": [
             "Fibonacci optimization",
             "Knapsack problem",
-            "Path counting"
+            "Path counting",
+            "Math Relations:",
+            "optimal_substructure : solution built from subproblem solutions",
+            "overlapping_subproblems : repeated subproblems are reused"
         ],
         "interview_questions": [
-            {
-                "question": "What is Dynamic Programming?",
-                "answer": "An optimization technique that solves complex problems by breaking them into overlapping subproblems and storing previous results."
-            },
-            {
-                "question": "When should we use Dynamic Programming?",
-                "answer": "Use Dynamic Programming when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "vector<int> dp(n + 1);\ndp[0] = 0;\ndp[1] = 1;\nfor(int i = 2; i <= n; i++) {\ndp[i] = dp[i - 1] + dp[i - 2];\n}\n"
@@ -5057,17 +4660,11 @@
         "real_life_examples": [
             "Coin change with canonical coin systems",
             "Activity selection",
-            "Minimum spanning tree algorithms"
+            "Minimum spanning tree algorithms",
+            "Math Relations:",
+            "time_complexity_relation : T(n) depends on input size n"
         ],
         "interview_questions": [
-            {
-                "question": "What is Greedy Algorithm?",
-                "answer": "An algorithmic strategy that makes the locally best choice at each step hoping to reach a globally optimal solution."
-            },
-            {
-                "question": "When should we use Greedy Algorithm?",
-                "answer": "Use Greedy Algorithm when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "sort(items.begin(), items.end());\nfor(auto item : items) {\nif(canChoose(item)) choose(item);\n}\n"
@@ -5121,17 +4718,11 @@
         "real_life_examples": [
             "N-Queens problem",
             "Sudoku solver",
-            "Generating permutations"
+            "Generating permutations",
+            "Math Relations:",
+            "time_complexity_relation : T(n) depends on input size n"
         ],
         "interview_questions": [
-            {
-                "question": "What is Backtracking?",
-                "answer": "A recursive problem-solving technique that builds candidates step by step and abandons a candidate when it cannot lead to a valid solution."
-            },
-            {
-                "question": "When should we use Backtracking?",
-                "answer": "Use Backtracking when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "void backtrack() {\nif(done()) return;\nfor(auto choice : choices) {\nchoose(choice);\nbacktrack();\nundo(choice);\n}\n}\n"
@@ -5179,17 +4770,12 @@
         },
         "real_life_examples": [
             "Maximum sum subarray of size k",
-            "Longest substring without repeating characters"
+            "Longest substring without repeating characters",
+            "Math Relations:",
+            "window_size : right - left + 1",
+            "two_pointer_update : move left or right boundary"
         ],
         "interview_questions": [
-            {
-                "question": "What is Sliding Window?",
-                "answer": "A technique used to process contiguous subarrays or substrings efficiently by maintaining a moving window over the data."
-            },
-            {
-                "question": "When should we use Sliding Window?",
-                "answer": "Use Sliding Window when its structure, operations, or performance match the problem requirement, especially in Algorithm topics."
-            }
         ],
         "code_examples": {
             "cpp": "int left = 0;\nfor(int right = 0; right < n; right++) {\n// add arr[right]\nwhile(windowInvalid()) {\n// remove arr[left]\nleft++;\n}\n}\n"
@@ -5239,17 +4825,12 @@
         "real_life_examples": [
             "Cycle detection in graphs",
             "Kruskal algorithm",
-            "Network connectivity"
+            "Network connectivity",
+            "Math Relations:",
+            "find_relation : representative(parent[x])",
+            "union_relation : merge two sets by parent/root"
         ],
         "interview_questions": [
-            {
-                "question": "What is Union Find?",
-                "answer": "A data structure that keeps track of disjoint sets and supports efficient union and find operations."
-            },
-            {
-                "question": "When should we use Union Find?",
-                "answer": "Use Union Find when its structure, operations, or performance match the problem requirement, especially in Specialized Structure topics."
-            }
         ],
         "code_examples": {
             "cpp": "int find(int x) {\nif(parent[x] == x) return x;\nreturn parent[x] = find(parent[x]);\n}\n"
@@ -5272,14 +4853,23 @@
         ]
     },
     {
-        "name": "Trie",
-        "definition": "A tree-like data structure used to store strings where each path represents a prefix.",
-        "category": "Specialized Structure",
+        "name": "String Matching",
+        "definition": "A tree-like data structure used to store strings where each path represents a prefix. Memoization stores previously computed results so repeated calculations can be avoided. Tabulation is a bottom-up dynamic programming method that solves smaller subproblems first and stores their results in a table. String matching is the process of finding whether a pattern appears inside a text.",
+        "category": "Algorithm",
         "difficulty": "Medium",
         "operations": [
             "insert word",
             "search word",
-            "startsWith prefix"
+            "startsWith prefix",
+            "Store result",
+            "Check cache",
+            "Reuse result",
+            "Create table",
+            "Fill base cases",
+            "Build solution bottom-up",
+            "compare characters",
+            "shift pattern",
+            "find match"
         ],
         "relationships": [
             {
@@ -5289,57 +4879,7 @@
             {
                 "target": "String Matching",
                 "type": "used_in"
-            }
-        ],
-        "time_complexity": {
-            "Main operations": "Depends on implementation"
-        },
-        "real_life_examples": [
-            "Autocomplete",
-            "Spell checker",
-            "Dictionary search"
-        ],
-        "interview_questions": [
-            {
-                "question": "What is Trie?",
-                "answer": "A tree-like data structure used to store strings where each path represents a prefix."
             },
-            {
-                "question": "When should we use Trie?",
-                "answer": "Use Trie when its structure, operations, or performance match the problem requirement, especially in Specialized Structure topics."
-            }
-        ],
-        "code_examples": {
-            "cpp": "struct TrieNode {\nTrieNode* child[26];\nbool isEnd;\n};\n"
-        },
-        "images": [
-            {
-                "title": "Trie Diagram",
-                "url": "images/trie_diagram.png"
-            },
-            {
-                "title": "Trie Example",
-                "url": "images/trie_example.png"
-            }
-        ],
-        "step_by_step": [
-            "Start from the root",
-            "For each character, move to or create a child node",
-            "Mark the end of a word",
-            "Search by following character links"
-        ]
-    },
-    {
-        "name": "Memoization",
-        "definition": "Memoization stores previously computed results so repeated calculations can be avoided.",
-        "category": "Algorithmic Technique",
-        "difficulty": "Medium",
-        "operations": [
-            "Store result",
-            "Check cache",
-            "Reuse result"
-        ],
-        "relationships": [
             {
                 "target": "Dynamic Programming",
                 "type": "used_in"
@@ -5347,51 +4887,7 @@
             {
                 "target": "Recursion",
                 "type": "related_to"
-            }
-        ],
-        "time_complexity": {
-            "lookup": "O(1)"
-        },
-        "real_life_examples": [
-            "Caching website data",
-            "Saving repeated calculations"
-        ],
-        "interview_questions": [
-            {
-                "question": "What is memoization?",
-                "answer": "Memoization is an optimization technique that stores computed results for reuse."
-            }
-        ],
-        "code_examples": {
-            "cpp": "unordered_map<int, int> memo;\n",
-            "java": "HashMap<Integer, Integer> memo = new HashMap<>();\n",
-            "python": "memo = {}\n"
-        },
-        "images": [
-            {
-                "title": "Memoization Cache",
-                "url": "images/memoization_cache.png"
-            }
-        ],
-        "step_by_step": [
-            "Check if answer exists in cache",
-            "If yes, return cached result",
-            "If no, compute answer",
-            "Store answer in cache",
-            "Return result"
-        ]
-    },
-    {
-        "name": "Tabulation",
-        "definition": "Tabulation is a bottom-up dynamic programming method that solves smaller subproblems first and stores their results in a table.",
-        "category": "Algorithmic Technique",
-        "difficulty": "Medium",
-        "operations": [
-            "Create table",
-            "Fill base cases",
-            "Build solution bottom-up"
-        ],
-        "relationships": [
+            },
             {
                 "target": "Dynamic Programming",
                 "type": "used_in"
@@ -5399,50 +4895,7 @@
             {
                 "target": "Memoization",
                 "type": "related_to"
-            }
-        ],
-        "time_complexity": {
-            "build table": "O(n)"
-        },
-        "real_life_examples": [
-            "Building a score table",
-            "Filling spreadsheet calculations"
-        ],
-        "interview_questions": [
-            {
-                "question": "What is tabulation?",
-                "answer": "Tabulation solves subproblems iteratively from the smallest case to the final answer."
-            }
-        ],
-        "code_examples": {
-            "cpp": "vector<int> dp(n + 1, 0);\n",
-            "java": "int[] dp = new int[n + 1];\n",
-            "python": "dp = [0] * (n + 1)\n"
-        },
-        "images": [
-            {
-                "title": "Tabulation Table",
-                "url": "images/tabulation_table.png"
-            }
-        ],
-        "step_by_step": [
-            "Create a table",
-            "Set base cases",
-            "Fill table from smaller problems",
-            "Use final cell as answer"
-        ]
-    },
-    {
-        "name": "String Matching",
-        "definition": "String matching is the process of finding whether a pattern appears inside a text.",
-        "category": "Algorithm",
-        "difficulty": "Medium",
-        "operations": [
-            "compare characters",
-            "shift pattern",
-            "find match"
-        ],
-        "relationships": [
+            },
             {
                 "target": "Trie",
                 "type": "used_in"
@@ -5453,30 +4906,66 @@
             }
         ],
         "time_complexity": {
+            "Main operations": "Depends on implementation",
+            "build table": "O(n)",
+            "lookup": "O(1)",
             "naive search": "O(n*m)"
         },
         "real_life_examples": [
+            "Autocomplete",
+            "Spell checker",
+            "Dictionary search",
+            "Math Relations:",
+            "prefix_relation : path(root,node) = prefix",
+            "search_complexity : O(L), where L is word length",
+            "Caching website data",
+            "Saving repeated calculations",
+            "Building a score table",
+            "Filling spreadsheet calculations",
             "Search bar autocomplete",
             "Finding words in documents"
         ],
         "interview_questions": [
-            {
-                "question": "What is string matching?",
-                "answer": "String matching finds occurrences of a pattern inside a larger text."
-            }
         ],
         "code_examples": {
-            "cpp": "text.find(pattern);\n",
-            "java": "text.contains(pattern);\n",
-            "python": "pattern in text\n"
+            "cpp": "struct TrieNode {\nTrieNode* child[26];\nbool isEnd;\n};\n\nunordered_map<int, int> memo;\n\nvector<int> dp(n + 1, 0);\n\ntext.find(pattern);\n"
         },
         "images": [
+            {
+                "title": "Trie Diagram",
+                "url": "images/trie_diagram.png"
+            },
+            {
+                "title": "Trie Example",
+                "url": "images/trie_example.png"
+            },
+            {
+                "title": "Memoization Cache",
+                "url": "images/memoization_cache.png"
+            },
+            {
+                "title": "Tabulation Table",
+                "url": "images/tabulation_table.png"
+            },
             {
                 "title": "String Matching Example",
                 "url": "images/string_matching.png"
             }
         ],
         "step_by_step": [
+            "Start from the root",
+            "For each character, move to or create a child node",
+            "Mark the end of a word",
+            "Search by following character links",
+            "Check if answer exists in cache",
+            "If yes, return cached result",
+            "If no, compute answer",
+            "Store answer in cache",
+            "Return result",
+            "Create a table",
+            "Set base cases",
+            "Fill table from smaller problems",
+            "Use final cell as answer",
             "Choose a pattern",
             "Compare pattern with text",
             "Move to next position if not matched",

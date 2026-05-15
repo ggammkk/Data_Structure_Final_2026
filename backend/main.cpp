@@ -56,31 +56,19 @@ int main(int argc, char *argv[])
             node.relationships.push_back(relationship);
         }
 
-        // CODE EXAMPLES
-        for (auto &code : item["code_examples"])
+    // CODE EXAMPLES: only CPP
+        if(item.contains("code_examples") && item["code_examples"].is_object())
+        {   
+        if(item["code_examples"].contains("cpp") &&
+           item["code_examples"]["cpp"].is_string())
         {
-            if (code.is_string())
-            {
-                node.code_examples.push_back(code.get<string>());
-            }
-            else if (code.is_object() && code.contains("code"))
-            {
-                if (code["code"].is_string())
-                {
-                    node.code_examples.push_back(code["code"].get<string>());
-                }
-                else if (code["code"].is_array())
-                {
-                    string fullCode = "";
+            string cppCode = item["code_examples"]["cpp"].get<string>();
 
-                    for (auto &line : code["code"])
-                    {
-                        fullCode += line.get<string>() + "\n";
-                    }
-
-                    node.code_examples.push_back(fullCode);
-                }
-            }
+            if(cppCode != "")
+            {
+               node.code_examples["cpp"] = cppCode;
+           }
+        }
         }
 
         // REAL LIFE EXAMPLES
@@ -138,18 +126,3 @@ int main(int argc, char *argv[])
 
     return 0;
 }
-
-#include "extract.h"
-/*
-int main()
-{
-    Extractor extractor;
-
-    extractor.convertTxtToJson(
-        "../data/dsa_llm_source.txt",
-        "../data/dsa_nodes.json"
-    );
-
-    return 0;
-}
-*/

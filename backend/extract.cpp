@@ -102,12 +102,10 @@ ExtractNode Extractor::parseBlock(string block)
     vector<string> relationshipLines;
     vector<string> timeLines;
     vector<string> realLifeLines;
-    vector<string> interviewLines;
-    vector<string> cppCodeLines;
-    vector<string> pythonCodeLines;
-    vector<string> javaCodeLines;
     vector<string> imageLines;
     vector<string> stepLines;
+    vector<string> mathLines;
+    vector<string> cppCodeLines;
 
     string currentSection = "";
 
@@ -158,24 +156,14 @@ ExtractNode Extractor::parseBlock(string block)
             currentSection = "real_life";
         }
 
-        else if(line == "Interview Questions:")
-        {
-            currentSection = "interview";
-        }
-
         else if(line == "CPP Code:")
         {
             currentSection = "cpp_code";
         }
 
-        else if(line == "Python Code:")
+        else if(line == "Math Relations:")
         {
-            currentSection = "python_code";
-        }
-
-        else if(line == "Java Code:")
-        {
-            currentSection = "java_code";
+            currentSection = "math";
         }
 
         else if(line == "Images:")
@@ -215,24 +203,14 @@ ExtractNode Extractor::parseBlock(string block)
                 realLifeLines.push_back(line);
             }
 
-            else if(currentSection == "interview")
-            {
-                interviewLines.push_back(line);
-            }
-
             else if(currentSection == "cpp_code")
             {
                 cppCodeLines.push_back(line);
             }
 
-            else if(currentSection == "python_code")
+            else if(currentSection == "math")
             {
-                pythonCodeLines.push_back(line);
-            }
-
-            else if(currentSection == "java_code")
-            {
-                javaCodeLines.push_back(line);
+                mathLines.push_back(line);
             }
 
             else if(currentSection == "images")
@@ -265,29 +243,16 @@ ExtractNode Extractor::parseBlock(string block)
     node.relationships = parseRelationships(relationshipLines);
     node.time_complexity = parseTimeComplexity(timeLines);
     node.real_life_examples = parseList(realLifeLines);
-    node.interview_questions = parseInterviewQuestions(interviewLines);
+    node.math_relations = parseList(mathLines);
     node.images = parseImages(imageLines);
     node.step_by_step = parseList(stepLines);
 
     string cppCode = joinCodeLines(cppCodeLines);
-    string pythonCode = joinCodeLines(pythonCodeLines);
-    string javaCode = joinCodeLines(javaCodeLines);
 
     if(cppCode != "")
     {
         node.code_examples["cpp"] = cppCode;
     }
-
-    if(pythonCode != "")
-    {
-        node.code_examples["python"] = pythonCode;
-    }
-
-    if(javaCode != "")
-    {
-        node.code_examples["java"] = javaCode;
-    }
-
     return node;
 }
 
@@ -399,52 +364,13 @@ map<string, string> Extractor::parseTimeComplexity(vector<string> lines)
 }
 
 // =========================
-// PARSE INTERVIEW QUESTIONS
-// Format: - Question? | Answer
-// =========================
-
-vector<InterviewQuestion> Extractor::parseInterviewQuestions(vector<string> lines)
-{
-    vector<InterviewQuestion> questions;
-
-    for(string line : lines)
-    {
-        line = trim(line);
-
-        if(line.rfind("- ", 0) == 0)
-        {
-            line = trim(line.substr(2));
-        }
-
-        if(line == "" || line == "None" || line == "none")
-        {
-            continue;
-        }
-
-        size_t barPos = line.find("|");
-
-        if(barPos != string::npos)
-        {
-            InterviewQuestion q;
-
-            q.question = trim(line.substr(0, barPos));
-            q.answer = trim(line.substr(barPos + 1));
-
-            questions.push_back(q);
-        }
-    }
-
-    return questions;
-}
-
-// =========================
 // PARSE IMAGES
 // Format: - BST Insertion -> images/bst_insert.png
 // =========================
 
-vector<ImageData> Extractor::parseImages(vector<string> lines)
+vector<ExtractImage> Extractor::parseImages(vector<string> lines)
 {
-    vector<ImageData> images;
+    vector<ExtractImage> images;
 
     for(string line : lines)
     {
@@ -464,7 +390,7 @@ vector<ImageData> Extractor::parseImages(vector<string> lines)
 
         if(arrowPos != string::npos)
         {
-            ImageData img;
+            ExtractImage img;
 
             img.title = trim(line.substr(0, arrowPos));
             img.url = trim(line.substr(arrowPos + 2));
@@ -612,24 +538,17 @@ void Extractor::writeJson(vector<ExtractNode> nodes, string outputPath)
 
         outputFile << "        ],\n";
 
-        // interview questions
-        outputFile << "        \"interview_questions\": [\n";
 
-        for(size_t j = 0; j < node.interview_questions.size(); j++)
+                // math relations
+        outputFile << "        \"math_relations\": [\n";
+
+        for(size_t j = 0; j < node.math_relations.size(); j++)
         {
-            outputFile << "            {\n";
+            outputFile << "            \""
+                       << escapeJson(node.math_relations[j])
+                       << "\"";
 
-            outputFile << "                \"question\": \""
-                       << escapeJson(node.interview_questions[j].question)
-                       << "\",\n";
-
-            outputFile << "                \"answer\": \""
-                       << escapeJson(node.interview_questions[j].answer)
-                       << "\"\n";
-
-            outputFile << "            }";
-
-            if(j + 1 < node.interview_questions.size())
+            if(j + 1 < node.math_relations.size())
             {
                 outputFile << ",";
             }
@@ -784,3 +703,17 @@ string Extractor::escapeJson(string text)
 
     return result;
 }
+/*
+#include "extract.h"
+
+int main()
+{
+    Extractor extractor;
+
+    extractor.convertTxtToJson(
+        "../data/dsa_llm_source_cpp_math_no_interview.txt",
+        "../data/dsa_nodes.json"
+    );
+
+    return 0;
+}*/

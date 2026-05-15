@@ -13,13 +13,7 @@ struct Relationship
     string type;
 };
 
-struct InterviewQuestion
-{
-    string question;
-    string answer;
-};
-
-struct ImageData
+struct Image
 {
     string title;
     string url;
@@ -38,12 +32,16 @@ struct Node
     unordered_map<string, string> time_complexity;
 
     vector<string> real_life_examples;
-    vector<InterviewQuestion> interview_questions;
 
+    // ONLY CPP NOW
     unordered_map<string, string> code_examples;
 
-    vector<ImageData> images;
+    vector<Image> images;
+
     vector<string> step_by_step;
+
+    // ADDED BACK
+    vector<string> math_relations;
 };
 
 #endif

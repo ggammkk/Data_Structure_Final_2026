@@ -13,13 +13,7 @@ struct ExtractRelationship
     string type;
 };
 
-struct InterviewQuestion
-{
-    string question;
-    string answer;
-};
-
-struct ImageData
+struct ExtractImage
 {
     string title;
     string url;
@@ -38,11 +32,11 @@ struct ExtractNode
     map<string, string> time_complexity;
 
     vector<string> real_life_examples;
-    vector<InterviewQuestion> interview_questions;
+    vector<string> math_relations;
 
     map<string, string> code_examples;
 
-    vector<ImageData> images;
+    vector<ExtractImage> images;
     vector<string> step_by_step;
 };
 
@@ -61,8 +55,7 @@ private:
     vector<string> parseList(vector<string> lines);
     vector<ExtractRelationship> parseRelationships(vector<string> lines);
     map<string, string> parseTimeComplexity(vector<string> lines);
-    vector<InterviewQuestion> parseInterviewQuestions(vector<string> lines);
-    vector<ImageData> parseImages(vector<string> lines);
+    vector<ExtractImage> parseImages(vector<string> lines);
 
     string joinCodeLines(vector<string> lines);
 

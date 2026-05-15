@@ -521,21 +521,6 @@ string Search::generateFullNodeResponse(Node node)
         }
     }
 
-    response += "\nInterview Questions:\n";
-
-    if(node.interview_questions.empty())
-    {
-        response += "None\n";
-    }
-    else
-    {
-        for(InterviewQuestion q : node.interview_questions)
-        {
-            response += "- Q: " + q.question + "\n";
-            response += "  A: " + q.answer + "\n";
-        }
-    }
-
     response += "\nCode Examples:\n";
 
     if(node.code_examples.empty())
@@ -559,7 +544,7 @@ string Search::generateFullNodeResponse(Node node)
     }
     else
     {
-        for(ImageData img : node.images)
+        for(Image img : node.images)
         {
             response += "- " + img.title + ": " + img.url + "\n";
         }
@@ -798,24 +783,6 @@ string Search::generateResponse(string query)
         return "Mathematical relations are now displayed in the topic details if available.";
     }
 
-    if(intent == "interview_questions")
-    {
-        if(node.interview_questions.empty())
-        {
-            return "No interview questions found for " + node.name + ".";
-        }
-
-        string response = "Interview questions for " + node.name + ":\n";
-
-        for(InterviewQuestion q : node.interview_questions)
-        {
-            response += "- Q: " + q.question + "\n";
-            response += "  A: " + q.answer + "\n\n";
-        }
-
-        return response;
-    }
-
     if(intent == "step_by_step")
     {
         if(node.step_by_step.empty())
@@ -842,7 +809,7 @@ string Search::generateResponse(string query)
 
         string response = "Images or diagrams available for " + node.name + ":\n";
 
-        for(ImageData img : node.images)
+        for(Image img : node.images)
         {
             response += "- " + img.title + ": " + img.url + "\n";
         }
