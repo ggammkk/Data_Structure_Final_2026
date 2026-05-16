@@ -122,8 +122,8 @@ body {
 .answer-box ul {
     margin-top: 10px;
 }
-html,
-body {
+
+html, body {
     min-height: 100%;
     overflow-y: auto;
 }
