@@ -114,7 +114,10 @@ int main() {
 
 function renderProblem(problem) {
     document.getElementById("problemTitle").innerText = problem.title;
-    document.getElementById("difficultyBadge").innerText = problem.difficulty;
+    const diffEl = document.getElementById("difficultyBadge");
+    diffEl.innerText = problem.difficulty;
+    diffEl.className = "";
+    diffEl.classList.add(problem.difficulty?.toLowerCase());
     document.getElementById("categoryBadge").innerText = problem.category;
     document.getElementById("problemText").innerText = problem.problem;
     document.getElementById("exampleInput").innerText = problem.example_input;
