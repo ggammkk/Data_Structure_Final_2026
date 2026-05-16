@@ -1,3 +1,14 @@
+:root {
+    --bg:#ffffff;
+    --bg-page:#f8f9fc;
+    --border:#e4e4e9;
+    --text:#1c1c2e;
+    --text-muted: #6b6b80;
+    --accent:#6c7b9e;     
+    --accent-light:#eef2fb; 
+    --problem-bg:#ececec;
+}
+
 *{
     margin:0;
     padding:0;
@@ -6,8 +17,8 @@
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#f8fafc;
-    color:#111827;
+    background: var(--bg-page);
+    color: var(--text);
 }
 
 .navbar{
@@ -15,8 +26,8 @@ body{
     padding:20px 50px;
     display:flex;
     gap:30px;
-    background:white;
-    border-bottom:1px solid #e5e7eb;
+    background: var(--bg-page);
+    border-bottom:1px solid var(--border);
     position:sticky;
     top:0;
     z-index:100;
@@ -24,13 +35,13 @@ body{
 
 .navbar a{
     text-decoration:none;
-    color:#374151;
+    color: var(--text);
     font-weight:600;
     transition:0.2s;
 }
 
 .navbar a:hover{
-    color:#4f46e5;
+    color: var(--accent);
 }
 
 .hero{
@@ -42,9 +53,9 @@ body{
 
     background:
     linear-gradient(
-        135deg,
-        #eef2ff,
-        #f8fafc
+        180deg,
+        var(--accent-light),
+        var(--bg-page)
     );
 }
 
@@ -54,7 +65,7 @@ body{
 }
 
 .tag{
-    color:#4f46e5;
+    color: var(--accent);
     font-weight:700;
     margin-bottom:20px;
 }
@@ -75,7 +86,7 @@ body{
 .start-btn{
     display:inline-block;
     padding:16px 32px;
-    background:#4f46e5;
+    background: var(--accent);
     color:white;
     text-decoration:none;
     border-radius:14px;
@@ -84,7 +95,7 @@ body{
 }
 
 .start-btn:hover{
-    background:#4338ca;
+    background: var(--accent-light);
     transform:translateY(-2px);
 }
 

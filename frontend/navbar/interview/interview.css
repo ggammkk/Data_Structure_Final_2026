@@ -1,9 +1,10 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f8fafc;
+    background: var(--bg-page);
     overflow-x: hidden;
     overflow-y: auto;
+    min-height: 100vh;
 }
 
 .interview-container {
@@ -18,12 +19,13 @@ body {
 }
 
 .interview-header h1 {
+    font-family: "imfell";
     font-size: 42px;
     margin-bottom: 10px;
 }
 
 .interview-header p {
-    color: #475569;
+    color: var(--text-muted);
     font-size: 18px;
 }
 
@@ -31,19 +33,20 @@ body {
     margin-top: 20px;
     padding: 12px 20px;
     border: none;
-    border-radius: 10px;
-    background: #2563eb;
+    border-radius: 20px;
+    background: var(--accent);
     color: white;
     font-size: 16px;
     cursor: pointer;
+    transition: 0.15s ease;
 }
 
 #refreshBtn:hover {
-    background: #1d4ed8;
+    background: #334882;
 }
 
 .question-card {
-    background: white;
+    background: var()--bg;
     border-radius: 18px;
     padding: 25px;
     margin-bottom: 25px;
@@ -57,14 +60,14 @@ body {
 }
 
 .question-text {
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    font-size: 18px;
+    margin: 20px 0px;
 }
 
 .badges {
     display: flex;
     gap: 10px;
+    align-items: center
 }
 
 .difficulty,
@@ -75,21 +78,31 @@ body {
     font-weight: bold;
 }
 
-.difficulty {
-    background: #dbeafe;
-    color: #1d4ed8;
+.difficulty.easy { 
+    background: #c5f3dd; 
+    color: #065f46; 
+}
+
+.difficulty.medium { 
+    background: #f1e7bd; 
+    color: #92400e; 
+}
+
+.difficulty.hard { 
+    background: #ffd6d6; 
+    color: #991b1b; 
 }
 
 .category {
-    background: #dcfce7;
-    color: #166534;
+    background: var(--accent-light);
+    color: var(--accent);
 }
 
 .question-card button {
     padding: 10px 18px;
     border: none;
-    border-radius: 10px;
-    background: #0f172a;
+    border-radius: 9px;
+    background: #2b4070;
     color: white;
     cursor: pointer;
 }

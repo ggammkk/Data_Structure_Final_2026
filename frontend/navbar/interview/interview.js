@@ -37,7 +37,7 @@ function renderQuestions(questions) {
             <div class="question-top">
                 <h2>Question ${index + 1}</h2>
                 <div class="badges">
-                    <span class="difficulty">${q.difficulty}</span>
+                    <span class="difficulty ${q.difficulty?.toLowerCase()}">${q.difficulty}</span>
                     <span class="category">${q.category}</span>
                 </div>
             </div>

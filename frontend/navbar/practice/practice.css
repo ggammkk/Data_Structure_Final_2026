@@ -75,9 +75,20 @@ body {
     font-size: 13px;
 }
 
-#difficultyBadge.easy   { background: #c5f3dd; color: #065f46; }
-#difficultyBadge.medium { background: #f1e7bd; color: #92400e; }
-#difficultyBadge.hard   { background: #ffc5c5; color: #991b1b; }
+#difficultyBadge.easy { 
+    background: #c5f3dd; 
+    color: #065f46; 
+}
+
+#difficultyBadge.medium { 
+    background: #f1e7bd; 
+    color: #92400e; 
+}
+
+#difficultyBadge.hard {     
+    background: #ffd6d6; 
+    color: #991b1b;  
+}
 
 #categoryBadge {
     background: var(--accent-light);
@@ -98,7 +109,7 @@ pre {
     padding: 15px;
     border-radius: 10px;
     overflow-x: auto;
-    margin: 10px 0px;
+    margin-top: 10px;
 }
 
 #editor {

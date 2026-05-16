@@ -187,8 +187,8 @@ fetch("http://localhost:3000/api/dsa")
                         'corner-radius': 100,
                         'width': 'label',
                         'height': 'label',
-                        'padding': '10px',
-                        'background-color': '#041361',
+                        'padding': '16px',
+                        'background-color': '#2d3a6b',
                         'label': 'data(label)',
                         'color': 'white',
                         'text-valign': 'center',
@@ -216,7 +216,7 @@ fetch("http://localhost:3000/api/dsa")
                 {
                     selector: '.highlight',
                     style: {
-                        'background-color': '#E5cbcc',
+                        'background-color': '#d4c8f0',
                         'color': '#000',
                     }
                 }

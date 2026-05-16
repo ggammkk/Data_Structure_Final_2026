@@ -36,13 +36,15 @@ body {
 .navbar {
     height: 50px;
     background: white;
-    box-shadow: 0 0 15px 0.1px #eaeaea; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     gap: 40px;
     justify-content: center;
     align-items: center;
     padding: 0 20px;
     font-weight: bold;
+    position: relative;
+    z-index: 100
 }
 
 .navbar a {
@@ -111,7 +113,7 @@ body {
     padding: 7px 14px;
     border: none;
     border-radius: 40px;
-    background: #5a6cbb;
+    background: var(--accent);
     color: #efede8;
     cursor: pointer;
     transition: 0.3s;
@@ -153,13 +155,25 @@ section {
 .image-grid {
     display: flex;
     gap: 10px;
+    flex-direction: row;
     flex-wrap: wrap;
     margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      
+    text-align: center;
 }
 
 .image-card img {
-    width: 320px;
-    max-width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
     cursor: pointer;
 }
 
@@ -206,8 +220,8 @@ li {
 }
 
 .image-popup-content img {
-    max-width: 85vw;
-    max-height: 80vh;
+    height: 400px;
+    object-fit: contain;
     display: block;
     border-radius: 10px;
 }
