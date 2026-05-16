@@ -133,33 +133,47 @@ app.get("/api/practice-topics", (req, res) => {
 //below rachel experiment 
 const os = require('os');
 
-app.post('/api/run', (req, res) => {
+app.post("/api/run", (req, res) => {
     const { code } = req.body;
 
-    const tmpDir  = os.tmpdir();
-    const srcFile = path.join(tmpDir, 'practice_code.cpp');
-    const outFile = path.join(tmpDir, 'practice_code.out');
+    if (!code) {
+        return res.json({ error: "No code provided." });
+    }
+
+    const tmpDir = os.tmpdir();
+    const fileId = Date.now();
+
+    const srcFile = path.join(tmpDir, `practice_code_${fileId}.cpp`);
+    const outFile = path.join(tmpDir, `practice_code_${fileId}.exe`);
 
     fs.writeFileSync(srcFile, code);
 
-    // Step 1: compile
-    exec(`g++ -o "${outFile}" "${srcFile}"`, (compileErr, _, compileStderr) => {
-        if (compileErr) {
-            return res.json({ error: compileStderr || compileErr.message });
-        }
-
-        // Step 2: run
-        exec(`"${outFile}"`, { timeout: 5000 }, (runErr, stdout, runStderr) => {
-            if (runErr) {
-                return res.json({ error: runStderr || runErr.message });
+    exec(
+        `g++ -std=c++17 "${srcFile}" -o "${outFile}"`,
+        { timeout: 10000 },
+        (compileErr, _, compileStderr) => {
+            if (compileErr) {
+                return res.json({
+                    error: compileStderr || compileErr.message
+                });
             }
-            res.json({ output: stdout || '(no output)' });
 
-            // cleanup
-            fs.unlink(srcFile, () => {});
-            fs.unlink(outFile, () => {});
-        });
-    });
+            exec(`"${outFile}"`, { timeout: 5000 }, (runErr, stdout, runStderr) => {
+                fs.unlink(srcFile, () => {});
+                fs.unlink(outFile, () => {});
+
+                if (runErr) {
+                    return res.json({
+                        error: runStderr || runErr.message
+                    });
+                }
+
+                res.json({
+                    output: stdout || "(no output)"
+                });
+            });
+        }
+    );
 });
 
 

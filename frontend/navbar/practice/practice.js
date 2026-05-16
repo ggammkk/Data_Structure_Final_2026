@@ -96,6 +96,17 @@ function loadProblem(topic) {
         });
 }
 
+function cleanStarterCode(code) {
+    return `#include <iostream>
+using namespace std;
+
+int main() {
+    // Write your code here
+
+    return 0;
+}`;
+}
+
 
 // =========================
 // RENDER PROBLEM
@@ -103,20 +114,15 @@ function loadProblem(topic) {
 
 function renderProblem(problem) {
     document.getElementById("problemTitle").innerText = problem.title;
-
-    const diffEl = document.getElementById("difficultyBadge");
-    diffEl.innerText = problem.difficulty;
-    diffEl.className = "";  
-    diffEl.classList.add(problem.difficulty?.toLowerCase());
-
+    document.getElementById("difficultyBadge").innerText = problem.difficulty;
     document.getElementById("categoryBadge").innerText = problem.category;
     document.getElementById("problemText").innerText = problem.problem;
     document.getElementById("exampleInput").innerText = problem.example_input;
     document.getElementById("expectedOutput").innerText = problem.expected_output;
 
-    setOutput("", ""); 
+    setOutput("", "");
 
-    editor.setValue(problem.starter_code || "");
+    editor.setValue(cleanStarterCode(problem.starter_code));
 
     document.getElementById("explanationList").innerHTML =
         (problem.explanation || [])
@@ -207,18 +213,20 @@ function showHint() {
 // =========================
 
 function showSolution() {
-    if (!currentProblem) return;
+    if (!currentProblem) {
+        setOutput("No problem loaded yet.", "error");
+        return;
+    }
+
     editor.setValue(currentProblem.solution || "// No solution available.");
     setOutput("Solution loaded into editor.", "success");
 }
 
-
 // =========================
 // RESET
 // =========================
-
 function resetCode() {
     if (!currentProblem) return;
-    editor.setValue(currentProblem.starter_code || "");
+    editor.setValue(cleanStarterCode(currentProblem.starter_code));
     setOutput("Starter code restored.", "hint");
 }
