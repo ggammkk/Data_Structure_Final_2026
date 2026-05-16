@@ -220,7 +220,7 @@ li {
 }
 
 .image-popup-content img {
-    height: 400px;
+    height: 600px;
     object-fit: contain;
     display: block;
     border-radius: 10px;
