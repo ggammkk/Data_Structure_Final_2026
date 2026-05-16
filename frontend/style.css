@@ -1,5 +1,15 @@
-#cy
-{
+:root {
+    --bg:#ffffff;
+    --bg-page:#f8f9fc;
+    --border:#e4e4e9;
+    --text:#1c1c2e;
+    --text-muted: #6b6b80;
+    --accent:#6c7b9e;     
+    --accent-light:#eef2fb; 
+    --problem-bg:#ececec;
+}
+
+#cy {
     width: 100%;
     height: 100%;
 }

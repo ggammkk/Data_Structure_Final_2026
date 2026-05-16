@@ -2,6 +2,16 @@ let globalData = [];
 let cy;
 
 function renderNode(nodeData) {
+    function formatCppCode(code) {
+        let indent = 0;
+        return code.split("\n").map(line => {
+            line = line.trim();
+            if (line.startsWith("}")) indent--;
+            const result = "\t".repeat(Math.max(0, indent)) + line;
+            if (line.endsWith("{")) indent++;
+            return result;
+        }).join("\n");
+    }
 
     // NAME
     document.getElementById("name").innerText = nodeData.name;
@@ -33,18 +43,15 @@ function renderNode(nodeData) {
 
     // CODE
     const cppCode = nodeData.code_examples?.cpp || "";
+    const codeText = Array.isArray(cppCode) ? cppCode.join("\n") : cppCode;
 
-    document.getElementById("code").innerHTML =
-        cppCode
-            ? `
-                <strong>Code Example</strong>
-                <pre class="code-block">${
-                    Array.isArray(cppCode)
-                        ? cppCode.join("\n")
-                        : cppCode
-                }</pre>
-            `
-            : "";
+    if (cppCode) {
+        document.getElementById("code").innerHTML = 
+            `<strong>Code Example</strong><pre class="code-block"></pre>`;
+        document.querySelector("#code .code-block").textContent = formatCppCode(codeText);
+    } else {
+        document.getElementById("code").innerHTML = "";
+    }
 
     // VISUAL / IMAGES
     document.getElementById("visual").innerHTML =
