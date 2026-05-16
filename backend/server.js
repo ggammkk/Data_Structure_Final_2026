@@ -6,7 +6,10 @@ const { execFile } = require("child_process");
 
 
 const app = express();
+//line below rachel experiment 
+app.use(express.json())
 
+//back to main code
 app.use(cors());
 
 app.get("/api/dsa", (req, res) => {
@@ -128,6 +131,32 @@ app.get("/api/practice-topics", (req, res) => {
     });
 });
 
+//below rachel experiment 
+app.post("/api/run", (req, res) => {
+
+    const code = req.body.code;
+
+    fs.writeFileSync("temp.cpp", code);
+
+    exec(
+        "g++ temp.cpp -o temp && temp",
+        (error, stdout, stderr) => {
+
+            if (error) {
+
+                return res.json({
+                    output: stderr
+                });
+            }
+
+            res.json({
+                output: stdout
+            });
+        }
+    );
+});
+
+//back to main code
 app.listen(3000, () => {
     console.log("Server running on port 3000");
 });
