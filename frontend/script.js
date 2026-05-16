@@ -379,3 +379,25 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 });
+
+document.addEventListener("click", function(event) {
+    if(event.target.tagName === "IMG" && event.target.closest(".image-card")) {
+        const popup = document.createElement("div");
+
+        popup.className = "image-popup";
+        popup.innerHTML = `
+            <div class="image-popup-content">
+                <span class="image-popup-close">&times;</span>
+                <img src="${event.target.src}" alt="${event.target.alt}">
+            </div>
+        `;
+
+        document.body.appendChild(popup);
+
+        popup.addEventListener("click", function(e) {
+            if(e.target.className === "image-popup" || e.target.className === "image-popup-close") {
+                popup.remove();
+            }
+        });
+    }
+});
