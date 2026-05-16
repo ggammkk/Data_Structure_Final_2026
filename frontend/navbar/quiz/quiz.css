@@ -126,3 +126,8 @@ body {
     background: var(--bg);
     line-height: 1.6;
 }
+
+.code-block {
+    tab-size: 4;
+    -moz-tab-size: 4;
+}

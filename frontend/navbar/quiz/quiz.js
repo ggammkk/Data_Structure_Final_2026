@@ -1,6 +1,17 @@
 let currentTopic = "";
 let score = 0;
 
+function formatCppCode(code) {
+    let indent = 0;
+    return code.split("\n").map(line => {
+        line = line.trim();
+        if (line.startsWith("}")) indent--;
+        const result = "\t".repeat(Math.max(0, indent)) + line;
+        if (line.endsWith("{")) indent++;
+        return result;
+    }).join("\n");
+}
+
 fetch("http://localhost:3000/api/quiz-topics")
   .then(res => res.json())
   .then(topics => {
@@ -57,7 +68,7 @@ function renderQuestions(questions) {
 
       ${q.image ? `<img src="../../../${q.image}" class="quiz-image">` : ""}
 
-      ${q.code ? `<pre class="code-block">${q.code}</pre>` : ""}
+      ${q.code ? `<pre class="code-block" data-code="${encodeURIComponent(q.code)}"></pre>` : ""}
 
       <div class="options">
         ${shuffledOptions.map(option => `
@@ -69,6 +80,10 @@ function renderQuestions(questions) {
     `;
 
     quizBox.appendChild(block);
+
+    block.querySelectorAll(".code-block[data-code]").forEach(pre => {
+        pre.textContent = formatCppCode(decodeURIComponent(pre.dataset.code));
+    });
 
     const buttons = block.querySelectorAll(".option-btn");
 
