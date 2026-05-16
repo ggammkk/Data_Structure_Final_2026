@@ -4705,6 +4705,8 @@ Step By Step:
 - Mark the end of a word
 - Search by following character links
 
+==================================================
+Topic ID: 88
 Topic: Memoization
 Category: Algorithmic Technique
 Difficulty: Medium
@@ -4741,6 +4743,8 @@ Step By Step:
 - Store answer in cache
 - Return result
 
+==================================================
+Topic ID: 89
 Topic: Tabulation
 Category: Algorithmic Technique
 Difficulty: Medium
@@ -4776,6 +4780,8 @@ Step By Step:
 - Fill table from smaller problems
 - Use final cell as answer
 
+==================================================
+Topic ID: 90
 Topic: String Matching
 Category: Algorithm
 Difficulty: Medium
@@ -4810,3 +4816,57 @@ Step By Step:
 - Compare pattern with text
 - Move to next position if not matched
 - Return match position if found
+==================================================
+Topic ID: 91
+Topic: Adjacency List
+Category: Graph Representation
+Difficulty: Medium
+
+Definition:
+A graph representation where each vertex stores a list of its adjacent vertices. It is memory efficient for sparse graphs.
+
+Operations:
+- Add Vertex
+- Add Edge
+- Remove Edge
+- Traverse Neighbors
+- Search Adjacent Vertices
+
+Relationships:
+- used_in -> Graph
+- used_in -> DFS (Depth First Search) Algorithm
+- used_in -> BFS (Breadth First Search) Algorithm
+- used_in -> Dijkstra Algorithm
+- related_to -> Adjacency Matrix
+
+Time Complexity:
+- Add Vertex: O(1)
+- Add Edge: O(1)
+- Remove Edge: O(V)
+- Search Adjacent Vertex: O(V)
+- Traverse Graph: O(V + E)
+
+Real Life Examples:
+- Social network friend connections
+- Road map navigation systems
+- Webpage hyperlink connections
+
+Math Relations:
+- Space Complexity: O(V + E)
+
+CPP Code:
+vector<vector<int>> adj(V);
+
+adj[0].push_back(1);
+adj[1].push_back(0);
+
+Images:
+- Adjacency List Diagram -> images/adjacency_list_diagram.png
+- Adjacency List Example -> images/adjacency_list_example.png
+
+Step By Step:
+- Create a list for each vertex
+- Store neighboring vertices
+- Add edges between connected vertices
+- Traverse neighbors when needed
+- Analyze graph complexity

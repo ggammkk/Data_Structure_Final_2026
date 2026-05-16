@@ -228,13 +228,7 @@ string Search::detectIntent(string query)
 {
     query = toLowerCases(query);
 
-    if(query.find("interview") != string::npos ||
-       query.find("question") != string::npos)
-    {
-        return "interview_questions";
-    }
-
-    else if(query.find("step") != string::npos ||
+    if(query.find("step") != string::npos ||
             query.find("process") != string::npos ||
             query.find("how does") != string::npos)
     {

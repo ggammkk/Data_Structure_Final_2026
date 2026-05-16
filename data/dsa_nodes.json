@@ -4971,5 +4971,86 @@
             "Move to next position if not matched",
             "Return match position if found"
         ]
+    },
+    {
+    "name": "Adjacency List",
+
+    "definition": "A graph representation where each vertex stores a list of its adjacent vertices. It is memory efficient for sparse graphs.",
+
+    "category": "Graph Representation",
+
+    "difficulty": "Medium",
+
+    "operations": [
+        "Add Vertex",
+        "Add Edge",
+        "Remove Edge",
+        "Traverse Neighbors",
+        "Search Adjacent Vertices"
+    ],
+
+    "relationships": [
+        {
+            "target": "Graph",
+            "type": "used_in"
+        },
+        {
+            "target": "DFS (Depth First Search) Algorithm",
+            "type": "used_in"
+        },
+        {
+            "target": "BFS (Breadth First Search) Algorithm",
+            "type": "used_in"
+        },
+        {
+            "target": "Dijkstra Algorithm",
+            "type": "used_in"
+        },
+        {
+            "target": "Adjacency Matrix",
+            "type": "related_to"
+        }
+    ],
+
+    "time_complexity": {
+        "Add Vertex": "O(1)",
+        "Add Edge": "O(1)",
+        "Remove Edge": "O(V)",
+        "Search Adjacent Vertex": "O(V)",
+        "Traverse Graph": "O(V + E)"
+    },
+
+    "real_life_examples": [
+        "Social network friend connections",
+        "Road map navigation systems",
+        "Webpage hyperlink connections"
+    ],
+
+    "math_relations": [
+        "Space Complexity = O(V + E)"
+    ],
+
+    "code_examples": {
+        "cpp": "vector<vector<int>> adj(V);\\nadj[0].push_back(1);\\nadj[1].push_back(0);"
+    },
+
+    "images": [
+        {
+            "title": "Adjacency List Diagram",
+            "url": "images/adjacency_list_diagram.png"
+        },
+        {
+            "title": "Adjacency List Example",
+            "url": "images/adjacency_list_example.png"
+        }
+    ],
+
+    "step_by_step": [
+        "Create a list for each vertex",
+        "Store neighboring vertices",
+        "Add edges between connected vertices",
+        "Traverse neighbors when needed",
+        "Analyze graph complexity"
+    ]
     }
 ]
