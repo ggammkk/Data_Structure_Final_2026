@@ -1,130 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DSA Practice Problems</title>
-
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="practice.css">
-
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="practice.css" />
     <script src="practice.js" defer></script>
+    <script src="https://unpkg.com/monaco-editor@latest/min/vs/loader.js"></script>
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <nav class="navbar">
-
-        <a href="../index.html">Home</a>
-        <a href="../codes.html">Knowledge Graph</a>
-        <a href="../quiz/quiz.html">Quizzes</a>
-        <a href="practice.html">Practice</a>
-
+      <a href="../../index.html">Home</a>
+      <a href="../dsa.html">DSA</a>
+      <a href="practice.html">Practice Problem</a>
+      <a href="../quiz-index.html">Quizzes</a>
+      <a href="../interview.html">Interview</a>
     </nav>
 
     <div class="practice-layout">
+      <aside class="practice-sidebar">
+        <h2>Topics</h2>
+        <div id="topicList"></div>
+      </aside>
 
-        <!-- SIDEBAR -->
+      <main class="practice-main">
+        <h1 id="problemTitle">Loading...</h1>
+        <div class="problem-meta">
+          <span id="difficultyBadge"></span>
+          <span id="categoryBadge"></span>
+        </div>
+        <section class="problem-section">
+          <h2>Problem</h2>
+          <p id="problemText"></p>
+        </section>
+        <section class="problem-section">
+          <h2>Example Input</h2>
+          <pre id="exampleInput"></pre>
+        </section>
+        <section class="problem-section">
+          <h2>Expected Output</h2>
+          <pre id="expectedOutput"></pre>
+        </section>
+        <section class="problem-section">
+          <h2>Code Editor</h2>
+          <div id="editor"></div>
+          <div class="editor-buttons">
+            <button class="btn-run" type="button" onclick="runExample()">
+              ▶ Run Code
+            </button>
+            <button type="button" onclick="showHint()">💡 Hint</button>
+            <button type="button" onclick="showSolution()">✦ Solution</button>
+            <button type="button" onclick="resetCode()">↺ Reset</button>
+          </div>
+        </section>
 
-        <aside class="practice-sidebar">
-
-            <h2>Topics</h2>
-
-            <div id="topicList"></div>
-
-        </aside>
-
-        <!-- MAIN CONTENT -->
-
-        <main class="practice-main">
-
-            <h1 id="problemTitle">
-                Loading...
-            </h1>
-
-            <div class="problem-meta">
-
-                <span id="difficultyBadge"></span>
-                <span id="categoryBadge"></span>
-
-            </div>
-
-            <section class="problem-section">
-
-                <h2>Problem</h2>
-
-                <p id="problemText"></p>
-
-            </section>
-
-            <section class="problem-section">
-
-                <h2>Example Input</h2>
-
-                <pre id="exampleInput"></pre>
-
-            </section>
-
-            <section class="problem-section">
-
-                <h2>Expected Output</h2>
-
-                <pre id="expectedOutput"></pre>
-
-            </section>
-
-            <section class="problem-section">
-
-                <h2>Code Editor</h2>
-
-                <textarea id="codeEditor"></textarea>
-
-                <div class="editor-buttons">
-
-                    <button onclick="runExample()">
-                        Run Example
-                    </button>
-
-                    <button onclick="showHint()">
-                        Show Hint
-                    </button>
-
-                    <button onclick="showSolution()">
-                        Show Solution
-                    </button>
-
-                    <button onclick="resetCode()">
-                        Reset Code
-                    </button>
-
-                </div>
-
-            </section>
-
-            <section class="problem-section">
-
-                <h2>Output</h2>
-
-                <pre id="outputBox"></pre>
-
-            </section>
-
-            <section class="problem-section">
-
-                <h2>Explanation</h2>
-
-                <ul id="explanationList"></ul>
-
-            </section>
-
-        </main>
-
+        <section class="problem-section">
+          <h2>Output</h2>
+          <pre id="outputBox"></pre>
+        </section>
+        <section class="problem-section">
+          <h2>Explanation</h2>
+          <ul id="explanationList"></ul>
+        </section>
+      </main>
     </div>
-
-</body>
-
+  </body>
 </html>

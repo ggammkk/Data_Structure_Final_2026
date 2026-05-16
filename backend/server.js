@@ -2,11 +2,10 @@ const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
 const path = require("path");
-const { execFile } = require("child_process");
-
 
 const app = express();
 //line below rachel experiment 
+const { execFile, exec } = require("child_process");
 app.use(express.json())
 
 //back to main code
@@ -132,29 +131,37 @@ app.get("/api/practice-topics", (req, res) => {
 });
 
 //below rachel experiment 
-app.post("/api/run", (req, res) => {
+const os = require('os');
 
-    const code = req.body.code;
+app.post('/api/run', (req, res) => {
+    const { code } = req.body;
 
-    fs.writeFileSync("temp.cpp", code);
+    const tmpDir  = os.tmpdir();
+    const srcFile = path.join(tmpDir, 'practice_code.cpp');
+    const outFile = path.join(tmpDir, 'practice_code.out');
 
-    exec(
-        "g++ temp.cpp -o temp && temp",
-        (error, stdout, stderr) => {
+    fs.writeFileSync(srcFile, code);
 
-            if (error) {
-
-                return res.json({
-                    output: stderr
-                });
-            }
-
-            res.json({
-                output: stdout
-            });
+    // Step 1: compile
+    exec(`g++ -o "${outFile}" "${srcFile}"`, (compileErr, _, compileStderr) => {
+        if (compileErr) {
+            return res.json({ error: compileStderr || compileErr.message });
         }
-    );
+
+        // Step 2: run
+        exec(`"${outFile}"`, { timeout: 5000 }, (runErr, stdout, runStderr) => {
+            if (runErr) {
+                return res.json({ error: runStderr || runErr.message });
+            }
+            res.json({ output: stdout || '(no output)' });
+
+            // cleanup
+            fs.unlink(srcFile, () => {});
+            fs.unlink(outFile, () => {});
+        });
+    });
 });
+
 
 //back to main code
 app.listen(3000, () => {

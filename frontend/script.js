@@ -264,7 +264,7 @@ fetch("http://localhost:3000/api/dsa")
                 cy.animate({
                     fit: {
                         eles: node,
-                        padding
+                        padding: 90
                     },
                     duration: 600
                 });
@@ -292,9 +292,12 @@ function searchTopic() {
 
     console.log("FOUND NODE:", nodeData);
 
-    if(!nodeData) {
-        document.getElementById("definition").innerHTML =
-            "No matching topic found.";
+    if(!input) {
+
+        document.getElementById("definition").innerHTML = `
+            <br>Please enter a search question.
+        `;
+
         return;
     }
     

@@ -1,47 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial;
-    padding: 30px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
 }
 
-.topiclist {
-    gap: 20px;
-    margin-top: 30px;
-}
+/* MAIN CONTAINER */
+.topicList {
+    width: min(1000px, 92%);
+    margin: 40px auto;
 
-.topic-card {
     background: white;
-    padding: 25px;
-    border-radius: 16px;
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-radius: 20px;
 
-    transition: 0.2s;
+    padding: 30px 35px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.topic-card:hover {
-    transform: translateY(-5px);
+.topicList h2 {
+    font-size: 32px;
+    margin: 0;
+    color: #0f172a;
 }
 
-.topic-ul {
+.subtitle {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.listWrapper {
+    margin-top: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+#topicList {
     list-style: none;
     padding: 0;
-    margin-top: 20px;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
 }
 
-.topic-ul li {
-    margin-bottom: 14px;
-}
+#topicList li a {
+    display: block;
 
-.topic-ul a {
+    padding: 16px 18px;
+
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+
     text-decoration: none;
-    color: black;
-    font-size: 20px;
+    color: #0f172a;
     font-weight: 600;
+
+    transition: 0.2s ease;
 }
 
-.topic-ul a:hover {
-    color: #2563eb;
+#topicList li a:hover {
+    transform: translateY(-3px);
+    background: #eef2ff;
+    border-color: #c7d2fe;
+    color: #4f46e5;
 }

@@ -1,50 +1,86 @@
+:root {
+    --bg:#ffffff;
+    --bg-page:#f8f9fc;
+    --border:#e4e4e9;
+    --text:#1c1c2e;
+    --text-muted: #6b6b80;
+    --accent:#6c7b9e;     
+    --accent-light:#eef2fb; 
+    --problem-bg:#ececec;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f8fafc;
+    background: var(--bg-page);
 }
 
 .practice-layout {
     display: flex;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 50px);
 }
 
 .practice-sidebar {
-    width: 260px;
-    background: #0f172a;
-    color: white;
-    padding: 20px;
+    width: 220px;
+    background: var(--bg);
+    border-right: 1px solid var(--border);
+    padding: 16px 12px;
     overflow-y: auto;
 }
 
+.practice-sidebar h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-muted);
+    padding: 0 8px 10px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid var(--border);
+}
+
 .topic-link {
-    display: block;
-    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-muted);
     text-decoration: none;
-    padding: 10px;
-    margin-bottom: 8px;
-    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 16px;
+    margin-bottom: 4px;
+    border-radius: 6px;
 }
 
 .topic-link:hover {
-    background: #1e293b;
+    background: var(--accent-light);
+}
+
+.active-topic {
+    background: var(--accent-light) !important;
+    color: var(--accent) !important;
+    font-weight: 600;
 }
 
 .practice-main {
     flex: 1;
-    padding: 30px;
+    padding: 15px;
     overflow-y: auto;
+}
+
+.practice-main h1 {
+    font-family: "imfell";
+    margin: 10px 0;
 }
 
 .problem-meta {
     margin-bottom: 20px;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 10px;
 }
 
 #difficultyBadge,
 #categoryBadge {
     display: inline-block;
-    background: #dbeafe;
-    color: #1e3a8a;
+    background: var(--accent);
+    color: var(--bg);
     padding: 6px 12px;
     border-radius: 999px;
     margin-right: 10px;
@@ -52,7 +88,7 @@ body {
 }
 
 .problem-section {
-    background: white;
+    background: var(--bg);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 14px;
@@ -60,41 +96,31 @@ body {
 }
 
 pre {
-    background: #0f172a;
-    color: white;
+    background: var(--problem-bg);
+    color: var(--text);
     padding: 15px;
     border-radius: 10px;
     overflow-x: auto;
+    margin: 10px 0px;
 }
 
-#codeEditor {
-    width: 100%;
-    min-height: 320px;
-    background: #020617;
-    color: #e5e7eb;
-    font-family: Consolas, monospace;
-    font-size: 15px;
-    padding: 15px;
-    border-radius: 10px;
-    border: none;
-    resize: vertical;
+#editor {
+    height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #1e293b;
 }
 
 .editor-buttons {
-    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 .editor-buttons button {
-    padding: 10px 16px;
-    margin-right: 10px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    background: #2563eb;
-    color: white;
-    font-weight: bold;
+    transition: 0.2s ease;
 }
 
 .editor-buttons button:hover {
-    background: #1d4ed8;
+    transform: translateY(-2px);
 }

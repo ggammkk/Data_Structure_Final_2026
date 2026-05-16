@@ -48,6 +48,9 @@ function renderQuestions(questions) {
     const block = document.createElement("div");
     block.className = "question-block";
 
+    const shuffledOptions = [...q.options]
+      .sort(() => Math.random() - 0.5);
+
     block.innerHTML = `
       <h2>Question ${index + 1}</h2>
       <p>${q.question}</p>
@@ -57,7 +60,7 @@ function renderQuestions(questions) {
       ${q.code ? `<pre class="code-block">${q.code}</pre>` : ""}
 
       <div class="options">
-        ${q.options.map(option => `
+        ${shuffledOptions.map(option => `
           <button class="option-btn">${option}</button>
         `).join("")}
       </div>

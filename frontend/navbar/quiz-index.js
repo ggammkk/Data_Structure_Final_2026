@@ -12,15 +12,13 @@ function loadTopics() {
   const topics = quizData;
 
   document.getElementById("topicList").innerHTML =
+  topics.map(t =>
     `
-      <ul class="topic-ul">
-        ${topics.map(topic => `
-          <li>
-            <a href="quiz/quiz.html?topic=${encodeURIComponent(topic)}">
-              ${topic}
-            </a>
-          </li>
-        `).join("")}
-      </ul>
-    `;
+      <li>
+        <a href="quiz/quiz.html?topic=${encodeURIComponent(t)}">
+          ${t}
+        </a>
+      </li>
+    `
+  ).join("");
 }

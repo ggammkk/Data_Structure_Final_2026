@@ -14,19 +14,16 @@ body {
     overflow: hidden;
 }
 
-/* whole app */
 .quiz-layout {
     display: flex;
     height: calc(100vh - 60px);
 }
 
-/* sidebar */
 .sidebar {
-    width: 20%;
+    width: 25%;
     background: #0f172a;
     color: white;
     padding: 20px;
-
     overflow-y: auto;
 }
 
@@ -44,9 +41,8 @@ body {
     background: #1e293b;
 }
 
-/* quiz section */
 .quiz-content {
-    width: 80%;
+    width: 75%;
     padding: 30px;
     overflow-y: auto;
     background: #f8fafc;
