@@ -1,842 +1,724 @@
 [
   {
     "id": 1,
-    "question": "How would you optimize memory usage when storing sparse graph data? Discuss the trade-offs involving Data.",
-    "answer": "Use adjacency lists or sparse matrix representations instead of dense matrices. In the context of Data, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "What is a data structure?",
+    "answer": "A data structure is a way of organizing and storing data so it can be accessed and modified efficiently.",
     "category": "Fundamental Concept",
     "difficulty": "Easy",
     "key_points": [
-      "Understanding of Data",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Organizes data",
+      "Improves efficiency",
+      "Supports operations such as insert, delete, search, and traversal"
     ]
   },
   {
     "id": 2,
-    "question": "Why might a heap be preferred over a sorted array in a real-time scheduling system? Discuss the trade-offs involving Data Structure.",
-    "answer": "A heap supports efficient insertion and removal of priority elements in O(log n). In the context of Data Structure, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "What is the difference between a linear and non-linear data structure?",
+    "answer": "A linear data structure stores elements sequentially, while a non-linear data structure stores elements hierarchically or through connections.",
     "category": "Fundamental Concept",
-    "difficulty": "Medium",
+    "difficulty": "Easy",
     "key_points": [
-      "Understanding of Data Structure",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Linear: array, stack, queue, linked list",
+      "Non-linear: tree, graph",
+      "Storage and traversal patterns differ"
     ]
   },
   {
     "id": 3,
-    "question": "Why are arrays cache-friendly compared to linked lists? Discuss the trade-offs involving Linear Data Structure.",
-    "answer": "Arrays store elements contiguously in memory, improving cache locality. In the context of Linear Data Structure, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "Why are arrays considered cache-friendly?",
+    "answer": "Arrays store elements in contiguous memory locations, so nearby elements can be loaded efficiently into CPU cache.",
     "category": "Linear Structure",
     "difficulty": "Easy",
     "key_points": [
-      "Understanding of Linear Data Structure",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Contiguous memory",
+      "Fast index access",
+      "Good cache locality"
     ]
   },
   {
     "id": 4,
-    "question": "How would you optimize memory usage when storing sparse graph data? Discuss the trade-offs involving Array.",
-    "answer": "Use adjacency lists or sparse matrix representations instead of dense matrices. In the context of Array, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "What is the main disadvantage of arrays?",
+    "answer": "Arrays usually have fixed size and insertion or deletion in the middle can require shifting elements.",
     "category": "Linear Structure",
     "difficulty": "Easy",
     "key_points": [
-      "Understanding of Array",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Fixed size in many cases",
+      "Insertion can be O(n)",
+      "Deletion can be O(n)"
     ]
   },
   {
     "id": 5,
-    "question": "Why might a heap be preferred over a sorted array in a real-time scheduling system? Discuss the trade-offs involving One-Dimensional Array.",
-    "answer": "A heap supports efficient insertion and removal of priority elements in O(log n). In the context of One-Dimensional Array, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "What is a linked list?",
+    "answer": "A linked list is a linear data structure made of nodes where each node stores data and a reference to the next node.",
     "category": "Linear Structure",
-    "difficulty": "Medium",
+    "difficulty": "Easy",
     "key_points": [
-      "Understanding of One-Dimensional Array",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Made of nodes",
+      "Uses pointers/references",
+      "Non-contiguous memory"
     ]
   },
   {
     "id": 6,
-    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving Two-Dimensional Array.",
-    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of Two-Dimensional Array, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "What is the difference between an array and a linked list?",
+    "answer": "Arrays use contiguous memory and allow O(1) access by index, while linked lists use nodes and require traversal for access.",
     "category": "Linear Structure",
     "difficulty": "Medium",
     "key_points": [
-      "Understanding of Two-Dimensional Array",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Array access is O(1)",
+      "Linked list access is O(n)",
+      "Linked lists allow flexible memory use"
     ]
   },
   {
     "id": 7,
-    "question": "How would you detect a cycle in a linked list during a production debugging session? Discuss the trade-offs involving Linked List.",
-    "answer": "Use Floyd\u2019s Cycle Detection algorithm with slow and fast pointers. In the context of Linked List, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "What is a singly linked list?",
+    "answer": "A singly linked list is a linked list where each node points only to the next node.",
     "category": "Linear Structure",
-    "difficulty": "Medium",
+    "difficulty": "Easy",
     "key_points": [
-      "Understanding of Linked List",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "One direction traversal",
+      "Each node has next pointer",
+      "Last node points to null"
     ]
   },
   {
     "id": 8,
-    "question": "Why might a heap be preferred over a sorted array in a real-time scheduling system? Discuss the trade-offs involving Singly Linked List.",
-    "answer": "A heap supports efficient insertion and removal of priority elements in O(log n). In the context of Singly Linked List, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "What is a doubly linked list?",
+    "answer": "A doubly linked list is a linked list where each node has pointers to both the previous and next nodes.",
     "category": "Linear Structure",
-    "difficulty": "Hard",
+    "difficulty": "Easy",
     "key_points": [
-      "Understanding of Singly Linked List",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Forward traversal",
+      "Backward traversal",
+      "Extra memory for previous pointer"
     ]
   },
   {
     "id": 9,
-    "question": "Your team needs a browser history feature with undo/redo support. Which data structure would you choose and why? Discuss the trade-offs involving Doubly Linked List.",
-    "answer": "A doubly linked list is ideal because it allows efficient forward and backward traversal. In the context of Doubly Linked List, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "When would you use a doubly linked list?",
+    "answer": "A doubly linked list is useful when movement in both directions is needed, such as browser history or undo/redo systems.",
     "category": "Linear Structure",
     "difficulty": "Medium",
     "key_points": [
-      "Understanding of Doubly Linked List",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Supports forward and backward movement",
+      "Useful for navigation",
+      "Uses more memory than singly linked list"
     ]
   },
   {
     "id": 10,
-    "question": "How would you detect a cycle in a linked list during a production debugging session? Discuss the trade-offs involving Circular Linked List.",
-    "answer": "Use Floyd\u2019s Cycle Detection algorithm with slow and fast pointers. In the context of Circular Linked List, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "How can you detect a cycle in a linked list?",
+    "answer": "Use Floyd's Cycle Detection algorithm with a slow pointer and a fast pointer. If they meet, a cycle exists.",
     "category": "Linear Structure",
     "difficulty": "Medium",
     "key_points": [
-      "Understanding of Circular Linked List",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Slow and fast pointers",
+      "O(n) time",
+      "O(1) extra space"
     ]
   },
   {
     "id": 11,
-    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving Node.",
-    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of Node, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Component",
-    "difficulty": "Hard",
+    "question": "What is a stack?",
+    "answer": "A stack is a linear data structure that follows LIFO, meaning the last element inserted is the first one removed.",
+    "category": "Linear Structure",
+    "difficulty": "Easy",
     "key_points": [
-      "Understanding of Node",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "LIFO",
+      "push inserts",
+      "pop removes",
+      "top reads latest element"
     ]
   },
   {
     "id": 12,
-    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving Pointer.",
-    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of Pointer, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Memory Concept",
+    "question": "Give two real-life examples of a stack.",
+    "answer": "Examples include undo functionality, browser back button, function call stack, and a stack of plates.",
+    "category": "Linear Structure",
     "difficulty": "Easy",
     "key_points": [
-      "Understanding of Pointer",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Undo operations",
+      "Browser back button",
+      "Function calls"
     ]
   },
   {
     "id": 13,
-    "question": "How would you detect a cycle in a linked list during a production debugging session? Discuss the trade-offs involving Dynamic Memory Allocation.",
-    "answer": "Use Floyd\u2019s Cycle Detection algorithm with slow and fast pointers. In the context of Dynamic Memory Allocation, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Memory Concept",
+    "question": "What is the time complexity of push and pop in a stack?",
+    "answer": "Push and pop are usually O(1) because they operate only at the top of the stack.",
+    "category": "Linear Structure",
     "difficulty": "Easy",
     "key_points": [
-      "Understanding of Dynamic Memory Allocation",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Push O(1)",
+      "Pop O(1)",
+      "Top O(1)"
     ]
   },
   {
     "id": 14,
-    "question": "Why are arrays cache-friendly compared to linked lists? Discuss the trade-offs involving Stack.",
-    "answer": "Arrays store elements contiguously in memory, improving cache locality. In the context of Stack, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "What is a queue?",
+    "answer": "A queue is a linear data structure that follows FIFO, meaning the first element inserted is the first one removed.",
     "category": "Linear Structure",
-    "difficulty": "Medium",
+    "difficulty": "Easy",
     "key_points": [
-      "Understanding of Stack",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "FIFO",
+      "enqueue inserts",
+      "dequeue removes",
+      "front reads first element"
     ]
   },
   {
     "id": 15,
-    "question": "Your team needs a browser history feature with undo/redo support. Which data structure would you choose and why? Discuss the trade-offs involving Queue.",
-    "answer": "A doubly linked list is ideal because it allows efficient forward and backward traversal. In the context of Queue, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "What is the difference between stack and queue?",
+    "answer": "A stack follows LIFO, while a queue follows FIFO.",
     "category": "Linear Structure",
-    "difficulty": "Medium",
+    "difficulty": "Easy",
     "key_points": [
-      "Understanding of Queue",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Stack: Last In First Out",
+      "Queue: First In First Out",
+      "Different removal order"
     ]
   },
   {
     "id": 16,
-    "question": "Your team needs a browser history feature with undo/redo support. Which data structure would you choose and why? Discuss the trade-offs involving Circular Queue.",
-    "answer": "A doubly linked list is ideal because it allows efficient forward and backward traversal. In the context of Circular Queue, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "Where are queues commonly used?",
+    "answer": "Queues are used in printer queues, CPU scheduling, customer service lines, and task processing systems.",
     "category": "Linear Structure",
-    "difficulty": "Medium",
+    "difficulty": "Easy",
     "key_points": [
-      "Understanding of Circular Queue",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Task scheduling",
+      "Printer queue",
+      "First-come-first-served processing"
     ]
   },
   {
     "id": 17,
-    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving Priority Queue.",
-    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of Priority Queue, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Specialized Structure",
-    "difficulty": "Hard",
+    "question": "What is a circular queue?",
+    "answer": "A circular queue connects the rear position back to the front using circular indexing to reuse empty spaces.",
+    "category": "Linear Structure",
+    "difficulty": "Medium",
     "key_points": [
-      "Understanding of Priority Queue",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Uses modulo arithmetic",
+      "Efficient space reuse",
+      "FIFO behavior"
     ]
   },
   {
     "id": 18,
-    "question": "Your team needs a browser history feature with undo/redo support. Which data structure would you choose and why? Discuss the trade-offs involving Deque.",
-    "answer": "A doubly linked list is ideal because it allows efficient forward and backward traversal. In the context of Deque, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "What is a deque?",
+    "answer": "A deque is a double-ended queue that allows insertion and deletion from both front and rear.",
     "category": "Linear Structure",
     "difficulty": "Easy",
     "key_points": [
-      "Understanding of Deque",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Insert front/back",
+      "Delete front/back",
+      "Flexible queue variant"
     ]
   },
   {
     "id": 19,
-    "question": "A service experiences stack overflow errors during recursion. How would you optimize it? Discuss the trade-offs involving Recursion.",
-    "answer": "Convert deep recursion into iteration or use tail recursion optimization where possible. In the context of Recursion, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Algorithmic Technique",
-    "difficulty": "Easy",
+    "question": "What is a priority queue?",
+    "answer": "A priority queue removes elements based on priority instead of insertion order.",
+    "category": "Specialized Structure",
+    "difficulty": "Medium",
     "key_points": [
-      "Understanding of Recursion",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Priority-based removal",
+      "Often implemented using heap",
+      "Used in scheduling and graph algorithms"
     ]
   },
   {
     "id": 20,
-    "question": "Why are arrays cache-friendly compared to linked lists? Discuss the trade-offs involving Recursive Function.",
-    "answer": "Arrays store elements contiguously in memory, improving cache locality. In the context of Recursive Function, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Algorithm",
-    "difficulty": "Hard",
+    "question": "Why is a heap useful for priority queues?",
+    "answer": "A heap allows efficient access to the highest or lowest priority element while supporting insertion and deletion in O(log n).",
+    "category": "Tree",
+    "difficulty": "Medium",
     "key_points": [
-      "Understanding of Recursive Function",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Top priority access",
+      "Insertion O(log n)",
+      "Deletion O(log n)"
     ]
   },
   {
     "id": 21,
-    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving Base Case.",
-    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of Base Case, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Algorithmic Technique",
+    "question": "What is a tree?",
+    "answer": "A tree is a hierarchical non-linear data structure made of nodes connected by edges with one root node.",
+    "category": "Non-Linear Structure",
     "difficulty": "Easy",
     "key_points": [
-      "Understanding of Base Case",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Root node",
+      "Parent-child relationship",
+      "Hierarchical structure"
     ]
   },
   {
     "id": 22,
-    "question": "Your team needs a browser history feature with undo/redo support. Which data structure would you choose and why? Discuss the trade-offs involving Call Stack.",
-    "answer": "A doubly linked list is ideal because it allows efficient forward and backward traversal. In the context of Call Stack, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Memory Concept",
-    "difficulty": "Medium",
+    "question": "What is a binary tree?",
+    "answer": "A binary tree is a tree where each node has at most two children: left and right.",
+    "category": "Non-Linear Structure",
+    "difficulty": "Easy",
     "key_points": [
-      "Understanding of Call Stack",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "At most two children",
+      "Left child",
+      "Right child"
     ]
   },
   {
     "id": 23,
-    "question": "A service experiences stack overflow errors during recursion. How would you optimize it? Discuss the trade-offs involving Sparse Matrix.",
-    "answer": "Convert deep recursion into iteration or use tail recursion optimization where possible. In the context of Sparse Matrix, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Specialized Structure",
-    "difficulty": "Hard",
+    "question": "What is a binary search tree?",
+    "answer": "A binary search tree is a binary tree where values in the left subtree are smaller than the root and values in the right subtree are larger.",
+    "category": "Non-Linear Structure",
+    "difficulty": "Medium",
     "key_points": [
-      "Understanding of Sparse Matrix",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Left < root",
+      "Right > root",
+      "Efficient search if balanced"
     ]
   },
   {
     "id": 24,
-    "question": "A service experiences stack overflow errors during recursion. How would you optimize it? Discuss the trade-offs involving Polynomial Representation.",
-    "answer": "Convert deep recursion into iteration or use tail recursion optimization where possible. In the context of Polynomial Representation, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Representation Technique",
+    "question": "What is the average search complexity in a balanced BST?",
+    "answer": "The average search complexity in a balanced BST is O(log n).",
+    "category": "Non-Linear Structure",
     "difficulty": "Medium",
     "key_points": [
-      "Understanding of Polynomial Representation",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Balanced height",
+      "O(log n) search",
+      "Worst case can be O(n) if unbalanced"
     ]
   },
   {
     "id": 25,
-    "question": "How would you optimize memory usage when storing sparse graph data? Discuss the trade-offs involving Tree.",
-    "answer": "Use adjacency lists or sparse matrix representations instead of dense matrices. In the context of Tree, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "What is an AVL tree?",
+    "answer": "An AVL tree is a self-balancing binary search tree where the height difference between left and right subtrees is at most one.",
     "category": "Non-Linear Structure",
-    "difficulty": "Medium",
+    "difficulty": "Hard",
     "key_points": [
-      "Understanding of Tree",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Self-balancing BST",
+      "Balance factor",
+      "Search/insert/delete O(log n)"
     ]
   },
   {
     "id": 26,
-    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving Binary Tree.",
-    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of Binary Tree, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "Why do AVL trees use rotations?",
+    "answer": "AVL trees use rotations to restore balance after insertion or deletion.",
     "category": "Non-Linear Structure",
     "difficulty": "Hard",
     "key_points": [
-      "Understanding of Binary Tree",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Maintains balance",
+      "Prevents skewed tree",
+      "Keeps operations O(log n)"
     ]
   },
   {
     "id": 27,
-    "question": "A service experiences stack overflow errors during recursion. How would you optimize it? Discuss the trade-offs involving Binary Search Tree.",
-    "answer": "Convert deep recursion into iteration or use tail recursion optimization where possible. In the context of Binary Search Tree, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "What is a heap?",
+    "answer": "A heap is a complete binary tree that follows a heap-order property, such as max-heap or min-heap.",
     "category": "Non-Linear Structure",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "key_points": [
-      "Understanding of Binary Search Tree",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Complete binary tree",
+      "Max heap or min heap",
+      "Used in priority queues"
     ]
   },
   {
     "id": 28,
-    "question": "A service experiences stack overflow errors during recursion. How would you optimize it? Discuss the trade-offs involving AVL Tree.",
-    "answer": "Convert deep recursion into iteration or use tail recursion optimization where possible. In the context of AVL Tree, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "What is the difference between min heap and max heap?",
+    "answer": "In a min heap, the parent is less than or equal to its children. In a max heap, the parent is greater than or equal to its children.",
     "category": "Non-Linear Structure",
     "difficulty": "Easy",
     "key_points": [
-      "Understanding of AVL Tree",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Min heap: parent <= child",
+      "Max heap: parent >= child",
+      "Root gives min or max"
     ]
   },
   {
     "id": 29,
-    "question": "A service experiences stack overflow errors during recursion. How would you optimize it? Discuss the trade-offs involving Heap.",
-    "answer": "Convert deep recursion into iteration or use tail recursion optimization where possible. In the context of Heap, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "What is a graph?",
+    "answer": "A graph is a non-linear data structure made of vertices and edges.",
     "category": "Non-Linear Structure",
-    "difficulty": "Hard",
+    "difficulty": "Easy",
     "key_points": [
-      "Understanding of Heap",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Vertices",
+      "Edges",
+      "Can be directed or undirected"
     ]
   },
   {
     "id": 30,
-    "question": "How would you detect a cycle in a linked list during a production debugging session? Discuss the trade-offs involving Max Heap.",
-    "answer": "Use Floyd\u2019s Cycle Detection algorithm with slow and fast pointers. In the context of Max Heap, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "What is the difference between directed and undirected graphs?",
+    "answer": "In a directed graph edges have direction, while in an undirected graph edges do not have direction.",
     "category": "Non-Linear Structure",
-    "difficulty": "Medium",
+    "difficulty": "Easy",
     "key_points": [
-      "Understanding of Max Heap",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Directed edges have direction",
+      "Undirected edges are two-way",
+      "Used for different relationship types"
     ]
   },
   {
     "id": 31,
-    "question": "Design a system that handles millions of search queries efficiently. Which tree structure would you recommend? Discuss the trade-offs involving Min Heap.",
-    "answer": "A balanced BST such as an AVL Tree provides efficient O(log n) search, insert, and delete operations. In the context of Min Heap, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Non-Linear Structure",
+    "question": "What is the difference between adjacency matrix and adjacency list?",
+    "answer": "An adjacency matrix uses a 2D table and is good for fast edge lookup, while an adjacency list stores neighbors and is more space-efficient for sparse graphs.",
+    "category": "Representation Technique",
     "difficulty": "Medium",
     "key_points": [
-      "Understanding of Min Heap",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Matrix edge lookup O(1)",
+      "List saves space for sparse graphs",
+      "Matrix can use O(V^2) space"
     ]
   },
   {
     "id": 32,
-    "question": "Your team needs a browser history feature with undo/redo support. Which data structure would you choose and why? Discuss the trade-offs involving Adjacency Matrix.",
-    "answer": "A doubly linked list is ideal because it allows efficient forward and backward traversal. In the context of Adjacency Matrix, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "When would you prefer an adjacency list?",
+    "answer": "Use an adjacency list when the graph is sparse because it stores only existing edges.",
     "category": "Representation Technique",
-    "difficulty": "Easy",
+    "difficulty": "Medium",
     "key_points": [
-      "Understanding of Adjacency Matrix",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Sparse graphs",
+      "Space efficient",
+      "Good for traversal"
     ]
   },
   {
     "id": 33,
-    "question": "Why are arrays cache-friendly compared to linked lists? Discuss the trade-offs involving Breadth First Search.",
-    "answer": "Arrays store elements contiguously in memory, improving cache locality. In the context of Breadth First Search, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "What is BFS?",
+    "answer": "Breadth First Search is a traversal algorithm that visits nodes level by level using a queue.",
     "category": "Algorithm",
-    "difficulty": "Hard",
+    "difficulty": "Easy",
     "key_points": [
-      "Understanding of Breadth First Search",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Uses queue",
+      "Level-order exploration",
+      "Good for shortest path in unweighted graphs"
     ]
   },
   {
     "id": 34,
-    "question": "How would you detect a cycle in a linked list during a production debugging session? Discuss the trade-offs involving Depth First Search.",
-    "answer": "Use Floyd\u2019s Cycle Detection algorithm with slow and fast pointers. In the context of Depth First Search, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "What is DFS?",
+    "answer": "Depth First Search is a traversal algorithm that explores as far as possible along a branch before backtracking.",
     "category": "Algorithm",
     "difficulty": "Easy",
     "key_points": [
-      "Understanding of Depth First Search",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Uses recursion or stack",
+      "Backtracking",
+      "Explores deep first"
     ]
   },
   {
     "id": 35,
-    "question": "Design a system that handles millions of search queries efficiently. Which tree structure would you recommend? Discuss the trade-offs involving Factorial.",
-    "answer": "A balanced BST such as an AVL Tree provides efficient O(log n) search, insert, and delete operations. In the context of Factorial, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Mathematics",
+    "question": "What is the time complexity of BFS and DFS?",
+    "answer": "For a graph represented with adjacency lists, both BFS and DFS are O(V + E).",
+    "category": "Algorithm",
     "difficulty": "Medium",
     "key_points": [
-      "Understanding of Factorial",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "V vertices",
+      "E edges",
+      "Each vertex and edge is processed"
     ]
   },
   {
     "id": 36,
-    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving Fibonacci Sequence.",
-    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of Fibonacci Sequence, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Mathematics",
+    "question": "When is BFS better than DFS?",
+    "answer": "BFS is better when searching for the shortest path in an unweighted graph or when level-order traversal is needed.",
+    "category": "Algorithm",
     "difficulty": "Medium",
     "key_points": [
-      "Understanding of Fibonacci Sequence",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Shortest path in unweighted graph",
+      "Level order",
+      "Uses queue"
     ]
   },
   {
     "id": 37,
-    "question": "Your team needs a browser history feature with undo/redo support. Which data structure would you choose and why? Discuss the trade-offs involving Level Order Traversal.",
-    "answer": "A doubly linked list is ideal because it allows efficient forward and backward traversal. In the context of Level Order Traversal, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "When is DFS useful?",
+    "answer": "DFS is useful for cycle detection, topological sorting, connected components, and backtracking problems.",
     "category": "Algorithm",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "key_points": [
-      "Understanding of Level Order Traversal",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Cycle detection",
+      "Topological sort",
+      "Backtracking"
     ]
   },
   {
     "id": 38,
-    "question": "Why might a heap be preferred over a sorted array in a real-time scheduling system? Discuss the trade-offs involving Memory Management.",
-    "answer": "A heap supports efficient insertion and removal of priority elements in O(log n). In the context of Memory Management, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Computer Science Concept",
-    "difficulty": "Hard",
+    "question": "What is Dijkstra's algorithm used for?",
+    "answer": "Dijkstra's algorithm finds the shortest path from a source node to other nodes in a weighted graph with non-negative edge weights.",
+    "category": "Algorithm",
+    "difficulty": "Medium",
     "key_points": [
-      "Understanding of Memory Management",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Shortest path",
+      "Weighted graph",
+      "Non-negative weights"
     ]
   },
   {
     "id": 39,
-    "question": "Why might a heap be preferred over a sorted array in a real-time scheduling system? Discuss the trade-offs involving Triplet Representation.",
-    "answer": "A heap supports efficient insertion and removal of priority elements in O(log n). In the context of Triplet Representation, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Representation Technique",
-    "difficulty": "Hard",
+    "question": "Why does Dijkstra often use a priority queue?",
+    "answer": "A priority queue efficiently selects the next node with the smallest current distance.",
+    "category": "Algorithm",
+    "difficulty": "Medium",
     "key_points": [
-      "Understanding of Triplet Representation",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Select minimum distance",
+      "Improves efficiency",
+      "Common with min heap"
     ]
   },
   {
     "id": 40,
-    "question": "Design a system that handles millions of search queries efficiently. Which tree structure would you recommend? Discuss the trade-offs involving Graph.",
-    "answer": "A balanced BST such as an AVL Tree provides efficient O(log n) search, insert, and delete operations. In the context of Graph, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Non-Linear Structure",
-    "difficulty": "Easy",
+    "question": "What is a minimum spanning tree?",
+    "answer": "A minimum spanning tree connects all vertices in a weighted undirected graph with minimum total edge weight and no cycles.",
+    "category": "Algorithm",
+    "difficulty": "Medium",
     "key_points": [
-      "Understanding of Graph",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Connects all vertices",
+      "No cycles",
+      "Minimum total weight"
     ]
   },
   {
     "id": 41,
-    "question": "Design a system that handles millions of search queries efficiently. Which tree structure would you recommend? Discuss the trade-offs involving Directed Graph.",
-    "answer": "A balanced BST such as an AVL Tree provides efficient O(log n) search, insert, and delete operations. In the context of Directed Graph, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Non-Linear Structure",
-    "difficulty": "Medium",
+    "question": "What is the difference between Prim's and Kruskal's algorithms?",
+    "answer": "Prim's algorithm grows one tree from a starting vertex, while Kruskal's algorithm sorts edges and adds the smallest valid edges without forming cycles.",
+    "category": "Algorithm",
+    "difficulty": "Hard",
     "key_points": [
-      "Understanding of Directed Graph",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Prim grows from vertices",
+      "Kruskal sorts edges",
+      "Both find MST"
     ]
   },
   {
     "id": 42,
-    "question": "Your team needs a browser history feature with undo/redo support. Which data structure would you choose and why? Discuss the trade-offs involving Undirected Graph.",
-    "answer": "A doubly linked list is ideal because it allows efficient forward and backward traversal. In the context of Undirected Graph, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Non-Linear Structure",
+    "question": "What is topological sorting?",
+    "answer": "Topological sorting orders vertices in a directed acyclic graph so each node appears before the nodes that depend on it.",
+    "category": "Algorithm",
     "difficulty": "Medium",
     "key_points": [
-      "Understanding of Undirected Graph",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Only for DAG",
+      "Dependency ordering",
+      "Used in scheduling"
     ]
   },
   {
     "id": 43,
-    "question": "Why might a heap be preferred over a sorted array in a real-time scheduling system? Discuss the trade-offs involving Weighted Graph.",
-    "answer": "A heap supports efficient insertion and removal of priority elements in O(log n). In the context of Weighted Graph, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Non-Linear Structure",
-    "difficulty": "Hard",
+    "question": "What is a hash table?",
+    "answer": "A hash table stores key-value pairs using a hash function to compute an index.",
+    "category": "Specialized Structure",
+    "difficulty": "Easy",
     "key_points": [
-      "Understanding of Weighted Graph",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Key-value pairs",
+      "Hash function",
+      "Fast average lookup"
     ]
   },
   {
     "id": 44,
-    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving DFS (Depth First Search) Algorithm.",
-    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of DFS (Depth First Search) Algorithm, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Algorithm",
-    "difficulty": "Hard",
+    "question": "What causes collisions in a hash table?",
+    "answer": "A collision occurs when two different keys produce the same hash index.",
+    "category": "Specialized Structure",
+    "difficulty": "Medium",
     "key_points": [
-      "Understanding of DFS (Depth First Search) Algorithm",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Same index",
+      "Different keys",
+      "Needs collision resolution"
     ]
   },
   {
     "id": 45,
-    "question": "How would you detect a cycle in a linked list during a production debugging session? Discuss the trade-offs involving BFS (Breadth First Search) Algorithm.",
-    "answer": "Use Floyd\u2019s Cycle Detection algorithm with slow and fast pointers. In the context of BFS (Breadth First Search) Algorithm, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Algorithm",
-    "difficulty": "Hard",
+    "question": "How can hash collisions be handled?",
+    "answer": "Collisions can be handled using chaining or open addressing.",
+    "category": "Specialized Structure",
+    "difficulty": "Medium",
     "key_points": [
-      "Understanding of BFS (Breadth First Search) Algorithm",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Chaining",
+      "Open addressing",
+      "Collision resolution"
     ]
   },
   {
     "id": 46,
-    "question": "A service experiences stack overflow errors during recursion. How would you optimize it? Discuss the trade-offs involving Dijkstra Algorithm.",
-    "answer": "Convert deep recursion into iteration or use tail recursion optimization where possible. In the context of Dijkstra Algorithm, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Algorithm",
+    "question": "What is the average time complexity of hash table lookup?",
+    "answer": "The average time complexity is O(1), but the worst case can be O(n) if many collisions occur.",
+    "category": "Specialized Structure",
     "difficulty": "Medium",
     "key_points": [
-      "Understanding of Dijkstra Algorithm",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Average O(1)",
+      "Worst O(n)",
+      "Depends on hash quality"
     ]
   },
   {
     "id": 47,
-    "question": "A service experiences stack overflow errors during recursion. How would you optimize it? Discuss the trade-offs involving Minimum Spanning Tree.",
-    "answer": "Convert deep recursion into iteration or use tail recursion optimization where possible. In the context of Minimum Spanning Tree, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "What is sorting?",
+    "answer": "Sorting is the process of arranging data in a specific order, such as ascending or descending.",
     "category": "Algorithm",
     "difficulty": "Easy",
     "key_points": [
-      "Understanding of Minimum Spanning Tree",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Ordering data",
+      "Ascending/descending",
+      "Useful for searching and organization"
     ]
   },
   {
     "id": 48,
-    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving Prim Algorithm.",
-    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of Prim Algorithm, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "What is bubble sort?",
+    "answer": "Bubble sort repeatedly compares adjacent elements and swaps them if they are in the wrong order.",
     "category": "Algorithm",
     "difficulty": "Easy",
     "key_points": [
-      "Understanding of Prim Algorithm",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Adjacent swaps",
+      "Simple but inefficient",
+      "O(n^2)"
     ]
   },
   {
     "id": 49,
-    "question": "How would you detect a cycle in a linked list during a production debugging session? Discuss the trade-offs involving Kruskal Algorithm.",
-    "answer": "Use Floyd\u2019s Cycle Detection algorithm with slow and fast pointers. In the context of Kruskal Algorithm, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "What is selection sort?",
+    "answer": "Selection sort repeatedly selects the smallest remaining element and places it in the correct position.",
     "category": "Algorithm",
-    "difficulty": "Hard",
+    "difficulty": "Easy",
     "key_points": [
-      "Understanding of Kruskal Algorithm",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Find minimum",
+      "Place in position",
+      "O(n^2)"
     ]
   },
   {
     "id": 50,
-    "question": "How would you optimize memory usage when storing sparse graph data? Discuss the trade-offs involving Topological Sorting.",
-    "answer": "Use adjacency lists or sparse matrix representations instead of dense matrices. In the context of Topological Sorting, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "What is insertion sort?",
+    "answer": "Insertion sort builds the sorted array one element at a time by inserting each element into its correct position.",
     "category": "Algorithm",
     "difficulty": "Easy",
     "key_points": [
-      "Understanding of Topological Sorting",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Good for small data",
+      "Stable",
+      "O(n^2) worst case"
     ]
   },
   {
     "id": 51,
-    "question": "Why might a heap be preferred over a sorted array in a real-time scheduling system? Discuss the trade-offs involving Hash Table.",
-    "answer": "A heap supports efficient insertion and removal of priority elements in O(log n). In the context of Hash Table, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Specialized Structure",
-    "difficulty": "Hard",
+    "question": "What is merge sort?",
+    "answer": "Merge sort is a divide-and-conquer algorithm that splits data, sorts each half, and merges them.",
+    "category": "Algorithm",
+    "difficulty": "Medium",
     "key_points": [
-      "Understanding of Hash Table",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Divide and conquer",
+      "Stable",
+      "O(n log n)"
     ]
   },
   {
     "id": 52,
-    "question": "How would you detect a cycle in a linked list during a production debugging session? Discuss the trade-offs involving Hash Function.",
-    "answer": "Use Floyd\u2019s Cycle Detection algorithm with slow and fast pointers. In the context of Hash Function, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Component",
-    "difficulty": "Hard",
+    "question": "What is quick sort?",
+    "answer": "Quick sort chooses a pivot, partitions the array, and recursively sorts the partitions.",
+    "category": "Algorithm",
+    "difficulty": "Medium",
     "key_points": [
-      "Understanding of Hash Function",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Pivot",
+      "Partitioning",
+      "Average O(n log n)"
     ]
   },
   {
     "id": 53,
-    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving Collision Resolution.",
-    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of Collision Resolution, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Component",
-    "difficulty": "Hard",
+    "question": "What is binary search?",
+    "answer": "Binary search finds a target in a sorted array by repeatedly dividing the search space in half.",
+    "category": "Algorithm",
+    "difficulty": "Easy",
     "key_points": [
-      "Understanding of Collision Resolution",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Requires sorted data",
+      "O(log n)",
+      "Uses middle element"
     ]
   },
   {
     "id": 54,
-    "question": "How would you optimize memory usage when storing sparse graph data? Discuss the trade-offs involving Sorting Algorithm.",
-    "answer": "Use adjacency lists or sparse matrix representations instead of dense matrices. In the context of Sorting Algorithm, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "question": "Why must binary search be used on sorted data?",
+    "answer": "Binary search relies on comparing the target with the middle element to decide which half to discard, which only works if data is sorted.",
     "category": "Algorithm",
-    "difficulty": "Medium",
+    "difficulty": "Easy",
     "key_points": [
-      "Understanding of Sorting Algorithm",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Sorted input required",
+      "Discard half each step",
+      "O(log n)"
     ]
   },
   {
     "id": 55,
-    "question": "How would you detect a cycle in a linked list during a production debugging session? Discuss the trade-offs involving Bubble Sort.",
-    "answer": "Use Floyd\u2019s Cycle Detection algorithm with slow and fast pointers. In the context of Bubble Sort, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Algorithm",
-    "difficulty": "Hard",
+    "question": "What is recursion?",
+    "answer": "Recursion is a technique where a function calls itself to solve smaller versions of a problem.",
+    "category": "Algorithmic Technique",
+    "difficulty": "Easy",
     "key_points": [
-      "Understanding of Bubble Sort",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Self-call",
+      "Smaller subproblem",
+      "Needs base case"
     ]
   },
   {
     "id": 56,
-    "question": "How would you detect a cycle in a linked list during a production debugging session? Discuss the trade-offs involving Selection Sort.",
-    "answer": "Use Floyd\u2019s Cycle Detection algorithm with slow and fast pointers. In the context of Selection Sort, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Algorithm",
-    "difficulty": "Medium",
+    "question": "What is a base case in recursion?",
+    "answer": "A base case is the stopping condition that prevents infinite recursive calls.",
+    "category": "Algorithmic Technique",
+    "difficulty": "Easy",
     "key_points": [
-      "Understanding of Selection Sort",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Stops recursion",
+      "Prevents infinite calls",
+      "Returns simple result"
     ]
   },
   {
     "id": 57,
-    "question": "Why are arrays cache-friendly compared to linked lists? Discuss the trade-offs involving Insertion Sort.",
-    "answer": "Arrays store elements contiguously in memory, improving cache locality. In the context of Insertion Sort, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Algorithm",
-    "difficulty": "Hard",
+    "question": "What is the call stack?",
+    "answer": "The call stack stores active function calls and their local data while a program is running.",
+    "category": "Memory Concept",
+    "difficulty": "Easy",
     "key_points": [
-      "Understanding of Insertion Sort",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Stores function calls",
+      "LIFO behavior",
+      "Important in recursion"
     ]
   },
   {
     "id": 58,
-    "question": "A service experiences stack overflow errors during recursion. How would you optimize it? Discuss the trade-offs involving Merge Sort.",
-    "answer": "Convert deep recursion into iteration or use tail recursion optimization where possible. In the context of Merge Sort, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Algorithm",
-    "difficulty": "Hard",
+    "question": "What can cause stack overflow in recursion?",
+    "answer": "Stack overflow can happen when recursion is too deep or missing a proper base case.",
+    "category": "Memory Concept",
+    "difficulty": "Medium",
     "key_points": [
-      "Understanding of Merge Sort",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Deep recursion",
+      "Missing base case",
+      "Too many stack frames"
     ]
   },
   {
     "id": 59,
-    "question": "Design a system that handles millions of search queries efficiently. Which tree structure would you recommend? Discuss the trade-offs involving Quick Sort.",
-    "answer": "A balanced BST such as an AVL Tree provides efficient O(log n) search, insert, and delete operations. In the context of Quick Sort, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Algorithm",
+    "question": "What is dynamic memory allocation?",
+    "answer": "Dynamic memory allocation means allocating memory at runtime using tools such as new and delete in C++.",
+    "category": "Memory Concept",
     "difficulty": "Easy",
     "key_points": [
-      "Understanding of Quick Sort",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Runtime allocation",
+      "Uses heap memory",
+      "Must deallocate when needed"
     ]
   },
   {
     "id": 60,
-    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving Binary Search.",
-    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of Binary Search, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
-    "category": "Algorithm",
-    "difficulty": "Hard",
+    "question": "What is the difference between time complexity and space complexity?",
+    "answer": "Time complexity measures how running time grows with input size, while space complexity measures how memory usage grows.",
+    "category": "Complexity Analysis",
+    "difficulty": "Easy",
     "key_points": [
-      "Understanding of Binary Search",
-      "Time complexity analysis",
-      "Space complexity analysis",
-      "Real-world trade-offs",
-      "Scalability considerations"
+      "Time measures speed",
+      "Space measures memory",
+      "Both depend on input size"
     ]
   }
 ]

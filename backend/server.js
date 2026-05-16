@@ -178,6 +178,24 @@ app.post("/api/run", (req, res) => {
 
 
 //back to main code
+app.get("/api/interview", (req, res) => {
+    execFile(
+        path.join(__dirname, "interview", "interview_program.exe"),
+        ["10"],
+        { cwd: path.join(__dirname, "interview") },
+        (error, stdout, stderr) => {
+            if (error) {
+                return res.status(500).json({
+                    error: "C++ interview failed",
+                    details: stdout || stderr || error.message
+                });
+            }
+
+            res.json(JSON.parse(stdout));
+        }
+    );
+});
+
 app.listen(3000, () => {
     console.log("Server running on port 3000");
 });
