@@ -1,0 +1,842 @@
+[
+  {
+    "id": 1,
+    "question": "How would you optimize memory usage when storing sparse graph data? Discuss the trade-offs involving Data.",
+    "answer": "Use adjacency lists or sparse matrix representations instead of dense matrices. In the context of Data, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Fundamental Concept",
+    "difficulty": "Easy",
+    "key_points": [
+      "Understanding of Data",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Why might a heap be preferred over a sorted array in a real-time scheduling system? Discuss the trade-offs involving Data Structure.",
+    "answer": "A heap supports efficient insertion and removal of priority elements in O(log n). In the context of Data Structure, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Fundamental Concept",
+    "difficulty": "Medium",
+    "key_points": [
+      "Understanding of Data Structure",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Why are arrays cache-friendly compared to linked lists? Discuss the trade-offs involving Linear Data Structure.",
+    "answer": "Arrays store elements contiguously in memory, improving cache locality. In the context of Linear Data Structure, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Linear Structure",
+    "difficulty": "Easy",
+    "key_points": [
+      "Understanding of Linear Data Structure",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 4,
+    "question": "How would you optimize memory usage when storing sparse graph data? Discuss the trade-offs involving Array.",
+    "answer": "Use adjacency lists or sparse matrix representations instead of dense matrices. In the context of Array, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Linear Structure",
+    "difficulty": "Easy",
+    "key_points": [
+      "Understanding of Array",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Why might a heap be preferred over a sorted array in a real-time scheduling system? Discuss the trade-offs involving One-Dimensional Array.",
+    "answer": "A heap supports efficient insertion and removal of priority elements in O(log n). In the context of One-Dimensional Array, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Linear Structure",
+    "difficulty": "Medium",
+    "key_points": [
+      "Understanding of One-Dimensional Array",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving Two-Dimensional Array.",
+    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of Two-Dimensional Array, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Linear Structure",
+    "difficulty": "Medium",
+    "key_points": [
+      "Understanding of Two-Dimensional Array",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 7,
+    "question": "How would you detect a cycle in a linked list during a production debugging session? Discuss the trade-offs involving Linked List.",
+    "answer": "Use Floyd\u2019s Cycle Detection algorithm with slow and fast pointers. In the context of Linked List, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Linear Structure",
+    "difficulty": "Medium",
+    "key_points": [
+      "Understanding of Linked List",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Why might a heap be preferred over a sorted array in a real-time scheduling system? Discuss the trade-offs involving Singly Linked List.",
+    "answer": "A heap supports efficient insertion and removal of priority elements in O(log n). In the context of Singly Linked List, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Linear Structure",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of Singly Linked List",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Your team needs a browser history feature with undo/redo support. Which data structure would you choose and why? Discuss the trade-offs involving Doubly Linked List.",
+    "answer": "A doubly linked list is ideal because it allows efficient forward and backward traversal. In the context of Doubly Linked List, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Linear Structure",
+    "difficulty": "Medium",
+    "key_points": [
+      "Understanding of Doubly Linked List",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 10,
+    "question": "How would you detect a cycle in a linked list during a production debugging session? Discuss the trade-offs involving Circular Linked List.",
+    "answer": "Use Floyd\u2019s Cycle Detection algorithm with slow and fast pointers. In the context of Circular Linked List, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Linear Structure",
+    "difficulty": "Medium",
+    "key_points": [
+      "Understanding of Circular Linked List",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 11,
+    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving Node.",
+    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of Node, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Component",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of Node",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 12,
+    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving Pointer.",
+    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of Pointer, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Memory Concept",
+    "difficulty": "Easy",
+    "key_points": [
+      "Understanding of Pointer",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 13,
+    "question": "How would you detect a cycle in a linked list during a production debugging session? Discuss the trade-offs involving Dynamic Memory Allocation.",
+    "answer": "Use Floyd\u2019s Cycle Detection algorithm with slow and fast pointers. In the context of Dynamic Memory Allocation, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Memory Concept",
+    "difficulty": "Easy",
+    "key_points": [
+      "Understanding of Dynamic Memory Allocation",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 14,
+    "question": "Why are arrays cache-friendly compared to linked lists? Discuss the trade-offs involving Stack.",
+    "answer": "Arrays store elements contiguously in memory, improving cache locality. In the context of Stack, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Linear Structure",
+    "difficulty": "Medium",
+    "key_points": [
+      "Understanding of Stack",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 15,
+    "question": "Your team needs a browser history feature with undo/redo support. Which data structure would you choose and why? Discuss the trade-offs involving Queue.",
+    "answer": "A doubly linked list is ideal because it allows efficient forward and backward traversal. In the context of Queue, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Linear Structure",
+    "difficulty": "Medium",
+    "key_points": [
+      "Understanding of Queue",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 16,
+    "question": "Your team needs a browser history feature with undo/redo support. Which data structure would you choose and why? Discuss the trade-offs involving Circular Queue.",
+    "answer": "A doubly linked list is ideal because it allows efficient forward and backward traversal. In the context of Circular Queue, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Linear Structure",
+    "difficulty": "Medium",
+    "key_points": [
+      "Understanding of Circular Queue",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 17,
+    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving Priority Queue.",
+    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of Priority Queue, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Specialized Structure",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of Priority Queue",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 18,
+    "question": "Your team needs a browser history feature with undo/redo support. Which data structure would you choose and why? Discuss the trade-offs involving Deque.",
+    "answer": "A doubly linked list is ideal because it allows efficient forward and backward traversal. In the context of Deque, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Linear Structure",
+    "difficulty": "Easy",
+    "key_points": [
+      "Understanding of Deque",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 19,
+    "question": "A service experiences stack overflow errors during recursion. How would you optimize it? Discuss the trade-offs involving Recursion.",
+    "answer": "Convert deep recursion into iteration or use tail recursion optimization where possible. In the context of Recursion, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Algorithmic Technique",
+    "difficulty": "Easy",
+    "key_points": [
+      "Understanding of Recursion",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 20,
+    "question": "Why are arrays cache-friendly compared to linked lists? Discuss the trade-offs involving Recursive Function.",
+    "answer": "Arrays store elements contiguously in memory, improving cache locality. In the context of Recursive Function, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Algorithm",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of Recursive Function",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 21,
+    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving Base Case.",
+    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of Base Case, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Algorithmic Technique",
+    "difficulty": "Easy",
+    "key_points": [
+      "Understanding of Base Case",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 22,
+    "question": "Your team needs a browser history feature with undo/redo support. Which data structure would you choose and why? Discuss the trade-offs involving Call Stack.",
+    "answer": "A doubly linked list is ideal because it allows efficient forward and backward traversal. In the context of Call Stack, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Memory Concept",
+    "difficulty": "Medium",
+    "key_points": [
+      "Understanding of Call Stack",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 23,
+    "question": "A service experiences stack overflow errors during recursion. How would you optimize it? Discuss the trade-offs involving Sparse Matrix.",
+    "answer": "Convert deep recursion into iteration or use tail recursion optimization where possible. In the context of Sparse Matrix, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Specialized Structure",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of Sparse Matrix",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 24,
+    "question": "A service experiences stack overflow errors during recursion. How would you optimize it? Discuss the trade-offs involving Polynomial Representation.",
+    "answer": "Convert deep recursion into iteration or use tail recursion optimization where possible. In the context of Polynomial Representation, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Representation Technique",
+    "difficulty": "Medium",
+    "key_points": [
+      "Understanding of Polynomial Representation",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 25,
+    "question": "How would you optimize memory usage when storing sparse graph data? Discuss the trade-offs involving Tree.",
+    "answer": "Use adjacency lists or sparse matrix representations instead of dense matrices. In the context of Tree, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Non-Linear Structure",
+    "difficulty": "Medium",
+    "key_points": [
+      "Understanding of Tree",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 26,
+    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving Binary Tree.",
+    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of Binary Tree, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Non-Linear Structure",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of Binary Tree",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 27,
+    "question": "A service experiences stack overflow errors during recursion. How would you optimize it? Discuss the trade-offs involving Binary Search Tree.",
+    "answer": "Convert deep recursion into iteration or use tail recursion optimization where possible. In the context of Binary Search Tree, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Non-Linear Structure",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of Binary Search Tree",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 28,
+    "question": "A service experiences stack overflow errors during recursion. How would you optimize it? Discuss the trade-offs involving AVL Tree.",
+    "answer": "Convert deep recursion into iteration or use tail recursion optimization where possible. In the context of AVL Tree, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Non-Linear Structure",
+    "difficulty": "Easy",
+    "key_points": [
+      "Understanding of AVL Tree",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 29,
+    "question": "A service experiences stack overflow errors during recursion. How would you optimize it? Discuss the trade-offs involving Heap.",
+    "answer": "Convert deep recursion into iteration or use tail recursion optimization where possible. In the context of Heap, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Non-Linear Structure",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of Heap",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 30,
+    "question": "How would you detect a cycle in a linked list during a production debugging session? Discuss the trade-offs involving Max Heap.",
+    "answer": "Use Floyd\u2019s Cycle Detection algorithm with slow and fast pointers. In the context of Max Heap, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Non-Linear Structure",
+    "difficulty": "Medium",
+    "key_points": [
+      "Understanding of Max Heap",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 31,
+    "question": "Design a system that handles millions of search queries efficiently. Which tree structure would you recommend? Discuss the trade-offs involving Min Heap.",
+    "answer": "A balanced BST such as an AVL Tree provides efficient O(log n) search, insert, and delete operations. In the context of Min Heap, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Non-Linear Structure",
+    "difficulty": "Medium",
+    "key_points": [
+      "Understanding of Min Heap",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 32,
+    "question": "Your team needs a browser history feature with undo/redo support. Which data structure would you choose and why? Discuss the trade-offs involving Adjacency Matrix.",
+    "answer": "A doubly linked list is ideal because it allows efficient forward and backward traversal. In the context of Adjacency Matrix, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Representation Technique",
+    "difficulty": "Easy",
+    "key_points": [
+      "Understanding of Adjacency Matrix",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 33,
+    "question": "Why are arrays cache-friendly compared to linked lists? Discuss the trade-offs involving Breadth First Search.",
+    "answer": "Arrays store elements contiguously in memory, improving cache locality. In the context of Breadth First Search, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Algorithm",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of Breadth First Search",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 34,
+    "question": "How would you detect a cycle in a linked list during a production debugging session? Discuss the trade-offs involving Depth First Search.",
+    "answer": "Use Floyd\u2019s Cycle Detection algorithm with slow and fast pointers. In the context of Depth First Search, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Algorithm",
+    "difficulty": "Easy",
+    "key_points": [
+      "Understanding of Depth First Search",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 35,
+    "question": "Design a system that handles millions of search queries efficiently. Which tree structure would you recommend? Discuss the trade-offs involving Factorial.",
+    "answer": "A balanced BST such as an AVL Tree provides efficient O(log n) search, insert, and delete operations. In the context of Factorial, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Mathematics",
+    "difficulty": "Medium",
+    "key_points": [
+      "Understanding of Factorial",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 36,
+    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving Fibonacci Sequence.",
+    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of Fibonacci Sequence, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Mathematics",
+    "difficulty": "Medium",
+    "key_points": [
+      "Understanding of Fibonacci Sequence",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 37,
+    "question": "Your team needs a browser history feature with undo/redo support. Which data structure would you choose and why? Discuss the trade-offs involving Level Order Traversal.",
+    "answer": "A doubly linked list is ideal because it allows efficient forward and backward traversal. In the context of Level Order Traversal, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Algorithm",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of Level Order Traversal",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 38,
+    "question": "Why might a heap be preferred over a sorted array in a real-time scheduling system? Discuss the trade-offs involving Memory Management.",
+    "answer": "A heap supports efficient insertion and removal of priority elements in O(log n). In the context of Memory Management, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Computer Science Concept",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of Memory Management",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 39,
+    "question": "Why might a heap be preferred over a sorted array in a real-time scheduling system? Discuss the trade-offs involving Triplet Representation.",
+    "answer": "A heap supports efficient insertion and removal of priority elements in O(log n). In the context of Triplet Representation, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Representation Technique",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of Triplet Representation",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 40,
+    "question": "Design a system that handles millions of search queries efficiently. Which tree structure would you recommend? Discuss the trade-offs involving Graph.",
+    "answer": "A balanced BST such as an AVL Tree provides efficient O(log n) search, insert, and delete operations. In the context of Graph, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Non-Linear Structure",
+    "difficulty": "Easy",
+    "key_points": [
+      "Understanding of Graph",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 41,
+    "question": "Design a system that handles millions of search queries efficiently. Which tree structure would you recommend? Discuss the trade-offs involving Directed Graph.",
+    "answer": "A balanced BST such as an AVL Tree provides efficient O(log n) search, insert, and delete operations. In the context of Directed Graph, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Non-Linear Structure",
+    "difficulty": "Medium",
+    "key_points": [
+      "Understanding of Directed Graph",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 42,
+    "question": "Your team needs a browser history feature with undo/redo support. Which data structure would you choose and why? Discuss the trade-offs involving Undirected Graph.",
+    "answer": "A doubly linked list is ideal because it allows efficient forward and backward traversal. In the context of Undirected Graph, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Non-Linear Structure",
+    "difficulty": "Medium",
+    "key_points": [
+      "Understanding of Undirected Graph",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 43,
+    "question": "Why might a heap be preferred over a sorted array in a real-time scheduling system? Discuss the trade-offs involving Weighted Graph.",
+    "answer": "A heap supports efficient insertion and removal of priority elements in O(log n). In the context of Weighted Graph, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Non-Linear Structure",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of Weighted Graph",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 44,
+    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving DFS (Depth First Search) Algorithm.",
+    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of DFS (Depth First Search) Algorithm, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Algorithm",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of DFS (Depth First Search) Algorithm",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 45,
+    "question": "How would you detect a cycle in a linked list during a production debugging session? Discuss the trade-offs involving BFS (Breadth First Search) Algorithm.",
+    "answer": "Use Floyd\u2019s Cycle Detection algorithm with slow and fast pointers. In the context of BFS (Breadth First Search) Algorithm, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Algorithm",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of BFS (Breadth First Search) Algorithm",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 46,
+    "question": "A service experiences stack overflow errors during recursion. How would you optimize it? Discuss the trade-offs involving Dijkstra Algorithm.",
+    "answer": "Convert deep recursion into iteration or use tail recursion optimization where possible. In the context of Dijkstra Algorithm, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Algorithm",
+    "difficulty": "Medium",
+    "key_points": [
+      "Understanding of Dijkstra Algorithm",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 47,
+    "question": "A service experiences stack overflow errors during recursion. How would you optimize it? Discuss the trade-offs involving Minimum Spanning Tree.",
+    "answer": "Convert deep recursion into iteration or use tail recursion optimization where possible. In the context of Minimum Spanning Tree, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Algorithm",
+    "difficulty": "Easy",
+    "key_points": [
+      "Understanding of Minimum Spanning Tree",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 48,
+    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving Prim Algorithm.",
+    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of Prim Algorithm, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Algorithm",
+    "difficulty": "Easy",
+    "key_points": [
+      "Understanding of Prim Algorithm",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 49,
+    "question": "How would you detect a cycle in a linked list during a production debugging session? Discuss the trade-offs involving Kruskal Algorithm.",
+    "answer": "Use Floyd\u2019s Cycle Detection algorithm with slow and fast pointers. In the context of Kruskal Algorithm, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Algorithm",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of Kruskal Algorithm",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 50,
+    "question": "How would you optimize memory usage when storing sparse graph data? Discuss the trade-offs involving Topological Sorting.",
+    "answer": "Use adjacency lists or sparse matrix representations instead of dense matrices. In the context of Topological Sorting, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Algorithm",
+    "difficulty": "Easy",
+    "key_points": [
+      "Understanding of Topological Sorting",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 51,
+    "question": "Why might a heap be preferred over a sorted array in a real-time scheduling system? Discuss the trade-offs involving Hash Table.",
+    "answer": "A heap supports efficient insertion and removal of priority elements in O(log n). In the context of Hash Table, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Specialized Structure",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of Hash Table",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 52,
+    "question": "How would you detect a cycle in a linked list during a production debugging session? Discuss the trade-offs involving Hash Function.",
+    "answer": "Use Floyd\u2019s Cycle Detection algorithm with slow and fast pointers. In the context of Hash Function, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Component",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of Hash Function",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 53,
+    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving Collision Resolution.",
+    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of Collision Resolution, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Component",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of Collision Resolution",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 54,
+    "question": "How would you optimize memory usage when storing sparse graph data? Discuss the trade-offs involving Sorting Algorithm.",
+    "answer": "Use adjacency lists or sparse matrix representations instead of dense matrices. In the context of Sorting Algorithm, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Algorithm",
+    "difficulty": "Medium",
+    "key_points": [
+      "Understanding of Sorting Algorithm",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 55,
+    "question": "How would you detect a cycle in a linked list during a production debugging session? Discuss the trade-offs involving Bubble Sort.",
+    "answer": "Use Floyd\u2019s Cycle Detection algorithm with slow and fast pointers. In the context of Bubble Sort, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Algorithm",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of Bubble Sort",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 56,
+    "question": "How would you detect a cycle in a linked list during a production debugging session? Discuss the trade-offs involving Selection Sort.",
+    "answer": "Use Floyd\u2019s Cycle Detection algorithm with slow and fast pointers. In the context of Selection Sort, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Algorithm",
+    "difficulty": "Medium",
+    "key_points": [
+      "Understanding of Selection Sort",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 57,
+    "question": "Why are arrays cache-friendly compared to linked lists? Discuss the trade-offs involving Insertion Sort.",
+    "answer": "Arrays store elements contiguously in memory, improving cache locality. In the context of Insertion Sort, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Algorithm",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of Insertion Sort",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 58,
+    "question": "A service experiences stack overflow errors during recursion. How would you optimize it? Discuss the trade-offs involving Merge Sort.",
+    "answer": "Convert deep recursion into iteration or use tail recursion optimization where possible. In the context of Merge Sort, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Algorithm",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of Merge Sort",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 59,
+    "question": "Design a system that handles millions of search queries efficiently. Which tree structure would you recommend? Discuss the trade-offs involving Quick Sort.",
+    "answer": "A balanced BST such as an AVL Tree provides efficient O(log n) search, insert, and delete operations. In the context of Quick Sort, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Algorithm",
+    "difficulty": "Easy",
+    "key_points": [
+      "Understanding of Quick Sort",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  },
+  {
+    "id": 60,
+    "question": "Explain when a queue is more suitable than a stack in backend processing systems. Discuss the trade-offs involving Binary Search.",
+    "answer": "Queues are ideal when tasks must be processed in arrival order (FIFO). In the context of Binary Search, the candidate should explain time complexity, scalability concerns, memory trade-offs, and practical production use cases.",
+    "category": "Algorithm",
+    "difficulty": "Hard",
+    "key_points": [
+      "Understanding of Binary Search",
+      "Time complexity analysis",
+      "Space complexity analysis",
+      "Real-world trade-offs",
+      "Scalability considerations"
+    ]
+  }
+]
