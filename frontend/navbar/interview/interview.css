@@ -2,6 +2,8 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #f8fafc;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .interview-container {
@@ -106,4 +108,14 @@ body {
 
 .answer-box ul {
     margin-top: 10px;
+}
+html,
+body {
+    min-height: 100%;
+    overflow-y: auto;
+}
+
+.interview-container {
+    min-height: 100vh;
+    overflow-y: visible;
 }

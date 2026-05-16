@@ -10,16 +10,22 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function loadInterviewQuestions() {
-    fetch("http://localhost:3000/api/interview?time=" + Date.now())
+
+    fetch("http://localhost:3000/api/interview")
+
         .then(res => res.json())
+
         .then(data => {
-            console.log("Interview data:", data);
-            renderQuestions(data);
+
+            console.log("NEW QUESTIONS LOADED");
+            console.log(data);
+
+            renderQuestions(data.questions || data);
         })
+
         .catch(error => {
-            console.log("Interview fetch error:", error);
-            document.getElementById("questionContainer").innerHTML =
-                "<p>Failed to load interview questions. Make sure backend is running.</p>";
+
+            console.log("Interview load error:", error);
         });
 }
 
