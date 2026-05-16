@@ -106,9 +106,9 @@ pre {
 
 #editor {
     height: 500px;
-    border-radius: 12px;
     overflow: hidden;
     border: 1px solid #1e293b;
+    margin: 10px 0;
 }
 
 .editor-buttons {
