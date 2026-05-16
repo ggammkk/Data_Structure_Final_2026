@@ -26,6 +26,10 @@ require(["vs/editor/editor.main"], function () {
     loadPracticeData();
 });
 
+document.getElementById("editor").addEventListener("mouseenter", () => {
+    editor.focus();
+});
+
 
 // =========================
 // LOAD DATA

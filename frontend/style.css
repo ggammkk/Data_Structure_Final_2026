@@ -242,6 +242,6 @@ li {
 }
 
 .code-block {
-    tab-size: 4;       /* ← controls tab width, default is 8 */
-    -moz-tab-size: 4;  /* ← firefox */
+    tab-size: 4;
+    -moz-tab-size: 4;
 }
