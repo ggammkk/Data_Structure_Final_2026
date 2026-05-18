@@ -57,7 +57,7 @@ body {
 }
 
 .quiz-content {
-    width: 75%;
+    width: 85%;
     padding: 30px;
     overflow-y: auto;
     background: var(--bg-page);
