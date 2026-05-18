@@ -13,9 +13,10 @@ function loadTopics() {
   const topics = quizData;
   document.getElementById("topicList").innerHTML =
   topics.map(t => // goes thru every topic and make a list out of it
-    `
+    // put the topic name as the link
+    ` 
       <li>
-        <a href="quiz/quiz.html?topic=${encodeURIComponent(t)}"> // put the topic name as the link
+        <a href="quiz/quiz.html?topic=${encodeURIComponent(t)}">
           ${t}
         </a>
       </li>
