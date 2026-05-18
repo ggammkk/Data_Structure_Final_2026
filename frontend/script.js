@@ -1,34 +1,36 @@
-let globalData = [];
-let cy;
+let globalData = []; // global variable to store loaded JSON data
+let cy; // cytoscape instance
 
-function renderNode(nodeData) {
-    function formatCppCode(code) {
+// render node details in the right panel
+function renderNode(nodeData) { 
+    // auto indent code examples 
+    function formatCppCode(code) { 
         let indent = 0;
-        return code.split("\n").map(line => {
-            line = line.trim();
-            if (line.startsWith("}")) indent--;
+        return code.split("\n").map(line => { // cut the code into array of lines then goes thru each line one by one
+            line = line.trim(); // remove any extra spaces at the start and end of each line
+            if (line.startsWith("}")) indent--; // remove indent on the current line if it starts with }
             const result = "\t".repeat(Math.max(0, indent)) + line;
-            if (line.endsWith("{")) indent++;
+            if (line.endsWith("{")) indent++; // add indent on the next line if current line ends with {
             return result;
         }).join("\n");
     }
 
-    // NAME
+    // name
     document.getElementById("name").innerText = nodeData.name;
 
-    // DEFINITION
+    // definition
     document.getElementById("definition").innerHTML = `
         <strong>Definition</strong><br>
         ${nodeData.definition}
     `;
 
-    // CATEGORY
+    // category
     document.getElementById("category").innerHTML = `
         <strong>Category</strong><br>
         ${nodeData.category}
     `;
 
-    // OPERATIONS
+    // operations
     document.getElementById("operations").innerHTML =
         nodeData.operations?.length
             ? `
@@ -41,19 +43,19 @@ function renderNode(nodeData) {
             `
             : "";
 
-    // CODE
+    // code examples (cpp)
     const cppCode = nodeData.code_examples?.cpp || "";
     const codeText = Array.isArray(cppCode) ? cppCode.join("\n") : cppCode;
-
     if (cppCode) {
         document.getElementById("code").innerHTML = 
             `<strong>Code Example</strong><pre class="code-block"></pre>`;
         document.querySelector("#code .code-block").textContent = formatCppCode(codeText);
-    } else {
+    } 
+    else {
         document.getElementById("code").innerHTML = "";
     }
 
-    // VISUAL / IMAGES
+    // visual / images
     document.getElementById("visual").innerHTML =
         nodeData.images?.length
             ? `
@@ -69,7 +71,7 @@ function renderNode(nodeData) {
             `
             : "";
 
-    // STEP BY STEP
+    // step by step explanation
     document.getElementById("stepbystep").innerHTML =
         nodeData.step_by_step?.length
             ? `
@@ -82,7 +84,7 @@ function renderNode(nodeData) {
             `
             : "";
 
-    // COMPLEXITY
+    // complexity
     document.getElementById("complexity").innerHTML =
         nodeData.time_complexity
             ? `
@@ -96,7 +98,7 @@ function renderNode(nodeData) {
             `
             : "";
 
-    // REAL LIFE EXAMPLES
+    // real life examples
     document.getElementById("realexample").innerHTML =
         nodeData.real_life_examples?.length
             ? `
@@ -110,18 +112,16 @@ function renderNode(nodeData) {
             : "";
 }
 
+// find exact node by name (case insensitive)
 function findNode(data, query) {
     return data.find(item =>
         item.name.toLowerCase() === query.toLowerCase()
     );
 }
 
-// =========================
-// LOAD DATA FROM NODE.JS API
-// =========================
-
+// load all data from node.js API (from backend) and create graph
 fetch("http://localhost:3000/api/dsa")
-    .then(response => response.json())
+    .then(response => response.json()) // convert response from raw text to a js object
     .then(data => {
         globalData = data;
 
@@ -135,16 +135,12 @@ fetch("http://localhost:3000/api/dsa")
         console.log(error);
     });
 
-    // =========================
-    // CREATE GRAPH
-    // =========================
-
+    // create graph using cytoscape.js
     function createGraph(data) {
-        const elements = [];
+        const elements = []; // array that will hold all nodes and edges
+        const nodeNames = new Set(data.map(item => item.name)); // store all nodes name 
 
-        const nodeNames = new Set(data.map(item => item.name));
-
-        // Create nodes
+        // create nodes
         data.forEach(item => {
             elements.push({
                 data: {
@@ -154,11 +150,11 @@ fetch("http://localhost:3000/api/dsa")
             });
         });
 
-        // Create edges safely
+        // create edges based on relationships
         data.forEach(item => {
             if(item.relationships && item.relationships.length > 0) {
                 item.relationships.forEach(rel => {
-                    if(rel.target && rel.type && nodeNames.has(rel.target)) {
+                    if(rel.target && rel.type && nodeNames.has(rel.target)) { // if the target node exists, create the edge
                         elements.push({
                             data: {
                                 source: item.name.trim(),
@@ -173,12 +169,11 @@ fetch("http://localhost:3000/api/dsa")
                 });
             }
         });
-
+        
+        // initialize cytoscape with elements and styles (creates the actual graph)
         cy = cytoscape({
-            container: document.getElementById("cy"),
-
-            elements: elements,
-
+            container: document.getElementById("cy"), 
+            elements: elements, // all the nodes and edges created
             style: [
                 {
                     selector: 'node',
@@ -220,28 +215,25 @@ fetch("http://localhost:3000/api/dsa")
                         'color': '#000',
                     }
                 }
-            ],
+            ], 
+            layout: {
+                name: 'cose',
+                idealEdgeLength: 100,
+                nodeRepulsion: 4000000,
+                edgeElasticity: 100,
+                gravity: 80,
+                animate: true,
 
-                layout: {
-                    name: 'cose',
-                    idealEdgeLength: 100,
-                    nodeRepulsion: 4000000,
-                    edgeElasticity: 100,
-                    gravity: 80,
-                    animate: true,
-
-                    fit: true,
-                    padding: 50
-                }
+                fit: true,
+                padding: 50
+            }
         });
-
+        // resize graph on window resize
         window.addEventListener("resize", () => {
             cy.resize();
             cy.fit(undefined, 50);
         });
-
         window.cy = cy;
-
         cy.on('layoutstop', () => {
             const padding = Math.min(
                 window.innerWidth,
@@ -253,11 +245,11 @@ fetch("http://localhost:3000/api/dsa")
 
         console.log("GRAPH CREATED SUCCESSFULLY");
 
-
+        // node click event
         cy.on('tap', 'node', function (evt) {
-                const node = evt.target;
+                const node = evt.target; // the clicked node
 
-                // remove previous highlight
+                // remove previous highlights
                 cy.elements().removeClass("highlight");
 
                 const nodeName = node.id();
@@ -265,9 +257,8 @@ fetch("http://localhost:3000/api/dsa")
                 // highlight clicked node
                 node.addClass("highlight");
 
-                // zoom + center
+                // fit view to clicked node
                 const padding = Math.min(window.innerWidth, window.innerHeight) * 0.2;
-
                 cy.animate({
                     fit: {
                         eles: node,
@@ -275,36 +266,32 @@ fetch("http://localhost:3000/api/dsa")
                     },
                     duration: 600
                 });
-
                 console.log("CLICKED:", nodeName);
 
+                // find the clicked node's data
                 const nodeData = globalData.find(n =>
                     n.name.trim().toLowerCase() === nodeName.toLowerCase()
                 );
-                if (nodeData) {
+                if (nodeData) { // if found, render the node
                     renderNode(nodeData);
                 }
         });
     }
 
-//globalData = data;
-
+// search function (search bar input), finds best matching node and renders details
 function searchTopic() {
-
+    // get and clean input from frontend search bar
     const input = document.getElementById("searchInput").value.trim();
 
     console.log("SEARCH START");
 
     const nodeData = findBestNodeMatch(input);
-
     console.log("FOUND NODE:", nodeData);
 
     if(!input) {
-
         document.getElementById("definition").innerHTML = `
             <br>Please enter a search question.
         `;
-
         return;
     }
     
@@ -316,7 +303,6 @@ function searchTopic() {
         const node = cy.$(`node[id = "${nodeData.name}"]`);
 
         if (node.length > 0) {
-
             cy.elements().removeClass("highlight");
             node.addClass("highlight");
 
@@ -334,6 +320,7 @@ function searchTopic() {
     }
 }
 
+// strips common question words to extract the topic name
 function findBestNodeMatch(input) {
     const cleanedInput = input
         .toLowerCase()
@@ -367,19 +354,15 @@ function findBestNodeMatch(input) {
     return partialMatch;
 }
 
-
-// =========================
-// EVENT LISTENERS
-// =========================
-
+// search button and enter key event listeners
 document.addEventListener("DOMContentLoaded", function() {
-
+    // run search function when the search button is clicked
     document.getElementById("searchButton")
         .addEventListener("click", searchTopic);
 
+    // run search function when enter key is pressed
     document.getElementById("searchInput")
         .addEventListener("keydown", function(event) {
-
             if(event.key === "Enter") {
                 event.preventDefault();
                 searchTopic();
@@ -387,11 +370,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 });
 
+// open popup when image is clicked
 document.addEventListener("click", function(event) {
     if(event.target.tagName === "IMG" && event.target.closest(".image-card")) {
         const popup = document.createElement("div");
 
-        popup.className = "image-popup";
+        popup.className = "image-popup"; // give class so that 
         popup.innerHTML = `
             <div class="image-popup-content">
                 <span class="image-popup-close">&times;</span>
@@ -407,4 +391,22 @@ document.addEventListener("click", function(event) {
             }
         });
     }
+});
+
+document.getElementById("fullscreenBtn").addEventListener("click", () => {
+    const graphEl = document.getElementById("cy");
+
+    if (!document.fullscreenElement) {
+        graphEl.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+});
+
+// resize cytoscape graph to fullscreen
+document.addEventListener("fullscreenchange", () => {
+    setTimeout(() => {
+        cy.resize();
+        cy.fit(cy.elements(), 80);
+    }, 100);
 });

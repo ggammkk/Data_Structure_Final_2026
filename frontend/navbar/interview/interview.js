@@ -1,37 +1,33 @@
+// click listener for interview page
 document.addEventListener("DOMContentLoaded", () => {
     const refreshBtn = document.getElementById("refreshBtn");
-
+    // refresh questions when button is clicked 
     refreshBtn.addEventListener("click", () => {
         console.log("New Random Questions clicked");
-        loadInterviewQuestions();
+        loadInterviewQuestions(); // load new questions
     });
-
+    // load questions when page loads
     loadInterviewQuestions();
 });
 
+// fetch randomized interview questions from backend and render
 function loadInterviewQuestions() {
-
     fetch("http://localhost:3000/api/interview")
-
         .then(res => res.json())
-
         .then(data => {
-
             console.log("NEW QUESTIONS LOADED");
             console.log(data);
-
             renderQuestions(data.questions || data);
         })
-
         .catch(error => {
-
             console.log("Interview load error:", error);
         });
 }
 
+// render questions function, creates question cards with show answer toggle
 function renderQuestions(questions) {
     const container = document.getElementById("questionContainer");
-
+    // create a card for each question (with title, difficulty badge, category badge, question text, and show answer button)
     container.innerHTML = questions.map((q, index) => `
         <div class="question-card">
             <div class="question-top">
@@ -61,6 +57,7 @@ function renderQuestions(questions) {
     `).join("");
 }
 
+// toggle answer box visibility
 function toggleAnswer(index) {
     const box = document.getElementById(`answer-${index}`);
 

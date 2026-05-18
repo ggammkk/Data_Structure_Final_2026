@@ -1,6 +1,7 @@
-let currentTopic = "";
-let score = 0;
+let currentTopic = ""; // store the currently selected quiz topic
+let score = 0; // track quiz score
 
+// auto indent code for code snippets
 function formatCppCode(code) {
     let indent = 0;
     return code.split("\n").map(line => {
@@ -12,6 +13,7 @@ function formatCppCode(code) {
     }).join("\n");
 }
 
+// fetch quiz topics from backend then pass them to loadsidebar function
 fetch("http://localhost:3000/api/quiz-topics")
   .then(res => res.json())
   .then(topics => {
@@ -23,9 +25,10 @@ fetch("http://localhost:3000/api/quiz-topics")
     loadQuiz(topic);
   });
 
+// load sidebar
 function loadSidebar(topics) {
-  const sidebar = document.getElementById("sidebarTopics");
-
+  const sidebar = document.getElementById("sidebarTopics"); // get sidebar content element 
+  // turn each topic into a link that goes to other quiz page
   sidebar.innerHTML = topics.map(topic => `
     <a
       href="?topic=${encodeURIComponent(topic)}"
@@ -36,10 +39,11 @@ function loadSidebar(topics) {
   `).join("");
 }
 
+// load quiz questions for selected topic
 function loadQuiz(topic) {
   currentTopic = topic;
-  score = 0;
-
+  score = 0; // reset score to 0 when goes to other page
+  // fetch quiz questions for topic and render
   fetch(`http://localhost:3000/api/quiz/${encodeURIComponent(topic)}`)
     .then(res => res.json())
     .then(questions => {
@@ -51,17 +55,18 @@ function loadQuiz(topic) {
     });
 }
 
+// render quiz questions, creates question blocks with options and handles answer selection function
 function renderQuestions(questions) {
   const quizBox = document.getElementById("quizBox");
   quizBox.innerHTML = "";
 
   questions.forEach((q, index) => {
-    const block = document.createElement("div");
+    const block = document.createElement("div"); // create a block for each question
     block.className = "question-block";
 
-    const shuffledOptions = [...q.options]
+    const shuffledOptions = [...q.options] // shuffle questions
       .sort(() => Math.random() - 0.5);
-
+    // the inside of the block
     block.innerHTML = `
       <h2>Question ${index + 1}</h2>
       <p>${q.question}</p>
@@ -86,7 +91,7 @@ function renderQuestions(questions) {
     });
 
     const buttons = block.querySelectorAll(".option-btn");
-
+    // add click event listener to each option button
     buttons.forEach(btn => {
       btn.addEventListener("click", () => {
         if (block.dataset.answered) return;
@@ -110,9 +115,9 @@ function renderQuestions(questions) {
               b.classList.add("correct");
             }
           });
-
+          // add explanation for wrong answer
           block.querySelector(".answer-text").innerText =
-            q.wrong_explanations?.[selected] ||
+            q.wrong_explanations?.[selected] || 
             `Correct Answer: ${correct}`;
         }
 
@@ -122,8 +127,9 @@ function renderQuestions(questions) {
   });
 }
 
+// highlight the active topic
 function highlightActiveTopic() {
-  document.querySelectorAll(".sidebar-link").forEach(link => {
+  document.querySelectorAll(".sidebar-link").forEach(link => { // go thru each topic link
     link.classList.remove("active-topic");
 
     const topic = new URL(link.href).searchParams.get("topic");
