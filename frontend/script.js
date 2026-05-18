@@ -338,8 +338,7 @@ function findBestNodeMatch(input) {
         .trim();
 
     let exactMatch = globalData.find(item =>
-        item.name.toLowerCase().includes(cleanedInput) ||
-        cleanedInput.includes(item.name.toLowerCase())
+        item.name.toLowerCase().includes(cleanedInput)
     );
 
     if(exactMatch) {
