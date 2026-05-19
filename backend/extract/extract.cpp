@@ -1,47 +1,45 @@
 #include "extract.h"
 
 #include <iostream>
-#include <fstream>
-#include <sstream>
+#include <fstream> //read and write files
+#include <sstream> // sream string
 
 using namespace std;
 
-// =========================
 // MAIN CONVERT FUNCTION
-// =========================
+// read txt file, split into blocks, parse each block, write JSON file
 
 bool Extractor::convertTxtToJson(string inputPath, string outputPath)
 {
     ifstream inputFile(inputPath);
 
-    if(!inputFile)
+    if(!inputFile) // check if fail to open
     {
         cout << "Failed to open input text file.\n";
         return false;
     }
 
-    stringstream buffer;
-    buffer << inputFile.rdbuf();
+    stringstream buffer; // temporarily store the whole content of the TXT file.
+    buffer << inputFile.rdbuf(); // read and put in buffer
 
-    string text = buffer.str();
+    string text = buffer.str(); // convert to string
 
-    vector<string> blocks = splitBlocks(text);
-
+    vector<string> blocks = splitBlocks(text); // split the text into topic blocks based on separator lines
     cout << "Found " << blocks.size() << " topic blocks.\n";
 
-    vector<ExtractNode> nodes;
+    vector<ExtractNode> nodes; // create vector to store
 
-    for(string block : blocks)
+    for(string block : blocks) // loop all node
     {
-        ExtractNode node = parseBlock(block);
+        ExtractNode node = parseBlock(block); // 1 topic = 1 obj.
 
-        if(node.name != "")
+        if(node.name != "") // only save if have topic name
         {
             nodes.push_back(node);
         }
     }
 
-    writeJson(nodes, outputPath);
+    writeJson(nodes, outputPath); // write all in json file
 
     cout << "Saved " << nodes.size()
          << " nodes to "
@@ -51,33 +49,33 @@ bool Extractor::convertTxtToJson(string inputPath, string outputPath)
     return true;
 }
 
-// =========================
 // SPLIT TXT INTO TOPIC BLOCKS
-// =========================
 
 vector<string> Extractor::splitBlocks(string text)
 {
     vector<string> blocks;
 
-    string separator = "==================================================";
+    string separator = "=================================================="; //seperator
 
     size_t start = 0;
     size_t end;
 
+    // Keep finding separator lines until there are no more separators.
     while((end = text.find(separator, start)) != string::npos)
     {
         string block = text.substr(start, end - start);
 
-        block = trim(block);
+        block = trim(block); // remove extarcspace
 
-        if(block != "")
+        if(block != "") // save if not empty
         {
             blocks.push_back(block);
         }
 
-        start = end + separator.length();
+        start = end + separator.length();//move to start after seperator
     }
 
+    // After the loop, there may still be one last block after the final separator.
     string lastBlock = text.substr(start);
     lastBlock = trim(lastBlock);
 
