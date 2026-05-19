@@ -279,78 +279,158 @@ fetch("http://localhost:3000/api/dsa")
     }
 
 // search function (search bar input), finds best matching node and renders details
+function detectSearchType(input) {
+    const q = input.toLowerCase();
+
+    if (q.includes("operation")) return "operations";
+    if (q.includes("complexity") || q.includes("time")) return "complexity";
+    if (q.includes("code")) return "code";
+    if (q.includes("example")) return "examples";
+    if (q.includes("step")) return "steps";
+    if (q.includes("category")) return "category";
+
+    return "all";
+}
+
+function extractTopic(input) {
+    return input.toLowerCase()
+        .replace("what is", "")
+        .replace("define", "")
+        .replace("operations of", "")
+        .replace("operation of", "")
+        .replace("time complexity of", "")
+        .replace("complexity of", "")
+        .replace("code example of", "")
+        .replace("examples of", "")
+        .replace("step by step of", "")
+        .replace("category of", "")
+        .replace("?", "")
+        .trim();
+}
+
+function clearDetails() {
+    document.getElementById("name").innerText = "";
+    document.getElementById("definition").innerHTML = "";
+    document.getElementById("category").innerHTML = "";
+    document.getElementById("operations").innerHTML = "";
+    document.getElementById("code").innerHTML = "";
+    document.getElementById("visual").innerHTML = "";
+    document.getElementById("stepbystep").innerHTML = "";
+    document.getElementById("complexity").innerHTML = "";
+    document.getElementById("realexample").innerHTML = "";
+}
+
 function searchTopic() {
-    // get and clean input from frontend search bar
     const input = document.getElementById("searchInput").value.trim();
 
-    console.log("SEARCH START");
-
-    const nodeData = findBestNodeMatch(input);
-    console.log("FOUND NODE:", nodeData);
-
-    if(!input) {
-        document.getElementById("definition").innerHTML = `
-            <br>Please enter a search question.
-        `;
+    if (!input) {
+        document.getElementById("definition").innerHTML =
+            "<br>Please enter a search question.";
         return;
     }
-    
-    renderNode(nodeData);
 
-    console.log("RENDER FINISHED");
+    clearDetails();
+
+    const searchType = detectSearchType(input);
+    const topic = extractTopic(input);
+
+    const matchedNode = globalData.find(item =>
+        item.name.toLowerCase() === topic ||
+        item.name.toLowerCase().includes(topic) ||
+        topic.includes(item.name.toLowerCase())
+    );
+
+    if (!matchedNode) {
+        document.getElementById("definition").innerHTML =
+            `<p>No matching topic found for "${input}".</p>`;
+        return;
+    }
+
+    document.getElementById("name").innerText = matchedNode.name;
+
+    if (searchType === "operations") {
+        document.getElementById("operations").innerHTML =
+            matchedNode.operations?.length
+                ? `
+                    <strong>Operations of ${matchedNode.name}</strong>
+                    <ul>
+                        ${matchedNode.operations.map(op => `<li>${op}</li>`).join("")}
+                    </ul>
+                `
+                : `<p>No operations listed for ${matchedNode.name}.</p>`;
+    }
+
+    else if (searchType === "complexity") {
+        document.getElementById("complexity").innerHTML =
+            matchedNode.time_complexity && Object.keys(matchedNode.time_complexity).length
+                ? `
+                    <strong>Time Complexity of ${matchedNode.name}</strong>
+                    <ul>
+                        ${Object.entries(matchedNode.time_complexity)
+                            .map(([key, value]) => `<li>${key}: ${value}</li>`)
+                            .join("")}
+                    </ul>
+                `
+                : `<p>No time complexity listed for ${matchedNode.name}.</p>`;
+    }
+
+    else if (searchType === "code") {
+        const cppCode = matchedNode.code_examples?.cpp || "";
+
+        document.getElementById("code").innerHTML =
+            cppCode
+                ? `<strong>Code Example of ${matchedNode.name}</strong>
+                   <pre class="code-block">${cppCode}</pre>`
+                : `<p>No code example listed for ${matchedNode.name}.</p>`;
+    }
+
+    else if (searchType === "examples") {
+        document.getElementById("realexample").innerHTML =
+            matchedNode.real_life_examples?.length
+                ? `
+                    <strong>Real Life Examples of ${matchedNode.name}</strong>
+                    <ul>
+                        ${matchedNode.real_life_examples.map(ex => `<li>${ex}</li>`).join("")}
+                    </ul>
+                `
+                : `<p>No real-life examples listed for ${matchedNode.name}.</p>`;
+    }
+
+    else if (searchType === "steps") {
+        document.getElementById("stepbystep").innerHTML =
+            matchedNode.step_by_step?.length
+                ? `
+                    <strong>Step By Step for ${matchedNode.name}</strong>
+                    <ol>
+                        ${matchedNode.step_by_step.map(step => `<li>${step}</li>`).join("")}
+                    </ol>
+                `
+                : `<p>No step-by-step explanation listed for ${matchedNode.name}.</p>`;
+    }
+
+    else if (searchType === "category") {
+        document.getElementById("category").innerHTML =
+            `<strong>Category</strong><br>${matchedNode.category}`;
+    }
+
+    else {
+        renderNode(matchedNode);
+    }
 
     if (window.cy) {
-        const node = cy.$(`node[id = "${nodeData.name}"]`);
+        const node = cy.nodes().filter(n => n.id() === matchedNode.name.trim());
 
         if (node.length > 0) {
             cy.elements().removeClass("highlight");
             node.addClass("highlight");
 
-            const padding = Math.min(window.innerWidth, window.innerHeight) * 0.15;
-
             cy.animate({
-                fit: {
-                    eles: node,
-                    padding: padding
-                },
+                fit: { eles: node, padding: 90 },
                 duration: 600,
                 easing: "ease-out-cubic"
             });
         }
     }
-}
-
-// strips common question words to extract the topic name
-function findBestNodeMatch(input) {
-    const cleanedInput = input
-        .toLowerCase()
-        .replace("what is", "")
-        .replace("define", "")
-        .replace("definition of", "")
-        .replace("operations of", "")
-        .replace("time complexity of", "")
-        .replace("code example of", "")
-        .replace("interview questions of", "")
-        .replace("step by step of", "")
-        .replace("diagram of", "")
-        .replace("image of", "")
-        .replace("?", "")
-        .trim();
-
-    let exactMatch = globalData.find(item =>
-        item.name.toLowerCase().includes(cleanedInput)
-    );
-
-    if(exactMatch) {
-        return exactMatch;
-    }
-
-    let partialMatch = globalData.find(item =>
-        item.name.toLowerCase().includes(cleanedInput) ||
-        cleanedInput.includes(item.name.toLowerCase())
-    );
-
-    return partialMatch;
 }
 
 // search button and enter key event listeners

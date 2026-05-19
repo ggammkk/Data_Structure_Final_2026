@@ -244,7 +244,7 @@ li {
 }
 
 .image-popup-content img {
-    height: 600px;
+    height: 500px;
     object-fit: contain;
     display: block;
     border-radius: 10px;
