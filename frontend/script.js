@@ -334,11 +334,20 @@ function searchTopic() {
     const searchType = detectSearchType(input);
     const topic = extractTopic(input);
 
-    const matchedNode = globalData.find(item =>
-        item.name.toLowerCase() === topic ||
-        item.name.toLowerCase().includes(topic) ||
-        topic.includes(item.name.toLowerCase())
+    const matches = globalData.filter(item =>
+        item.name.toLowerCase().includes(topic)
     );
+
+    matches.sort((a, b) => {
+        const aExact = a.name.toLowerCase() === topic ? 1 : 0;
+        const bExact = b.name.toLowerCase() === topic ? 1 : 0;
+
+        if (aExact !== bExact) return bExact - aExact;
+
+        return a.name.length - b.name.length;
+    });
+
+const matchedNode = matches[0];
 
     if (!matchedNode) {
         document.getElementById("definition").innerHTML =
